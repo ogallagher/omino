@@ -1,0 +1,9 @@
+# Owen Gallagher <ogallagher>
+# 2021-04-08
+# Omino root git ignore
+
+docs/
+node_modules/
+res/
+secret/
+

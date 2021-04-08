@@ -1,0 +1,28 @@
+{
+  "name": "omino",
+  "version": "0.0.1",
+  "description": "Webserver for the Omino constructed auxiliary language.",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ogallagher/omino.git"
+  },
+  "keywords": [
+    "conlang",
+    "auxlang",
+    "javascript",
+    "nodejs",
+    "mysql",
+    "webserver",
+    "language"
+  ],
+  "author": "Owen Gallagher <owengall@icloud.com>",
+  "license": "CC-BY-4.0",
+  "bugs": {
+    "url": "https://github.com/ogallagher/omino/issues"
+  },
+  "homepage": "https://github.com/ogallagher/omino#readme"
+}
