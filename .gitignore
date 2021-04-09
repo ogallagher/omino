@@ -2,7 +2,15 @@
 # 2021-04-08
 # Omino root git ignore
 
+# node dependencies
 node_modules/
+
+# credentials
 secret/
+
+# data
+data/
+
+# environment variables
 .env
 

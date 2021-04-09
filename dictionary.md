@@ -39,3 +39,7 @@ Words that contain these words.
 ## Synonyms
 
 No synonyms.
+
+## Antonyms
+
+No antonyms.
