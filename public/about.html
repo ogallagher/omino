@@ -14,6 +14,7 @@
 		
         <meta name="description" content="About Omino, a constructed auxiliary language."/>
         <meta name="author" content="Owen Gallagher <github.com/ogallagher>"/>
+		<meta name="page-name" content="about.html"/>
         
         <title>Omino: About</title>
 		
@@ -58,14 +59,46 @@
 
 	</head>
 	
-	<body class="container-fluid">
-		<div class="row">
-			<div class="col-sm">
-				<ul id="table-of-contents" class="sticky-top pt-3">
-				</ul>
-			</div>
-			<div class="col-sm-9">
-				<!--
+	<body class="bg-light">
+		<div id="navbar-container" class="navbar-dark bg-dark">
+			<!--
+	Owen Gallagher
+	2021-04-09
+
+	Omino website shared top navbar.
+-->
+<nav class="navbar navbar-expand-md navbar-light">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="#">
+			omino
+		</a>
+		
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-nav" aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle menu bar">
+	    	<span class="navbar-toggler-icon"></span>
+	    </button>
+		
+		<div id="navbar-nav" class="navbar-collapse collapse">
+			<ul class="navbar-nav">
+				<li clas="nav-item">
+					<a class="nav-link" href="about.html">about</a>
+				</li>
+				<li clas="nav-item">
+					<a class="nav-link" href="dictionary.html">dictionary</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+		</div>
+		
+		<div class="container-fluid">
+			<div class="row pt-2">
+				<div class="col-md d-none d-md-block">
+					<ul id="table-of-contents" class="sticky-top pt-3">
+					</ul>
+				</div>
+				<div class="col-md-9">
+					<!--
     Author: **Owen Gallagher**  
     Creation date: **5 April 2021**
 -->
@@ -1141,10 +1174,10 @@ You feed my friend, please. &rarr; hamem doamien hoaki.</p>
 <h2 id="footnotes">Footnotes</h2>
 <p><b id="mino-etymology">1</b> <strong>mino</strong> in turn comes from <strong>mi</strong> (movement) and <strong>no</strong> (knowledge). <a href="#a1">&#8617;</a></p>
 <p><b id="implicit-dipthongs">2</b> In some languages there are implicit vowel dipthongs, even when only a single vowel is written. "No", for example, can be pronounced "N-uh-oh-oo". In Omino, this never happens. <a href="#a2">&#8617;</a></p>
+				</div>
 			</div>
-		</div>
-		
-		<!--
+			
+			<!--
 	Owen Gallagher <github.com/ogallagher>
 	2021-04-08
 	
@@ -1157,6 +1190,14 @@ You feed my friend, please. &rarr; hamem doamien hoaki.</p>
 
 <!-- custom js -->
 <script type="text/javascript">
+	// mark current page in navbar
+	
+	let page = $('meta[name="page-name"]').prop('content')
+	
+	$(`.nav-link[href="${page}"]`)
+	.addClass('active')
+	.prop('aria-current','page')
+	
 	// add css classes
 	
 	$('table').addClass('table table-striped')
@@ -1182,5 +1223,6 @@ You feed my friend, please. &rarr; hamem doamien hoaki.</p>
     })
 </script>
 
+		</div>
 	</body>
 </html>

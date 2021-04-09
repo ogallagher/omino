@@ -11,6 +11,14 @@
 
 <!-- custom js -->
 <script type="text/javascript">
+	// mark current page in navbar
+	
+	let page = $('meta[name="page-name"]').prop('content')
+	
+	$(`.nav-link[href="${page}"]`)
+	.addClass('active')
+	.prop('aria-current','page')
+	
 	// add css classes
 	
 	$('table').addClass('table table-striped')

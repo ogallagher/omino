@@ -14,23 +14,30 @@
 		
         <meta name="description" content="About Omino, a constructed auxiliary language."/>
         <meta name="author" content="Owen Gallagher <github.com/ogallagher>"/>
+		<meta name="page-name" content="about.html"/>
         
         <title>Omino: About</title>
 		
-		<div id="backend-import-css"></div>
+		{backend-import-css}
 	</head>
 	
-	<body class="container-fluid">
-		<div class="row">
-			<div class="col-sm">
-				<ul id="table-of-contents" class="sticky-top pt-3">
-				</ul>
-			</div>
-			<div class="col-sm-9">
-				<div id="backend-import-md"></div>
-			</div>
+	<body class="bg-light">
+		<div id="navbar-container" class="navbar-dark bg-dark">
+			{backend-import-navbar}
 		</div>
 		
-		<div id="backend-import-js"></div>
+		<div class="container-fluid">
+			<div class="row pt-2">
+				<div class="col-md d-none d-md-block">
+					<ul id="table-of-contents" class="sticky-top pt-3">
+					</ul>
+				</div>
+				<div class="col-md-9">
+					{backend-import-md}
+				</div>
+			</div>
+			
+			{backend-import-js}
+		</div>
 	</body>
 </html>
