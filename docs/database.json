@@ -10,7 +10,7 @@
 					"email": "owengall@icloud.com",
 					"github username": "ogallagher"
 				}
-			],
+			]
 		},
 		"last update": {
 			"year": 2021,
@@ -518,7 +518,7 @@
 		"skui",
 		"skoi",
 		"skai",
-		"skei"
+		"skei",
 		
 		"nado",
 		
@@ -1519,7 +1519,7 @@
 			"es:desacuerdo","es:no"
 		],
 		"hiuki": [
-	        "say no","disagree"
+	        "say no","disagree",
 			"es:decir que no","es:no estar de acuerdo"
 	    ],
 		"hiun": [
@@ -1534,7 +1534,7 @@
 		],
 		"muki": [
 			"en:want not","en:be unwanted",
-			"es:no querer","es:ser no querido"
+			"es:no querer","es:ser no querido",
 			"ko:싫어하다"
 		],
 		"mumki": [
@@ -1668,7 +1668,7 @@
 	    ],
 		"nau": [],
 		"neu": [
-			"bottom","foot"
+			"bottom","foot",
 			"es:fondo","es:pie"
 		],
 		"neuki": [
@@ -1680,7 +1680,7 @@
 	        "es:bajo","es:de fondo"
 	    ],
 		"neukin": [
-	        "plugged",
+	        "plugged"
 	    ],
 		"neul": [
 	        "at bottom of",
@@ -1711,7 +1711,7 @@
 		"siu": ["loss"],
 		"fu": ["absence","lack","zero"],
 		"fuki": [
-			"es:haber poco", "es:tener poco"
+			"es:haber poco", "es:tener poco",
 			"en:become scarce", "en:have few", "en:make few"
 		],
 		"fun": [
@@ -1829,7 +1829,7 @@
 		],
 		"duki": [
 			"sadden",
-			"es:entristecer"
+			"es:entristecer",
 			"ko:슬퍼하다"
 		],
 		"dun": [
@@ -1913,7 +1913,7 @@
 			"es:personificar"
 		],
 		"haon": [
-			"human","en:ones"
+			"human","en:ones",
 			"es:humano","es:propio"
 		],
 		"haokin": [
@@ -1961,7 +1961,7 @@
 			"bitten","mouthed","biting","mouthing"
 		],
 	    "maoski": [
-	        "en:tooth","en:fang"
+	        "en:tooth","en:fang",
 	        "es:diente"
 	    ],
 		"maoskiki": [
@@ -1984,7 +1984,7 @@
 		],
 		"loki": [
 			"face", "en:point to", "en:indicate",
-			"es:encararse a", "es:señalar",
+			"es:encararse a", "es:señalar"
 		],
 		"lon": [
 			"on route", "along the route",
@@ -1992,17 +1992,17 @@
 		],
 		"lokin": [
 			"en:faced", "en:indicated",
-			"es:indicado",
+			"es:indicado"
 		],
 		"lol": [
 			"en:to", "en:into", "en:toward",
-			"es:a", "es:en", "es:hacia"
+			"es:a", "es:en", "es:hacia",
 			"ko:로/으로", "ko:에"
 		],
 		"luo": [],
 		"lao": ["art"],
 		"leo": [
-			"en:literature","en:writing"
+			"en:literature","en:writing",
 			"es:literatura","es:escritura"
 		],
 		"leoki": [
@@ -2022,7 +2022,7 @@
 			"es:oreja","es:oído"
 		],
 		"naoki": [
-			"hear","listen","listen to","be heard","be listened to"
+			"hear","listen","listen to","be heard","be listened to",
 	        "es:escuchar","es:oír","es:ser escuchado","es:ser oído"
 		],
 		"naon": [
@@ -2058,7 +2058,7 @@
 			"es:sonido","es:ruido"
 		],
 		"nioki": [
-	        "es:sonar","es:intonar"
+	        "es:sonar","es:intonar",
 	        "en:sound","en:play","en:be played","en:be sounded"
 	    ],
 		"nion": [
@@ -2066,7 +2066,7 @@
 	        "es:ruidoso"
 	    ],
 		"niokin": [
-	        "sounded","played","sounding","playing"
+	        "sounded","played","sounding","playing",
 	        "es:intonado","es:que suena","es:que se toca","es:tocado"
 	    ],
 		"so": [
@@ -2206,12 +2206,12 @@
 			"en:orbit", "en:make a planet"
 		],
 		"baon": [
-			"en:orbiting", "en:planetary", "en:global"
+			"en:orbiting", "en:planetary", "en:global",
 			"es:hecho planeta", "es:global"
 		],
 		"baokin": [
-			"en:orbited", "en:made a planet"
-			"es:hecho planeta",
+			"en:orbited", "en:made a planet",
+			"es:hecho planeta"
 		],
 		"beo": [
 			"origin",
@@ -2260,7 +2260,7 @@
 			"es:hecho universal", "es:difundir"
 		],
 		"deon": [
-			"universal","natural"
+			"universal","natural",
 			"es:universal","es:natural"
 		],
 		"deokin": [
@@ -2293,7 +2293,7 @@
 			"es:ojo","es:dos"
 		],
 		"kaoki": [
-			"en:see","en:look at","en:watch","en:be seen","en:be watched","en:be looked at"
+			"en:see","en:look at","en:watch","en:be seen","en:be watched","en:be looked at",
 	        "es:ver","es:mirar"
 		],
 		"kaon": [
@@ -2381,7 +2381,7 @@
 			"ko:그들", "ko:그녀들"
 		],
 		"haseki": [
-			"refer to", "be referred to", "mention", "be mentioned"
+			"refer to", "be referred to", "mention", "be mentioned",
 			"es:referirse a", "es:mencionar", "es:ser referido", "es:ser mencionado"
 		],
 		"hasenei": [
@@ -2398,7 +2398,7 @@
 		],
 		"hasemki": [
 			"refer to", "mention",
-			"es:referirse a", "es:mencionar",
+			"es:referirse a", "es:mencionar"
 		],
 		"hasenein": [
 			"be referred to", "be mentioned",
@@ -2454,7 +2454,7 @@
 	        "es:mujer"
 	    ],
 		"hamaki": [
-			"en:make a woman","en:be made a woman"
+			"en:make a woman","en:be made a woman",
 			"es:hacer mujer","es:hacerse mujer"
 		],
 		"haman": [
@@ -2475,7 +2475,7 @@
 			"es:hacer amigo"
 		],
 		"hamen": [
-			"friendly"
+			"friendly",
 			"es:amigable", "es:amistoso"
 		],
 		"hamekin": [
@@ -2516,12 +2516,12 @@
 		"hua": [],
 		"hoa": [
 			"en:food",
-			"es:comida","es:alimento"
+			"es:comida","es:alimento",
 			"ko:음식","ko:식사"
 		],
 		"hoaki": [
-			"en:feed", "en:be fed"
-			"es:alimentar", "es:ser alimentado"
+			"en:feed", "en:be fed",
+			"es:alimentar", "es:ser alimentado",
 			"ko:먹이다"
 		],
 		"hoan": [
@@ -2530,7 +2530,7 @@
 		],
 		"hoakin": [
 			"en:fed",
-			"es:alimentado"
+			"es:alimentado",
 			"ko:먹인"
 		],
 		"hea": ["health","safety"],
@@ -2612,7 +2612,7 @@
 			"es:tener mucho", "es:hacer mucho"
 		],
 		"nan": [
-			"abundant","a lot of","be many"
+			"abundant","a lot of","be many",
 			"ko:많은"
 		],
 		"nakin": [
@@ -2660,7 +2660,7 @@
 			"es:satisfacer", "es:gustar"
 		],
 		"nian": [
-			"satisfied","content"
+			"satisfied","content",
 			"es:satisfecho","es:content"
 		],
 		"niakin": [
@@ -2680,7 +2680,7 @@
 	        "alienate", "be alienated"
 	    ],
 		"sean": [
-	        "alien", "foreign",
+	        "alien", "foreign"
 	    ],
 		"seakin": [
 	        "alienated", "alienating"
@@ -2703,15 +2703,15 @@
 	        "es:ave","es:pájaro"
 	    ],
 		"fa": [
-			"en:achievement","en:victory"
+			"en:achievement","en:victory",
 			"es:victoria","es:éxito"
 		],
 		"faki": [
-			"en:achieve","en:win"
+			"en:achieve","en:win",
 			"es:ganar","es:tener éxito"
 		],
 		"fan": [
-			"en:successful", "en:winning"
+			"en:successful", "en:winning",
 			"es:exitoso", "es:ganador"
 		],
 		"fakin": [
@@ -2725,7 +2725,7 @@
 			"throw","launch","projectile"
 		],
 		"fiaki": [
-	        "throw",
+	        "throw"
 	    ],
 		"fian": [
 	        "thrown","projectile","of throwing"
@@ -2752,7 +2752,7 @@
 			"ko:자는"
 		],
 		"bakin": [
-			"en:putting to sleep","en:be put to sleep"
+			"en:putting to sleep","en:be put to sleep",
 			"es:durmiendo", "es:dormido"
 		],
 		"bua": [
@@ -2766,7 +2766,7 @@
 		],
 		"buan": [
 			"en:plant-like",
-			"es:vegetal"
+			"es:vegetal",
 			"ko:식물처럼"
 		],
 		"buakin": [
@@ -2789,7 +2789,7 @@
 		"bia": ["clothing","garment"],
 		"da": ["happiness","joy","cheer"],
 		"taki": [
-			"make happy", "cheer"
+			"make happy", "cheer",
 			"es:animar", "es:alegrar"
 		],
 		"tan": [
@@ -2894,7 +2894,7 @@
 			"of furniture"
 		],
 		"hieki": [
-			"furnish","be furnished",
+			"furnish","be furnished"
 		],
 		"hiekin": [
 			"furnishing", "furnished"
@@ -2943,20 +2943,20 @@
 			"es:comparado"
 		],
 		"filel": [
-			"en:compared to/compared with", "en:relative to"
+			"en:compared to/compared with", "en:relative to",
 			"es:comparado con", "es:relativo a"
 		],
 		"leki": [
 	        "make similar", "approximate", "be made similar", "be approximated"
 	    ],
 		"len": [
-	        "similar", "similarly",
+	        "similar", "similarly"
 	    ],
 		"lekin": [
 	        "made similar", "approximated", "making similar", "approximating"
 	    ],
 		"lel": [
-	        "like, as",
+	        "like, as"
 	    ],
 		"lue": [],
 		"loe": [
@@ -3006,11 +3006,11 @@
 	    "lelaema": [
 	        "en:sister",
 	        "es:hermana",
-	        "ko:여동생","ko:누나","ko:언니",
+	        "ko:여동생","ko:누나","ko:언니"
 	    ],
 	    "hilae": [
 	        "en:parent",
-	        "es:padre","es:madre"
+	        "es:padre","es:madre",
 	        "ko:부모"
 	    ],
 		"hilaeki": [
@@ -3054,7 +3054,7 @@
 			"es:materno", "es:como madre"
 		],
 		"laemakin": [
-			"become a mother"
+			"become a mother",
 			"es: hecha madre"
 		],
 	    "kelae": [
@@ -3091,12 +3091,12 @@
 		],
 		"neki": [
 	        "bring close", 
-			"es:acercar",
+			"es:acercar"
 	    ],
 		"nen": [
 	        "this","close",
 			"es:este","es:cercano",
-			"ko:이",
+			"ko:이"
 	    ],
 		"nekin": [
 			"en:brought close","en:approaching","en:bringing close",
@@ -3130,11 +3130,11 @@
 	    ],
 		"sen": [
 	        "that", "far",
-	        "es:lejano" "es:ese" "es:aquél",
+	        "es:lejano", "es:ese", "es:aquél"
 	    ],
 		"sekin": [
-	        "en:distanced"
-	        "es:alejado",
+	        "en:distanced",
+	        "es:alejado"
 	    ],
 		"sel": [
 	        "far from",
@@ -3153,7 +3153,7 @@
 			"es:flotar al aire"
 		],
 		"sien": [
-			"en:floating", "en:aerial", "en:be in the sky"
+			"en:floating", "en:aerial", "en:be in the sky",
 			"es:flotante", "es:estar en el aire"
 		],
 		"siekin": [
@@ -3169,7 +3169,7 @@
 			"en:tire"
 		],
 		"fen": [
-			"es:cansado","es:fatigado"
+			"es:cansado","es:fatigado",
 			"en:tired","en:fatigued"
 		],
 		"fekin": [
@@ -3206,7 +3206,7 @@
 	        "ko:돈","ko:현금"
 	    ],
 		"kebueki": [
-			"en:buy", "en:sell", "en:rent", "en:lease", "en:pay"
+			"en:buy", "en:sell", "en:rent", "en:lease", "en:pay",
 			"es:comprar", "es:vender", "es:rentar", "es:alquilar", "es:pagar"
 		],
 		"kebuen": [
@@ -3261,7 +3261,7 @@
 		"doe": ["finding","discovery","recovery"],
 		"dae": ["hug","embrace","wrap"],
 		"die": [
-			"hand","five","highfive"
+			"hand","five","highfive",
 			"es:mano","es:cinco"
 		],
 		"diese": [
@@ -3332,7 +3332,7 @@
 			"es:herramienta","es:reparación","es:afinación"
 		],
 		"hoiki": [
-			"use a tool on", "fix", "tune"
+			"use a tool on", "fix", "tune",
 			"es:arreglar", "es:trabajar con herramienta", "es:afinar"
 		],
 		"hoin": [
@@ -3409,7 +3409,7 @@
 			"es:futuro","es:cuándo"
 		],
 		"liki": [
-			"en:spend time", "en:last"
+			"en:spend time", "en:last",
 			"ko:지내다", 
 			"es:durar", "es:pasar tiempo"
 		],
@@ -3422,49 +3422,49 @@
 			"es:donde se pasa tiempo", "es:con que se pasa tiempo"
 		],
 	    "hali": [
-	        "en:now","present"
+	        "en:now","present",
 	        "es:ahora","es:presente"
 	    ],
 		"haliki": [
-	        "happen", "make happen", "modernize",
+	        "happen", "make happen", "modernize"
 	    ],
 		"han": [
-	        "current", "happening",
+	        "current", "happening"
 	    ],
 		"hakin": [
-	        "modernized",
+	        "modernized"
 	    ],
 		"halil": [
-	        "while/when",
+	        "while/when"
 	    ],
 	    "fuli": [
 	        "en:past",
 	        "es:pasado"
 	    ],
 		"fuliki": [
-	        "deprecate", "precede",
+	        "deprecate", "precede"
 	    ],
 		"fulin": [
-	        "antecuated", "obselete", "precedent",
+	        "antecuated", "obselete", "precedent"
 	    ],
 		"fulikin": [
-	        "made obselete", "preceded by",
+	        "made obselete", "preceded by"
 	    ],
 		"fulil": [
-	        "before",
+	        "before"
 	    ],
 	    "soli": [
 	        "en:future",
 	        "es:futuro"
 	    ],
 		"soliki": [
-	        "modernize, postpone, succeed",
+	        "modernize, postpone, succeed"
 	    ],
 		"solin": [
-	        "successor, del futuro",
+	        "successor, del futuro"
 	    ],
 		"solil": [
-	        "after",
+	        "after"
 	    ],
 		"lui": [
 			"slipping","sliding","slipperiness"
@@ -3479,7 +3479,7 @@
 	        "lubricated", "made slippery"
 	    ],
 	    "luihai": [
-	        "en:snake","en:serpent"
+	        "en:snake","en:serpent",
 	        "es:serpiente"
 	    ],
 		"loi": [
@@ -3497,10 +3497,10 @@
 		],
 		"lein": [
 			"en:seasonal",
-			"es:estacional",
+			"es:estacional"
 		],
 		"leikin": [
-			"en:where a season is spent", "en:with which a season is spent"
+			"en:where a season is spent", "en:with which a season is spent",
 			"es:donde se pasa la temporada", "es:con que se pasa la temporada"
 		],
 		"ni": [
@@ -3508,11 +3508,11 @@
 			"es:simplicidad"
 		],
 		"niki": [
-	        "en:simplify","en:be simplified"
+	        "en:simplify","en:be simplified",
 			"es:simplificar","es:ser simplificado"
 	    ],
 		"nin": [
-	        "simple", "simply",
+	        "simple", "simply"
 	    ],
 		"nikin": [
 	        "simplified","simplifying"
@@ -3610,13 +3610,13 @@
 	        "make different, differentiate","be differentiated"
 	    ],
 		"fin": [
-	        "different",
+	        "different"
 	    ],
 		"fikin": [
 	        "differentiated","differentiating"
 	    ],
 		"fil": [
-	        "unlike","different from","than",
+	        "unlike","different from","than"
 	    ],
 		"fui": ["weapon"],
 		"foi": ["fear"],
@@ -3639,7 +3639,7 @@
 		"boi": ["vehicle"],
 		"bai": [],
 		"bei": [
-			"moment", "instant"
+			"moment", "instant",
 			"es:momento", "es:instante"
 		],
 		"beiki": [
@@ -3647,7 +3647,7 @@
 			"es:pasar un momento", "es:acortar"
 		],
 		"bein": [
-			"en:short", "en:temporary", "en:ephimeral", "en:transient"
+			"en:short", "en:temporary", "en:ephimeral", "en:transient",
 			"es:corto", "es:temporal", "es:efímero"
 		],
 		"beikin": [
@@ -3688,7 +3688,7 @@
 			"es:diversión", "es:entretenimiento"
 		],
 		"kaiki": [
-			"es:divertir", "es:entretener"
+			"es:divertir", "es:entretener",
 			"en:entertain", "en:have fun"
 		],
 		"kain": [
@@ -3709,11 +3709,11 @@
 		],
 		"kein": [
 			"en:happening",
-			"es:ocurriendo",
+			"es:ocurriendo"
 		],
 		"keikin": [
 			"en:made happen",
-			"es:hecho pasar",
+			"es:hecho pasar"
 		],
 		"beokei": [
 			"cause"
@@ -3753,7 +3753,7 @@
 			"effective","as a result"
 		],
 	    "neokeil": [
-	        "because of",
+	        "because of"
 	    ],
 		
 		"smu": [],
@@ -4627,7 +4627,7 @@
 			"omi:beokein Aki neokein Bki.","en:Cause A, effect B. A happening as a cause, B happens as a result.",
 			"omi:beon Aki neon Bki.","en:Origin A, destination B. Coming from A happening, B would happen.",
 			"omi:neokein Bki?","en:Effect B? Would B happen?",
-			"omi:neon Bki?","en:Destination B? Would B happen?",
+			"omi:neon Bki?","en:Destination B? Would B happen?"
 		],
 		"grammar present progressive": [
 			"en:I write in the house.","omi:habo habeam hel leoki.",
