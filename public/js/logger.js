@@ -37,6 +37,29 @@ class Logger {
 		}
 	}
 	
+	static level_number(level) {
+		switch (level.toLowerCase()) {
+			case 'debug':
+				return Logger.LEVEL_DEBUG
+			
+			case 'info':
+				return Logger.LEVEL_INFO
+			
+			case 'warning':
+				return Logger.LEVEL_WARNING
+			
+			case 'error':
+				return Logger.LEVEL_ERROR
+			
+			case 'critical':
+				return Logger.LEVEL_CRITICAL
+		
+			default:
+				console.log(`invalid logging level ${level}, using debug=${Logger.LEVEL_DEBUG}`)
+				return Logger.LEVEL_DEBUG
+		}
+	}
+	
 	static set_root(new_root) {
 		if (Logger.root != undefined) {
 			// move current root children to new root

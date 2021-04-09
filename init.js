@@ -11,6 +11,7 @@ Omino webserver initialization.
 
 const fs = require('fs')
 const ShowdownConverter = require('showdown').Converter
+const yargs = require('yargs')
 
 // frontend imports
 
@@ -23,6 +24,7 @@ const MD_DICTIONARY_FILE = 'dictionary.md'
 
 const PUBLIC_DIR = 'public'
 const TEMPLATES_DIR = 'templates'
+const DATA_DIR = 'data'
 
 const ABOUT_FILE = `${PUBLIC_DIR}/about.html`
 const ABOUT_TEMPLATE_FILE = `${TEMPLATES_DIR}/about.html`
@@ -39,9 +41,14 @@ const PLACEHOLDER_JS = '{backend-import-js}'
 const PLACEHOLDER_MD = '{backend-import-md}'
 const PLACEHOLDER_NAVBAR = '{backend-import-navbar}'
 
+const ISO_LANGS_FILE = `${DATA_DIR}/iso_language_codes.json`
+
+const CLI_LOG_LEVEL = 'logging'
+const CLI_COMPILE = 'compile'
+const CLI_IMPORT_ISO_LANGS = 'import-iso-langs'
+
 // module logger
 const log = new Logger('init', Logger.LEVEL_DEBUG)
-log.debug('logging initialized')
 
 // markdown-html converter
 const md_html_converter = new ShowdownConverter({
@@ -54,6 +61,30 @@ const md_html_converter = new ShowdownConverter({
 })
 
 // methods
+
+function parse_cli_args() {
+	return Promise.resolve(
+		yargs
+		.option(CLI_LOG_LEVEL, {
+			alias: 'l',
+			type: 'string',
+			description: 'Set logging level to one of: debug (verbose), info, warning, error, critical (quiet).'
+		})
+		.option(CLI_COMPILE, {
+			alias: 'c',
+			type: 'string',
+			description: `Compile a comma-delimited subset of available markdown files: all, ${MD_README_FILE}, ${MD_DICTIONARY_FILE}.`
+		})
+		.option(CLI_IMPORT_ISO_LANGS, {
+			type: 'boolean',
+			description: `Import language codes from ${ISO_LANGS_FILE} into the database.`,
+			default: false
+		})
+		.help()
+		.alias('help','h')
+		.argv
+	)
+}
 
 function load_navbar() {
 	return new Promise(function(resolve,reject) {
@@ -186,7 +217,7 @@ function compile_readme() {
 	})
 }
 
-function compile_dictionary() {
+function compile_dictionary() {	
 	return new Promise(function(resolve,reject) {
 		log.debug(`compiling ${MD_DICTIONARY_FILE} to html at ${DICTIONARY_FILE}`)
 		
@@ -232,18 +263,55 @@ function compile_dictionary() {
 
 // main
 
-compile_readme()
-.then(() => {
-	log.info('compilation of readme passed')
+parse_cli_args()
+.then(function(cli_args) {
+	if (cli_args[CLI_LOG_LEVEL]) {
+		let level = Logger.level_number(cli_args[CLI_LOG_LEVEL])
+		log.info(`set logging level to ${cli_args[CLI_LOG_LEVEL]}=${level}`)
+		log.set_level(level)
+	}
+	log.debug('logging initialized')
 	
-	compile_dictionary()
-	.then(() => {
-		log.info('compilation of dictionary passed')
-	})
-	.catch(() => {
-		log.critical('compilation of dictionary failed')
-	})
-})
-.catch(() => {
-	log.critical('compilation of readme failed')
+	if (cli_args[CLI_COMPILE]) {
+		let targets = cli_args[CLI_COMPILE].split(',')
+		
+		log.debug(`compiling: ${JSON.stringify(targets)}`)
+		
+		new Promise(function(resolve) {
+			if (targets.includes(MD_README_FILE)) {
+				compile_readme()
+				.then(() => {
+					log.info('compilation of readme passed')
+				})
+				.catch(() => {
+					log.critical('compilation of readme failed')
+				})
+				.finally(resolve)
+			}
+			else {
+				resolve()
+			}
+		})
+		.then(() => {
+			return new Promise(function(resolve) {
+				if (targets.includes(MD_DICTIONARY_FILE)) {
+					compile_dictionary()
+					.then(() => {
+						log.info('compilation of dictionary passed')
+					})
+					.catch(() => {
+						log.critical('compilation of dictionary failed')
+					})
+					.finally(resolve)
+				}
+				else {
+					resolve()
+				}
+			})
+		})
+	}
+	
+	if (cli_args[CLI_IMPORT_ISO_LANGS]) {
+		log.debug('importing iso language codes')
+	}
 })
