@@ -1470,7 +1470,10 @@
 			"grammar suffix","passive verb"
 		],
 		
-		"hu": ["stillness","four"],
+		"hu": [
+			"en:stillness","en:four",
+			"es:quietud","es:cuatro"
+		],
 		"huki": [
 			"stop",
 			"es:parar/pararse", "es:detener/detenerse"
@@ -1869,7 +1872,7 @@
 		"kau": [],
 		"keu": ["pain"],
 		"kiu": ["killing","slaughter","murder"],
-
+		
 		"ho": [
 			"en:thing","en:it","en:object",
 			"es:cosa","es:eso","es:objeto",
@@ -2830,7 +2833,10 @@
 	        "day after tomorrow",
 			"es:pasado mañada"
 	    ],
-		"ka": ["desire","want"],
+		"ka": [
+			"desire","want",
+			"es:deseo","es:querer"
+		],
 		"kaki": [
 			"en:want", "en:desire",
 			"es:querer", "es:desear"
@@ -2843,12 +2849,26 @@
 			"en:wanted", "en:desired",
 			"es:deseado", "es:querido"
 		],
-		"kua": ["hole","stab"],
-		"koa": [],
-		"kea": [],
-		"kia": ["jump","hop"],
+		"kua": [
+			"hole","stab",
+			"es:puñalada","es:agujero","es:hoyo"
+		],
+		"koa": [
+			"en:await","en:hope",
+			"es:esperar"
+		],
+		"kea": [
+			"en:work","en:labor","en:functioning",
+			"es:trabajo","es:laburo","es:funcionamiento"
+		],
+		"kia": [
+			"jump","hop",
+			"es:saltar","es:brincar"
+		],
 		
-		"he": ["existence","being","state","equality","one"],
+		"he": [
+			"existence","being","state","equality","one"
+		],
 		"heki": [
 			"en:be", "en:there is", "en:there are",
 			"es:hay", "es:ser", "es:estar", 

@@ -487,9 +487,8 @@ Each root is a monosyllable noun, chosen as a fitting embodiment of the combinat
 
 ### All roots (simple, dipthong, double consonant)
 
-
 |       |  h  |  m  |  l  |  n  |  s  |  f  |  b  |  d  |  k  | sm | sn | sf | sp | st | sk |
-| ----- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ---- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **u**  | hu - stillness | mu - want not | lu - removal | nu - darkness | su - lowness,depth | fu - absence,lack | bu - ground | du - sadness | ku - death | sm | snu - shadow | sfu - decrease | spu - secret | st | sk |
 | **uo** | huo - whisper,self |  muo  |  luo  |  nuo  |  suo  |  fuo  |  buo  |  duo  |  kuo - piece,part | sm | sn | sf| sp | st | sk |
 | **ua** | hua  |  mua - kiss |  lua  |  nua - experience |  sua - invisibility |  fua - consumption |  bua - plant |  dua  |  kua hole,stab | sm | sn | sf| sp | st | sk |
@@ -497,17 +496,17 @@ Each root is a monosyllable noun, chosen as a fitting embodiment of the combinat
 | **ui** | hui - artificiality |  mui - flow,current |  lui - sliding,slipping |  nui - top |  sui - steepness |  fui - weapon |  bui - business |  dui - chaos,disorder |  kui - speed | sm | sn | sf| sp | st | sk |
 | **ou** | hou |  mou - want not  |  lou - age  |  nou - falsehood |  sou - emptiness  |  fou |  bou - respect |  dou |  kou  | sm | sn | sf| sp | st | sk |
 | **o**  | ho - thing,it | mo - peace | lo - direction | no - knowledge | so - ignorance | fo - uncertainty | bo - importance | do - size | ko - appearance | sm | sno - flavor,taste | sf| sp | st | sk |
-| **oa** | hoa - food |  moa - truth |  loa - love |  noa - body |  soa |  foa |  boa - head |  doa - help |  koa  | sm | sn | sf| sp | st | sk |
+| **oa** | hoa - food |  moa - truth |  loa - love |  noa - body |  soa |  foa |  boa - head |  doa - help |  koa - hope  | sm | sn | sf| sp | st | sk |
 | **oe** | hoe - whole |  moe - smoothness |  loe - normalcy |  noe - possession |  soe - luck,randomness |  foe |  boe - fullness |  doe - finding |  koe - reflection | sm | snoe - familiarity | sf| sp | st | skoe - moon |
 | **oi** | hoi - tool |  moi  |  loi - exposure,vulnerability |  noi - thought |  soi - weightlessness |  foi - fear |  boi - vehicle |  doi - emotion |  koi - color | sm | sn | sf| sp | st | skoi - rainbow |
 | **au** | hau  |  mau - ice  |  lau  |  nau  |  sau - rain |  fau - sickness |  bau - preservation |  dau - extraction |  kau  | sm | sn | sf| sp | st | sk |
 | **ao** | hao - person |  mao - mouth |  lao - art |  nao - ear |  sao - nose |  fao |  bao - world |  dao  |  kao - eye | sm | snao - tongue | sf| sp | st | sk |
 | **a**  | ha - life | ma - water | la - music | na - abundance | sa - air | fa - achievement | ba - sleep,rest | da - happiness | ka - desire | sma - breath | sna - increase | sf| sp | st | ska - request |
-| **ae** | hae |  mae |  lae - family |  nae - stickiness,attraction |  sae - freedom |  fae |  bae - order |  dae - hug,embrace |  kae | sm | sn | sf| sp | st | sk |
+| **ae** | hae |  mae |  lae - family |  nae - stickiness,attraction |  sae - freedom |  fae |  bae - order |  dae - hug,embrace |  kae | sm | sn | sf | sp | st | sk |
 | **ai** | hai - animal |  mai - youth |  lai |  nai - belief |  sai - cloud |  fai - effort,attempt |  bai |  dai - fire |  kai - fun | smai - steam | sn | sf| sp | st | sk |
 | **eu** | heu - singularity  |  meu  |  leu - departure |  neu - bottom  |  seu - quiet |  feu - opposition,negativity |  beu - solid |  deu - frown |  keu - pain | sm | sn | sf| sp | steu - dryness | sk |
 | **eo** | heo - balance |  meo - roundness |  leo - literature |  neo - destination |  seo |  feo |  beo - origin |  deo - nature,universe |  keo - count,number | sm | sneo - goal,target | sf| sp | st | sk |
-| **ea** | hea - health,safety |  mea - good |  lea - ease |  nea - affirmation,positivity |  sea - alien |  fea - irritation,itchiness |  bea - cover,protection | dea - smile | kea | sm | sn | sf| sp | st | sk |
+| **ea** | hea - health,safety |  mea - good |  lea - ease |  nea - affirmation,positivity |  sea - alien |  fea - irritation,itchiness |  bea - cover,protection | dea - smile | kea - labor,work | sm | sn | sf| sp | st | sk |
 | **e**  | he - existence | me - addition | le - similarity | ne - proximity | se - distance | fe - fatigue | be - place,location | de - touch,feeling | ke - repetition | sme - meeting | sne - edge,border | sf| sp | ste - arm | sk |
 | **ei** | hei - type |  mei - liquid |  lei - season |  nei - idleness |  sei - gas |  fei - difficulty |  bei - moment |  dei - heat | kei - occurrence | sm | sn | sf| sp | st | sk |
 | **iu** | hiu - no,disagreement  |  miu - snow  |  liu - taking,greed |  niu - deception,trick |  siu - loss |  fiu - dissatisfaction | biu - cold | diu - bad | kiu - slaughter | smiu - foot | sn | sf| sp | st | sk |
