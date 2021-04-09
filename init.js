@@ -217,7 +217,7 @@ function compile_readme() {
 	})
 }
 
-function compile_dictionary() {	
+function compile_dictionary() {
 	return new Promise(function(resolve,reject) {
 		log.debug(`compiling ${MD_DICTIONARY_FILE} to html at ${DICTIONARY_FILE}`)
 		
@@ -258,6 +258,18 @@ function compile_dictionary() {
 				}
 			}
 		})
+	})
+}
+
+function import_iso_langs() {
+	return new Promise(function(resolve,reject) {
+		let langs = require(`./${ISO_LANGS_FILE}`)
+		log.debug(`loaded ${langs.length} language codes from ${ISO_LANGS_FILE}`)
+		
+		// ex. { English: 'Afar', alpha2: 'aa', 'alpha3-b': 'aar' }
+		for (let lang of langs) {
+			
+		}
 	})
 }
 
@@ -313,5 +325,13 @@ parse_cli_args()
 	
 	if (cli_args[CLI_IMPORT_ISO_LANGS]) {
 		log.debug('importing iso language codes')
+		
+		import_iso_langs()
+		.then(() => {
+			log.info('iso langs import complete')
+		})
+		.catch(() => {
+			log.error('failed to import iso language codes')
+		})
 	}
 })

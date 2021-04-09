@@ -22,6 +22,7 @@ try {
 	// backend imports
 	
 	const tests = require('./tests')
+	const db_server = require('./db/db_server')
 	
 	// constants
 	
@@ -38,14 +39,19 @@ try {
 	
 	// cross origin request origins
 	const origins = [
-		'https://localhost', 						//local testing (same device)
-		'http://localhost',							//local testing (same devicel; http)
-		'https://192.168.0.24',						//local testing (different devices)
-		'http://192.168.0.24'						//local testing (different devices; http)
+		'http://localhost',	'http://127.0.0.1',		// local testing (same device)
+		'http://192.168.0.30',						// local testing (different devices, pi)
+		'http://ominolanguage.com'					// omino domain tbd
 	]
 	
 	// logging
 	const log = new Logger('server', Logger.LEVEL_DEBUG)
+	
+	// routing
+	const ROUTE_DB = '/db'
+	
+	// server instance
+	const server = express()
 	
 	// methods
 	
@@ -72,6 +78,33 @@ try {
 		log.always(`${WEBSITE_NAME} server is running at <host>:${server.get('port')}`)
 	}
 	
+	function handle_db(endpoint,args,res) {
+		log.info(`db: ${endpoint} [${args}]`)
+		
+		db_server
+		.get_query(endpoint, args, true)
+		.then(function(action) {
+		    if (action.sql) {
+		  		db_server.send_query(action.sql, function(err,data) {
+		  			if (err) {
+		  				log.error(`error in db data fetch: ${err}`)
+		  				res.json({error: 'fetch error'})
+		  			}
+		  			else {
+		  				res.json(data)
+		  			}
+		  		})
+		    }
+			else {
+				res.json({error: action})
+			}
+		})
+		.catch(function(err) {
+			log.error('conversion from endpoint to sql failed: ' + err)
+			res.json({error: 'endpoint error'})
+		})
+	}
+	
 	// main
 	
 	parse_cli_args()
@@ -94,7 +127,6 @@ try {
 			tests.read_dotenv(['TEST_KEY'])
 	
 			// handle POST request data with bodyparser
-			const server = express()
 			server.use(bodyparser.json())
 			server.use(bodyparser.urlencoded({
 				extended: false,
@@ -122,6 +154,22 @@ try {
 		
 			// http server
 			server.listen(server.get('port'), on_start)
+			
+			//expose database
+			server
+			.route(ROUTE_DB)
+			.get(function (req,res) {
+				let endpoint = req.query.endpoint //db api endpoint
+				let args = req.query.args //inputs for compiled sql string
+			
+				handle_db(endpoint,args,res)
+			})
+			.post(function (req,res) {
+				let endpoint = req.body.endpoint //db api endpoint
+				let args = req.body.args //inputs for compiled sql string
+		
+				handle_db(endpoint,args,res)
+			});
 		}
 		else {
 			log.info('webserver not enabled; skipping')

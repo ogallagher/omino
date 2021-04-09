@@ -1,0 +1,12 @@
+{
+	"match_email": {
+		"params": ["{username}","{email}"],
+		"query": "select 1 from people where username={username} and email={email}",
+		"external": true
+	},
+	"insert_language": {
+		"external": false,
+		"params": [],
+		"query": "insert into languages(code,english) values"
+	}
+}
