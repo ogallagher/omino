@@ -1,0 +1,37 @@
+<!--
+	Owen Gallagher <github.com/ogallagher>
+	2021-04-08
+	
+	Custom scripts for generated html from markdown, including imports of external javascript.
+-->
+
+<!-- external js -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<!-- custom js -->
+<script type="text/javascript">
+	// add css classes
+	
+	$('table').addClass('table table-striped')
+	
+	$('pre').addClass('bg-dark text-light rounded p-2')
+	
+	$('h1,h2').addClass('border-bottom')
+	
+	// create left index of headings (table of contents)
+	
+	let toc = $('#table-of-contents')
+    $('h2,h3').each(function (index) {
+		let heading = $(this)
+		
+        let anchor = $(`<a name="toc${index}" id="toc${index}"></a>`)
+		heading.prepend(anchor)
+		
+		let level = parseInt(heading.prop('tagName').toLowerCase().replace('h',''))
+		
+        toc.append($(
+        	`<li class="h${level+3}"><a href="#toc${index}">${heading.text()}</a></li>`
+        ))
+    })
+</script>

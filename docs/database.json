@@ -1,0 +1,5223 @@
+{
+	"notes": {
+		"about this file": "This is essentially a formal restructuring of all details I've compiled for Omino, in preparation for an automated workflow that will convert this data into a proper normalized database.",
+		"ordered omino alphabet": "uoaeihmlnsfbdk",
+		"ordered english alphabet": "abcdefghijklmnopqrstuvwxyz",
+		"contributors": {
+			"authors": [
+				{
+					"full name": "Owen Gallagher",
+					"email": "owengall@icloud.com",
+					"github username": "ogallagher"
+				}
+			],
+		},
+		"last update": {
+			"year": 2021,
+			"month": 4,
+			"day": 8,
+			"hour": 0,
+			"minute": 0
+		},
+		"iso codes": {
+			"2 char": "oo",
+			"3 char": "omi"
+		},
+		"misc": [
+			"Examples can be examples of concepts (ex. grammar conditional tense) in addition to vocabulary.",
+			"Unnamed translations are under the \"#noname\" entry.",
+			"aliases are same-language mappings between synonyms. They should be restructured so there's no hierarchy, rather an unordered list of a-b pairs."
+		]
+	},
+	"letters": [
+		"u",
+		"o",
+		"a",
+		"e",
+		"i",
+		"h",
+		"m",
+		"l",
+		"n",
+		"s",
+		"z",
+		"f",
+		"v",
+		"b",
+		"p",
+		"d",
+		"t",
+		"g",
+		"k"
+	],
+	"vowels": [
+		"u",
+		"o",
+		"a",
+		"e",
+		"i"
+	],
+	"consonants": [
+		"m",
+		"l",
+		"n",
+		"s",
+		"z",
+		"f",
+		"v",
+		"h",
+		"b",
+		"p",
+		"d",
+		"t",
+		"g",
+		"k"
+	],
+	"aliases": {
+		"s": ["z"],
+		"z": ["s"],
+		"f": ["v"],
+		"v": ["f"],
+		"t": ["d"],
+		"d": ["t"],
+		"k": ["g"],
+		"g": ["k"],
+		
+		"grammar suffix": ["particle"],
+		"particle": ["grammar suffix"],
+		
+		"m kiki": ["mki"],
+		
+		"0": [0,"zero"],
+		"1": [1,"one","January"],
+		"2": [2,"two","February"],
+		"3": [3,"three","March"],
+		"4": [4,"four","April"],
+		"5": [5,"five","May"],
+		"6": [6,"six","June"],
+		"7": [7,"seven","July"],
+		"8": [8,"eight","August"],
+		"9": [9,"nine","September"],
+		"10": [10,"ten","October"],
+		"11": [11,"eleven","November"],
+		"12": [12,"twelve","December"],
+		
+		"nado": ["bao"],
+		
+		"gray": ["grey"],
+		
+		"much": ["many","a lot"],
+		
+		"en:moment": ["en:instant"],
+		"es:momento": ["es:instante"]
+	},
+	"preferred aliases": [
+		"s","f","d","b","k","grammar suffix","bao","gray","much"
+	],
+	"preconsonants": [
+		"m",
+		"l",
+		"n",
+		"s",
+		"z",
+		"f",
+		"v"
+	],
+	"grammar suffixes": [
+		"bo","ki","n","l","m","s","f","mki","m kiki","nei"
+	],
+	"words": [
+		"hu",
+		"hou",
+		"hau",
+		"heu",
+		"hiu",
+		"mu",
+		"mou",
+		"mau",
+		"meu",
+		"miu",
+		"lu",
+		"lou",
+		"lau",
+		"leu",
+		"liu",
+		"nu",
+		"nou",
+		"nau",
+		"neu",
+		"niu",
+		"su",
+		"sou",
+		"sau",
+		"seu",
+		"siu",
+		"fu",
+		"fou",
+		"fau",
+		"feu",
+		"fiu",
+		"bu",
+		"bou",
+		"bau",
+		"beu",
+		"biu",
+		"du",
+		"dou",
+		"dau",
+		"deu",
+		"diu",
+		"ku",
+		"kou",
+		"kau",
+		"keu",
+		"kiu",
+
+		"ho",
+		"huo",
+		"hao",
+		"heo",
+		"hio",
+		"mo",
+		"muo",
+		"mao",
+		"meo",
+		"mio",
+		"lo",
+		"luo",
+		"lao",
+		"leo",
+		"lio",
+		"no",
+		"nuo",
+		"nao",
+		"neo",
+		"nio",
+		"so",
+		"sohao","sobei","soli",
+		"suo",
+		"sao",
+		"seo",
+		"sio",
+		"fo",
+		"fuo",
+		"fao",
+		"feo",
+		"fio",
+		"bo",
+		"buo",
+		"bao",
+		"beo",
+		"bio",
+		"do",
+		"duo",
+		"dao",
+		"deo",
+		"dio",
+		"ko",
+		"kuo",
+		"kao",
+		"keo",
+		"kio",
+		
+		"ha",
+		"habo","hane","hase","haso","hasa","hamo","hama",
+		"hame","hafeu",
+		"habea",
+		"hua",
+		"hoa",
+		"hea",
+		"hia",
+		"ma",
+		"mua",
+		"moa",
+		"mea",
+		"mia",
+		"miahai",
+		"la",
+		"lua",
+		"loa",
+		"lea",
+		"lia",
+		"na",
+		"nua",
+		"noa",
+		"nea",
+		"nia",
+		"sa",
+		"sua",
+		"soa",
+		"sea",
+		"sia",
+		"siahai",
+		"fa",
+		"fua",
+		"foa",
+		"fea",
+		"fia",
+		"ba",
+		"bua",
+		"boa",
+		"bea",
+		"bia",
+		"da",
+		"dua",
+		"doa",
+		"dea",
+		"dia",
+		"ka",
+		"kua",
+		"koa",
+		"kea",
+		"kia",
+		
+		"he",
+		"hue",
+		"hoe",
+		"hae",
+		"hie",
+		"me",
+		"mue",
+		"moe",
+		"mae",
+		"mie",
+		"le",
+		"lue",
+		"loe",
+		"lae",
+		"lelae","hilae","laemo","laema","kelae",
+		"lie",
+		"ne",
+		"nue",
+		"noe",
+		"nae",
+		"nie",
+		"se",
+		"sue",
+		"soe",
+		"sae",
+		"sie",
+		"fu",
+		"fue",
+		"foe",
+		"fae",
+		"fie",
+		"be",
+		"bue",
+		"boe",
+		"bae",
+		"bie",
+		"du",
+		"due",
+		"doe",
+		"dae",
+		"die","diese",
+		"ke",
+		"kue",
+		"koe",
+		"kae",
+		"kie",
+		
+		"hi",
+		"hui",
+		"hoi",
+		"hai",
+		"hei",
+		"mi",
+		"mui",
+		"moi",
+		"mai",
+		"mei",
+		"li",
+		"lui",
+		"luihai",
+		"loi",
+		"lai",
+		"lei",
+		"ni",
+		"nui",
+		"noi",
+		"nai",
+		"nei",
+		"si",
+		"sui",
+		"soi",
+		"sai",
+		"sei",
+		"fi",
+		"fui",
+		"foi",
+		"fai",
+		"fei",
+		"bi",
+		"bui",
+		"boi",
+		"bai",
+		"bei",
+		"di",
+		"dui",
+		"doi",
+		"dai",
+		"dei",
+		"ki",
+		"kui",
+		"koi",
+		"kai",
+		"kei",
+		
+		"smu",
+		"smou",
+		"smau",
+		"smeu",
+		"smiu",
+		"snu",
+		"snou",
+		"snau",
+		"sneu",
+		"sniu",
+		"sfu",
+		"sfou",
+		"sfau",
+		"sfeu",
+		"sfiu",
+		"sbu",
+		"sbou",
+		"sbau",
+		"sbeu",
+		"sbiu",
+		"sdu",
+		"sdou",
+		"sdau",
+		"sdeu",
+		"sdiu",
+		"sku",
+		"skou",
+		"skau",
+		"skeu",
+		"skiu",
+
+		"smo",
+		"smuo",
+		"smao",
+		"smeo",
+		"smio",
+		"sno",
+		"snuo",
+		"snao",
+		"sneo",
+		"snio",
+		"sfo",
+		"sfuo",
+		"sfao",
+		"sfeo",
+		"sfio",
+		"sbo",
+		"sbuo",
+		"sbao",
+		"sbeo",
+		"sbio",
+		"sdo",
+		"sduo",
+		"sdao",
+		"sdeo",
+		"sdio",
+		"sko",
+		"skuo",
+		"skao",
+		"skeo",
+		"skio",
+
+		"sma",
+		"smua",
+		"smoa",
+		"smea",
+		"smia",
+		"sna",
+		"snua",
+		"snoa",
+		"snea",
+		"snia",
+		"sfa",
+		"sfua",
+		"sfoa",
+		"sfea",
+		"sfia",
+		"sba",
+		"sbua",
+		"sboa",
+		"sbea",
+		"sbia",
+		"sda",
+		"sdua",
+		"sdoa",
+		"sdea",
+		"sdia",
+		"ska",
+		"skua",
+		"skoa",
+		"skea",
+		"skia",
+		
+		"sme",
+		"smue",
+		"smoe",
+		"smae",
+		"smie",
+		"sne",
+		"snue",
+		"snoe",
+		"snae",
+		"snie",
+		"sfu",
+		"sfue",
+		"sfoe",
+		"sfae",
+		"sfie",
+		"sbe",
+		"sbue",
+		"sboe",
+		"sbae",
+		"sbie",
+		"sdu",
+		"sdue",
+		"sdoe",
+		"sdae",
+		"sdie",
+		"ske",
+		"skue",
+		"skoe",
+		"skae",
+		"skie",
+		
+		"smi",
+		"smui",
+		"smoi",
+		"smai",
+		"smei",
+		"sni",
+		"snui",
+		"snoi",
+		"snai",
+		"snei",
+		"sfi",
+		"sfui",
+		"sfoi",
+		"sfai",
+		"sfei",
+		"sbi",
+		"sbui",
+		"sboi",
+		"sbai",
+		"sbei",
+		"sdi",
+		"sdui",
+		"sdoi",
+		"sdai",
+		"sdei",
+		"ski",
+		"skui",
+		"skoi",
+		"skai",
+		"skei"
+		
+		"nado",
+		
+		"daikoi",
+		"makoi",
+		"dakoi",
+		"suakoi",
+		"nukoi",
+		"bekoi",
+		"hakoi",
+		"suekoi",
+		"bukoi",
+		"soikoi",
+		"saikoi",
+		"keikoi"
+	],
+	"roots": [
+		"hu",
+		"hou",
+		"hau",
+		"heu",
+		"hiu",
+		"mu",
+		"mou",
+		"mau",
+		"meu",
+		"miu",
+		"lu",
+		"lou",
+		"lau",
+		"leu",
+		"liu",
+		"nu",
+		"nou",
+		"nau",
+		"neu",
+		"niu",
+		"su",
+		"sou",
+		"sau",
+		"seu",
+		"siu",
+		"fu",
+		"fou",
+		"fau",
+		"feu",
+		"fiu",
+		"bu",
+		"bou",
+		"bau",
+		"beu",
+		"biu",
+		"du",
+		"dou",
+		"dau",
+		"deu",
+		"diu",
+		"ku",
+		"kou",
+		"kau",
+		"keu",
+		"kiu",
+
+		"ho",
+		"huo",
+		"hao",
+		"heo",
+		"hio",
+		"mo",
+		"muo",
+		"mao",
+		"meo",
+		"mio",
+		"lo",
+		"luo",
+		"lao",
+		"leo",
+		"lio",
+		"no",
+		"nuo",
+		"nao",
+		"neo",
+		"nio",
+		"so",
+		"suo",
+		"sao",
+		"seo",
+		"sio",
+		"fo",
+		"fuo",
+		"fao",
+		"feo",
+		"fio",
+		"bo",
+		"buo",
+		"bao",
+		"beo",
+		"bio",
+		"do",
+		"duo",
+		"dao",
+		"deo",
+		"dio",
+		"ko",
+		"kuo",
+		"kao",
+		"keo",
+		"kio",
+		
+		"ha",
+		"hua",
+		"hoa",
+		"hea",
+		"hia",
+		"ma",
+		"mua",
+		"moa",
+		"mea",
+		"mia",
+		"la",
+		"lua",
+		"loa",
+		"lea",
+		"lia",
+		"na",
+		"nua",
+		"noa",
+		"nea",
+		"nia",
+		"sa",
+		"sua",
+		"soa",
+		"sea",
+		"sia",
+		"fa",
+		"fua",
+		"foa",
+		"fea",
+		"fia",
+		"ba",
+		"bua",
+		"boa",
+		"bea",
+		"bia",
+		"da",
+		"dua",
+		"doa",
+		"dea",
+		"dia",
+		"ka",
+		"kua",
+		"koa",
+		"kea",
+		"kia",
+		
+		"he",
+		"hue",
+		"hoe",
+		"hae",
+		"hie",
+		"me",
+		"mue",
+		"moe",
+		"mae",
+		"mie",
+		"le",
+		"lue",
+		"loe",
+		"lae",
+		"lie",
+		"ne",
+		"nue",
+		"noe",
+		"nae",
+		"nie",
+		"se",
+		"sue",
+		"soe",
+		"sae",
+		"sie",
+		"fu",
+		"fue",
+		"foe",
+		"fae",
+		"fie",
+		"be",
+		"bue",
+		"boe",
+		"bae",
+		"bie",
+		"du",
+		"due",
+		"doe",
+		"dae",
+		"die",
+		"ke",
+		"kue",
+		"koe",
+		"kae",
+		"kie",
+		
+		"hi",
+		"hui",
+		"hoi",
+		"hai",
+		"hei",
+		"mi",
+		"mui",
+		"moi",
+		"mai",
+		"mei",
+		"li",
+		"lui",
+		"loi",
+		"lai",
+		"lei",
+		"ni",
+		"nui",
+		"noi",
+		"nai",
+		"nei",
+		"si",
+		"sui",
+		"soi",
+		"sai",
+		"sei",
+		"fi",
+		"fui",
+		"foi",
+		"fai",
+		"fei",
+		"bi",
+		"bui",
+		"boi",
+		"bai",
+		"bei",
+		"di",
+		"dui",
+		"doi",
+		"dai",
+		"dei",
+		"ki",
+		"kui",
+		"koi",
+		"kai",
+		"kei",
+		
+		"smu",
+		"smou",
+		"smau",
+		"smeu",
+		"smiu",
+		"snu",
+		"snou",
+		"snau",
+		"sneu",
+		"sniu",
+		"sfu",
+		"sfou",
+		"sfau",
+		"sfeu",
+		"sfiu",
+		"sbu",
+		"sbou",
+		"sbau",
+		"sbeu",
+		"sbiu",
+		"sdu",
+		"sdou",
+		"sdau",
+		"sdeu",
+		"sdiu",
+		"sku",
+		"skou",
+		"skau",
+		"skeu",
+		"skiu",
+
+		"smo",
+		"smuo",
+		"smao",
+		"smeo",
+		"smio",
+		"sno",
+		"snuo",
+		"snao",
+		"sneo",
+		"snio",
+		"sfo",
+		"sfuo",
+		"sfao",
+		"sfeo",
+		"sfio",
+		"sbo",
+		"sbuo",
+		"sbao",
+		"sbeo",
+		"sbio",
+		"sdo",
+		"sduo",
+		"sdao",
+		"sdeo",
+		"sdio",
+		"sko",
+		"skuo",
+		"skao",
+		"skeo",
+		"skio",
+
+		"sma",
+		"smua",
+		"smoa",
+		"smea",
+		"smia",
+		"sna",
+		"snua",
+		"snoa",
+		"snea",
+		"snia",
+		"sfa",
+		"sfua",
+		"sfoa",
+		"sfea",
+		"sfia",
+		"sba",
+		"sbua",
+		"sboa",
+		"sbea",
+		"sbia",
+		"sda",
+		"sdua",
+		"sdoa",
+		"sdea",
+		"sdia",
+		"ska",
+		"skua",
+		"skoa",
+		"skea",
+		"skia",
+		
+		"sme",
+		"smue",
+		"smoe",
+		"smae",
+		"smie",
+		"sne",
+		"snue",
+		"snoe",
+		"snae",
+		"snie",
+		"sfu",
+		"sfue",
+		"sfoe",
+		"sfae",
+		"sfie",
+		"sbe",
+		"sbue",
+		"sboe",
+		"sbae",
+		"sbie",
+		"sdu",
+		"sdue",
+		"sdoe",
+		"sdae",
+		"sdie",
+		"ske",
+		"skue",
+		"skoe",
+		"skae",
+		"skie",
+		
+		"smi",
+		"smui",
+		"smoi",
+		"smai",
+		"smei",
+		"sni",
+		"snui",
+		"snoi",
+		"snai",
+		"snei",
+		"sfi",
+		"sfui",
+		"sfoi",
+		"sfai",
+		"sfei",
+		"sbi",
+		"sbui",
+		"sboi",
+		"sbai",
+		"sbei",
+		"sdi",
+		"sdui",
+		"sdoi",
+		"sdai",
+		"sdei",
+		"ski",
+		"skui",
+		"skoi",
+		"skai",
+		"skei"
+	],
+	"simple roots": [
+		"hu",
+		"ho",
+		"ha",
+		"he",
+		"hi",
+		"mu",
+		"mo",
+		"ma",
+		"me",
+		"mi",
+		"lu",
+		"lo",
+		"la",
+		"le",
+		"li",
+		"nu",
+		"no",
+		"na",
+		"ne",
+		"ni",
+		"su",
+		"so",
+		"sa",
+		"se",
+		"si",
+		"fu",
+		"fo",
+		"fa",
+		"fe",
+		"fi",
+		"bu",
+		"bo",
+		"ba",
+		"be",
+		"bi",
+		"du",
+		"do",
+		"da",
+		"de",
+		"di",
+		"ku",
+		"ko",
+		"ka",
+		"ke",
+		"ki"
+	],
+	"single consonant roots": [
+		"hu",
+		"hou",
+		"hau",
+		"heu",
+		"hiu",
+		"mu",
+		"mou",
+		"mau",
+		"meu",
+		"miu",
+		"lu",
+		"lou",
+		"lau",
+		"leu",
+		"liu",
+		"nu",
+		"nou",
+		"nau",
+		"neu",
+		"niu",
+		"su",
+		"sou",
+		"sau",
+		"seu",
+		"siu",
+		"fu",
+		"fou",
+		"fau",
+		"feu",
+		"fiu",
+		"bu",
+		"bou",
+		"bau",
+		"beu",
+		"biu",
+		"du",
+		"dou",
+		"dau",
+		"deu",
+		"diu",
+		"ku",
+		"kou",
+		"kau",
+		"keu",
+		"kiu",
+
+		"ho",
+		"huo",
+		"hao",
+		"heo",
+		"hio",
+		"mo",
+		"muo",
+		"mao",
+		"meo",
+		"mio",
+		"lo",
+		"luo",
+		"lao",
+		"leo",
+		"lio",
+		"no",
+		"nuo",
+		"nao",
+		"neo",
+		"nio",
+		"so",
+		"suo",
+		"sao",
+		"seo",
+		"sio",
+		"fo",
+		"fuo",
+		"fao",
+		"feo",
+		"fio",
+		"bo",
+		"buo",
+		"bao",
+		"beo",
+		"bio",
+		"do",
+		"duo",
+		"dao",
+		"deo",
+		"dio",
+		"ko",
+		"kuo",
+		"kao",
+		"keo",
+		"kio",
+		
+		"ha",
+		"hua",
+		"hoa",
+		"hea",
+		"hia",
+		"ma",
+		"mua",
+		"moa",
+		"mea",
+		"mia",
+		"la",
+		"lua",
+		"loa",
+		"lea",
+		"lia",
+		"na",
+		"nua",
+		"noa",
+		"nea",
+		"nia",
+		"sa",
+		"sua",
+		"soa",
+		"sea",
+		"sia",
+		"fa",
+		"fua",
+		"foa",
+		"fea",
+		"fia",
+		"ba",
+		"bua",
+		"boa",
+		"bea",
+		"bia",
+		"da",
+		"dua",
+		"doa",
+		"dea",
+		"dia",
+		"ka",
+		"kua",
+		"koa",
+		"kea",
+		"kia",
+		
+		"he",
+		"hue",
+		"hoe",
+		"hae",
+		"hie",
+		"me",
+		"mue",
+		"moe",
+		"mae",
+		"mie",
+		"le",
+		"lue",
+		"loe",
+		"lae",
+		"lie",
+		"ne",
+		"nue",
+		"noe",
+		"nae",
+		"nie",
+		"se",
+		"sue",
+		"soe",
+		"sae",
+		"sie",
+		"fu",
+		"fue",
+		"foe",
+		"fae",
+		"fie",
+		"be",
+		"bue",
+		"boe",
+		"bae",
+		"bie",
+		"du",
+		"due",
+		"doe",
+		"dae",
+		"die",
+		"ke",
+		"kue",
+		"koe",
+		"kae",
+		"kie",
+		
+		"hi",
+		"hui",
+		"hoi",
+		"hai",
+		"hei",
+		"mi",
+		"mui",
+		"moi",
+		"mai",
+		"mei",
+		"li",
+		"lui",
+		"loi",
+		"lai",
+		"lei",
+		"ni",
+		"nui",
+		"noi",
+		"nai",
+		"nei",
+		"si",
+		"sui",
+		"soi",
+		"sai",
+		"sei",
+		"fi",
+		"fui",
+		"foi",
+		"fai",
+		"fei",
+		"bi",
+		"bui",
+		"boi",
+		"bai",
+		"bei",
+		"di",
+		"dui",
+		"doi",
+		"dai",
+		"dei",
+		"ki",
+		"kui",
+		"koi",
+		"kai",
+		"kei"
+	],
+	"double consonant roots": [
+		"smu",
+		"smou",
+		"smau",
+		"smeu",
+		"smiu",
+		"snu",
+		"snou",
+		"snau",
+		"sneu",
+		"sniu",
+		"sfu",
+		"sfou",
+		"sfau",
+		"sfeu",
+		"sfiu",
+		"sbu",
+		"sbou",
+		"sbau",
+		"sbeu",
+		"sbiu",
+		"sdu",
+		"sdou",
+		"sdau",
+		"sdeu",
+		"sdiu",
+		"sku",
+		"skou",
+		"skau",
+		"skeu",
+		"skiu",
+
+		"smo",
+		"smuo",
+		"smao",
+		"smeo",
+		"smio",
+		"sno",
+		"snuo",
+		"snao",
+		"sneo",
+		"snio",
+		"sfo",
+		"sfuo",
+		"sfao",
+		"sfeo",
+		"sfio",
+		"sbo",
+		"sbuo",
+		"sbao",
+		"sbeo",
+		"sbio",
+		"sdo",
+		"sduo",
+		"sdao",
+		"sdeo",
+		"sdio",
+		"sko",
+		"skuo",
+		"skao",
+		"skeo",
+		"skio",
+
+		"sma",
+		"smua",
+		"smoa",
+		"smea",
+		"smia",
+		"sna",
+		"snua",
+		"snoa",
+		"snea",
+		"snia",
+		"sfa",
+		"sfua",
+		"sfoa",
+		"sfea",
+		"sfia",
+		"sba",
+		"sbua",
+		"sboa",
+		"sbea",
+		"sbia",
+		"sda",
+		"sdua",
+		"sdoa",
+		"sdea",
+		"sdia",
+		"ska",
+		"skua",
+		"skoa",
+		"skea",
+		"skia",
+		
+		"sme",
+		"smue",
+		"smoe",
+		"smae",
+		"smie",
+		"sne",
+		"snue",
+		"snoe",
+		"snae",
+		"snie",
+		"sfu",
+		"sfue",
+		"sfoe",
+		"sfae",
+		"sfie",
+		"sbe",
+		"sbue",
+		"sboe",
+		"sbae",
+		"sbie",
+		"sdu",
+		"sdue",
+		"sdoe",
+		"sdae",
+		"sdie",
+		"ske",
+		"skue",
+		"skoe",
+		"skae",
+		"skie",
+		
+		"smi",
+		"smui",
+		"smoi",
+		"smai",
+		"smei",
+		"sni",
+		"snui",
+		"snoi",
+		"snai",
+		"snei",
+		"sfi",
+		"sfui",
+		"sfoi",
+		"sfai",
+		"sfei",
+		"sbi",
+		"sbui",
+		"sboi",
+		"sbai",
+		"sbei",
+		"sdi",
+		"sdui",
+		"sdoi",
+		"sdai",
+		"sdei",
+		"ski",
+		"skui",
+		"skoi",
+		"skai",
+		"skei"
+	],
+	"numbers": [
+		"keo",
+		"fu",
+		"he",
+		"kao",
+		"lo",
+		"hu",
+		"die",
+		"su",
+		"sue",
+		"mi",
+		"loe",
+		"na",
+		"do",
+		"nado",
+		"bao"
+	],
+	"colors": [
+		"koi",
+		"daikoi",
+		"makoi",
+		"dakoi",
+		"suakoi",
+		"nukoi",
+		"bekoi",
+		"hakoi",
+		"suekoi",
+		"bukoi",
+		"soikoi",
+		"saikoi",
+		"keikoi"
+	],
+	"rel definitions": {
+		"u": [
+			"negativity","loss","death","dark","depth",
+			"es:negatividad","es:pérdida","es:muerte","es:oscuridad","es:profundidad"
+		],
+		"o": [
+			"neutrality","awareness","smoothness","wholeness",
+			"es:neutralidad","es:conocimiento","es:lo liso","es:lo completo"
+		],
+		"a": [
+			"positivity","life","comfort","health",
+			"es:positividad","es:vida","es:comodidad","es:salud"
+		],
+		"e": [
+			"stillness","uniformity","slowness",
+			"es:tranquilidad","es:consistencia","es:lentitud"
+		],
+		"i": [
+			"energy","change","sharpness","difference",
+			"es:energía","es:cambio","es:lo afilado","es:lo puntiagudo","es:diferencia"
+		],
+		"h": [
+			"breath","existence","peace",
+			"es:aliento","es:existencia","es:paz"
+		],
+		"m": [
+			"comfort","flow","goodness",
+			"grammar suffix","direct object","object of preposition",
+			"es:comodidad","es:flujo","es:buen"
+		],
+		"l": [
+			"flow","motion","pleasantness","ease",
+			"grammar suffix","preposition",
+			"es:flujo","es:movimiento","es:lo agradable","es:facilidad",
+			"es:sufijo gramático","es:preposición"
+		],
+		"n": [
+			"completion","satisfaction","effort",
+			"grammar suffix","adjective","adverb",
+			"es:lo completo","es:satisfacción","es:esfuerzo",
+			"es:sufijo gramático","es:adjetivo","es:adverbio"
+		],
+		"s": [
+			"whispering","drift","invisibility","intangibility",
+			"grammar suffix","plural noun","future verb",
+			"es:susurro","es:deriva","es:invisibilidad","es:intagibilidad",
+			"es:sufijo gramático","es:sustantivo plural","es:verbo futuro"
+		],
+		"f": [
+			"struggle","discomfort","effort",
+			"grammar suffix","indirect object","past verb",
+			"es:lucha","es:incomodidad","es:esfuerzo",
+			"es:sufijo gramático","es:objeto indirecto","es:verbo pasado"
+		],
+		"b": [
+			"bulk","stillness","fatigue","weight",
+			"es:peso","es:tranquilidad","es:fatiga","es:bulto"
+		],
+		"d": [
+			"energy","light","contact",
+			"es:energía","es:luz","es:contacto"
+		],
+		"k": [
+			"sharpness","light","speed",
+			"es:lo afilado","es:puntiagudez","es:lo puntiagudo","es:luz","es:rapidéz"
+		],
+		
+		"bo": [
+			"importance",
+			"grammar suffix","subject"
+		],
+		"ki": [
+			"action",
+			"grammar suffix","verb"
+		],
+		"mki": [
+			"m kiki contraction","grammar suffix","active verb"
+		],
+		"nei": [
+			"idleness",
+			"grammar suffix","passive verb"
+		],
+		
+		"hu": ["stillness","four"],
+		"huki": [
+			"stop",
+			"es:parar/pararse", "es:detener/detenerse"
+		],
+		"hun": [
+			"still",
+			"es:quieto"
+		],
+		"hukin": [
+			"stopped",
+			"es:detenido"
+		],
+		"huki": [
+			"stop","be stopped"
+		],
+		"humki": [
+			"stop"
+		],
+		"hunei": [
+			"be stopped"
+		],
+		"hun": [
+			"still"
+		],
+		"hukin": [
+			"stopped","stopping"
+		],
+		"humkin": [
+			"stopping"
+		],
+		"hunein": [
+			"stopped"
+		],
+		"hou": [],
+		"hau": [],
+		"heu": [
+			"singularity",
+			"es:singularidad"
+		],
+	    "seheu": [
+	        "en:isolation","en:solitude",
+	        "es:aislamiento","es:soledad"
+	    ],
+		"hiu": [
+			"disagreement","no",
+			"es:desacuerdo","es:no"
+		],
+		"hiuki": [
+	        "say no","disagree"
+			"es:decir que no","es:no estar de acuerdo"
+	    ],
+		"hiun": [
+	        "disagreeable","not"
+	    ],
+		"hiukin": [
+	        "disagreed","disagreeing",
+			"es:que no está de acuerdo"
+	    ],
+		"mu": [
+			"en:want not"
+		],
+		"muki": [
+			"en:want not","en:be unwanted",
+			"es:no querer","es:ser no querido"
+			"ko:싫어하다"
+		],
+		"mumki": [
+			"en:want not",
+			"es:no querer",
+			"ko:싫어하다"
+		],
+		"munei": [
+			"en:be unwanted",
+			"es:ser no querido"
+		],
+		"mun": [
+			"en:undesirable",
+			"es:indeseable"
+		],
+		"mukin": [
+			"en:unwanted ",
+			"es:no deseado",
+			"ko:싫어한","ko:싫은"
+		],
+		"mou": [],
+		"mau": [
+			"en:ice",
+			"es:hielo"
+		],
+		"mauki": [
+			"freeze","ice","be frozen","be iced"
+		],
+		"maumki": [
+			"freeze","ice"
+		],
+		"maunei": [
+			"be frozen","be iced"
+		],
+		"maun": [
+			"icy","frozen","freezing"
+		],
+		"maukin": [
+			"iced","frozen","freezing","icing","being frozen","being iced"
+		],
+		"maumkin": [
+			"freezing"
+		],
+		"maunein": [
+			"iced","frozen","being frozen","being iced"
+		],
+		"meu": [],
+		"miu": ["snow"],
+		"miuki": ["snow","be snowed"],
+		"miunei": ["be snowed"],
+		"miumki": ["snow"],
+		"miun": ["snowy"],
+		"miukin": ["snowed","snowing"],
+		"miumkin": ["snowing"],
+		"miunein": ["snowed"],
+	    "miubae": [
+	        "en:cleanliness",
+	        "es:limpieza"
+	    ],
+		"miubaeki": [
+			"en:clean",
+			"es:limpiar/limpiarse",
+			"ko:깨긋하다"
+		],
+		"miubaen": [
+			"en:clean",
+			"es:limpio"
+		],
+		"miubaekin": [
+			"en:cleaned",
+			"es:limpiado",
+			"ko:깨긋한"
+		],
+	    "budui": [
+	        "en:dirtiness",
+	        "es:suciedad"
+	    ],
+		"buduiki": [
+			"en:dirty",
+			"es:ensuciar"
+		],
+		"buduin": [
+			"en:dirty",
+			"es:sucio",
+			"ko:더러운"
+		],
+		"buduikin": [
+			"en:dirtied",
+			"es:ensuciado"
+		],
+		"lu": ["removal"],
+		"luki": [
+			"remove",
+			"es:quitar","es:eliminar"
+		],
+		"lun": [
+			"missing","gone",
+			"es:faltante"
+		],
+		"lukin": [
+			"removed",
+			"es:quitado","es:eliminado"
+		],
+		"lul": [
+			"en:without",
+			"es:sin"
+		],
+		"lou": ["age"],
+		"lau": [],
+		"leu": ["departure","leaving"],
+		"liu": ["taking","greed"],
+		"nu": ["darkness"],
+		"nuki": ["darken"],
+		"nun": ["dark","darkly"],
+		"nukin": ["darkened"],
+		"nou": [
+			"falsehood","false",
+			"es:falsedad"
+		],
+		"nouki": [
+	        "disprove","be disproven",
+	        "es:desmentir","es:refutar","es:ser desmentido","es:ser refutado"
+	    ],
+		"noun": [
+	        "false",
+	        "es:falso"
+	    ],
+		"noukin": [
+	        "disproven","disproving",
+	        "es:desmentido","es:que desmiente","es:refutado","es:que refuta"
+	    ],
+		"nau": [],
+		"neu": [
+			"bottom","foot"
+			"es:fondo","es:pie"
+		],
+		"neuki": [
+	        "plug a hole","add a bottom",
+	        "es:poner base","es:poner fondo"
+	    ],
+		"neun": [
+	        "low","bottom",
+	        "es:bajo","es:de fondo"
+	    ],
+		"neukin": [
+	        "plugged",
+	    ],
+		"neul": [
+	        "at bottom of",
+	        "al fondo de"
+	    ],
+		"niu": ["trickery","deception","lie"],
+		"su": [
+			"lowness","depth","six"
+		],
+		"suki": [
+	        "deepen","link","lower"
+	    ],
+		"sun": [
+	        "deep","low"
+	    ],
+		"sukin": [
+	        "sunk","deepened","lowered"
+	    ],
+		"sul": [
+	        "under/below"
+	    ],
+		"sou": ["emptiness","vacuum"],
+		"sau": ["rain","drizzle"],
+		"sauki": ["rain", "pour"],
+		"saun": ["rainy"],
+		"saukin": ["rained", "poured"],
+		"seu": ["quiet"],
+		"siu": ["loss"],
+		"fu": ["absence","lack","zero"],
+		"fuki": [
+			"es:haber poco", "es:tener poco"
+			"en:become scarce", "en:have few", "en:make few"
+		],
+		"fun": [
+			"en:scarce",
+			"es:poco"
+		],
+		"fukin": ["made scarce"],
+		"ful": [
+			"without",
+			"es:sin",
+			"ko:하고", "ko:와/과", "ko:랑/이랑"
+		],
+		"fou": [],
+		"fau": ["sickness","illness"],
+		"feu": [
+			"opposition","negativity",
+			"es:oposición","es:negatividad"
+		],
+		"feuki": [
+	        "oppose","conflict with","be opposed",
+	        "es:oponerse a","es:ir en contra de"
+	    ],
+		"feun": [
+	        "negative","opposing","opposite","conflicting",
+	        "es:negativo","es:opuesto"
+	    ],
+		"feukin": [
+	        "opposed",
+	        "es:opuesto"
+	    ],
+		"feul": [
+	        "against",
+	        "es:en contra de"
+	    ],
+		"fiu": [
+			"dissatisfaction"
+		],
+		"fiuki": [
+			"displease", "dissatisfy",
+			"es:no gustar"
+		],
+		"fiun": [
+			"dissatisfied",
+			"es:insatisfecho", "es:descontento"
+		],
+		"fiukin": [
+			"displeased",
+			"es:no a gusto", "es:insatisfecho"
+		],
+		"bu": [
+			"ground","earth","dirt",
+			"es:tierra","suelo"
+		],
+	    "sibu": [
+	        "en:hill","en:pile","en:stack",
+	        "es:colina","es:pila"
+	    ],
+		"sibuki": [
+	        "en:pile","en:be piled",
+	        "es:apilar"
+	    ],
+		"sibun": [
+	        "en:convex","en:hilly"
+	    ],
+		"sibukin": [
+	        "piled",
+	        "es:apilado"
+	    ],
+	    "dobu": [
+	        "en:mountain","en:pile","en:stack",
+	        "es:montaña","es:montón","es:pila"
+	    ],
+		"dobuki": [
+	        "en:pile","en:stack","en:be piled","en:be stacked",
+	        "es:amontonar","es:ser amontonado"
+	    ],
+		"dobun": [
+	        "en:mountainous",
+	        "es:montañoso"
+	    ],
+		"dobukin": [
+	        "en:piled", "en:piling",
+	        "es:amontonado", "es:que amontona"
+	    ],
+	    "subu": [
+	        "en:valley",
+	        "es:valle"
+	    ],
+		"subuki": [
+	        "dent","be dented"
+	    ],
+		"subun": [
+	        "concave", "undulating"
+	    ],
+		"subukin": [
+	        "dented", "denting"
+	    ],
+		"buki": ["land","ground"],
+		"bun": ["earthen"],
+		"bukin": ["landed","grounded"],
+		"bou": ["respect"],
+		"bau": ["preservation"],
+		"beu": ["solid","hardness","omi:buobeu"],
+		"beuki": ["solidify"],
+		"beun": ["solid"],
+		"beukin": ["solidified"],
+		"biu": ["cold"],
+		"biuki": ["cool"],
+		"biun": ["cold"],
+		"buikin": ["cooled"],
+		"du": [
+			"sadness",
+			"es:tristeza",
+			"ko:슬픔"
+		],
+		"duki": [
+			"sadden",
+			"es:entristecer"
+			"ko:슬퍼하다"
+		],
+		"dun": [
+			"en:sad",
+			"es:triste",
+			"ko:슬픈"
+		],
+		"dukin": [
+			"en:saddened",
+			"es:entristecido",
+			"ko:슬퍼하는"
+		],
+		"dou": [],
+		"dau": [
+			"extraction",
+			"es:extracción"
+		],
+		"deu": ["frown"],
+		"diu": [
+			"bad",
+			"es:mal",
+			"ko:나쁨"
+		],
+	    "diubio": [
+	        "en:blame",
+	        "es:culpa"
+	    ],
+	    "diubue": [
+	        "guilt",
+	        "es:culpa"
+	    ],
+		"ku": ["death"],
+		"kuki": ["die"],
+		"kun": ["dead", "morbid"],
+		"kukin": ["dead"],
+		"kou": [],
+		"kau": [],
+		"keu": ["pain"],
+		"kiu": ["killing","slaughter","murder"],
+
+		"ho": [
+			"en:thing","en:it","en:object",
+			"es:cosa","es:eso","es:objeto",
+			"ko:것","ko:그것"
+		],
+		"hoki": [
+			"en:objectify",
+			"es:objetificar"
+		],
+		"hon": [
+			"ko:그",
+			"es:ese",
+			"en:that"
+		],
+		"hokin": [
+			"objectified",
+			"es:objetificado"
+		],
+		"huo": [
+			"whisper","mumble","self","oneself",
+			"es:susurro","es:murmullo","es:sí mismo","es:uno mismo"
+		],
+		"huoki": [
+			"whisper", "mumble",
+			"es:susurrar"
+		],
+		"huon": [
+			"introverted", 
+			"es:ensimismado"
+		],
+		"huokin": [
+			"whispered", "mumbled",
+			"es:susurrado"
+		],
+		"hao": [
+			"person","human","one",
+			"es:persona","es:humano","es:uno","es:se"
+		],
+		"haoki": [
+			"personify",
+			"es:personificar"
+		],
+		"haon": [
+			"human","en:ones"
+			"es:humano","es:propio"
+		],
+		"haokin": [
+			"personified",
+			"es:personificado"
+		],
+		"heo": [
+			"balance","equilibrium",
+			"es:equilibrio"
+		],
+		"hio": [
+			"voice",
+			"es:voz"
+		],
+		"hioki": [
+			"yell","cry",
+	        "es:gritar"
+		],
+		"hion": [
+			"aloud","vocal",
+	        "es:en voz alta","es:vocal"
+		],
+		"hiokin": [
+			"yelled","yelling","crying",
+	        "es:gritado","es:que grita"
+		],
+		"bahio": [
+			"en:yawn",
+			"es:bostezo"
+		],
+		"mo": ["peace","harmony"],
+		"muo": [],
+		"mao": [
+			"mouth",
+			"es:boca",
+			"ko:입"
+		],
+		"maoki": [
+			"bite","mouth","be bitten","be mouthed"
+		],
+		"maon": [
+			"oral"
+		],
+		"maokin": [
+			"bitten","mouthed","biting","mouthing"
+		],
+	    "maoski": [
+	        "en:tooth","en:fang"
+	        "es:diente"
+	    ],
+		"maoskiki": [
+			"chew","bite","be chewed","be bitten",
+	        "es:masticar","es:morder"
+		],
+		"maoskin": [
+			"dental",
+	        "es:dental"
+		],
+		"maoskikin": [
+			"chewed","bitten","chewing","biting"
+		],
+		"meo": ["roundness","sphere","ball"],
+		"mio": ["speech","conversation","talking"],
+		"lo": [
+			"direction","three",
+			"es:dirección","es:tres",
+			"ko:쪽","ko:셋/삼"
+		],
+		"loki": [
+			"face", "en:point to", "en:indicate",
+			"es:encararse a", "es:señalar",
+		],
+		"lon": [
+			"on route", "along the route",
+			"es:en camino", "es:por el camino"
+		],
+		"lokin": [
+			"en:faced", "en:indicated",
+			"es:indicado",
+		],
+		"lol": [
+			"en:to", "en:into", "en:toward",
+			"es:a", "es:en", "es:hacia"
+			"ko:로/으로", "ko:에"
+		],
+		"luo": [],
+		"lao": ["art"],
+		"leo": [
+			"en:literature","en:writing"
+			"es:literatura","es:escritura"
+		],
+		"leoki": [
+			"en:write"
+		],
+		"leon": [
+			"en:literary", "en:writing"
+		],
+		"leokin": [
+			"en:written", "en:writing"
+		],
+		"lio": ["method"],
+		"no": ["knowledge"],
+		"nuo": [],
+		"nao": [
+			"ear",
+			"es:oreja","es:oído"
+		],
+		"naoki": [
+			"hear","listen","listen to","be heard","be listened to"
+	        "es:escuchar","es:oír","es:ser escuchado","es:ser oído"
+		],
+		"naon": [
+			"of the ear",
+	        "auricular","de oído"
+		],
+		"naokin": [
+			"heard","hearing",
+	        "es:oído","es:escuchado","es:que escucha"
+		],
+		"neo": [
+			"destination",
+			"es:destino"
+		],
+		"neoki": [
+			"head to","attempt",
+	        "es:dar rumbo a","es:intentar","es:dirigirse a"
+		],
+		"neon": [
+			"ultimate","recipient",
+	        "es:último","es:recipiente"
+		],
+		"neokin": [
+			"headed to","attempted","heading to","attempting",
+	        "es:a que se dirige","es:intentado","es:que intenta"
+		],
+		"neol": [
+			"es:hasta","es:para",
+	        "en:in order to","en:until"
+		],
+		"nio": [
+			"sound","noise",
+			"es:sonido","es:ruido"
+		],
+		"nioki": [
+	        "es:sonar","es:intonar"
+	        "en:sound","en:play","en:be played","en:be sounded"
+	    ],
+		"nion": [
+	        "loud",
+	        "es:ruidoso"
+	    ],
+		"niokin": [
+	        "sounded","played","sounding","playing"
+	        "es:intonado","es:que suena","es:que se toca","es:tocado"
+	    ],
+		"so": [
+			"ignorance","nescience","unknown","what",
+			"es:ignorancia","es:desconocimiento","es:qué","es:cuál"
+		],
+		"son": [
+			"unknown", "ignorant",
+			"es:desconocido", "es:ignorante"
+		],
+		"sohao": [
+			"en:who",
+			"es:quién"
+		],
+		"sobei": [
+			"en:when",
+			"es:cuándo"
+		],
+		"sosneo": [
+			"en:why","en:for what",
+			"es:por qué","es:para qué"
+		],
+		"soneo": [
+			"en:why","en:for what","en:to where",
+			"es:por qué","es:para qué","es:adónde"
+		],
+		"sobeo": [
+			"en:why","en:because of what",
+			"es:por qué"
+		],
+		"sobe": [
+			"en:where",
+			"es:dónde"
+		],
+		"solio": [
+			"en:how",
+			"es:cómo"
+		],
+		"sodo": [
+			"how big","how much",
+			"qué tan grande","es:qué tamaño","es:cuánto"
+		],
+		"sona": [
+			"how much",
+			"es:cuánto"
+		],
+		"sohei": [
+			"en:what kind","en:what sort",
+			"es:qué tipo","es:qué especie",
+			"ko:무슨","ko:어떤"
+		],
+		"suo": [],
+		"sao": [
+			"nose","smell",
+			"es:nariz","es:sentido de olor"
+		],
+		"saoki": [
+			"smell","be smelled",
+	        "es:oler","es:ser olido"
+		],
+		"saon": [
+			"nasal",
+	        "es:nasal"
+		],
+		"saokin": [
+			"smelled","smelling",
+	        "es:olido","es:que huele"
+		],
+		"seo": [],
+		"sio": [
+			"smell","perfume","fragrance",
+			"es:olor","es:perfume","es:fragancia"
+		],
+		"sioki": [
+	        "be smelly","make smelly","perfume",
+	        "es:oler","es:perfumar","es:hacer oloroso"
+	    ],
+		"sion": [
+	        "smelly",
+	        "es:oloroso"
+	    ],
+		"siokin": [
+	        "made smelly", "perfuming",
+	        "es:hecho oloroso","es:perfumado","es:que perfuma"
+	    ],
+		"fo": [
+			"uncertainty","which",
+			"es:incertidumbre","es:cuál"
+		],
+		"foli": [
+			"en:what time","en:when",
+			"es:a qué hora","es:cuándo"
+		],
+		"fuo": [
+			"emptiness","vacuum",
+			"es:vacío"
+		],
+		"fuoki": [
+			"es:vaciar","es:ser vaciado",
+	        "en:empty","en:be emptied"
+		],
+		"fuon": [
+			"es:vacío",
+	        "en:empty"
+		],
+		"fuokin": [
+			"emptied","emptying",
+	        "es:vaciado","es:que vacía"
+		],
+		"fao": [],
+		"feo": [],
+		"fio": ["curiosity","question"],
+		"buo": [
+			"garbage","trash","waste",
+			"es:basura",
+			"ko:쓰레기"
+		],
+		"buomei": [
+			"en:pee",
+			"es:pis","es:orina"
+		],
+		"buobeu": [
+			"en:poop","en:shit","en:crap","en:poo",
+			"es:caca","es:mierda"
+		],
+		"buosei": [
+			"en:fart","en:toot",
+			"es:gas","es:pedo"
+		],
+		"bao": [
+			"en:world","en:planet","en:Earth","en:thousand","en:year",
+			"es:mundo","es:planeta","es:Tierra","es:mil","es:año",
+			"ko:천","ko:년"
+		],
+		"baoki": [
+			"es:hacer planeta", 
+			"en:orbit", "en:make a planet"
+		],
+		"baon": [
+			"en:orbiting", "en:planetary", "en:global"
+			"es:hecho planeta", "es:global"
+		],
+		"baokin": [
+			"en:orbited", "en:made a planet"
+			"es:hecho planeta",
+		],
+		"beo": [
+			"origin",
+			"es:orígen"
+		],
+		"beoki": [
+			"originate from/in",
+	        "es:originarse de"
+		],
+		"beon": [
+			"original","sender",
+	        "es:remitiente","es:original"
+		],
+		"beokin": [
+			"originated from/in"
+		],
+		"beol": [
+			"of","from",
+	        "es:desde","es:de"
+		],
+		"bio": ["responsibility","obligation","duty"],
+		"do": [
+			"size","hundred","one hundred",
+			"es:tamaño","es:talla","es:cien","es:ciento"
+		],
+		"doki": [
+	        "grow","be grown",
+	        "es:agrandar","es:crecer"
+	    ],
+		"don": [
+	        "big",
+	        "es:grande"
+	    ],
+		"dokin": [
+	        "grown","growing",
+	        "es:crecido","es:que crece"
+	    ],
+		"duo": [],
+		"dao": [],
+		"deo": [
+			"universe","nature",
+			"es:universo","naturaleza"
+		],
+		"deoki": [
+			"made universal", "spread everywhere",
+			"es:hecho universal", "es:difundir"
+		],
+		"deon": [
+			"universal","natural"
+			"es:universal","es:natural"
+		],
+		"deokin": [
+			"spread everywhere",
+			"es:difundido"
+		],
+		"dio": ["strength","force"],
+		"ko": [
+			"appearance","apparition","sight","view",
+			"es:apariencia","es:vista","es:visión"
+		],
+		"koki": [
+	        "appear","show","be shown",
+	        "es:aparecer","es:mostrar","es:enseñar"
+	    ],
+		"kon": [
+	        "visible",
+	        "es:visible"
+	    ],
+		"kokin": [
+	        "seen","appeared","shown",
+	        "es:visto","es:aparecido","es:mostrado","es:enseñado"
+	    ],
+		"kuo": [
+			"piece","part","fragment","section",
+			"es:pieza","es:fragmeneto","es:sección"
+		],
+		"kao": [
+			"eye","two",
+			"es:ojo","es:dos"
+		],
+		"kaoki": [
+			"en:see","en:look at","en:watch","en:be seen","en:be watched","en:be looked at"
+	        "es:ver","es:mirar"
+		],
+		"kaon": [
+			"en:visible","en:ocular",
+	        "es:visible","es:ocular"
+		],
+		"kaokin": [
+			"seen","seeing","watched","watching","looking","looked at"
+		],
+		"keo": ["number","count","multiplicity"],
+		"kio": [],
+		
+		"ha": [
+			"life"
+		],
+		"han": [
+			"lively", "living", "of life",
+			"es:lleno de vida", "de vida"
+		],
+		"haki": [
+			"live","revive","be alive","liven",
+			"es:animar","es:viviente","es:ser revivido","es:ser animado"
+		],
+		"hamki": [
+			"live","revive","liven",
+			"es:vivir","revivir","animar"
+		],
+		"hanei": [
+			"be lived","be revived","brought to life",
+			"es:ser revivido","es:ser animado"
+		],
+		"habo": [
+			"en:I",
+			"es:yo",
+			"ko:나","ko:저"
+		],
+		"habos": [
+			"en:we",
+			"es:nosotros",
+			"ko:우리"
+		],
+		"haboki": [
+		],
+		"habon": [
+			"en:my", "en:of me",
+			"es:mi", "es:de mí",
+			"ko:저의/제", "ko:나의/내"
+		],
+		"habokin": [
+		],
+		"hane": [
+			"en:you",
+			"es:usted","es:tú",
+			"ko:너","ko:당신"
+		],
+		"hanes": [
+			"en:you all/y'all", "en:you",
+			"es:ustedes","es:vosotros",
+			"ko:너희들"
+		],
+		"haneki": [
+			"en:call", "en:call to", "en:be called",
+			"es:llamar", "es:ser llamado"
+		],
+		"hanen": [
+			"en:your",
+			"es:tu","es:su",
+			"ko:너의/네"
+		],
+		"hanekin": [
+			"en:called","en:calling",
+			"es:llamado","es:que llama"
+		],
+		"hanenei": [
+			"en:be called",
+			"es:ser llamado"
+		],
+	    "hase": [
+	        "en:they",
+	        "es:él", "es:ella", "es:ese"
+	    ],
+		"hases": [
+			"en:they",
+			"es:ellos", "es:ellas",
+			"ko:그들", "ko:그녀들"
+		],
+		"haseki": [
+			"refer to", "be referred to", "mention", "be mentioned"
+			"es:referirse a", "es:mencionar", "es:ser referido", "es:ser mencionado"
+		],
+		"hasenei": [
+			"be referred to", "be mentioned",
+			"es:ser referido", "es:ser mencionado"
+		],
+		"hasen": [
+			"their",
+			"es:su"
+		],
+		"hasekin": [
+			"referred to", "mentioned", "mentioning",
+			"es:referido", "es:mencionado", "es:mencionando"
+		],
+		"hasemki": [
+			"refer to", "mention",
+			"es:referirse a", "es:mencionar",
+		],
+		"hasenein": [
+			"be referred to", "be mentioned",
+			"es:ser referido", "es:ser mencionado"
+		],
+	    "haso": [
+	        "en:he",
+	        "es:él"
+	    ],
+		"hasos": [
+			"en:they (male)",
+			"es:ellos",
+			"ko:그들"
+		],
+		"hasoki": [
+		],
+		"hason": [
+			"his"
+		],
+	    "hasa": [
+	        "en:she",
+	        "es:ella",
+	        "ko:그녀"
+	    ],
+		"hasas": [
+			"en:they (female)"
+		],
+		"hasaki": [
+		],
+		"hasan": [
+			"hers"
+		],
+	    "hamo": [
+	        "en:man",
+	        "es:hombre",
+	        "ko:남자"
+	    ],
+		"hamoki": [
+			"en:make a man",
+			"es:hacer hombre"
+		],
+		"hamon": [
+			"en:masculine",
+			"es:masculino"
+		],
+		"hamokin": [
+			"en:made a man",
+			"es:hecho hombre"
+		],
+	    "hama": [
+	        "en:woman",
+	        "ko:여자",
+	        "es:mujer"
+	    ],
+		"hamaki": [
+			"en:make a woman","en:be made a woman"
+			"es:hacer mujer","es:hacerse mujer"
+		],
+		"haman": [
+			"feminine",
+			"es:feminino"
+		],
+		"hamakin": [
+			"made a woman",
+			"es:hecha mujer"
+		],
+	    "hame": [
+	        "en:friend","en:companion",
+	        "es:amigo","es:amiga","es:acompañante","es:compadre","es:comadre",
+	        "ko:친구"
+	    ],
+		"hameki": [
+			"befriend",
+			"es:hacer amigo"
+		],
+		"hamen": [
+			"friendly"
+			"es:amigable", "es:amistoso"
+		],
+		"hamekin": [
+			"befriended",
+			"es:hecho amigo"
+		],
+	    "hafeu": [
+	        "en:enemy",
+	        "es:enemigo"
+	    ],
+		"hafeuki": [
+			"make an enemy",
+			"es:hacer enemigo"
+		],
+		"hafeun": [
+			"mean",
+			"es:antipático"
+		],
+		"hafeukin": [
+			"made an enemy",
+			"es:hecho enemigo"
+		],
+	    "habea": [
+	        "en:house","en:home",
+	        "es:casa","es:hogar"
+	    ],
+		"habeaki": [
+	        "en:host","en:shelter","be hosted","be sheltered",
+			"es:anfitrionar","es:albergar","es:ser albergado","ser invitado"
+	    ],
+		"habean": [
+	        "es:casero", 
+			"en:homemade"
+	    ],
+		"habeakin": [
+	        "en:hosted", "en:sheltered", "en:hosting", "en:sheltering"
+	    ],
+		"hua": [],
+		"hoa": [
+			"en:food",
+			"es:comida","es:alimento"
+			"ko:음식","ko:식사"
+		],
+		"hoaki": [
+			"en:feed", "en:be fed"
+			"es:alimentar", "es:ser alimentado"
+			"ko:먹이다"
+		],
+		"hoan": [
+			"en:of food",
+			"es:de comida"
+		],
+		"hoakin": [
+			"en:fed",
+			"es:alimentado"
+			"ko:먹인"
+		],
+		"hea": ["health","safety"],
+		"hia": [
+			"yes","agreement",
+			"es:sí","es:acuerdo","es:concordia"
+		],
+		"hiaki": [
+	        "say yes","agree","be agreed",
+			"es:decir que sí","es:poner de acuerdo"
+	    ],
+		"hian": [
+	        "agreeable","indeed",
+			"es:sí"
+	    ],
+		"hiakin": [
+	        "confirmed","agreed","agreeing","saying yes",
+			"es:confirmado","que dice que sí","poniéndose de acuerdo"
+	    ],
+		"ma": ["water","wetness"],
+		"maki": ["water","drink","give drink","wet"],
+		"man": ["watery","wet"],
+		"makin": ["watered","drunk","wet","given drink"],
+		"mua": ["kiss"],
+		"moa": [
+			"truth",
+			"es:verdad"
+		],
+		"moaki": [
+	        "be proven","prove",
+	        "es:probar","es:ser probado"
+	    ],
+		"moan": [
+	        "true","truthful",
+	        "es:cierto","es:verdadero"
+	    ],
+		"moakin": [
+	        "proven","proving",
+	        "es:probado","que prueba"
+	    ],
+		"mea": ["good"],
+		"mia": ["swimming"],
+		"miaki": [
+	        "swim"
+	    ],
+		"mian": [
+	        "swimming, marine"
+	    ],
+		"miakin": [
+	        "swum "
+	    ],
+	    "miahai": [
+	        "en:fish",
+	        "es:pez","es:pescado"
+	    ],
+		"la": ["music"],
+		"lua": [],
+		"loa": ["love"],
+		"lea": ["ease"],
+		"lia": [
+			"throat","neck",
+			"es:garganta","es:cuello"
+		],
+		"liaki": [
+			"swallow","be swallowed",
+	        "es:tragar","es:ser tragado"
+		],
+		"lian": [
+			"en:of the throat","en:of the neck",
+	        "es:de garganta","es:de cuello"
+		],
+		"liakin": [
+			"swallowed","swallowing"
+		],
+		"na": ["abundance","multitude","crowd","ten"],
+		"naki": [
+			"ko:많다",
+			"en:have many", "en:make many", "en:make abundant",
+			"es:tener mucho", "es:hacer mucho"
+		],
+		"nan": [
+			"abundant","a lot of","be many"
+			"ko:많은"
+		],
+		"nakin": [
+			"made abundant"
+		],
+		"nal": [
+			"en:of", "en:made of"
+		],
+		"nua": [
+			"experience",
+			"es:experiencia"
+		],
+		"noa": [
+			"body",
+			"es:cuerpo"
+		],
+		"noaki": [
+			"incorporate","be incorporated"
+		],
+		"noan": [
+			"bodily"
+		],
+		"noakin": [
+			"incorporated","incorporating"
+		],
+		"nea": [
+			"affirmation","positivity","support",
+			"es:afirmación","es:positividad","es:apoyo"
+		],
+		"neaki": [
+	        "propose","affirm","complement","be proposed","be affirmed","be complemented",
+	        "es:proponer","es:afirmar","es:complementar"
+	    ],
+		"nean": [
+	        "positive","complementary",
+	        "es:positivo"
+	    ],
+		"neakin": [
+	        "proposed","affirmed",
+	        "es:propuesto","es:afirmado"
+	    ],
+		"nia": ["satisfaction"],
+		"niaki": [
+			"satisfy", "please",
+			"es:satisfacer", "es:gustar"
+		],
+		"nian": [
+			"satisfied","content"
+			"es:satisfecho","es:content"
+		],
+		"niakin": [
+			"pleased",
+			"es:estar a gusto"
+		],
+		"sa": ["air"],
+		"saki": ["blow","blow on","inflate"],
+		"san": ["airy","full of air","aerosol"],
+		"sakin": ["blown","blown on","inflated"],
+		"sua": ["invisibility"],
+		"soa": [],
+		"sea": [
+			"alien","foreigner","outsider"
+		],
+		"seaki": [
+	        "alienate", "be alienated"
+	    ],
+		"sean": [
+	        "alien", "foreign",
+	    ],
+		"seakin": [
+	        "alienated", "alienating"
+	    ],
+		"sia": [
+			"flight",
+			"es:vuelo"
+		],
+		"siaki": [
+	        "fly","launch"
+	    ],
+		"sian": [
+	        "flying"
+	    ],
+		"siakin": [
+	        "launched"
+	    ],
+	    "siahai": [
+	        "en:bird",
+	        "es:ave","es:pájaro"
+	    ],
+		"fa": [
+			"en:achievement","en:victory"
+			"es:victoria","es:éxito"
+		],
+		"faki": [
+			"en:achieve","en:win"
+			"es:ganar","es:tener éxito"
+		],
+		"fan": [
+			"en:successful", "en:winning"
+			"es:exitoso", "es:ganador"
+		],
+		"fakin": [
+			"en:achieved", "en:won",
+			"es:ganado"
+		],
+		"fua": ["consumption"],
+		"foa": [],
+		"fea": ["itchiness","itch","irritation","annoyance"],
+		"fia": [
+			"throw","launch","projectile"
+		],
+		"fiaki": [
+	        "throw",
+	    ],
+		"fian": [
+	        "thrown","projectile","of throwing"
+	    ],
+		"fiakin": [
+	        "thrown","launched","throwing"
+	    ],
+		"ba": ["sleep","rest"],
+		"baki": [
+			"es:dormir", "es:descansar", "en:ser dormido",
+			"en:sleep", "en:put to sleep", "en:be put to sleep", "en:rest"
+		],
+		"bamki": [
+			"en:sleep", "en:put to sleep", "en:rest",
+			"es:dormir", "es:descansar"
+		],
+		"banei": [
+			"be put to sleep",
+			"es:ser dormido"
+		],
+		"ban": [
+			"es:durmiente", "es:somnoliento",
+			"en:sleepy", "en:asleep",
+			"ko:자는"
+		],
+		"bakin": [
+			"en:putting to sleep","en:be put to sleep"
+			"es:durmiendo", "es:dormido"
+		],
+		"bua": [
+			"plant", "vegetation", "flora",
+			"es:planta", "es:hierba",
+			"ko:식물"
+		],
+		"buaki": [
+			"es:sembrar",
+			"en:plant","en:garden"
+		],
+		"buan": [
+			"en:plant-like",
+			"es:vegetal"
+			"ko:식물처럼"
+		],
+		"buakin": [
+			"en:planted",
+			"es:sembrado"
+		],
+		"boa": [
+			"head",
+			"es:cabeza"
+		],
+		"boaki": [
+			"es:encabezar",
+	        "en:head","en:lead","en:be lead","en:be headed by"
+		],
+		"boan": [
+			"en:of the head",
+	        "es:cabezal"
+		],
+		"bea": ["cover","protection"],
+		"bia": ["clothing","garment"],
+		"da": ["happiness","joy","cheer"],
+		"taki": [
+			"make happy", "cheer"
+			"es:animar", "es:alegrar"
+		],
+		"tan": [
+			"happy", "cheerful",
+			"es:feliz", "es:alegre",
+			"ko:행복한", "ko:기쁜"
+		],
+		"takin": [
+			"made happy",
+			"es:animado", "es:hecho feliz"
+		],
+		"dua": [],
+		"doa": ["help","assistance"],
+		"dea": ["smile"],
+		"dia": [
+			"sun","star","day","today","omi:hadia",
+			"es:sol","es:estrella","es:hoy"
+		],
+	    "hadia": [
+	        "today",
+			"es:hoy"
+	    ],
+	    "fudia": [
+	        "yesterday","days ago",
+			"es:ayer","es:días atrás",
+	        "omi:hefudia"
+	    ],
+	    "sodia": [
+	        "tomorrow","days from now","days later",
+			"es:mañana",
+	        "omi:hesodia"
+	    ],
+	    "koafudia": [
+	        "day before yesterday",
+			"es:anteayer"
+	    ],
+	    "koasodia": [
+	        "day after tomorrow",
+			"es:pasado mañada"
+	    ],
+		"ka": ["desire","want"],
+		"kaki": [
+			"en:want", "en:desire",
+			"es:querer", "es:desear"
+		],
+		"kan": [
+			"en:desirable",
+			"es:deseable"
+		],
+		"kakin": [
+			"en:wanted", "en:desired",
+			"es:deseado", "es:querido"
+		],
+		"kua": ["hole","stab"],
+		"koa": [],
+		"kea": [],
+		"kia": ["jump","hop"],
+		
+		"he": ["existence","being","state","equality","one"],
+		"heki": [
+			"en:be", "en:there is", "en:there are",
+			"es:hay", "es:ser", "es:estar", 
+			"ko:이다", "ko:있다"
+		],
+		"hen": ["existent"],
+		"hekin": ["been","being"],
+		"hel": [
+			"en:in", "en:at", "en:on",
+			"es:en", "es:a", "es:dentro de",
+			"ko:에", "ko:에서", "ko:안에"
+		],
+		"hue": [
+			"weakness","fragility",
+			"es:debilidad","es:fragilidad"
+		],
+		"hoe": [
+			"whole","wholeness","entirety","completeness",
+			"es:lo completo","es:lo entero"
+		],
+	    "hoefi": [
+	        "en:diversity",
+	        "es:diversidad"
+	    ],
+	    "hoele": [
+	        "en:purity",
+	        "es:pureza"
+	    ],
+	    "heuhoe": [
+	        "en:unity",
+	        "es:unión"
+	    ],
+	    "nehoe": [
+	        "en:community",
+	        "es:comunidad"
+	    ],
+		"hae": [],
+		"hie": [
+			"furniture",
+			"es:mueble"
+		],
+		"hien": [
+			"of furniture"
+		],
+		"hieki": [
+			"furnish","be furnished",
+		],
+		"hiekin": [
+			"furnishing", "furnished"
+		],
+		"hienei": [
+			"be furnished"
+		],
+		"hiemki": [
+			"furnish"
+		],
+		"me": ["addition","accompaniment"],
+		"meki": [
+			"accompany","add",
+			"es:acompañar", "es:agregar"
+		],
+		"men": [
+			"additional",
+			"es:adicional"
+		],
+		"mekin": [
+			"accompanied","added",
+			"es:acompañado","es:agregado"
+		],
+		"mel": ["with"],
+		"mue": [],
+		"moe": ["smoothness"],
+		"mae": [],
+		"mie": ["giving","generosity"],
+		"le": [
+			"similarity","likeness"
+		],
+	    "file": [
+	        "en:comparison","en:contrast",
+	        "es:comparación","es:contraste"
+	    ],
+		"fileki": [
+			"en:compare",
+			"es:comparar"
+		],
+	    "filen": [
+	        "en:comparitive", "en:relative",
+	        "es:relative"
+	    ],
+		"filekin": [
+			"en:compared",
+			"es:comparado"
+		],
+		"filel": [
+			"en:compared to/compared with", "en:relative to"
+			"es:comparado con", "es:relativo a"
+		],
+		"leki": [
+	        "make similar", "approximate", "be made similar", "be approximated"
+	    ],
+		"len": [
+	        "similar", "similarly",
+	    ],
+		"lekin": [
+	        "made similar", "approximated", "making similar", "approximating"
+	    ],
+		"lel": [
+	        "like, as",
+	    ],
+		"lue": [],
+		"loe": [
+			"normalcy","average","nine",
+			"es:normalidad","es:promedio","es:nueve",
+			"ko:아홉","ko:구"
+		],
+	    "lae": [
+	        "en:family",
+	        "es:familia",
+	        "ko:가족"
+	    ],
+		"laeki": [
+			"adopt",
+			"es:adoptar"
+		],
+		"laen": [
+			"familial",
+			"es:familiar"
+		],
+		"laekin": [
+			"adopted",
+			"es:adoptado"
+		],
+	    "lelae": [
+	        "en:sibling",
+	        "es:hermano","es:hermana",
+	        "ko:동생"
+	    ],
+		"lelaeki": [
+			"make a sibling",
+			"es:hacer hermano"
+		],
+		"lelaen": [
+			"fraternal",
+			"es:fraterno"
+		],
+		"lelaekin": [
+			"made a sibling",
+			"es:hecho hermano"
+		],
+	    "lelaemo": [
+	        "en:brother",
+	        "es:hermano",
+	        "ko:남동생","ko:오빠","ko:형"
+	    ],
+	    "lelaema": [
+	        "en:sister",
+	        "es:hermana",
+	        "ko:여동생","ko:누나","ko:언니",
+	    ],
+	    "hilae": [
+	        "en:parent",
+	        "es:padre","es:madre"
+	        "ko:부모"
+	    ],
+		"hilaeki": [
+			"en:become a parent", "en:make a parent",
+			"es:convertirse en padre", "es:hacer padre"
+		],
+		"hilaen": [
+			"en:parental", "as a parent",
+			"es:como padre"
+		],
+		"hilaekin": [
+			"made a parent",
+			"hecho padre"
+		],
+	    "laemo": [
+	        "en:father","en:dad",
+	        "es:padre","es:papá"
+	    ],
+		"laemoki": [
+			"en:become a father", "en:make a father",
+			"es:convertirse en padre", "es:hacer padre"
+		],
+		"laemon": [
+			"en:fatherly", "as a father",
+			"es:paterno", "es:como padre"
+		],
+		"laemokin": [
+			"made a father",
+			"hecho padre"
+		],
+	    "laema": [
+	        "en:mother","en:mom",
+	        "es:madre","mamá"
+	    ],
+		"laemaki": [
+			"en:become a mother", "en:make a mother",
+			"es:convertirse en madre", "es:hacer madre"
+		],
+		"laeman": [
+			"maternal",
+			"es:materno", "es:como madre"
+		],
+		"laemakin": [
+			"become a mother"
+			"es: hecha madre"
+		],
+	    "kelae": [
+	        "en:child",
+	        "es:hijo","es:hija"
+	    ],
+		"kelaeki": [
+	        "birth", "have a baby"
+	    ],
+		"kelaen": [
+	        "born", "childish"
+	    ],
+		"kelaekin": [
+	        "born", "birthing"
+	    ],
+		"lie": [
+			"ability","possibility",
+			"es:capacidad","es:posibilidad"
+		],
+		"lieki": [
+			"enable","become able","make possible","be made possible",
+			"es:capacitar","es:habilitar","es:volverse capaz"
+		],
+		"lien": [
+			"which is able to be done",
+			"es:que puede hacerse"
+		],
+		"liekin": [
+			"enabled"
+		],
+		"ne": [
+			"proximity","closeness",
+			"es:cercanía","es:proximidad"
+		],
+		"neki": [
+	        "bring close", 
+			"es:acercar",
+	    ],
+		"nen": [
+	        "this","close",
+			"es:este","es:cercano",
+			"ko:이",
+	    ],
+		"nekin": [
+			"en:brought close","en:approaching","en:bringing close",
+	        "es:acercado","es:acercando"
+	    ],
+		"nel": [
+	        "en:near to",
+			"es:cerca de"
+	    ],
+		"nue": ["captivity","trap"],
+		"noe": ["possession","having","ownership"],
+		"nae": [
+			"stickiness","attraction",
+			"es:pegajosidad","es:atracción"
+		],
+		"naeki": [
+			"stick to","be sticky","make sticky","stick"
+		],
+		"naen": [
+			"sticky",
+			"es:pegajoso"
+		],
+		"naekin": [
+			"made sticky","making sticky","sticking"
+		],
+		"nie": ["arrival"],
+		"se": ["distance"],
+		"seki": [
+	        "en:distance","en:be distanced",
+	        "es:alejar","es:ser alejado"
+	    ],
+		"sen": [
+	        "that", "far",
+	        "es:lejano" "es:ese" "es:aquél",
+	    ],
+		"sekin": [
+	        "en:distanced"
+	        "es:alejado",
+	    ],
+		"sel": [
+	        "far from",
+	        "es:lejos de"
+	    ],
+		"sue": ["strangeness","wierdness","abnormality","seven"],
+		"soe": ["luck","randomness","fortune"],
+		"sae": ["freedom","liberation"],
+		"sie": [
+			"sky",
+			"es:cielo",
+			"ko:하늘"
+		],
+		"sieki": [
+			"en:float in air",
+			"es:flotar al aire"
+		],
+		"sien": [
+			"en:floating", "en:aerial", "en:be in the sky"
+			"es:flotante", "es:estar en el aire"
+		],
+		"siekin": [
+			"en:floated", "en:left in the sky",
+			"es:flotado", "es:dejado al aire"
+		],
+		"fe": [
+			"fatigue","tiredness","sleepyness",
+			"es:fatiga","es:cansancio"
+		],
+		"feki": [
+			"es:cansar",
+			"en:tire"
+		],
+		"fen": [
+			"es:cansado","es:fatigado"
+			"en:tired","en:fatigued"
+		],
+		"fekin": [
+			"es:hecho cansado",
+			"en:made tired"
+		],
+		"fue": ["laziness","sloth"],
+		"foe": [],
+		"fae": [],
+		"fie": ["roughness"],
+		"be": [
+			"en:place","en:location",
+			"es:lugar","es:ubicación"
+		],
+		"beki": [
+			"locate", "place",
+			"es:ubicar", "es:colocar"
+		],
+		"ben": [
+			"es:dejado",
+			"en:left"
+		],
+		"bekin": [
+			"en:located", "en:placed",
+			"es:ubicado", "es:colocado"
+		],
+		"bue": [
+			"weight","cost","value",
+			"es:peso","es:costo","es:precio","es:valor"
+		],
+	    "kebue": [
+	        "en:money","en:cash",
+	        "es:dinero",
+	        "ko:돈","ko:현금"
+	    ],
+		"kebueki": [
+			"en:buy", "en:sell", "en:rent", "en:lease", "en:pay"
+			"es:comprar", "es:vender", "es:rentar", "es:alquilar", "es:pagar"
+		],
+		"kebuen": [
+			"en:monetary",
+			"es:financiero"
+		],
+		"kebuekin": [
+			"en:bought",
+			"en:sold",
+			"en:rented",
+			"es:comprado",
+			"es:vendido",
+			"es:rentado",
+			"es:alquilado",
+			"es:pagado"
+		],
+		"boe": [
+			"fullness","density","matter",
+			"es:densidad","es:materia"
+		],
+		"boeki": [
+			"es:llenar","es:rellenar",
+	        "en:fill","en:stuff","be filled","be stuffed"
+		],
+		"boen": [
+			"es:lleno","es:relleno","es:denso",
+	        "en:full","en:stuffed","en:dense"
+		],
+		"boekin": [
+			"es:llenado",
+	        "en:filled","en:filling","stuffed","stuffing"
+		],
+		"bae": ["order","organization"],
+		"bie": ["control","command","direct"],
+		"de": [
+			"touch","feeling",
+			"es:toque","es:sensación"
+		],
+		"deki": [
+	        "touch","feel","be touched","be felt",
+	        "es:tocar","sentir"
+	    ],
+		"den": [
+	        "felt","adjacent",
+	        "es:sentido","es:adyacente"
+	    ],
+		"dekin": [
+	        "touched","touching",
+	        "es:tocado","es:que toca"
+	    ],
+		"due": ["shape","form"],
+		"doe": ["finding","discovery","recovery"],
+		"dae": ["hug","embrace","wrap"],
+		"die": [
+			"hand","five","highfive"
+			"es:mano","es:cinco"
+		],
+		"diese": [
+			"en:finger",
+			"es:dedo"
+		],
+		"dieseki": [
+			"point","be pointed at"
+		],
+		"diesen": [
+			"of the finger",
+	        "es:dedal"
+		],
+		"diesekin": [
+			"pointed at","pointing"
+		],
+		"dieki": [
+			"slap","give a highfive","be slapped","be given a highfive"
+		],
+		"dien": [
+			"of the hand","manual"
+		],
+		"diekin": [
+			"slapped","slapping"
+		],
+		"ke": ["repetition","repeat"],
+		"kue": ["danger"],
+		"koe": ["reflection"],
+		"kae": [],
+		"kie": ["hit","impact","collision"],
+		
+		"hi": [
+			"en:creation", "en:creativity",
+			"es:creación", "es:creatividad"
+		],
+		"hiki": [
+			"en:create", "en:build",
+			"es:crear", "es:construir"
+		],
+		"hin": [
+			"en:creative",
+			"es:creativo"
+		],
+		"hikin": [
+			"en:built", "en:made",
+			"es:construido", "es:hecho"
+		],
+		"hui": [
+			"en:artificiality","en:synthesis","en:manufacture",
+			"es:fabricación","es:artificialidad"
+		],
+		"huihao": [
+			"en:robot",
+			"es:robot"
+		],
+		"huikao": [
+			"en:camera",
+			"es:cámera",
+			"ko:카메라"
+		],
+		"huiho": [
+			"en:machine",
+			"es:máquina",
+			"ko:기계"
+		],
+		"hoi": [
+			"tool","repair","tuning",
+			"es:herramienta","es:reparación","es:afinación"
+		],
+		"hoiki": [
+			"use a tool on", "fix", "tune"
+			"es:arreglar", "es:trabajar con herramienta", "es:afinar"
+		],
+		"hoin": [
+			"en:tool-like",
+			"es:como herramienta"
+		],
+		"hoikin": [
+			"en:fixed",
+			"es:arreglado"
+		],
+		"hai": [
+			"en:animal",
+			"es:animal",
+			"ko:동물"
+		],
+		"haiki": [
+			"dehumanize", "behave like an animal",
+			"es:deshumanizar", "es:portarse como animal",
+			"ko:동물처럼 하다"
+		],
+		"hain": [
+			"animal",
+			"es:animal"
+		],
+		"haikin": [
+			"dehumanized",
+			"es:deshumanizado"
+		],
+		"hei": ["type"],
+		"mi": ["movement","eight"],
+		"miki": ["move"],
+		"min": ["moving"],
+		"mikin": ["moved"],
+		"mui": ["flow","current"],
+		"moi": [],
+		"mai": ["youth","novelty"],
+		"mei": ["liquid","omi:buomei"],
+		"meiki": ["liquify"],
+		"mein": ["liquid"],
+		"meikin": ["liquified"],
+		"li": [
+			"en:time",
+			"es:tiempo",
+			"ko:시간"
+		],
+	    "beoli": [
+	        "en:beginning",
+	        "es:inicio"
+	    ],
+	    "neoli": [
+	        "en:end",
+	        "es:fin"
+	    ],
+	    "kuili": [
+	        "en:earliness",
+	        "es:lo temprano"
+	    ],
+		"kuilil": [
+			"en:before",
+			"es:antes de",
+			"ko:전"
+		],
+	    "huli": [
+	        "en:tardiness",
+	        "es:lo tarde"
+	    ],
+		"hulil": [
+			"en:after",
+			"es:después de",
+			"ko:후"
+		],
+		"soli": [
+			"en:future","en:when",
+			"es:futuro","es:cuándo"
+		],
+		"liki": [
+			"en:spend time", "en:last"
+			"ko:지내다", 
+			"es:durar", "es:pasar tiempo"
+		],
+		"lin": [
+			"en:chronological",
+			"es:chronológico"
+		],
+		"likin": [
+			"en:where time is spent", "en:with which time is spent",
+			"es:donde se pasa tiempo", "es:con que se pasa tiempo"
+		],
+	    "hali": [
+	        "en:now","present"
+	        "es:ahora","es:presente"
+	    ],
+		"haliki": [
+	        "happen", "make happen", "modernize",
+	    ],
+		"han": [
+	        "current", "happening",
+	    ],
+		"hakin": [
+	        "modernized",
+	    ],
+		"halil": [
+	        "while/when",
+	    ],
+	    "fuli": [
+	        "en:past",
+	        "es:pasado"
+	    ],
+		"fuliki": [
+	        "deprecate", "precede",
+	    ],
+		"fulin": [
+	        "antecuated", "obselete", "precedent",
+	    ],
+		"fulikin": [
+	        "made obselete", "preceded by",
+	    ],
+		"fulil": [
+	        "before",
+	    ],
+	    "soli": [
+	        "en:future",
+	        "es:futuro"
+	    ],
+		"soliki": [
+	        "modernize, postpone, succeed",
+	    ],
+		"solin": [
+	        "successor, del futuro",
+	    ],
+		"solil": [
+	        "after",
+	    ],
+		"lui": [
+			"slipping","sliding","slipperiness"
+		],
+		"luiki": [
+	        "slide", "slip", "slither", "lubricate", "be lubricated"
+	    ],
+		"luin": [
+	        "slippery"
+	    ],
+		"luikin": [
+	        "lubricated", "made slippery"
+	    ],
+	    "luihai": [
+	        "en:snake","en:serpent"
+	        "es:serpiente"
+	    ],
+		"loi": [
+			"exposure","vulnerability",
+			"es:exposición","es:lo descubierto","es:vulnerabilidad"
+		],
+		"lai": [],
+		"lei": [
+			"season",
+			"es:temporada", "es:estación"
+		],
+		"leiki": [
+			"en:change seasons", "en:spend a season",
+			"es:camiar de temporada", "es:pasar la temporada"
+		],
+		"lein": [
+			"en:seasonal",
+			"es:estacional",
+		],
+		"leikin": [
+			"en:where a season is spent", "en:with which a season is spent"
+			"es:donde se pasa la temporada", "es:con que se pasa la temporada"
+		],
+		"ni": [
+			"simplicity",
+			"es:simplicidad"
+		],
+		"niki": [
+	        "en:simplify","en:be simplified"
+			"es:simplificar","es:ser simplificado"
+	    ],
+		"nin": [
+	        "simple", "simply",
+	    ],
+		"nikin": [
+	        "simplified","simplifying"
+	    ],
+		"nui": [
+			"top","lid","cap",
+			"es:cima","tapa"
+		],
+		"nuiki": [
+	        "es:tapar",
+	        "en:put a lid on"
+	    ],
+		"nuin": [
+	        "top","high",
+	        "es:de encima","es:alto"
+	    ],
+		"nuikin": [
+	        "es:tapado",
+	        "closed", "closing"
+	    ],
+		"nuil": [
+	        "on top of",
+	        "encima de"
+	    ],
+		"noi": [
+			"thought",
+			"es:pensamiento"
+		],
+		"kenoi": [
+			"en:memory",
+			"es:memoria","es:recuerdo"
+		],
+		"nai": [
+			"belief","faith",
+			"es:creencia","es:fe"
+		],
+		
+		"si": [
+			"height","up",
+			"es:altura","es:arriba",
+			"ko:키"
+		],
+		"sibua": [
+			"en:tree",
+			"es:árbol",
+			"ko:나무"
+		],
+		"siki": [
+	        "raise","be raised",
+	        "es:subir","es:levantar"
+	    ],
+		"sin": [
+	        "high",
+	        "es:alto",
+			"ko:키가 큰"
+	    ],
+		"sikin": [
+	        "raised","raising",
+	        "es:subido","es:que sube"
+	    ],
+		"sil": [
+	        "over", "above",
+	        "es:sobre", "arriba de",
+			"ko:위에"
+	    ],
+	    "sima": [
+	        "en:wave",
+	        "es:ola","es:onda"
+	    ],
+		"simaki": [
+	        "wave","be waved",
+	        "es:agitar","es:ser agitado"
+	    ],
+		"siman": [
+	        "wavy"
+	    ],
+		"simakin": [
+	        "waved","waving",
+	        "es:agitado","es:que agita"
+	    ],
+		"sui": ["steepness"],
+		"soi": ["weightlessness","lightness"],
+		"sai": ["cloud"],
+		"saiki": ["fog up", "blur"],
+		"sain": ["cloudy", "blurry"],
+		"saikin": ["fogged", "blurred"],
+		"sei": ["gas","omi:buosei"],
+		"seiki": ["boil"],
+		"sein": ["gaseous"],
+		"seikin": ["boiled","boiling"],
+		"fi": [
+			"difference"
+		],
+		"fiki": [
+	        "make different, differentiate","be differentiated"
+	    ],
+		"fin": [
+	        "different",
+	    ],
+		"fikin": [
+	        "differentiated","differentiating"
+	    ],
+		"fil": [
+	        "unlike","different from","than",
+	    ],
+		"fui": ["weapon"],
+		"foi": ["fear"],
+		"fai": ["effort","attempt"],
+		"fei": ["difficulty"],
+		"bi": ["destruction"],
+		"biki": [
+			"en:destroy",
+			"es:destruir"
+		],
+		"bin": [
+			"en:destructive",
+			"es:destructivo"
+		],
+		"bikin": [
+			"en:destroyed",
+			"es:destruido"
+		],
+		"bui": ["business"],
+		"boi": ["vehicle"],
+		"bai": [],
+		"bei": [
+			"moment", "instant"
+			"es:momento", "es:instante"
+		],
+		"beiki": [
+			"en:spend a moment", "en:shorten",
+			"es:pasar un momento", "es:acortar"
+		],
+		"bein": [
+			"en:short", "en:temporary", "en:ephimeral", "en:transient"
+			"es:corto", "es:temporal", "es:efímero"
+		],
+		"beikin": [
+			"en:with which a moment is spent", "en:where a moment is spent", "en:shortened",
+			"es:con que se pasa el momento", "es:donde se pasa el momento"
+		],
+		"di": ["light","brightness"],
+		"diki": ["brighten","shine"],
+		"din": ["bright","shining","shiny"],
+		"dikin": ["lit","brightened"],
+		"dui": ["chaos","disorder"],
+		"doi": ["emotion"],
+		"dai": ["fire"],
+		"daiki": ["light on fire","light","turn on"],
+		"dain": ["fiery","burning"],
+		"daikin": ["turned on","lit on fire"],
+		"dei": ["heat"],
+		"deiki": ["heat"],
+		"dein": ["hot"],
+		"deikin": ["heated"],
+		
+		"kiki": [
+			"en:do",
+			"es:hacer"
+		],
+		"kin": [
+			"en:active",
+			"es:activo"
+		],
+		"kikin": [
+			"en:done",
+			"es:hecho"
+		],
+		"kui": ["speed"],
+		"koi": ["color"],
+		"kai": [
+			"en:fun", "en:entertainment",
+			"es:diversión", "es:entretenimiento"
+		],
+		"kaiki": [
+			"es:divertir", "es:entretener"
+			"en:entertain", "en:have fun"
+		],
+		"kain": [
+			"en:fun", "en:entertaining",
+			"es:divertido"
+		],
+		"kaikin": [
+			"en:entertained",
+			"es:entretenido"
+		],
+		"kei": [
+			"occurrence","event",
+			"es:evento","es:suceso"
+		],
+		"keiki": [
+			"en:make happen", "en:happen",
+			"es:pasar", "es:suceder", "es:hacer pasar"
+		],
+		"kein": [
+			"en:happening",
+			"es:ocurriendo",
+		],
+		"keikin": [
+			"en:made happen",
+			"es:hecho pasar",
+		],
+		"beokei": [
+			"cause"
+		],
+		"beokeiki": [
+			"cause"
+		],
+	    "beokeimki": [
+	        "cause","make a cause"
+	    ],
+	    "beokeinei": [
+	        "made a cause"
+	    ],
+		"beokein": [
+			"causal","as a cause","culpable"
+		],
+		"beokeikin": [
+			"caused"
+		],
+		"beokeil": [
+			"causing"
+		],
+	    "neokei": [
+	        "en:effect",
+	        "es:resultado","es:efecto"
+	    ],
+		"neokeiki": [
+			"be caused by","be affected by","result"
+		],
+	    "neokeimki": [
+			"result from","be affected by"
+		],
+	    "neokeinei": [
+			"result from","be affected by"
+		],
+		"neokein": [
+			"effective","as a result"
+		],
+	    "neokeil": [
+	        "because of",
+	    ],
+		
+		"smu": [],
+		"smou": [],
+		"smau": [],
+		"smeu": [],
+		"smiu": [
+			"foot",
+			"es:pie"
+		],
+		"smiuse": [
+			"en:toe",
+			"es:dedo de pie"
+		],
+		"smiuseki": [
+			"touch with toe",
+	        "es:tocar con dedo de pie"
+		],
+		"smiusen": [
+			"of the toe",
+	        "es:dedal","es:de dedo de pie"
+		],
+		"smiusekin": [
+			"touched with toe","touching with toe"
+		],
+		"smiuki": [
+			"es:pisar",
+	        "en:step","en:step on","en:stomp"
+		],
+		"smiun": [
+			"of the foot","podal",
+	        "es:pedal","de pie"
+		],
+		"smikin": [
+			"es:pisado",
+	        "en:stepped on","en:stepping","en:stepping on"
+		],
+		"snu": ["shadow"],
+		"snou": [],
+		"snau": [],
+		"sneu": [],
+		"sniu": [],
+		"sfu": ["decrease"],
+		"sfou": [],
+		"sfau": [],
+		"sfeu": [],
+		"sfiu": [],
+		"spu": ["secret"],
+		"spou": [],
+		"spau": [],
+		"speu": [],
+		"spiu": [],
+		"stu": [],
+		"stou": [],
+		"stau": [],
+		"steu": ["dryness"],
+		"steuki": ["dry"],
+		"steun": ["dry"],
+		"setukin": ["dried"],
+		"stiu": [],
+		"sku": [],
+		"skou": [],
+		"skau": [],
+		"skeu": [],
+		"skiu": [],
+
+		"smo": [],
+		"smuo": [],
+		"smao": [],
+		"smeo": [],
+		"smio": [],
+		"sno": [
+			"flavor","taste",
+			"es:sabor"
+		],
+		"snoki": [
+	        "be tasty","make tasty",
+	        "es:ser sabroso","hacer sabroso"
+	    ],
+		"snon": [
+	        "tasty","of flavor",
+	        "es:sabroso"
+	    ],
+		"snokin": [
+	        "made tasty","making tasty",
+	        "es:hecho sabroso"
+	    ],
+	    "dasno": [
+	        "en:sweetness",
+	        "es:dulzura"
+	    ],
+		"dasnon": [
+	        "sweet",
+	        "es:dulce"
+	    ],
+	    "feisno": [
+	        "en:sourness",
+	        "es:acidez"
+	    ],
+		"feisnon": [
+	        "sour",
+	        "es:ácido"
+	    ],
+	    "deisno": [
+	        "en:spice",
+	        "es:picante"
+	    ],
+		"deisnon": [
+	        "spicy",
+	        "es:picante"
+	    ],
+	    "lusno": [
+	        "en:bitterness",
+	        "es:amargura"
+	    ],
+		"lusnon": [
+	        "bitter",
+	        "es:amargo"
+	    ],
+	    "masno": [
+	        "en:salt",
+	        "es:sal"
+	    ],
+		"masnon": [
+	        "salty",
+	        "es:salado"
+	    ],
+	    "biusno": [
+	        "en:mint",
+	        "es:menta"
+	    ],
+		"biusnon": [
+	        "minty",
+	        "es:tener sabor de menta"
+	    ],
+	    "fusno": [
+	        "en:blandness",
+	        "es:falta de sabor"
+	    ],
+		"fusnon": [
+	        "bland",
+	        "es:faltar sabor"
+	    ],
+		"snuo": [],
+		"snao": [
+			"tongue","lick",
+			"es:lengua","es:lamido"
+		],
+		"snaoki": [
+			"lick","be licked"
+		],
+		"snaon": [
+			"of the tongue"
+		],
+		"snaokin": [
+			"licked","licking"
+		],
+		"sneo": [
+			"goal","target","purpose",
+			"es:meta","es:propósito"
+		],
+		"sneol": [
+			"in order to","with the purpose of",
+			"es:para","es:con el propósito de"
+		],
+		"snio": [],
+		"sfo": [],
+		"sfuo": [],
+		"sfao": [],
+		"sfeo": [],
+		"sfio": [],
+		"spo": [],
+		"spuo": [],
+		"spao": [],
+		"speo": [],
+		"spio": [],
+		"sto": [],
+		"stuo": [],
+		"stao": [],
+		"steo": [],
+		"stio": [
+			"smallness",
+			"es:lo pequeño"
+		],
+		"stioki": [
+	        "shrink","be shrunk",
+	        "es:empequeñecer","es:ser empequeñecido"
+	    ],
+		"stion": [
+	        "small",
+	        "es:pequeño"
+	    ],
+		"stiokin": [
+	        "shrunk","shrinking",
+	        "es:que empequeñece","es:empequeñecido"
+	    ],
+		"sko": [],
+		"skuo": [],
+		"skao": [],
+		"skeo": [],
+		"skio": [],
+
+		"sma": [
+			"breath",
+			"es:aliento"
+		],
+		"smaki": [
+			"breathe","blow on","be breathed","be blown on"
+		],
+		"sman": [
+			"of the breath"
+		],
+		"smakin": [
+			"breathed","blown on","breathing","blowing on"
+		],
+		"smua": [],
+		"smoa": [],
+		"smea": [],
+		"smia": [],
+		"sna": ["increase"],
+		"snua": [],
+		"snoa": [],
+		"snea": [],
+		"snia": [],
+		"sfa": [],
+		"sfua": [],
+		"sfoa": [],
+		"sfea": [],
+		"sfia": [],
+		"spa": [],
+		"spua": [],
+		"spoa": [],
+		"spea": [],
+		"spia": [],
+		"sta": [],
+		"stua": [],
+		"stoa": [],
+		"stea": [],
+		"stia": [],
+		"ska": ["request"],
+		"skua": [],
+		"skoa": [],
+		"skea": [],
+		"skia": [],
+		
+		"sme": ["meeting"],
+		"smue": [],
+		"smoe": [],
+		"smae": [],
+		"smie": [],
+		"sne": ["edge","border"],
+		"snue": [],
+		"snoe": ["familiarity"],
+		"snae": [],
+		"snie": [],
+		"sfe": [],
+		"sfue": [],
+		"sfoe": [],
+		"sfae": [],
+		"sfie": [],
+		"spe": [],
+		"spue": [],
+		"spoe": [],
+		"spae": [],
+		"spie": [],
+		"ste": [
+			"arm",
+			"es:brazo"
+		],
+		"steki": [
+			"clothesline","be clotheslined"
+		],
+		"sten": [
+			"of the arm"
+		],
+		"stekin": [
+			"clotheslined","clotheslining"
+		],
+		"stue": [],
+		"stoe": [],
+		"stae": [],
+		"stie": [],
+		"ske": [],
+		"skue": [],
+		"skoe": ["moon"],
+		"skae": [],
+		"skie": [],
+		
+		"smi": [
+			"leg","kick",
+			"es:pierna","es:pata","es:patada"
+		],
+		"smiki": [
+			"kick","be kicked"
+		],
+		"smin": [
+			"kicker","of kicking"
+		],
+		"smikin": [
+			"kicked","kicking"
+		],
+		"smui": [],
+		"smoi": [],
+		"smai": [
+			"steam","vapor",
+			"es:vapor"
+		],
+		"smaiki": [
+			"steam","be steamed"
+		],
+		"smain": [
+			"steamy","steaming"
+		],
+		"smaikin": [
+			"steamed","steaming"
+		],
+		"smei": [],
+		"sni": ["shallowness","surface"],
+		"snui": [],
+		"snoi": [],
+		"snai": [],
+		"snei": [],
+		"sfi": ["change"],
+		"sfui": [],
+		"sfoi": [],
+		"sfai": [],
+		"sfei": [],
+		"spi": [],
+		"spui": [],
+		"spoi": [],
+		"spai": [],
+		"spei": [],
+		"sti": [],
+		"stui": [],
+		"stoi": [],
+		"stai": [],
+		"stei": [],
+		"ski": ["sharpness"],
+		"skui": [],
+		"skoi": ["rainbow"],
+		"skai": [],
+		"skei": [],
+		
+		"daikoi": ["red"],
+		"makoi": ["blue"],
+		"dakoi": ["yellow"],
+		"suakoi": ["clear"],
+		"nukoi": ["black"],
+		"bekoi": ["white"],
+		"hakoi": ["green"],
+		"suekoi": ["purple"],
+		"bukoi": ["brown"],
+		"soikoi": ["pink"],
+		"saikoi": ["gray"],
+		"keikoi": ["orange"]
+	},
+	"definitions": {
+		"red": [
+			"A color."
+		],
+		"blue": [
+			"A color."
+		],
+		"yellow": [
+			"A color."
+		],
+		"clear": [
+			"A color."
+		],
+		"black": [
+			"A color."
+		],
+		"white": [
+			"A color."
+		],
+		"green": [
+			"A color."
+		],
+		"purple": [
+			"A color."
+		],
+		"brown": [
+			"A color."
+		],
+		"pink": [
+			"A color."
+		],
+		"gray": [
+			"A color."
+		],
+		"orange": [
+			"A color."
+		],
+		
+		"zero": [
+			"The number 0."
+		],
+		"one": [
+			"The number 1."
+		],
+		"two": [
+			"The number 2."
+		],
+		"three": [
+			"The number 3."
+		],
+		"four": [
+			"The number 4."
+		],
+		"five": [
+			"The number 5."
+		],
+		"six": [
+			"The number 6."
+		],
+		"seven": [
+			"The number 7."
+		],
+		"eight": [
+			"The number 8."
+		],
+		"nine": [
+			"The number 9."
+		],
+		"ten": [
+			"The number 10."
+		],
+		"hundred": [
+			"When \"one hundred\", the number 100. When within a number, multiplied by 100."
+		],
+		"thousand": [
+			"When \"one thousand\", the number 1000. When within a number, multiplied by 1000"
+		]
+	},
+	"rel examples": {
+		"hu": [],
+		"hou": [],
+		"hau": [],
+		"heu": [],
+		"hiu": [],
+		"mu": [],
+		"mou": [],
+		"mau": [],
+		"meu": [],
+		"miu": [],
+		"lu": [],
+		"lou": [],
+		"lau": [],
+		"leu": [],
+		"liu": [],
+		"nu": [],
+		"nou": [],
+		"nau": [],
+		"neu": [],
+		"niu": [],
+		"su": [],
+		"sou": [],
+		"sau": [],
+		"seu": [],
+		"siu": [],
+		"fu": [],
+		"fou": [],
+		"fau": [],
+		"feu": [],
+		"fiu": [],
+		"bu": [],
+		"bou": [],
+		"bau": [],
+		"beu": [],
+		"biu": [],
+		"du": [],
+		"dou": [],
+		"dau": [],
+		"deu": [],
+		"diu": [],
+		"ku": [],
+		"kou": [],
+		"kau": [],
+		"keu": [],
+		"kiu": [],
+
+		"ho": [],
+		"huo": [
+			"omi:habo huom noki.",
+			"en:I know myself."
+		],
+		"hao": [],
+		"heo": [],
+		"hio": [],
+		"mo": [],
+		"muo": [],
+		"mao": [],
+		"meo": [],
+		"mio": [],
+		"lo": [],
+		"luo": [],
+		"lao": [],
+		"leo": [],
+		"lio": [],
+		"no": [],
+		"nuo": [],
+		"nao": [],
+		"neo": [],
+		"nio": [],
+		"so": [],
+		"suo": [],
+		"sao": [],
+		"seo": [],
+		"sio": [],
+		"fo": [],
+		"fuo": [],
+		"fao": [],
+		"feo": [],
+		"fio": [],
+		"bo": [],
+		"buo": [],
+		"bao": [],
+		"beo": [
+			"omi:Abo Bm beoki",
+		    "en:A originates from B",
+			"omi:Bbo An beom heki",
+		    "en:B is A's origin",
+			"omi:Bbo Abo beokin bemm heki",
+		    "en:B is where A originates from",
+			"omi:Bbo Abo beokin heki",
+		    "en:B is where a originates",
+			"omi:Abo Bm beol heki",
+		    "en:A is from B",
+			"omi:Abo Beon heki beol bm",
+		    "en:A is originally from B"
+		],
+		"bio": [],
+		"do": [],
+		"duo": [],
+		"dao": [],
+		"deo": [],
+		"dio": [],
+		"ko": [],
+		"kuo": [],
+		"kao": [],
+		"keo": [],
+		"kio": [],
+		
+		"ha": [],
+		"habo": [
+			"omi:abo mon aki = habo mon haki",
+			"en:I live peacefully."
+		],
+		"hua": [],
+		"hoa": [],
+		"hea": [],
+		"hia": [],
+		"ma": [],
+		"mua": [],
+		"moa": [
+			"omi:moam mioki/minoki",
+		    "en:speak/communicate the truth",
+			"omi:moan mioki",
+		    "en:speak truthfully"
+		],
+		"mea": [],
+		"mia": [],
+		"la": [],
+		"lua": [],
+		"loa": [],
+		"lea": [],
+		"lia": [],
+		"na": [],
+		"nua": [],
+		"noa": [],
+		"nea": [],
+		"nia": [],
+		"sa": [],
+		"sua": [],
+		"soa": [],
+		"sea": [],
+		"sia": [],
+		"fa": [],
+		"fua": [],
+		"foa": [],
+		"fea": [],
+		"fia": [],
+		"ba": [],
+		"bua": [],
+		"boa": [],
+		"bea": [],
+		"bia": [],
+		"da": [],
+		"dua": [],
+		"doa": [],
+		"dea": [],
+		"dia": [],
+		"ka": [],
+		"kua": [],
+		"koa": [],
+		"kea": [],
+		"kia": [],
+		
+		"he": [],
+		"hue": [],
+		"hoe": [],
+		"hae": [],
+		"hie": [],
+		"me": [],
+		"mue": [],
+		"moe": [],
+		"mae": [],
+		"mie": [],
+		"le": [],
+		"lue": [],
+		"loe": [],
+		"lae": [],
+		"lie": [],
+		"ne": [
+			"omi:abo bm neki",
+		    "en:a brings b closer",
+			"omi:abo bm neol/lol neki",
+		    "en:a approaches b",
+			"omi:abo bm nel hekis",
+		    "en:a will be near b"
+		],
+		"nue": [],
+		"noe": [],
+		"nae": [],
+		"nie": [],
+		"se": [],
+		"sue": [],
+		"soe": [],
+		"sae": [],
+		"sie": [],
+		"fe": [],
+		"fue": [],
+		"foe": [],
+		"fae": [],
+		"fie": [],
+		"be": [],
+		"bue": [],
+		"boe": [],
+		"bae": [],
+		"bie": [],
+		"de": [],
+		"due": [],
+		"doe": [],
+		"dae": [],
+		"die": [],
+		"ke": [],
+		"kue": [],
+		"koe": [],
+		"kae": [],
+		"kie": [],
+		
+		"hi": [],
+		"hui": [],
+		"hoi": [],
+		"hai": [],
+		"hei": [],
+		"mi": [],
+		"mui": [],
+		"moi": [],
+		"mai": [],
+		"mei": [],
+		"li": [],
+		"lui": [],
+		"loi": [],
+		"lai": [],
+		"lei": [],
+		"ni": [],
+		"nui": [],
+		"noi": [],
+		"nai": [],
+		"nei": [],
+		"si": [],
+		"sui": [],
+		"soi": [],
+		"sai": [],
+		"sei": [],
+		"fi": [
+			"omi:Abo kuim nan fil boim heki",
+			"en:A is faster than a vehicle"
+		],
+		"fui": [],
+		"foi": [],
+		"fai": [],
+		"fei": [],
+		"bi": [],
+		"bui": [],
+		"boi": [],
+		"bai": [],
+		"bei": [],
+		"di": [],
+		"dui": [],
+		"doi": [],
+		"dai": [],
+		"dei": [],
+		"ki": [],
+		"kui": [],
+		"koi": [],
+		"kai": [],
+		"kei": [],
+		"beokei": [
+			"omi:Abo Cm beokeil Bm snaoki",
+		    "en:A licks B causing C"
+		],
+		"neokei": [
+		    "omi:Abo Cm neokeil Bm snaoki",
+		    "en:A licks B, because of C"
+		],
+		
+		"smu": [],
+		"smou": [],
+		"smau": [],
+		"smeu": [],
+		"smiu": [],
+		"snu": [],
+		"snou": [],
+		"snau": [],
+		"sneu": [],
+		"sniu": [],
+		"sfu": [],
+		"sfou": [],
+		"sfau": [],
+		"sfeu": [],
+		"sfiu": [],
+		"spu": [],
+		"spou": [],
+		"spau": [],
+		"speu": [],
+		"spiu": [],
+		"stu": [],
+		"stou": [],
+		"stau": [],
+		"steu": [],
+		"stiu": [],
+		"sku": [],
+		"skou": [],
+		"skau": [],
+		"skeu": [],
+		"skiu": [],
+
+		"smo": [],
+		"smuo": [],
+		"smao": [],
+		"smeo": [],
+		"smio": [],
+		"sno": [],
+		"snuo": [],
+		"snao": [],
+		"sneo": [],
+		"snio": [],
+		"sfo": [],
+		"sfuo": [],
+		"sfao": [],
+		"sfeo": [],
+		"sfio": [],
+		"spo": [],
+		"spuo": [],
+		"spao": [],
+		"speo": [],
+		"spio": [],
+		"sto": [],
+		"stuo": [],
+		"stao": [],
+		"steo": [],
+		"stio": [],
+		"sko": [],
+		"skuo": [],
+		"skao": [],
+		"skeo": [],
+		"skio": [],
+
+		"sma": [],
+		"smua": [],
+		"smoa": [],
+		"smea": [],
+		"smia": [],
+		"sna": [],
+		"snua": [],
+		"snoa": [],
+		"snea": [],
+		"snia": [],
+		"sfa": [],
+		"sfua": [],
+		"sfoa": [],
+		"sfea": [],
+		"sfia": [],
+		"spa": [],
+		"spua": [],
+		"spoa": [],
+		"spea": [],
+		"spia": [],
+		"sta": [],
+		"stua": [],
+		"stoa": [],
+		"stea": [],
+		"stia": [],
+		"ska": [],
+		"skua": [],
+		"skoa": [],
+		"skea": [],
+		"skia": [],
+		
+		"sme": [],
+		"smue": [],
+		"smoe": [],
+		"smae": [],
+		"smie": [],
+		"sne": [],
+		"snue": [],
+		"snoe": [],
+		"snae": [],
+		"snie": [],
+		"sfe": [],
+		"sfue": [],
+		"sfoe": [],
+		"sfae": [],
+		"sfie": [],
+		"spe": [],
+		"spue": [],
+		"spoe": [],
+		"spae": [],
+		"spie": [],
+		"ste": [],
+		"stue": [],
+		"stoe": [],
+		"stae": [],
+		"stie": [],
+		"ske": [],
+		"skue": [],
+		"skoe": [],
+		"skae": [],
+		"skie": [],
+		
+		"smi": [],
+		"smui": [],
+		"smoi": [],
+		"smai": [],
+		"smei": [],
+		"sni": [],
+		"snui": [],
+		"snoi": [],
+		"snai": [],
+		"snei": [],
+		"sfi": [],
+		"sfui": [],
+		"sfoi": [],
+		"sfai": [],
+		"sfei": [],
+		"spi": [],
+		"spui": [],
+		"spoi": [],
+		"spai": [],
+		"spei": [],
+		"sti": [],
+		"stui": [],
+		"stoi": [],
+		"stai": [],
+		"stei": [],
+		"ski": [],
+		"skui": [],
+		"skoi": [],
+		"skai": [],
+		"skei": [],
+		
+		"grammar conditional": [
+			"omi:Afoki Bki.","en:If A were to happen, B happens.",
+			"omi:Akei Bki.","en:If A happens, B happens.",
+			"omi:Akim hel Bki.","en:In the event of  A happening, B happens.",
+			"omi:Akim beol Bki.","en:Originating from A, B happens.",
+			"omi:Akim neokeil Bki","en:As a result of A, B happens.",
+			"omi:Bkim beokeil Aki","en:A happens, causing B.",
+			"omi:beokein Aki neokein Bki.","en:Cause A, effect B. A happening as a cause, B happens as a result.",
+			"omi:beon Aki neon Bki.","en:Origin A, destination B. Coming from A happening, B would happen.",
+			"omi:neokein Bki?","en:Effect B? Would B happen?",
+			"omi:neon Bki?","en:Destination B? Would B happen?",
+		],
+		"grammar present progressive": [
+			"en:I write in the house.","omi:habo habeam hel leoki.",
+			"en:I am writing in the house.","omi:habo habeam hel leomkin heki.",
+			"en:I am literarily in the house","omi:habo hel habeam leon heki.",
+			"en:I am being written in the house.","omi:habo hel habeam leokin/leonein heki."
+		]
+	},
+	"examples": [
+		"omi:habo huom noki.",
+		"en:I know myself.",
+		"omi:Abo Bm neki",
+	    "en:A brings B closer",
+		"omi:Abo Bm neol/lol neki",
+	    "en:A approaches B",
+		"omi:Abo Bm nel hekis",
+	    "en:A will be near B",
+		"omi:Abo kuim nan fil boim heki",
+		"en:A is faster than a vehicle",
+		"omi:moam mioki/minoki",
+	    "en:speak/communicate the truth",
+		"omi:moan mioki",
+	    "en:speak truthfully",
+		"omi:Abo Bm beoki",
+	    "en:A originates from B",
+		"omi:Bbo An beom heki",
+	    "en:B is A's origin",
+		"omi:Bbo Abo beokin bemm heki",
+	    "en:B is where A originates from",
+		"omi:Bbo Abo beokin heki",
+	    "en:B is where a originates",
+		"omi:Abo Bm beol heki",
+	    "en:A is from B",
+		"omi:Abo Beon heki beol bm",
+	    "en:A is originally from B",
+		"omi:Abo Cm beokeil Bm snaoki",
+	    "en:A licks B causing C",
+		"omi:abo mon aki = habo mon haki",
+		"en:I live peacefully."
+	],
+	"translations": {
+		"omi:habo huom noki.": [
+			"omi:habo huom noki.",
+			"en:I know myself."
+		],
+		"omi:Abo Bm neki": [
+			"omi:Abo Bm neki",
+			"en:A brings B closer"
+		],
+		"omi:Abo Bm neol/lol neki": [
+			"omi:Abo Bm neol/lol neki",
+			"en:A approaches B"
+		],
+		"omi:Abo Bm nel hekis": [
+			"omi:Abo Bm nel hekis",
+			"en:A will be near B"
+		],
+		"omi:Abo kuim nan fil boim heki": [
+			"omi:Abo kuim nan fil boim heki",
+			"en:A is faster than a vehicle"
+		],
+		"omi:moam mioki/minoki": [
+			"omi:moam mioki/minoki",
+			"en:speak/communicate the truth"
+		],
+		"omi:moan mioki": [
+			"omi:moan mioki",
+			"en:speak truthfully"
+		],
+		"omi:Abo Bm beoki": [
+			"omi:Abo Bm beoki",
+			"en:A originates from B"
+		],
+		"omi:Bbo An beom heki": [
+			"omi:Bbo An beom heki",
+			"en:B is A's origin"
+		],
+		"omi:Bbo Abo beokin bemm heki": [
+			"omi:Bbo Abo beokin bemm heki",
+			"en:B is where A originates from"
+		],
+		"omi:Bbo Abo beokin heki": [
+			"omi:Bbo Abo beokin heki",
+			"en:B is where a originates"
+		],
+		"omi:Abo Bm beol heki": [
+			"omi:Abo Bm beol heki",
+			"en:A is from B"
+		],
+		"omi:Abo Beon heki beol bm": [
+			"omi:Abo Beon heki beol bm",
+			"en:A is originally from B"
+		],
+		"omi:Abo Cm beokeil Bm snaoki": [
+			"omi:Abo Cm beokeil Bm snaoki",
+			"en:A licks B causing C"
+		],
+		"omi:abo mon aki = habo mon haki": [
+			"omi:abo mon aki = habo mon haki",
+			"en:I live peacefully."
+		],
+		"#noname": [
+			[
+				"en:I write in the house.",
+				"omi:habo habeam hel leoki."
+			],
+			[
+				"en:I am writing in the house.",
+				"omi:habo habeam hel leomkin heki."
+			],
+			[
+				"en:I am literarily in the house",
+				"omi:habo hel habeam leon heki."
+			],
+			[
+				"en:I am being written in the house.",
+				"omi:habo hel habeam leokin/leonein heki."
+			],
+			[
+				"omi:Afoki Bki.",
+				"en:If A were to happen, B happens."
+			],
+			[
+				"omi:Akei Bki.",
+				"en:If A happens, B happens."
+			],
+			[
+				"omi:Akim hel Bki.",
+				"en:In the event of  A happening, B happens."
+			],
+			[
+				"omi:Akim beol Bki.",
+				"en:Originating from A, B happens."
+			],
+			[
+				"omi:Akim neokeil Bki",
+				"en:As a result of A, B happens."
+			],
+			[
+				"omi:Bkim beokeil Aki",
+				"en:A happens, causing B."
+			],
+			[
+				"omi:beokein Aki neokein Bki.",
+				"en:Cause A, effect B. A happening as a cause, B happens as a result."
+			],
+			[
+				"omi:beon Aki neon Bki.",
+				"en:Origin A, destination B. Coming from A happening, B would happen."
+			],
+			[
+				"omi:neokein Bki?",
+				"en:Effect B? Would B happen?"
+			],
+			[
+				"omi:neon Bki?",
+				"en:Destination B? Would B happen?"
+			]
+		]
+	},
+	"antonyms": {
+		"hu": ["mi"],
+		"hou": [],
+		"hau": [],
+		"heu": [],
+		"hiu": [],
+		"mu": [],
+		"mou": [],
+		"mau": [],
+		"meu": [],
+		"miu": [],
+		"lu": [],
+		"lou": [],
+		"lau": [],
+		"leu": [],
+		"liu": [],
+		"nu": [],
+		"nou": [],
+		"nau": [],
+		"neu": [],
+		"niu": [],
+		"su": [],
+		"sou": [],
+		"sau": [],
+		"seu": [],
+		"siu": [],
+		"fu": [],
+		"fou": [],
+		"fau": [],
+		"feu": [],
+		"fiu": [],
+		"bu": [],
+		"bou": [],
+		"bau": [],
+		"beu": [],
+		"biu": [],
+		"du": [],
+		"dou": [],
+		"dau": [],
+		"deu": [],
+		"diu": [],
+		"ku": [],
+		"kou": [],
+		"kau": [],
+		"keu": [],
+		"kiu": [],
+
+		"ho": [],
+		"huo": [],
+		"hao": [],
+		"heo": [],
+		"hio": [],
+		"mo": [],
+		"muo": [],
+		"mao": [],
+		"meo": [],
+		"mio": [],
+		"lo": [],
+		"luo": [],
+		"lao": [],
+		"leo": [],
+		"lio": [],
+		"no": [],
+		"nuo": [],
+		"nao": [],
+		"neo": [],
+		"nio": [],
+		"so": [],
+		"suo": [],
+		"sao": [],
+		"seo": [],
+		"sio": [],
+		"fo": [],
+		"fuo": [],
+		"fao": [],
+		"feo": [],
+		"fio": [],
+		"bo": [],
+		"buo": [],
+		"bao": [],
+		"beo": [],
+		"bio": [],
+		"do": [],
+		"duo": [],
+		"dao": [],
+		"deo": [],
+		"dio": [],
+		"ko": [],
+		"kuo": [],
+		"kao": [],
+		"keo": [],
+		"kio": [],
+		
+		"ha": [],
+		"hua": [],
+		"hoa": [],
+		"hea": [],
+		"hia": [],
+		"ma": [],
+		"mua": [],
+		"moa": [],
+		"mea": [],
+		"mia": [],
+		"la": [],
+		"lua": [],
+		"loa": [],
+		"lea": [],
+		"lia": [],
+		"na": [],
+		"nua": [],
+		"noa": [],
+		"nea": [],
+		"nia": [],
+		"sa": [],
+		"sua": [],
+		"soa": [],
+		"sea": [],
+		"sia": [],
+		"fa": [],
+		"fua": [],
+		"foa": [],
+		"fea": [],
+		"fia": [],
+		"ba": [],
+		"bua": [],
+		"boa": [],
+		"bea": [],
+		"bia": [],
+		"da": [],
+		"dua": [],
+		"doa": [],
+		"dea": [],
+		"dia": [],
+		"ka": [],
+		"kua": [],
+		"koa": [],
+		"kea": [],
+		"kia": [],
+		
+		"he": [],
+		"hue": [],
+		"hoe": [],
+		"hae": [],
+		"hie": [],
+		"me": [],
+		"mue": [],
+		"moe": [],
+		"mae": [],
+		"mie": [],
+		"le": [],
+		"lue": [],
+		"loe": [],
+		"lae": [],
+		"lie": [],
+		"ne": [],
+		"nue": [],
+		"noe": [],
+		"nae": [],
+		"nie": [],
+		"se": [],
+		"sue": [],
+		"soe": [],
+		"sae": [],
+		"sie": [],
+		"fe": [],
+		"fue": [],
+		"foe": [],
+		"fae": [],
+		"fie": [],
+		"be": [],
+		"bue": [],
+		"boe": [],
+		"bae": [],
+		"bie": [],
+		"de": [],
+		"due": [],
+		"doe": [],
+		"dae": [],
+		"die": [],
+		"ke": [],
+		"kue": [],
+		"koe": [],
+		"kae": [],
+		"kie": [],
+		
+		"hi": [],
+		"hui": [],
+		"hoi": [],
+		"hai": [],
+		"hei": [],
+		"mi": [],
+		"mui": [],
+		"moi": [],
+		"mai": [],
+		"mei": [],
+		"li": [],
+		"lui": [],
+		"loi": [],
+		"lai": [],
+		"lei": [],
+		"ni": [],
+		"nui": [],
+		"noi": [],
+		"nai": [],
+		"nei": [],
+		"si": [],
+		"sui": [],
+		"soi": [],
+		"sai": [],
+		"sei": [],
+		"fi": [],
+		"fui": [],
+		"foi": [],
+		"fai": [],
+		"fei": [],
+		"bi": [],
+		"bui": [],
+		"boi": [],
+		"bai": [],
+		"bei": [],
+		"di": [],
+		"dui": [],
+		"doi": [],
+		"dai": [],
+		"dei": [],
+		"ki": [],
+		"kui": [],
+		"koi": [],
+		"kai": [],
+		"kei": [],
+		
+		"smu": [],
+		"smou": [],
+		"smau": [],
+		"smeu": [],
+		"smiu": [],
+		"snu": [],
+		"snou": [],
+		"snau": [],
+		"sneu": [],
+		"sniu": [],
+		"sfu": [],
+		"sfou": [],
+		"sfau": [],
+		"sfeu": [],
+		"sfiu": [],
+		"spu": [],
+		"spou": [],
+		"spau": [],
+		"speu": [],
+		"spiu": [],
+		"stu": [],
+		"stou": [],
+		"stau": [],
+		"steu": [],
+		"stiu": [],
+		"sku": [],
+		"skou": [],
+		"skau": [],
+		"skeu": [],
+		"skiu": [],
+
+		"smo": [],
+		"smuo": [],
+		"smao": [],
+		"smeo": [],
+		"smio": [],
+		"sno": [],
+		"snuo": [],
+		"snao": [],
+		"sneo": [],
+		"snio": [],
+		"sfo": [],
+		"sfuo": [],
+		"sfao": [],
+		"sfeo": [],
+		"sfio": [],
+		"spo": [],
+		"spuo": [],
+		"spao": [],
+		"speo": [],
+		"spio": [],
+		"sto": [],
+		"stuo": [],
+		"stao": [],
+		"steo": [],
+		"stio": [],
+		"sko": [],
+		"skuo": [],
+		"skao": [],
+		"skeo": [],
+		"skio": [],
+
+		"sma": [],
+		"smua": [],
+		"smoa": [],
+		"smea": [],
+		"smia": [],
+		"sna": [],
+		"snua": [],
+		"snoa": [],
+		"snea": [],
+		"snia": [],
+		"sfa": [],
+		"sfua": [],
+		"sfoa": [],
+		"sfea": [],
+		"sfia": [],
+		"spa": [],
+		"spua": [],
+		"spoa": [],
+		"spea": [],
+		"spia": [],
+		"sta": [],
+		"stua": [],
+		"stoa": [],
+		"stea": [],
+		"stia": [],
+		"ska": [],
+		"skua": [],
+		"skoa": [],
+		"skea": [],
+		"skia": [],
+		
+		"sme": [],
+		"smue": [],
+		"smoe": [],
+		"smae": [],
+		"smie": [],
+		"sne": [],
+		"snue": [],
+		"snoe": [],
+		"snae": [],
+		"snie": [],
+		"sfe": [],
+		"sfue": [],
+		"sfoe": [],
+		"sfae": [],
+		"sfie": [],
+		"spe": [],
+		"spue": [],
+		"spoe": [],
+		"spae": [],
+		"spie": [],
+		"ste": [],
+		"stue": [],
+		"stoe": [],
+		"stae": [],
+		"stie": [],
+		"ske": [],
+		"skue": [],
+		"skoe": [],
+		"skae": [],
+		"skie": [],
+		
+		"smi": [],
+		"smui": [],
+		"smoi": [],
+		"smai": [],
+		"smei": [],
+		"sni": [],
+		"snui": [],
+		"snoi": [],
+		"snai": [],
+		"snei": [],
+		"sfi": [],
+		"sfui": [],
+		"sfoi": [],
+		"sfai": [],
+		"sfei": [],
+		"spi": [],
+		"spui": [],
+		"spoi": [],
+		"spai": [],
+		"spei": [],
+		"sti": [],
+		"stui": [],
+		"stoi": [],
+		"stai": [],
+		"stei": [],
+		"ski": [],
+		"skui": [],
+		"skoi": [],
+		"skai": [],
+		"skei": []
+	},
+	"homophones": {
+		"ou": ["o"],
+		"au": ["ao"],
+		"eu": ["eo"],
+		
+		"o": ["ou"],
+		"ao": ["au"],
+		"eo": ["eu"],
+		
+		"ua": ["oa"],
+		"oa": ["ua"],
+		"ea": ["ia"],
+		"ia": ["ea"],
+		
+		"ue": ["oe"],
+		"oe": ["ue"],
+		"ae": ["ai"],
+		
+		"ai": ["ae"],
+		
+		"hu": ["u"],
+		"hou": ["ou"],
+		"hau": ["au"],
+		"heu": ["eu"],
+		"hiu": ["iu"],
+		"ho": ["o"],
+		"huo": ["uo"],
+		"hao": ["ao"],
+		"heo": ["eo"],
+		"hio": ["io"],
+		"ha": ["a"],
+		"hua": ["ua"],
+		"hoa": ["oa"],
+		"hea": ["ea"],
+		"hia": ["ia"],
+		"he": ["e"],
+		"hue": ["ue"],
+		"hoe": ["oe"],
+		"hae": ["ae"],
+		"hie": ["ie"],
+		"hi": ["i"],
+		"hui": ["ui"],
+		"hoi": ["oi"],
+		"hai": ["ai"],
+		"hei": ["ei"]
+	}
+}

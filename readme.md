@@ -1,5 +1,7 @@
-> Owen Gallagher  
-> 5 April 2021
+<!--
+    Author: **Owen Gallagher**  
+    Creation date: **5 April 2021**
+-->
 
 # Omino
 
@@ -7,15 +9,15 @@ Omino is another proposed international auxiliary language.
 
 **_Another one? You must be joking. Haven't you ever heard of [Esperanto](https://en.wikipedia.org/wiki/Esperanto)? Or Ido? Interlingua? Novial? Volapuk? Kotava? Toki Pona? Et Cetera?_**
 
-Yes, another one. Admittedly, I understand it's a long shot to expect much from another attempt at inventing a universal second language after so many have already been attempted, with a language like Esperanto steadily gaining true international use and relevance. 
+Yes, another one. Admittedly, I understand it's a long shot to expect much from another attempt at inventing a universal second language after so many have already been attempted, with a language like Esperanto steadily gaining true international use and relevance.
 
-However, there are some considerable drawbacks to the existing constructed languages I've seen so far that I hope Omino can address. So even if it doesn't advance to the major leagues itself, perhaps the principles espoused, and approaches used to achieve them, can inform existing more successful auxiliary languages of possible improvements.
+However, there are some drawbacks to the existing constructed languages I've seen so far that I hope Omino can address. So even if it doesn't advance to the major leagues itself, perhaps the principles espoused, and approaches used to achieve them, can inform existing more successful auxiliary languages of possible improvements.
 
 Realistically, it'll probably just pose an interesting thought experiment, which isn't such a bad thing either.
 
 ## Principles
 
-**intuitive** The grammar and meanings are intuitive. Omino relies heavily on the theory of [phonosematics](#inherent-meanings-of-letters) for the derivation of words.
+**intuitive** The grammar and meanings are intuitive. Omino relies heavily on the theory of [phonosemantics](#inherent-meanings-of-letters) for the derivation of words.
 
 **simple** Simplify whenever possible.
 
@@ -104,7 +106,7 @@ These inherent were chosen wholly based on personal intuition, trusting that lif
 
 Generally, pronunciation of each letter is pure and consistent. There are no accents, tones, or syllable stress rules. However, there are some permitted, but not required, exceptions:
 
-<span id="pronunciation-h">**H** can be pronounced as a breath (English **h**ello), a [loose k](https://en.wikipedia.org/wiki/Voiceless_velar_fricative) or some other approximant, or be skipped altogether.</span> Note that skipping pronunciation of an H will inevitably add ambiguity, however. Because **h** can be skipped (especially at the beginning of a word), it can also be skipped when writing. For example:
+<span id="pronunciation-h">**H** can be pronounced as a breath (English **h**ello), a [loose k](https://en.wikipedia.org/wiki/Voiceless_velar_fricative) or some other approximant, or be skipped altogether.</span> Skipping H's should only be done at the beginning of a word, or for dipthong (two vowel) syllables. Note that skipping pronunciation of an H will inevitably add ambiguity. For example:
 
 abo mon aki = habo mon haki &rarr; I live peacefully.
 
