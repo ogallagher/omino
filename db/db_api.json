@@ -2,9 +2,81 @@
 	"insert_language": {
 		"external": false,
 		"params": [
-			"code","name"
+			"code",
+			"name"
 		],
 		"query": "insert ignore into `languages`(`code`,`english_name`) values ({code},{name})",
 		"notes": "insert ignore fails quietly if the language is already in the db"
+	},
+	"insert_string": {
+		"external": true,
+		"params": [
+			"language",
+			"value",
+			"timestamp_ms"
+		],
+		"query": "insert into `strings`(`language`,`value`,`last_updated`) values ({language},{value},{timestamp_ms})"
+	},
+	"fetch_string": {
+		"external": true,
+		"params": [
+			"value",
+			"language"
+		],
+		"query": "select * from `strings` where `value`={value} and `language`={language}"
+	},
+	"insert_definition": {
+		"external": true,
+		"params": [
+			"value",
+			"language",
+			"timestamp_ms"
+		],
+		"query": "call insert_definition_by_value({value},{language},{timestamp_ms})"
+	},
+	"insert_rel_definition": {
+		"external": true,
+		"params": [
+			"entry_val",
+			"entry_lang",
+			"def_val",
+			"def_lang"
+		],
+		"query": "call insert_rel_definition_by_value({entry_val},{entry_lang},{def_val},{def_lang})",
+		"notes": "assumes both entry and definition already exist in strings"
+	},
+	"insert_letter": {
+		"external": true,
+		"params": [
+			"value",
+			"timestamp_ms"
+		],
+		"query": "call insert_letter_by_value({value},{timestamp_ms})"
+	},
+	"insert_root": {
+		"external": true,
+		"params": [
+			"value",
+			"timestamp_ms"
+		],
+		"query": "call insert_root_by_value({value},{timestamp_ms})"
+	},
+	"insert_omino_word": {
+		"external": true,
+		"params": [
+			"value",
+			"timestamp_ms"
+		],
+		"query": "call insert_omino_word_by_value({value},{timestamp_ms})"
+	},
+	"insert_example": {
+		"external": true,
+		"params": [
+			"value",
+			"language",
+			"timestamp_ms",
+			"correct"
+		],
+		"query": "call insert_example_by_value({value},{language},{timestamp_ms},{correct})"
 	}
 }

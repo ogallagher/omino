@@ -88,19 +88,19 @@
 		
 		"m kiki": ["mki"],
 		
-		"0": [0,"zero"],
-		"1": [1,"one","January"],
-		"2": [2,"two","February"],
-		"3": [3,"three","March"],
-		"4": [4,"four","April"],
-		"5": [5,"five","May"],
-		"6": [6,"six","June"],
-		"7": [7,"seven","July"],
-		"8": [8,"eight","August"],
-		"9": [9,"nine","September"],
-		"10": [10,"ten","October"],
-		"11": [11,"eleven","November"],
-		"12": [12,"twelve","December"],
+		"0": ["0","zero"],
+		"1": ["1","one","January"],
+		"2": ["2","two","February"],
+		"3": ["3","three","March"],
+		"4": ["4","four","April"],
+		"5": ["5","five","May"],
+		"6": ["6","six","June"],
+		"7": ["7","seven","July"],
+		"8": ["8","eight","August"],
+		"9": ["9","nine","September"],
+		"10": ["10","ten","October"],
+		"11": ["11","eleven","November"],
+		"12": ["12","twelve","December"],
 		
 		"nado": ["bao"],
 		
@@ -108,8 +108,8 @@
 		
 		"much": ["many","a lot"],
 		
-		"en:moment": ["en:instant"],
-		"es:momento": ["es:instante"]
+		"eng:moment": ["eng:instant"],
+		"spa:momento": ["spa:instante"]
 	},
 	"preferred aliases": [
 		"s","f","d","b","k","grammar suffix","bao","gray","much"
@@ -968,393 +968,6 @@
 		"ke",
 		"ki"
 	],
-	"single consonant roots": [
-		"hu",
-		"hou",
-		"hau",
-		"heu",
-		"hiu",
-		"mu",
-		"mou",
-		"mau",
-		"meu",
-		"miu",
-		"lu",
-		"lou",
-		"lau",
-		"leu",
-		"liu",
-		"nu",
-		"nou",
-		"nau",
-		"neu",
-		"niu",
-		"su",
-		"sou",
-		"sau",
-		"seu",
-		"siu",
-		"fu",
-		"fou",
-		"fau",
-		"feu",
-		"fiu",
-		"bu",
-		"bou",
-		"bau",
-		"beu",
-		"biu",
-		"du",
-		"dou",
-		"dau",
-		"deu",
-		"diu",
-		"ku",
-		"kou",
-		"kau",
-		"keu",
-		"kiu",
-
-		"ho",
-		"huo",
-		"hao",
-		"heo",
-		"hio",
-		"mo",
-		"muo",
-		"mao",
-		"meo",
-		"mio",
-		"lo",
-		"luo",
-		"lao",
-		"leo",
-		"lio",
-		"no",
-		"nuo",
-		"nao",
-		"neo",
-		"nio",
-		"so",
-		"suo",
-		"sao",
-		"seo",
-		"sio",
-		"fo",
-		"fuo",
-		"fao",
-		"feo",
-		"fio",
-		"bo",
-		"buo",
-		"bao",
-		"beo",
-		"bio",
-		"do",
-		"duo",
-		"dao",
-		"deo",
-		"dio",
-		"ko",
-		"kuo",
-		"kao",
-		"keo",
-		"kio",
-		
-		"ha",
-		"hua",
-		"hoa",
-		"hea",
-		"hia",
-		"ma",
-		"mua",
-		"moa",
-		"mea",
-		"mia",
-		"la",
-		"lua",
-		"loa",
-		"lea",
-		"lia",
-		"na",
-		"nua",
-		"noa",
-		"nea",
-		"nia",
-		"sa",
-		"sua",
-		"soa",
-		"sea",
-		"sia",
-		"fa",
-		"fua",
-		"foa",
-		"fea",
-		"fia",
-		"ba",
-		"bua",
-		"boa",
-		"bea",
-		"bia",
-		"da",
-		"dua",
-		"doa",
-		"dea",
-		"dia",
-		"ka",
-		"kua",
-		"koa",
-		"kea",
-		"kia",
-		
-		"he",
-		"hue",
-		"hoe",
-		"hae",
-		"hie",
-		"me",
-		"mue",
-		"moe",
-		"mae",
-		"mie",
-		"le",
-		"lue",
-		"loe",
-		"lae",
-		"lie",
-		"ne",
-		"nue",
-		"noe",
-		"nae",
-		"nie",
-		"se",
-		"sue",
-		"soe",
-		"sae",
-		"sie",
-		"fu",
-		"fue",
-		"foe",
-		"fae",
-		"fie",
-		"be",
-		"bue",
-		"boe",
-		"bae",
-		"bie",
-		"du",
-		"due",
-		"doe",
-		"dae",
-		"die",
-		"ke",
-		"kue",
-		"koe",
-		"kae",
-		"kie",
-		
-		"hi",
-		"hui",
-		"hoi",
-		"hai",
-		"hei",
-		"mi",
-		"mui",
-		"moi",
-		"mai",
-		"mei",
-		"li",
-		"lui",
-		"loi",
-		"lai",
-		"lei",
-		"ni",
-		"nui",
-		"noi",
-		"nai",
-		"nei",
-		"si",
-		"sui",
-		"soi",
-		"sai",
-		"sei",
-		"fi",
-		"fui",
-		"foi",
-		"fai",
-		"fei",
-		"bi",
-		"bui",
-		"boi",
-		"bai",
-		"bei",
-		"di",
-		"dui",
-		"doi",
-		"dai",
-		"dei",
-		"ki",
-		"kui",
-		"koi",
-		"kai",
-		"kei"
-	],
-	"double consonant roots": [
-		"smu",
-		"smou",
-		"smau",
-		"smeu",
-		"smiu",
-		"snu",
-		"snou",
-		"snau",
-		"sneu",
-		"sniu",
-		"sfu",
-		"sfou",
-		"sfau",
-		"sfeu",
-		"sfiu",
-		"sbu",
-		"sbou",
-		"sbau",
-		"sbeu",
-		"sbiu",
-		"sdu",
-		"sdou",
-		"sdau",
-		"sdeu",
-		"sdiu",
-		"sku",
-		"skou",
-		"skau",
-		"skeu",
-		"skiu",
-
-		"smo",
-		"smuo",
-		"smao",
-		"smeo",
-		"smio",
-		"sno",
-		"snuo",
-		"snao",
-		"sneo",
-		"snio",
-		"sfo",
-		"sfuo",
-		"sfao",
-		"sfeo",
-		"sfio",
-		"sbo",
-		"sbuo",
-		"sbao",
-		"sbeo",
-		"sbio",
-		"sdo",
-		"sduo",
-		"sdao",
-		"sdeo",
-		"sdio",
-		"sko",
-		"skuo",
-		"skao",
-		"skeo",
-		"skio",
-
-		"sma",
-		"smua",
-		"smoa",
-		"smea",
-		"smia",
-		"sna",
-		"snua",
-		"snoa",
-		"snea",
-		"snia",
-		"sfa",
-		"sfua",
-		"sfoa",
-		"sfea",
-		"sfia",
-		"sba",
-		"sbua",
-		"sboa",
-		"sbea",
-		"sbia",
-		"sda",
-		"sdua",
-		"sdoa",
-		"sdea",
-		"sdia",
-		"ska",
-		"skua",
-		"skoa",
-		"skea",
-		"skia",
-		
-		"sme",
-		"smue",
-		"smoe",
-		"smae",
-		"smie",
-		"sne",
-		"snue",
-		"snoe",
-		"snae",
-		"snie",
-		"sfu",
-		"sfue",
-		"sfoe",
-		"sfae",
-		"sfie",
-		"sbe",
-		"sbue",
-		"sboe",
-		"sbae",
-		"sbie",
-		"sdu",
-		"sdue",
-		"sdoe",
-		"sdae",
-		"sdie",
-		"ske",
-		"skue",
-		"skoe",
-		"skae",
-		"skie",
-		
-		"smi",
-		"smui",
-		"smoi",
-		"smai",
-		"smei",
-		"sni",
-		"snui",
-		"snoi",
-		"snai",
-		"snei",
-		"sfi",
-		"sfui",
-		"sfoi",
-		"sfai",
-		"sfei",
-		"sbi",
-		"sbui",
-		"sboi",
-		"sbai",
-		"sbei",
-		"sdi",
-		"sdui",
-		"sdoi",
-		"sdai",
-		"sdei",
-		"ski",
-		"skui",
-		"skoi",
-		"skai",
-		"skei"
-	],
 	"numbers": [
 		"keo",
 		"fu",
@@ -1390,101 +1003,106 @@
 	"rel definitions": {
 		"u": [
 			"negativity","loss","death","dark","depth",
-			"es:negatividad","es:pérdida","es:muerte","es:oscuridad","es:profundidad"
+			"spa:negatividad","spa:pérdida","spa:muerte","spa:oscuridad","spa:profundidad"
 		],
 		"o": [
 			"neutrality","awareness","smoothness","wholeness",
-			"es:neutralidad","es:conocimiento","es:lo liso","es:lo completo"
+			"spa:neutralidad","spa:conocimiento","spa:lo liso","spa:lo completo"
 		],
 		"a": [
 			"positivity","life","comfort","health",
-			"es:positividad","es:vida","es:comodidad","es:salud"
+			"spa:positividad","spa:vida","spa:comodidad","spa:salud"
 		],
 		"e": [
 			"stillness","uniformity","slowness",
-			"es:tranquilidad","es:consistencia","es:lentitud"
+			"spa:tranquilidad","spa:consistencia","spa:lentitud"
 		],
 		"i": [
 			"energy","change","sharpness","difference",
-			"es:energía","es:cambio","es:lo afilado","es:lo puntiagudo","es:diferencia"
+			"spa:energía","spa:cambio","spa:lo afilado","spa:lo puntiagudo","spa:diferencia"
 		],
 		"h": [
 			"breath","existence","peace",
-			"es:aliento","es:existencia","es:paz"
+			"spa:aliento","spa:existencia","spa:paz"
 		],
 		"m": [
 			"comfort","flow","goodness",
-			"grammar suffix","direct object","object of preposition",
-			"es:comodidad","es:flujo","es:buen"
+			"eng:grammar suffix of direct object, object of preposition",
+			"spa:sufijo gramático de objecto directo, objeto de preposición",
+			"spa:comodidad","spa:flujo","spa:buen"
 		],
 		"l": [
 			"flow","motion","pleasantness","ease",
-			"grammar suffix","preposition",
-			"es:flujo","es:movimiento","es:lo agradable","es:facilidad",
-			"es:sufijo gramático","es:preposición"
+			"eng:grammar suffix of preposition",
+			"spa:flujo","spa:movimiento","spa:lo agradable","spa:facilidad",
+			"spa:sufijo gramático preposición"
 		],
 		"n": [
 			"completion","satisfaction","effort",
-			"grammar suffix","adjective","adverb",
-			"es:lo completo","es:satisfacción","es:esfuerzo",
-			"es:sufijo gramático","es:adjetivo","es:adverbio"
+			"grammar suffix of adjective, adverb",
+			"spa:lo completo","spa:satisfacción","spa:esfuerzo",
+			"spa:sufijo gramático","spa:adjetivo","spa:adverbio"
 		],
 		"s": [
 			"whispering","drift","invisibility","intangibility",
-			"grammar suffix","plural noun","future verb",
-			"es:susurro","es:deriva","es:invisibilidad","es:intagibilidad",
-			"es:sufijo gramático","es:sustantivo plural","es:verbo futuro"
+			"eng:grammar suffix of plural noun, future verb",
+			"spa:susurro","spa:deriva","spa:invisibilidad","spa:intagibilidad",
+			"spa:sufijo gramático de sustantivo plural, verbo futuro"
 		],
 		"f": [
 			"struggle","discomfort","effort",
-			"grammar suffix","indirect object","past verb",
-			"es:lucha","es:incomodidad","es:esfuerzo",
-			"es:sufijo gramático","es:objeto indirecto","es:verbo pasado"
+			"grammar suffix of indirect object, past verb",
+			"spa:lucha","spa:incomodidad","spa:esfuerzo",
+			"spa:sufijo gramático de objeto indirecto, verbo pasado"
 		],
 		"b": [
 			"bulk","stillness","fatigue","weight",
-			"es:peso","es:tranquilidad","es:fatiga","es:bulto"
+			"spa:peso","spa:tranquilidad","spa:fatiga","spa:bulto"
 		],
 		"d": [
 			"energy","light","contact",
-			"es:energía","es:luz","es:contacto"
+			"spa:energía","spa:luz","spa:contacto"
 		],
 		"k": [
 			"sharpness","light","speed",
-			"es:lo afilado","es:puntiagudez","es:lo puntiagudo","es:luz","es:rapidéz"
+			"spa:lo afilado","spa:puntiagudez","spa:lo puntiagudo","spa:luz","spa:rapidéz"
 		],
 		
 		"bo": [
 			"importance",
-			"grammar suffix","subject"
+			"grammar suffix of subject",
+			"spa:sufijo gramático de sujeto"
 		],
 		"ki": [
 			"action",
-			"grammar suffix","verb"
+			"grammar suffix of verb",
+			"spa:sufijo gramático de verbo"
 		],
 		"mki": [
-			"m kiki contraction","grammar suffix","active verb"
+			"m kiki contraction","grammar suffix of active verb",
+			"spa:sufijo gramático de verbo activo"
 		],
 		"nei": [
 			"idleness",
-			"grammar suffix","passive verb"
+			"grammar suffix of passive verb",
+			"spa:sufijo gramático de verbo pasivo"
 		],
 		
 		"hu": [
-			"en:stillness","en:four",
-			"es:quietud","es:cuatro"
+			"eng:stillness","eng:four",
+			"spa:quietud","spa:cuatro"
 		],
 		"huki": [
 			"stop",
-			"es:parar/pararse", "es:detener/detenerse"
+			"spa:parar", "spa:detener"
 		],
 		"hun": [
 			"still",
-			"es:quieto"
+			"spa:quieto"
 		],
 		"hukin": [
 			"stopped",
-			"es:detenido"
+			"spa:detenido"
 		],
 		"huki": [
 			"stop","be stopped"
@@ -1511,57 +1129,57 @@
 		"hau": [],
 		"heu": [
 			"singularity",
-			"es:singularidad"
+			"spa:singularidad"
 		],
 	    "seheu": [
-	        "en:isolation","en:solitude",
-	        "es:aislamiento","es:soledad"
+	        "eng:isolation","eng:solitude",
+	        "spa:aislamiento","spa:soledad"
 	    ],
 		"hiu": [
 			"disagreement","no",
-			"es:desacuerdo","es:no"
+			"spa:desacuerdo","spa:no"
 		],
 		"hiuki": [
 	        "say no","disagree",
-			"es:decir que no","es:no estar de acuerdo"
+			"spa:decir que no","spa:no estar de acuerdo"
 	    ],
 		"hiun": [
 	        "disagreeable","not"
 	    ],
 		"hiukin": [
 	        "disagreed","disagreeing",
-			"es:que no está de acuerdo"
+			"spa:que no está de acuerdo"
 	    ],
 		"mu": [
-			"en:want not"
+			"eng:want not"
 		],
 		"muki": [
-			"en:want not","en:be unwanted",
-			"es:no querer","es:ser no querido",
-			"ko:싫어하다"
+			"eng:want not","eng:be unwanted",
+			"spa:no querer","spa:ser no querido",
+			"kor:싫어하다"
 		],
 		"mumki": [
-			"en:want not",
-			"es:no querer",
-			"ko:싫어하다"
+			"eng:want not",
+			"spa:no querer",
+			"kor:싫어하다"
 		],
 		"munei": [
-			"en:be unwanted",
-			"es:ser no querido"
+			"eng:be unwanted",
+			"spa:ser no querido"
 		],
 		"mun": [
-			"en:undesirable",
-			"es:indeseable"
+			"eng:undesirable",
+			"spa:indeseable"
 		],
 		"mukin": [
-			"en:unwanted ",
-			"es:no deseado",
-			"ko:싫어한","ko:싫은"
+			"eng:unwanted ",
+			"spa:no deseado",
+			"kor:싫어한","kor:싫은"
 		],
 		"mou": [],
 		"mau": [
-			"en:ice",
-			"es:hielo"
+			"eng:ice",
+			"spa:hielo"
 		],
 		"mauki": [
 			"freeze","ice","be frozen","be iced"
@@ -1594,56 +1212,56 @@
 		"miumkin": ["snowing"],
 		"miunein": ["snowed"],
 	    "miubae": [
-	        "en:cleanliness",
-	        "es:limpieza"
+	        "eng:cleanliness",
+	        "spa:limpieza"
 	    ],
 		"miubaeki": [
-			"en:clean",
-			"es:limpiar/limpiarse",
-			"ko:깨긋하다"
+			"eng:clean",
+			"spa:limpiar/limpiarse",
+			"kor:깨긋하다"
 		],
 		"miubaen": [
-			"en:clean",
-			"es:limpio"
+			"eng:clean",
+			"spa:limpio"
 		],
 		"miubaekin": [
-			"en:cleaned",
-			"es:limpiado",
-			"ko:깨긋한"
+			"eng:cleaned",
+			"spa:limpiado",
+			"kor:깨긋한"
 		],
 	    "budui": [
-	        "en:dirtiness",
-	        "es:suciedad"
+	        "eng:dirtiness",
+	        "spa:suciedad"
 	    ],
 		"buduiki": [
-			"en:dirty",
-			"es:ensuciar"
+			"eng:dirty",
+			"spa:ensuciar"
 		],
 		"buduin": [
-			"en:dirty",
-			"es:sucio",
-			"ko:더러운"
+			"eng:dirty",
+			"spa:sucio",
+			"kor:더러운"
 		],
 		"buduikin": [
-			"en:dirtied",
-			"es:ensuciado"
+			"eng:dirtied",
+			"spa:ensuciado"
 		],
 		"lu": ["removal"],
 		"luki": [
 			"remove",
-			"es:quitar","es:eliminar"
+			"spa:quitar","spa:eliminar"
 		],
 		"lun": [
 			"missing","gone",
-			"es:faltante"
+			"spa:faltante"
 		],
 		"lukin": [
 			"removed",
-			"es:quitado","es:eliminado"
+			"spa:quitado","spa:eliminado"
 		],
 		"lul": [
-			"en:without",
-			"es:sin"
+			"eng:without",
+			"spa:sin"
 		],
 		"lou": ["age"],
 		"lau": [],
@@ -1655,32 +1273,32 @@
 		"nukin": ["darkened"],
 		"nou": [
 			"falsehood","false",
-			"es:falsedad"
+			"spa:falsedad"
 		],
 		"nouki": [
 	        "disprove","be disproven",
-	        "es:desmentir","es:refutar","es:ser desmentido","es:ser refutado"
+	        "spa:desmentir","spa:refutar","spa:ser desmentido","spa:ser refutado"
 	    ],
 		"noun": [
 	        "false",
-	        "es:falso"
+	        "spa:falso"
 	    ],
 		"noukin": [
 	        "disproven","disproving",
-	        "es:desmentido","es:que desmiente","es:refutado","es:que refuta"
+	        "spa:desmentido","spa:que desmiente","spa:refutado","spa:que refuta"
 	    ],
 		"nau": [],
 		"neu": [
 			"bottom","foot",
-			"es:fondo","es:pie"
+			"spa:fondo","spa:pie"
 		],
 		"neuki": [
 	        "plug a hole","add a bottom",
-	        "es:poner base","es:poner fondo"
+	        "spa:poner base","spa:poner fondo"
 	    ],
 		"neun": [
 	        "low","bottom",
-	        "es:bajo","es:de fondo"
+	        "spa:bajo","spa:de fondo"
 	    ],
 		"neukin": [
 	        "plugged"
@@ -1714,94 +1332,94 @@
 		"siu": ["loss"],
 		"fu": ["absence","lack","zero"],
 		"fuki": [
-			"es:haber poco", "es:tener poco",
-			"en:become scarce", "en:have few", "en:make few"
+			"spa:haber poco", "spa:tener poco",
+			"eng:become scarce", "eng:have few", "eng:make few"
 		],
 		"fun": [
-			"en:scarce",
-			"es:poco"
+			"eng:scarce",
+			"spa:poco"
 		],
 		"fukin": ["made scarce"],
 		"ful": [
 			"without",
-			"es:sin",
-			"ko:하고", "ko:와/과", "ko:랑/이랑"
+			"spa:sin",
+			"kor:하고", "kor:와/과", "kor:랑/이랑"
 		],
 		"fou": [],
 		"fau": ["sickness","illness"],
 		"feu": [
 			"opposition","negativity",
-			"es:oposición","es:negatividad"
+			"spa:oposición","spa:negatividad"
 		],
 		"feuki": [
 	        "oppose","conflict with","be opposed",
-	        "es:oponerse a","es:ir en contra de"
+	        "spa:oponerse a","spa:ir en contra de"
 	    ],
 		"feun": [
 	        "negative","opposing","opposite","conflicting",
-	        "es:negativo","es:opuesto"
+	        "spa:negativo","spa:opuesto"
 	    ],
 		"feukin": [
 	        "opposed",
-	        "es:opuesto"
+	        "spa:opuesto"
 	    ],
 		"feul": [
 	        "against",
-	        "es:en contra de"
+	        "spa:en contra de"
 	    ],
 		"fiu": [
 			"dissatisfaction"
 		],
 		"fiuki": [
 			"displease", "dissatisfy",
-			"es:no gustar"
+			"spa:no gustar"
 		],
 		"fiun": [
 			"dissatisfied",
-			"es:insatisfecho", "es:descontento"
+			"spa:insatisfecho", "spa:descontento"
 		],
 		"fiukin": [
 			"displeased",
-			"es:no a gusto", "es:insatisfecho"
+			"spa:no a gusto", "spa:insatisfecho"
 		],
 		"bu": [
 			"ground","earth","dirt",
-			"es:tierra","suelo"
+			"spa:tierra","suelo"
 		],
 	    "sibu": [
-	        "en:hill","en:pile","en:stack",
-	        "es:colina","es:pila"
+	        "eng:hill","eng:pile","eng:stack",
+	        "spa:colina","spa:pila"
 	    ],
 		"sibuki": [
-	        "en:pile","en:be piled",
-	        "es:apilar"
+	        "eng:pile","eng:be piled",
+	        "spa:apilar"
 	    ],
 		"sibun": [
-	        "en:convex","en:hilly"
+	        "eng:convex","eng:hilly"
 	    ],
 		"sibukin": [
 	        "piled",
-	        "es:apilado"
+	        "spa:apilado"
 	    ],
 	    "dobu": [
-	        "en:mountain","en:pile","en:stack",
-	        "es:montaña","es:montón","es:pila"
+	        "eng:mountain","eng:pile","eng:stack",
+	        "spa:montaña","spa:montón","spa:pila"
 	    ],
 		"dobuki": [
-	        "en:pile","en:stack","en:be piled","en:be stacked",
-	        "es:amontonar","es:ser amontonado"
+	        "eng:pile","eng:stack","eng:be piled","eng:be stacked",
+	        "spa:amontonar","spa:ser amontonado"
 	    ],
 		"dobun": [
-	        "en:mountainous",
-	        "es:montañoso"
+	        "eng:mountainous",
+	        "spa:montañoso"
 	    ],
 		"dobukin": [
-	        "en:piled", "en:piling",
-	        "es:amontonado", "es:que amontona"
+	        "eng:piled", "eng:piling",
+	        "spa:amontonado", "spa:que amontona"
 	    ],
 	    "subu": [
-	        "en:valley",
-	        "es:valle"
+	        "eng:valley",
+	        "spa:valle"
 	    ],
 		"subuki": [
 	        "dent","be dented"
@@ -1827,42 +1445,42 @@
 		"buikin": ["cooled"],
 		"du": [
 			"sadness",
-			"es:tristeza",
-			"ko:슬픔"
+			"spa:tristeza",
+			"kor:슬픔"
 		],
 		"duki": [
 			"sadden",
-			"es:entristecer",
-			"ko:슬퍼하다"
+			"spa:entristecer",
+			"kor:슬퍼하다"
 		],
 		"dun": [
-			"en:sad",
-			"es:triste",
-			"ko:슬픈"
+			"eng:sad",
+			"spa:triste",
+			"kor:슬픈"
 		],
 		"dukin": [
-			"en:saddened",
-			"es:entristecido",
-			"ko:슬퍼하는"
+			"eng:saddened",
+			"spa:entristecido",
+			"kor:슬퍼하는"
 		],
 		"dou": [],
 		"dau": [
 			"extraction",
-			"es:extracción"
+			"spa:extracción"
 		],
 		"deu": ["frown"],
 		"diu": [
 			"bad",
-			"es:mal",
-			"ko:나쁨"
+			"spa:mal",
+			"kor:나쁨"
 		],
 	    "diubio": [
-	        "en:blame",
-	        "es:culpa"
+	        "eng:blame",
+	        "spa:culpa"
 	    ],
 	    "diubue": [
 	        "guilt",
-	        "es:culpa"
+	        "spa:culpa"
 	    ],
 		"ku": ["death"],
 		"kuki": ["die"],
@@ -1874,85 +1492,85 @@
 		"kiu": ["killing","slaughter","murder"],
 		
 		"ho": [
-			"en:thing","en:it","en:object",
-			"es:cosa","es:eso","es:objeto",
-			"ko:것","ko:그것"
+			"eng:thing","eng:it","eng:object",
+			"spa:cosa","spa:eso","spa:objeto",
+			"kor:것","kor:그것"
 		],
 		"hoki": [
-			"en:objectify",
-			"es:objetificar"
+			"eng:objectify",
+			"spa:objetificar"
 		],
 		"hon": [
-			"ko:그",
-			"es:ese",
-			"en:that"
+			"kor:그",
+			"spa:ese",
+			"eng:that"
 		],
 		"hokin": [
 			"objectified",
-			"es:objetificado"
+			"spa:objetificado"
 		],
 		"huo": [
 			"whisper","mumble","self","oneself",
-			"es:susurro","es:murmullo","es:sí mismo","es:uno mismo"
+			"spa:susurro","spa:murmullo","spa:sí mismo","spa:uno mismo"
 		],
 		"huoki": [
 			"whisper", "mumble",
-			"es:susurrar"
+			"spa:susurrar"
 		],
 		"huon": [
 			"introverted", 
-			"es:ensimismado"
+			"spa:ensimismado"
 		],
 		"huokin": [
 			"whispered", "mumbled",
-			"es:susurrado"
+			"spa:susurrado"
 		],
 		"hao": [
 			"person","human","one",
-			"es:persona","es:humano","es:uno","es:se"
+			"spa:persona","spa:humano","spa:uno","spa:se"
 		],
 		"haoki": [
 			"personify",
-			"es:personificar"
+			"spa:personificar"
 		],
 		"haon": [
-			"human","en:ones",
-			"es:humano","es:propio"
+			"human","eng:ones",
+			"spa:humano","spa:propio"
 		],
 		"haokin": [
 			"personified",
-			"es:personificado"
+			"spa:personificado"
 		],
 		"heo": [
 			"balance","equilibrium",
-			"es:equilibrio"
+			"spa:equilibrio"
 		],
 		"hio": [
 			"voice",
-			"es:voz"
+			"spa:voz"
 		],
 		"hioki": [
 			"yell","cry",
-	        "es:gritar"
+	        "spa:gritar"
 		],
 		"hion": [
 			"aloud","vocal",
-	        "es:en voz alta","es:vocal"
+	        "spa:en voz alta","spa:vocal"
 		],
 		"hiokin": [
 			"yelled","yelling","crying",
-	        "es:gritado","es:que grita"
+	        "spa:gritado","spa:que grita"
 		],
 		"bahio": [
-			"en:yawn",
-			"es:bostezo"
+			"eng:yawn",
+			"spa:bostezo"
 		],
 		"mo": ["peace","harmony"],
 		"muo": [],
 		"mao": [
 			"mouth",
-			"es:boca",
-			"ko:입"
+			"spa:boca",
+			"kor:입"
 		],
 		"maoki": [
 			"bite","mouth","be bitten","be mouthed"
@@ -1964,16 +1582,16 @@
 			"bitten","mouthed","biting","mouthing"
 		],
 	    "maoski": [
-	        "en:tooth","en:fang",
-	        "es:diente"
+	        "eng:tooth","eng:fang",
+	        "spa:diente"
 	    ],
 		"maoskiki": [
 			"chew","bite","be chewed","be bitten",
-	        "es:masticar","es:morder"
+	        "spa:masticar","spa:morder"
 		],
 		"maoskin": [
 			"dental",
-	        "es:dental"
+	        "spa:dental"
 		],
 		"maoskikin": [
 			"chewed","bitten","chewing","biting"
@@ -1982,51 +1600,51 @@
 		"mio": ["speech","conversation","talking"],
 		"lo": [
 			"direction","three",
-			"es:dirección","es:tres",
-			"ko:쪽","ko:셋/삼"
+			"spa:dirección","spa:tres",
+			"kor:쪽","kor:셋/삼"
 		],
 		"loki": [
-			"face", "en:point to", "en:indicate",
-			"es:encararse a", "es:señalar"
+			"face", "eng:point to", "eng:indicate",
+			"spa:encararse a", "spa:señalar"
 		],
 		"lon": [
 			"on route", "along the route",
-			"es:en camino", "es:por el camino"
+			"spa:en camino", "spa:por el camino"
 		],
 		"lokin": [
-			"en:faced", "en:indicated",
-			"es:indicado"
+			"eng:faced", "eng:indicated",
+			"spa:indicado"
 		],
 		"lol": [
-			"en:to", "en:into", "en:toward",
-			"es:a", "es:en", "es:hacia",
-			"ko:로/으로", "ko:에"
+			"eng:to", "eng:into", "eng:toward",
+			"spa:a", "spa:en", "spa:hacia",
+			"kor:로/으로", "kor:에"
 		],
 		"luo": [],
 		"lao": ["art"],
 		"leo": [
-			"en:literature","en:writing",
-			"es:literatura","es:escritura"
+			"eng:literature","eng:writing",
+			"spa:literatura","spa:escritura"
 		],
 		"leoki": [
-			"en:write"
+			"eng:write"
 		],
 		"leon": [
-			"en:literary", "en:writing"
+			"eng:literary", "eng:writing"
 		],
 		"leokin": [
-			"en:written", "en:writing"
+			"eng:written", "eng:writing"
 		],
 		"lio": ["method"],
 		"no": ["knowledge"],
 		"nuo": [],
 		"nao": [
 			"ear",
-			"es:oreja","es:oído"
+			"spa:oreja","spa:oído"
 		],
 		"naoki": [
 			"hear","listen","listen to","be heard","be listened to",
-	        "es:escuchar","es:oír","es:ser escuchado","es:ser oído"
+	        "spa:escuchar","spa:oír","spa:ser escuchado","spa:ser oído"
 		],
 		"naon": [
 			"of the ear",
@@ -2034,274 +1652,274 @@
 		],
 		"naokin": [
 			"heard","hearing",
-	        "es:oído","es:escuchado","es:que escucha"
+	        "spa:oído","spa:escuchado","spa:que escucha"
 		],
 		"neo": [
 			"destination",
-			"es:destino"
+			"spa:destino"
 		],
 		"neoki": [
 			"head to","attempt",
-	        "es:dar rumbo a","es:intentar","es:dirigirse a"
+	        "spa:dar rumbo a","spa:intentar","spa:dirigirse a"
 		],
 		"neon": [
 			"ultimate","recipient",
-	        "es:último","es:recipiente"
+	        "spa:último","spa:recipiente"
 		],
 		"neokin": [
 			"headed to","attempted","heading to","attempting",
-	        "es:a que se dirige","es:intentado","es:que intenta"
+	        "spa:a que se dirige","spa:intentado","spa:que intenta"
 		],
 		"neol": [
-			"es:hasta","es:para",
-	        "en:in order to","en:until"
+			"spa:hasta","spa:para",
+	        "eng:in order to","eng:until"
 		],
 		"nio": [
 			"sound","noise",
-			"es:sonido","es:ruido"
+			"spa:sonido","spa:ruido"
 		],
 		"nioki": [
-	        "es:sonar","es:intonar",
-	        "en:sound","en:play","en:be played","en:be sounded"
+	        "spa:sonar","spa:intonar",
+	        "eng:sound","eng:play","eng:be played","eng:be sounded"
 	    ],
 		"nion": [
 	        "loud",
-	        "es:ruidoso"
+	        "spa:ruidoso"
 	    ],
 		"niokin": [
 	        "sounded","played","sounding","playing",
-	        "es:intonado","es:que suena","es:que se toca","es:tocado"
+	        "spa:intonado","spa:que suena","spa:que se toca","spa:tocado"
 	    ],
 		"so": [
 			"ignorance","nescience","unknown","what",
-			"es:ignorancia","es:desconocimiento","es:qué","es:cuál"
+			"spa:ignorancia","spa:desconocimiento","spa:qué","spa:cuál"
 		],
 		"son": [
 			"unknown", "ignorant",
-			"es:desconocido", "es:ignorante"
+			"spa:desconocido", "spa:ignorante"
 		],
 		"sohao": [
-			"en:who",
-			"es:quién"
+			"eng:who",
+			"spa:quién"
 		],
 		"sobei": [
-			"en:when",
-			"es:cuándo"
+			"eng:when",
+			"spa:cuándo"
 		],
 		"sosneo": [
-			"en:why","en:for what",
-			"es:por qué","es:para qué"
+			"eng:why","eng:for what",
+			"spa:por qué","spa:para qué"
 		],
 		"soneo": [
-			"en:why","en:for what","en:to where",
-			"es:por qué","es:para qué","es:adónde"
+			"eng:why","eng:for what","eng:to where",
+			"spa:por qué","spa:para qué","spa:adónde"
 		],
 		"sobeo": [
-			"en:why","en:because of what",
-			"es:por qué"
+			"eng:why","eng:because of what",
+			"spa:por qué"
 		],
 		"sobe": [
-			"en:where",
-			"es:dónde"
+			"eng:where",
+			"spa:dónde"
 		],
 		"solio": [
-			"en:how",
-			"es:cómo"
+			"eng:how",
+			"spa:cómo"
 		],
 		"sodo": [
 			"how big","how much",
-			"qué tan grande","es:qué tamaño","es:cuánto"
+			"qué tan grande","spa:qué tamaño","spa:cuánto"
 		],
 		"sona": [
 			"how much",
-			"es:cuánto"
+			"spa:cuánto"
 		],
 		"sohei": [
-			"en:what kind","en:what sort",
-			"es:qué tipo","es:qué especie",
-			"ko:무슨","ko:어떤"
+			"eng:what kind","eng:what sort",
+			"spa:qué tipo","spa:qué especie",
+			"kor:무슨","kor:어떤"
 		],
 		"suo": [],
 		"sao": [
 			"nose","smell",
-			"es:nariz","es:sentido de olor"
+			"spa:nariz","spa:sentido de olor"
 		],
 		"saoki": [
 			"smell","be smelled",
-	        "es:oler","es:ser olido"
+	        "spa:oler","spa:ser olido"
 		],
 		"saon": [
 			"nasal",
-	        "es:nasal"
+	        "spa:nasal"
 		],
 		"saokin": [
 			"smelled","smelling",
-	        "es:olido","es:que huele"
+	        "spa:olido","spa:que huele"
 		],
 		"seo": [],
 		"sio": [
 			"smell","perfume","fragrance",
-			"es:olor","es:perfume","es:fragancia"
+			"spa:olor","spa:perfume","spa:fragancia"
 		],
 		"sioki": [
 	        "be smelly","make smelly","perfume",
-	        "es:oler","es:perfumar","es:hacer oloroso"
+	        "spa:oler","spa:perfumar","spa:hacer oloroso"
 	    ],
 		"sion": [
 	        "smelly",
-	        "es:oloroso"
+	        "spa:oloroso"
 	    ],
 		"siokin": [
 	        "made smelly", "perfuming",
-	        "es:hecho oloroso","es:perfumado","es:que perfuma"
+	        "spa:hecho oloroso","spa:perfumado","spa:que perfuma"
 	    ],
 		"fo": [
 			"uncertainty","which",
-			"es:incertidumbre","es:cuál"
+			"spa:incertidumbre","spa:cuál"
 		],
 		"foli": [
-			"en:what time","en:when",
-			"es:a qué hora","es:cuándo"
+			"eng:what time","eng:when",
+			"spa:a qué hora","spa:cuándo"
 		],
 		"fuo": [
 			"emptiness","vacuum",
-			"es:vacío"
+			"spa:vacío"
 		],
 		"fuoki": [
-			"es:vaciar","es:ser vaciado",
-	        "en:empty","en:be emptied"
+			"spa:vaciar","spa:ser vaciado",
+	        "eng:empty","eng:be emptied"
 		],
 		"fuon": [
-			"es:vacío",
-	        "en:empty"
+			"spa:vacío",
+	        "eng:empty"
 		],
 		"fuokin": [
 			"emptied","emptying",
-	        "es:vaciado","es:que vacía"
+	        "spa:vaciado","spa:que vacía"
 		],
 		"fao": [],
 		"feo": [],
 		"fio": ["curiosity","question"],
 		"buo": [
 			"garbage","trash","waste",
-			"es:basura",
-			"ko:쓰레기"
+			"spa:basura",
+			"kor:쓰레기"
 		],
 		"buomei": [
-			"en:pee",
-			"es:pis","es:orina"
+			"eng:pee",
+			"spa:pis","spa:orina"
 		],
 		"buobeu": [
-			"en:poop","en:shit","en:crap","en:poo",
-			"es:caca","es:mierda"
+			"eng:poop","eng:shit","eng:crap","eng:poo",
+			"spa:caca","spa:mierda"
 		],
 		"buosei": [
-			"en:fart","en:toot",
-			"es:gas","es:pedo"
+			"eng:fart","eng:toot",
+			"spa:gas","spa:pedo"
 		],
 		"bao": [
-			"en:world","en:planet","en:Earth","en:thousand","en:year",
-			"es:mundo","es:planeta","es:Tierra","es:mil","es:año",
-			"ko:천","ko:년"
+			"eng:world","eng:planet","eng:Earth","eng:thousand","eng:year",
+			"spa:mundo","spa:planeta","spa:Tierra","spa:mil","spa:año",
+			"kor:천","kor:년"
 		],
 		"baoki": [
-			"es:hacer planeta", 
-			"en:orbit", "en:make a planet"
+			"spa:hacer planeta", 
+			"eng:orbit", "eng:make a planet"
 		],
 		"baon": [
-			"en:orbiting", "en:planetary", "en:global",
-			"es:hecho planeta", "es:global"
+			"eng:orbiting", "eng:planetary", "eng:global",
+			"spa:hecho planeta", "spa:global"
 		],
 		"baokin": [
-			"en:orbited", "en:made a planet",
-			"es:hecho planeta"
+			"eng:orbited", "eng:made a planet",
+			"spa:hecho planeta"
 		],
 		"beo": [
 			"origin",
-			"es:orígen"
+			"spa:orígen"
 		],
 		"beoki": [
 			"originate from/in",
-	        "es:originarse de"
+	        "spa:originarse de"
 		],
 		"beon": [
 			"original","sender",
-	        "es:remitiente","es:original"
+	        "spa:remitiente","spa:original"
 		],
 		"beokin": [
 			"originated from/in"
 		],
 		"beol": [
 			"of","from",
-	        "es:desde","es:de"
+	        "spa:desde","spa:de"
 		],
 		"bio": ["responsibility","obligation","duty"],
 		"do": [
 			"size","hundred","one hundred",
-			"es:tamaño","es:talla","es:cien","es:ciento"
+			"spa:tamaño","spa:talla","spa:cien","spa:ciento"
 		],
 		"doki": [
 	        "grow","be grown",
-	        "es:agrandar","es:crecer"
+	        "spa:agrandar","spa:crecer"
 	    ],
 		"don": [
 	        "big",
-	        "es:grande"
+	        "spa:grande"
 	    ],
 		"dokin": [
 	        "grown","growing",
-	        "es:crecido","es:que crece"
+	        "spa:crecido","spa:que crece"
 	    ],
 		"duo": [],
 		"dao": [],
 		"deo": [
 			"universe","nature",
-			"es:universo","naturaleza"
+			"spa:universo","naturaleza"
 		],
 		"deoki": [
 			"made universal", "spread everywhere",
-			"es:hecho universal", "es:difundir"
+			"spa:hecho universal", "spa:difundir"
 		],
 		"deon": [
 			"universal","natural",
-			"es:universal","es:natural"
+			"spa:universal","spa:natural"
 		],
 		"deokin": [
 			"spread everywhere",
-			"es:difundido"
+			"spa:difundido"
 		],
 		"dio": ["strength","force"],
 		"ko": [
 			"appearance","apparition","sight","view",
-			"es:apariencia","es:vista","es:visión"
+			"spa:apariencia","spa:vista","spa:visión"
 		],
 		"koki": [
 	        "appear","show","be shown",
-	        "es:aparecer","es:mostrar","es:enseñar"
+	        "spa:aparecer","spa:mostrar","spa:enseñar"
 	    ],
 		"kon": [
 	        "visible",
-	        "es:visible"
+	        "spa:visible"
 	    ],
 		"kokin": [
 	        "seen","appeared","shown",
-	        "es:visto","es:aparecido","es:mostrado","es:enseñado"
+	        "spa:visto","spa:aparecido","spa:mostrado","spa:enseñado"
 	    ],
 		"kuo": [
 			"piece","part","fragment","section",
-			"es:pieza","es:fragmeneto","es:sección"
+			"spa:pieza","spa:fragmeneto","spa:sección"
 		],
 		"kao": [
 			"eye","two",
-			"es:ojo","es:dos"
+			"spa:ojo","spa:dos"
 		],
 		"kaoki": [
-			"en:see","en:look at","en:watch","en:be seen","en:be watched","en:be looked at",
-	        "es:ver","es:mirar"
+			"eng:see","eng:look at","eng:watch","eng:be seen","eng:be watched","eng:be looked at",
+	        "spa:ver","spa:mirar"
 		],
 		"kaon": [
-			"en:visible","en:ocular",
-	        "es:visible","es:ocular"
+			"eng:visible","eng:ocular",
+	        "spa:visible","spa:ocular"
 		],
 		"kaokin": [
 			"seen","seeing","watched","watching","looking","looked at"
@@ -2314,107 +1932,107 @@
 		],
 		"han": [
 			"lively", "living", "of life",
-			"es:lleno de vida", "de vida"
+			"spa:lleno de vida", "de vida"
 		],
 		"haki": [
 			"live","revive","be alive","liven",
-			"es:animar","es:viviente","es:ser revivido","es:ser animado"
+			"spa:animar","spa:viviente","spa:ser revivido","spa:ser animado"
 		],
 		"hamki": [
 			"live","revive","liven",
-			"es:vivir","revivir","animar"
+			"spa:vivir","revivir","animar"
 		],
 		"hanei": [
 			"be lived","be revived","brought to life",
-			"es:ser revivido","es:ser animado"
+			"spa:ser revivido","spa:ser animado"
 		],
 		"habo": [
-			"en:I",
-			"es:yo",
-			"ko:나","ko:저"
+			"eng:I",
+			"spa:yo",
+			"kor:나","kor:저"
 		],
 		"habos": [
-			"en:we",
-			"es:nosotros",
-			"ko:우리"
+			"eng:we",
+			"spa:nosotros",
+			"kor:우리"
 		],
 		"haboki": [
 		],
 		"habon": [
-			"en:my", "en:of me",
-			"es:mi", "es:de mí",
-			"ko:저의/제", "ko:나의/내"
+			"eng:my", "eng:of me",
+			"spa:mi", "spa:de mí",
+			"kor:저의/제", "kor:나의/내"
 		],
 		"habokin": [
 		],
 		"hane": [
-			"en:you",
-			"es:usted","es:tú",
-			"ko:너","ko:당신"
+			"eng:you",
+			"spa:usted","spa:tú",
+			"kor:너","kor:당신"
 		],
 		"hanes": [
-			"en:you all/y'all", "en:you",
-			"es:ustedes","es:vosotros",
-			"ko:너희들"
+			"eng:you all/y'all", "eng:you",
+			"spa:ustedes","spa:vosotros",
+			"kor:너희들"
 		],
 		"haneki": [
-			"en:call", "en:call to", "en:be called",
-			"es:llamar", "es:ser llamado"
+			"eng:call", "eng:call to", "eng:be called",
+			"spa:llamar", "spa:ser llamado"
 		],
 		"hanen": [
-			"en:your",
-			"es:tu","es:su",
-			"ko:너의/네"
+			"eng:your",
+			"spa:tu","spa:su",
+			"kor:너의/네"
 		],
 		"hanekin": [
-			"en:called","en:calling",
-			"es:llamado","es:que llama"
+			"eng:called","eng:calling",
+			"spa:llamado","spa:que llama"
 		],
 		"hanenei": [
-			"en:be called",
-			"es:ser llamado"
+			"eng:be called",
+			"spa:ser llamado"
 		],
 	    "hase": [
-	        "en:they",
-	        "es:él", "es:ella", "es:ese"
+	        "eng:they",
+	        "spa:él", "spa:ella", "spa:ese"
 	    ],
 		"hases": [
-			"en:they",
-			"es:ellos", "es:ellas",
-			"ko:그들", "ko:그녀들"
+			"eng:they",
+			"spa:ellos", "spa:ellas",
+			"kor:그들", "kor:그녀들"
 		],
 		"haseki": [
 			"refer to", "be referred to", "mention", "be mentioned",
-			"es:referirse a", "es:mencionar", "es:ser referido", "es:ser mencionado"
+			"spa:referirse a", "spa:mencionar", "spa:ser referido", "spa:ser mencionado"
 		],
 		"hasenei": [
 			"be referred to", "be mentioned",
-			"es:ser referido", "es:ser mencionado"
+			"spa:ser referido", "spa:ser mencionado"
 		],
 		"hasen": [
 			"their",
-			"es:su"
+			"spa:su"
 		],
 		"hasekin": [
 			"referred to", "mentioned", "mentioning",
-			"es:referido", "es:mencionado", "es:mencionando"
+			"spa:referido", "spa:mencionado", "spa:mencionando"
 		],
 		"hasemki": [
 			"refer to", "mention",
-			"es:referirse a", "es:mencionar"
+			"spa:referirse a", "spa:mencionar"
 		],
 		"hasenein": [
 			"be referred to", "be mentioned",
-			"es:ser referido", "es:ser mencionado"
+			"spa:ser referido", "spa:ser mencionado"
 		],
 	    "haso": [
-	        "en:he",
-	        "es:él"
+	        "eng:he",
+	        "spa:él"
 	    ],
 		"hasos": [
-			"en:they (male)",
-			"es:ellos",
-			"ko:그들"
+			"eng:they (male)",
+			"spa:ellos",
+			"kor:그들"
 		],
 		"hasoki": [
 		],
@@ -2422,12 +2040,12 @@
 			"his"
 		],
 	    "hasa": [
-	        "en:she",
-	        "es:ella",
-	        "ko:그녀"
+	        "eng:she",
+	        "spa:ella",
+	        "kor:그녀"
 	    ],
 		"hasas": [
-			"en:they (female)"
+			"eng:they (female)"
 		],
 		"hasaki": [
 		],
@@ -2435,123 +2053,123 @@
 			"hers"
 		],
 	    "hamo": [
-	        "en:man",
-	        "es:hombre",
-	        "ko:남자"
+	        "eng:man",
+	        "spa:hombre",
+	        "kor:남자"
 	    ],
 		"hamoki": [
-			"en:make a man",
-			"es:hacer hombre"
+			"eng:make a man",
+			"spa:hacer hombre"
 		],
 		"hamon": [
-			"en:masculine",
-			"es:masculino"
+			"eng:masculine",
+			"spa:masculino"
 		],
 		"hamokin": [
-			"en:made a man",
-			"es:hecho hombre"
+			"eng:made a man",
+			"spa:hecho hombre"
 		],
 	    "hama": [
-	        "en:woman",
-	        "ko:여자",
-	        "es:mujer"
+	        "eng:woman",
+	        "kor:여자",
+	        "spa:mujer"
 	    ],
 		"hamaki": [
-			"en:make a woman","en:be made a woman",
-			"es:hacer mujer","es:hacerse mujer"
+			"eng:make a woman","eng:be made a woman",
+			"spa:hacer mujer","spa:hacerse mujer"
 		],
 		"haman": [
 			"feminine",
-			"es:feminino"
+			"spa:feminino"
 		],
 		"hamakin": [
 			"made a woman",
-			"es:hecha mujer"
+			"spa:hecha mujer"
 		],
 	    "hame": [
-	        "en:friend","en:companion",
-	        "es:amigo","es:amiga","es:acompañante","es:compadre","es:comadre",
-	        "ko:친구"
+	        "eng:friend","eng:companion",
+	        "spa:amigo","spa:amiga","spa:acompañante","spa:compadre","spa:comadre",
+	        "kor:친구"
 	    ],
 		"hameki": [
 			"befriend",
-			"es:hacer amigo"
+			"spa:hacer amigo"
 		],
 		"hamen": [
 			"friendly",
-			"es:amigable", "es:amistoso"
+			"spa:amigable", "spa:amistoso"
 		],
 		"hamekin": [
 			"befriended",
-			"es:hecho amigo"
+			"spa:hecho amigo"
 		],
 	    "hafeu": [
-	        "en:enemy",
-	        "es:enemigo"
+	        "eng:enemy",
+	        "spa:enemigo"
 	    ],
 		"hafeuki": [
 			"make an enemy",
-			"es:hacer enemigo"
+			"spa:hacer enemigo"
 		],
 		"hafeun": [
 			"mean",
-			"es:antipático"
+			"spa:antipático"
 		],
 		"hafeukin": [
 			"made an enemy",
-			"es:hecho enemigo"
+			"spa:hecho enemigo"
 		],
 	    "habea": [
-	        "en:house","en:home",
-	        "es:casa","es:hogar"
+	        "eng:house","eng:home",
+	        "spa:casa","spa:hogar"
 	    ],
 		"habeaki": [
-	        "en:host","en:shelter","be hosted","be sheltered",
-			"es:anfitrionar","es:albergar","es:ser albergado","ser invitado"
+	        "eng:host","eng:shelter","be hosted","be sheltered",
+			"spa:anfitrionar","spa:albergar","spa:ser albergado","ser invitado"
 	    ],
 		"habean": [
-	        "es:casero", 
-			"en:homemade"
+	        "spa:casero", 
+			"eng:homemade"
 	    ],
 		"habeakin": [
-	        "en:hosted", "en:sheltered", "en:hosting", "en:sheltering"
+	        "eng:hosted", "eng:sheltered", "eng:hosting", "eng:sheltering"
 	    ],
 		"hua": [],
 		"hoa": [
-			"en:food",
-			"es:comida","es:alimento",
-			"ko:음식","ko:식사"
+			"eng:food",
+			"spa:comida","spa:alimento",
+			"kor:음식","kor:식사"
 		],
 		"hoaki": [
-			"en:feed", "en:be fed",
-			"es:alimentar", "es:ser alimentado",
-			"ko:먹이다"
+			"eng:feed", "eng:be fed",
+			"spa:alimentar", "spa:ser alimentado",
+			"kor:먹이다"
 		],
 		"hoan": [
-			"en:of food",
-			"es:de comida"
+			"eng:of food",
+			"spa:de comida"
 		],
 		"hoakin": [
-			"en:fed",
-			"es:alimentado",
-			"ko:먹인"
+			"eng:fed",
+			"spa:alimentado",
+			"kor:먹인"
 		],
 		"hea": ["health","safety"],
 		"hia": [
 			"yes","agreement",
-			"es:sí","es:acuerdo","es:concordia"
+			"spa:sí","spa:acuerdo","spa:concordia"
 		],
 		"hiaki": [
 	        "say yes","agree","be agreed",
-			"es:decir que sí","es:poner de acuerdo"
+			"spa:decir que sí","spa:poner de acuerdo"
 	    ],
 		"hian": [
 	        "agreeable","indeed",
-			"es:sí"
+			"spa:sí"
 	    ],
 		"hiakin": [
 	        "confirmed","agreed","agreeing","saying yes",
-			"es:confirmado","que dice que sí","poniéndose de acuerdo"
+			"spa:confirmado","que dice que sí","poniéndose de acuerdo"
 	    ],
 		"ma": ["water","wetness"],
 		"maki": ["water","drink","give drink","wet"],
@@ -2560,19 +2178,19 @@
 		"mua": ["kiss"],
 		"moa": [
 			"truth",
-			"es:verdad"
+			"spa:verdad"
 		],
 		"moaki": [
 	        "be proven","prove",
-	        "es:probar","es:ser probado"
+	        "spa:probar","spa:ser probado"
 	    ],
 		"moan": [
 	        "true","truthful",
-	        "es:cierto","es:verdadero"
+	        "spa:cierto","spa:verdadero"
 	    ],
 		"moakin": [
 	        "proven","proving",
-	        "es:probado","que prueba"
+	        "spa:probado","que prueba"
 	    ],
 		"mea": ["good"],
 		"mia": ["swimming"],
@@ -2586,8 +2204,8 @@
 	        "swum "
 	    ],
 	    "miahai": [
-	        "en:fish",
-	        "es:pez","es:pescado"
+	        "eng:fish",
+	        "spa:pez","spa:pescado"
 	    ],
 		"la": ["music"],
 		"lua": [],
@@ -2595,42 +2213,42 @@
 		"lea": ["ease"],
 		"lia": [
 			"throat","neck",
-			"es:garganta","es:cuello"
+			"spa:garganta","spa:cuello"
 		],
 		"liaki": [
 			"swallow","be swallowed",
-	        "es:tragar","es:ser tragado"
+	        "spa:tragar","spa:ser tragado"
 		],
 		"lian": [
-			"en:of the throat","en:of the neck",
-	        "es:de garganta","es:de cuello"
+			"eng:of the throat","eng:of the neck",
+	        "spa:de garganta","spa:de cuello"
 		],
 		"liakin": [
 			"swallowed","swallowing"
 		],
 		"na": ["abundance","multitude","crowd","ten"],
 		"naki": [
-			"ko:많다",
-			"en:have many", "en:make many", "en:make abundant",
-			"es:tener mucho", "es:hacer mucho"
+			"kor:많다",
+			"eng:have many", "eng:make many", "eng:make abundant",
+			"spa:tener mucho", "spa:hacer mucho"
 		],
 		"nan": [
 			"abundant","a lot of","be many",
-			"ko:많은"
+			"kor:많은"
 		],
 		"nakin": [
 			"made abundant"
 		],
 		"nal": [
-			"en:of", "en:made of"
+			"eng:of", "eng:made of"
 		],
 		"nua": [
 			"experience",
-			"es:experiencia"
+			"spa:experiencia"
 		],
 		"noa": [
 			"body",
-			"es:cuerpo"
+			"spa:cuerpo"
 		],
 		"noaki": [
 			"incorporate","be incorporated"
@@ -2643,32 +2261,32 @@
 		],
 		"nea": [
 			"affirmation","positivity","support",
-			"es:afirmación","es:positividad","es:apoyo"
+			"spa:afirmación","spa:positividad","spa:apoyo"
 		],
 		"neaki": [
 	        "propose","affirm","complement","be proposed","be affirmed","be complemented",
-	        "es:proponer","es:afirmar","es:complementar"
+	        "spa:proponer","spa:afirmar","spa:complementar"
 	    ],
 		"nean": [
 	        "positive","complementary",
-	        "es:positivo"
+	        "spa:positivo"
 	    ],
 		"neakin": [
 	        "proposed","affirmed",
-	        "es:propuesto","es:afirmado"
+	        "spa:propuesto","spa:afirmado"
 	    ],
 		"nia": ["satisfaction"],
 		"niaki": [
 			"satisfy", "please",
-			"es:satisfacer", "es:gustar"
+			"spa:satisfacer", "spa:gustar"
 		],
 		"nian": [
 			"satisfied","content",
-			"es:satisfecho","es:content"
+			"spa:satisfecho","spa:content"
 		],
 		"niakin": [
 			"pleased",
-			"es:estar a gusto"
+			"spa:estar a gusto"
 		],
 		"sa": ["air"],
 		"saki": ["blow","blow on","inflate"],
@@ -2690,7 +2308,7 @@
 	    ],
 		"sia": [
 			"flight",
-			"es:vuelo"
+			"spa:vuelo"
 		],
 		"siaki": [
 	        "fly","launch"
@@ -2702,24 +2320,24 @@
 	        "launched"
 	    ],
 	    "siahai": [
-	        "en:bird",
-	        "es:ave","es:pájaro"
+	        "eng:bird",
+	        "spa:ave","spa:pájaro"
 	    ],
 		"fa": [
-			"en:achievement","en:victory",
-			"es:victoria","es:éxito"
+			"eng:achievement","eng:victory",
+			"spa:victoria","spa:éxito"
 		],
 		"faki": [
-			"en:achieve","en:win",
-			"es:ganar","es:tener éxito"
+			"eng:achieve","eng:win",
+			"spa:ganar","spa:tener éxito"
 		],
 		"fan": [
-			"en:successful", "en:winning",
-			"es:exitoso", "es:ganador"
+			"eng:successful", "eng:winning",
+			"spa:exitoso", "spa:ganador"
 		],
 		"fakin": [
-			"en:achieved", "en:won",
-			"es:ganado"
+			"eng:achieved", "eng:won",
+			"spa:ganado"
 		],
 		"fua": ["consumption"],
 		"foa": [],
@@ -2738,177 +2356,177 @@
 	    ],
 		"ba": ["sleep","rest"],
 		"baki": [
-			"es:dormir", "es:descansar", "en:ser dormido",
-			"en:sleep", "en:put to sleep", "en:be put to sleep", "en:rest"
+			"spa:dormir", "spa:descansar", "eng:ser dormido",
+			"eng:sleep", "eng:put to sleep", "eng:be put to sleep", "eng:rest"
 		],
 		"bamki": [
-			"en:sleep", "en:put to sleep", "en:rest",
-			"es:dormir", "es:descansar"
+			"eng:sleep", "eng:put to sleep", "eng:rest",
+			"spa:dormir", "spa:descansar"
 		],
 		"banei": [
 			"be put to sleep",
-			"es:ser dormido"
+			"spa:ser dormido"
 		],
 		"ban": [
-			"es:durmiente", "es:somnoliento",
-			"en:sleepy", "en:asleep",
-			"ko:자는"
+			"spa:durmiente", "spa:somnoliento",
+			"eng:sleepy", "eng:asleep",
+			"kor:자는"
 		],
 		"bakin": [
-			"en:putting to sleep","en:be put to sleep",
-			"es:durmiendo", "es:dormido"
+			"eng:putting to sleep","eng:be put to sleep",
+			"spa:durmiendo", "spa:dormido"
 		],
 		"bua": [
 			"plant", "vegetation", "flora",
-			"es:planta", "es:hierba",
-			"ko:식물"
+			"spa:planta", "spa:hierba",
+			"kor:식물"
 		],
 		"buaki": [
-			"es:sembrar",
-			"en:plant","en:garden"
+			"spa:sembrar",
+			"eng:plant","eng:garden"
 		],
 		"buan": [
-			"en:plant-like",
-			"es:vegetal",
-			"ko:식물처럼"
+			"eng:plant-like",
+			"spa:vegetal",
+			"kor:식물처럼"
 		],
 		"buakin": [
-			"en:planted",
-			"es:sembrado"
+			"eng:planted",
+			"spa:sembrado"
 		],
 		"boa": [
 			"head",
-			"es:cabeza"
+			"spa:cabeza"
 		],
 		"boaki": [
-			"es:encabezar",
-	        "en:head","en:lead","en:be lead","en:be headed by"
+			"spa:encabezar",
+	        "eng:head","eng:lead","eng:be lead","eng:be headed by"
 		],
 		"boan": [
-			"en:of the head",
-	        "es:cabezal"
+			"eng:of the head",
+	        "spa:cabezal"
 		],
 		"bea": ["cover","protection"],
 		"bia": ["clothing","garment"],
 		"da": ["happiness","joy","cheer"],
 		"taki": [
 			"make happy", "cheer",
-			"es:animar", "es:alegrar"
+			"spa:animar", "spa:alegrar"
 		],
 		"tan": [
 			"happy", "cheerful",
-			"es:feliz", "es:alegre",
-			"ko:행복한", "ko:기쁜"
+			"spa:feliz", "spa:alegre",
+			"kor:행복한", "kor:기쁜"
 		],
 		"takin": [
 			"made happy",
-			"es:animado", "es:hecho feliz"
+			"spa:animado", "spa:hecho feliz"
 		],
 		"dua": [],
 		"doa": ["help","assistance"],
 		"dea": ["smile"],
 		"dia": [
 			"sun","star","day","today","omi:hadia",
-			"es:sol","es:estrella","es:hoy"
+			"spa:sol","spa:estrella","spa:hoy"
 		],
 	    "hadia": [
 	        "today",
-			"es:hoy"
+			"spa:hoy"
 	    ],
 	    "fudia": [
 	        "yesterday","days ago",
-			"es:ayer","es:días atrás",
+			"spa:ayer","spa:días atrás",
 	        "omi:hefudia"
 	    ],
 	    "sodia": [
 	        "tomorrow","days from now","days later",
-			"es:mañana",
+			"spa:mañana",
 	        "omi:hesodia"
 	    ],
 	    "koafudia": [
 	        "day before yesterday",
-			"es:anteayer"
+			"spa:anteayer"
 	    ],
 	    "koasodia": [
 	        "day after tomorrow",
-			"es:pasado mañada"
+			"spa:pasado mañada"
 	    ],
 		"ka": [
 			"desire","want",
-			"es:deseo","es:querer"
+			"spa:deseo","spa:querer"
 		],
 		"kaki": [
-			"en:want", "en:desire",
-			"es:querer", "es:desear"
+			"eng:want", "eng:desire",
+			"spa:querer", "spa:desear"
 		],
 		"kan": [
-			"en:desirable",
-			"es:deseable"
+			"eng:desirable",
+			"spa:deseable"
 		],
 		"kakin": [
-			"en:wanted", "en:desired",
-			"es:deseado", "es:querido"
+			"eng:wanted", "eng:desired",
+			"spa:deseado", "spa:querido"
 		],
 		"kua": [
 			"hole","stab",
-			"es:puñalada","es:agujero","es:hoyo"
+			"spa:puñalada","spa:agujero","spa:hoyo"
 		],
 		"koa": [
-			"en:await","en:hope",
-			"es:esperar"
+			"eng:await","eng:hope",
+			"spa:esperar"
 		],
 		"kea": [
-			"en:work","en:labor","en:functioning",
-			"es:trabajo","es:laburo","es:funcionamiento"
+			"eng:work","eng:labor","eng:functioning",
+			"spa:trabajo","spa:laburo","spa:funcionamiento"
 		],
 		"kia": [
 			"jump","hop",
-			"es:saltar","es:brincar"
+			"spa:saltar","spa:brincar"
 		],
 		
 		"he": [
 			"existence","being","state","equality","one"
 		],
 		"heki": [
-			"en:be", "en:there is", "en:there are",
-			"es:hay", "es:ser", "es:estar", 
-			"ko:이다", "ko:있다"
+			"eng:be", "eng:there is", "eng:there are",
+			"spa:hay", "spa:ser", "spa:estar", 
+			"kor:이다", "kor:있다"
 		],
 		"hen": ["existent"],
 		"hekin": ["been","being"],
 		"hel": [
-			"en:in", "en:at", "en:on",
-			"es:en", "es:a", "es:dentro de",
-			"ko:에", "ko:에서", "ko:안에"
+			"eng:in", "eng:at", "eng:on",
+			"spa:en", "spa:a", "spa:dentro de",
+			"kor:에", "kor:에서", "kor:안에"
 		],
 		"hue": [
 			"weakness","fragility",
-			"es:debilidad","es:fragilidad"
+			"spa:debilidad","spa:fragilidad"
 		],
 		"hoe": [
 			"whole","wholeness","entirety","completeness",
-			"es:lo completo","es:lo entero"
+			"spa:lo completo","spa:lo entero"
 		],
 	    "hoefi": [
-	        "en:diversity",
-	        "es:diversidad"
+	        "eng:diversity",
+	        "spa:diversidad"
 	    ],
 	    "hoele": [
-	        "en:purity",
-	        "es:pureza"
+	        "eng:purity",
+	        "spa:pureza"
 	    ],
 	    "heuhoe": [
-	        "en:unity",
-	        "es:unión"
+	        "eng:unity",
+	        "spa:unión"
 	    ],
 	    "nehoe": [
-	        "en:community",
-	        "es:comunidad"
+	        "eng:community",
+	        "spa:comunidad"
 	    ],
 		"hae": [],
 		"hie": [
 			"furniture",
-			"es:mueble"
+			"spa:mueble"
 		],
 		"hien": [
 			"of furniture"
@@ -2928,15 +2546,15 @@
 		"me": ["addition","accompaniment"],
 		"meki": [
 			"accompany","add",
-			"es:acompañar", "es:agregar"
+			"spa:acompañar", "spa:agregar"
 		],
 		"men": [
 			"additional",
-			"es:adicional"
+			"spa:adicional"
 		],
 		"mekin": [
 			"accompanied","added",
-			"es:acompañado","es:agregado"
+			"spa:acompañado","spa:agregado"
 		],
 		"mel": ["with"],
 		"mue": [],
@@ -2947,24 +2565,24 @@
 			"similarity","likeness"
 		],
 	    "file": [
-	        "en:comparison","en:contrast",
-	        "es:comparación","es:contraste"
+	        "eng:comparison","eng:contrast",
+	        "spa:comparación","spa:contraste"
 	    ],
 		"fileki": [
-			"en:compare",
-			"es:comparar"
+			"eng:compare",
+			"spa:comparar"
 		],
 	    "filen": [
-	        "en:comparitive", "en:relative",
-	        "es:relative"
+	        "eng:comparitive", "eng:relative",
+	        "spa:relative"
 	    ],
 		"filekin": [
-			"en:compared",
-			"es:comparado"
+			"eng:compared",
+			"spa:comparado"
 		],
 		"filel": [
-			"en:compared to/compared with", "en:relative to",
-			"es:comparado con", "es:relativo a"
+			"eng:compared to/compared with", "eng:relative to",
+			"spa:comparado con", "spa:relativo a"
 		],
 		"leki": [
 	        "make similar", "approximate", "be made similar", "be approximated"
@@ -2981,105 +2599,105 @@
 		"lue": [],
 		"loe": [
 			"normalcy","average","nine",
-			"es:normalidad","es:promedio","es:nueve",
-			"ko:아홉","ko:구"
+			"spa:normalidad","spa:promedio","spa:nueve",
+			"kor:아홉","kor:구"
 		],
 	    "lae": [
-	        "en:family",
-	        "es:familia",
-	        "ko:가족"
+	        "eng:family",
+	        "spa:familia",
+	        "kor:가족"
 	    ],
 		"laeki": [
 			"adopt",
-			"es:adoptar"
+			"spa:adoptar"
 		],
 		"laen": [
 			"familial",
-			"es:familiar"
+			"spa:familiar"
 		],
 		"laekin": [
 			"adopted",
-			"es:adoptado"
+			"spa:adoptado"
 		],
 	    "lelae": [
-	        "en:sibling",
-	        "es:hermano","es:hermana",
-	        "ko:동생"
+	        "eng:sibling",
+	        "spa:hermano","spa:hermana",
+	        "kor:동생"
 	    ],
 		"lelaeki": [
 			"make a sibling",
-			"es:hacer hermano"
+			"spa:hacer hermano"
 		],
 		"lelaen": [
 			"fraternal",
-			"es:fraterno"
+			"spa:fraterno"
 		],
 		"lelaekin": [
 			"made a sibling",
-			"es:hecho hermano"
+			"spa:hecho hermano"
 		],
 	    "lelaemo": [
-	        "en:brother",
-	        "es:hermano",
-	        "ko:남동생","ko:오빠","ko:형"
+	        "eng:brother",
+	        "spa:hermano",
+	        "kor:남동생","kor:오빠","kor:형"
 	    ],
 	    "lelaema": [
-	        "en:sister",
-	        "es:hermana",
-	        "ko:여동생","ko:누나","ko:언니"
+	        "eng:sister",
+	        "spa:hermana",
+	        "kor:여동생","kor:누나","kor:언니"
 	    ],
 	    "hilae": [
-	        "en:parent",
-	        "es:padre","es:madre",
-	        "ko:부모"
+	        "eng:parent",
+	        "spa:padre","spa:madre",
+	        "kor:부모"
 	    ],
 		"hilaeki": [
-			"en:become a parent", "en:make a parent",
-			"es:convertirse en padre", "es:hacer padre"
+			"eng:become a parent", "eng:make a parent",
+			"spa:convertirse en padre", "spa:hacer padre"
 		],
 		"hilaen": [
-			"en:parental", "as a parent",
-			"es:como padre"
+			"eng:parental", "as a parent",
+			"spa:como padre"
 		],
 		"hilaekin": [
 			"made a parent",
 			"hecho padre"
 		],
 	    "laemo": [
-	        "en:father","en:dad",
-	        "es:padre","es:papá"
+	        "eng:father","eng:dad",
+	        "spa:padre","spa:papá"
 	    ],
 		"laemoki": [
-			"en:become a father", "en:make a father",
-			"es:convertirse en padre", "es:hacer padre"
+			"eng:become a father", "eng:make a father",
+			"spa:convertirse en padre", "spa:hacer padre"
 		],
 		"laemon": [
-			"en:fatherly", "as a father",
-			"es:paterno", "es:como padre"
+			"eng:fatherly", "as a father",
+			"spa:paterno", "spa:como padre"
 		],
 		"laemokin": [
 			"made a father",
 			"hecho padre"
 		],
 	    "laema": [
-	        "en:mother","en:mom",
-	        "es:madre","mamá"
+	        "eng:mother","eng:mom",
+	        "spa:madre","mamá"
 	    ],
 		"laemaki": [
-			"en:become a mother", "en:make a mother",
-			"es:convertirse en madre", "es:hacer madre"
+			"eng:become a mother", "eng:make a mother",
+			"spa:convertirse en madre", "spa:hacer madre"
 		],
 		"laeman": [
 			"maternal",
-			"es:materno", "es:como madre"
+			"spa:materno", "spa:como madre"
 		],
 		"laemakin": [
 			"become a mother",
-			"es: hecha madre"
+			"spa: hecha madre"
 		],
 	    "kelae": [
-	        "en:child",
-	        "es:hijo","es:hija"
+	        "eng:child",
+	        "spa:hijo","spa:hija"
 	    ],
 		"kelaeki": [
 	        "birth", "have a baby"
@@ -3092,52 +2710,52 @@
 	    ],
 		"lie": [
 			"ability","possibility",
-			"es:capacidad","es:posibilidad"
+			"spa:capacidad","spa:posibilidad"
 		],
 		"lieki": [
 			"enable","become able","make possible","be made possible",
-			"es:capacitar","es:habilitar","es:volverse capaz"
+			"spa:capacitar","spa:habilitar","spa:volverse capaz"
 		],
 		"lien": [
 			"which is able to be done",
-			"es:que puede hacerse"
+			"spa:que puede hacerse"
 		],
 		"liekin": [
 			"enabled"
 		],
 		"ne": [
 			"proximity","closeness",
-			"es:cercanía","es:proximidad"
+			"spa:cercanía","spa:proximidad"
 		],
 		"neki": [
 	        "bring close", 
-			"es:acercar"
+			"spa:acercar"
 	    ],
 		"nen": [
 	        "this","close",
-			"es:este","es:cercano",
-			"ko:이"
+			"spa:este","spa:cercano",
+			"kor:이"
 	    ],
 		"nekin": [
-			"en:brought close","en:approaching","en:bringing close",
-	        "es:acercado","es:acercando"
+			"eng:brought close","eng:approaching","eng:bringing close",
+	        "spa:acercado","spa:acercando"
 	    ],
 		"nel": [
-	        "en:near to",
-			"es:cerca de"
+	        "eng:near to",
+			"spa:cerca de"
 	    ],
 		"nue": ["captivity","trap"],
 		"noe": ["possession","having","ownership"],
 		"nae": [
 			"stickiness","attraction",
-			"es:pegajosidad","es:atracción"
+			"spa:pegajosidad","spa:atracción"
 		],
 		"naeki": [
 			"stick to","be sticky","make sticky","stick"
 		],
 		"naen": [
 			"sticky",
-			"es:pegajoso"
+			"spa:pegajoso"
 		],
 		"naekin": [
 			"made sticky","making sticky","sticking"
@@ -3145,155 +2763,155 @@
 		"nie": ["arrival"],
 		"se": ["distance"],
 		"seki": [
-	        "en:distance","en:be distanced",
-	        "es:alejar","es:ser alejado"
+	        "eng:distance","eng:be distanced",
+	        "spa:alejar","spa:ser alejado"
 	    ],
 		"sen": [
 	        "that", "far",
-	        "es:lejano", "es:ese", "es:aquél"
+	        "spa:lejano", "spa:ese", "spa:aquél"
 	    ],
 		"sekin": [
-	        "en:distanced",
-	        "es:alejado"
+	        "eng:distanced",
+	        "spa:alejado"
 	    ],
 		"sel": [
 	        "far from",
-	        "es:lejos de"
+	        "spa:lejos de"
 	    ],
 		"sue": ["strangeness","wierdness","abnormality","seven"],
 		"soe": ["luck","randomness","fortune"],
 		"sae": ["freedom","liberation"],
 		"sie": [
 			"sky",
-			"es:cielo",
-			"ko:하늘"
+			"spa:cielo",
+			"kor:하늘"
 		],
 		"sieki": [
-			"en:float in air",
-			"es:flotar al aire"
+			"eng:float in air",
+			"spa:flotar al aire"
 		],
 		"sien": [
-			"en:floating", "en:aerial", "en:be in the sky",
-			"es:flotante", "es:estar en el aire"
+			"eng:floating", "eng:aerial", "eng:be in the sky",
+			"spa:flotante", "spa:estar en el aire"
 		],
 		"siekin": [
-			"en:floated", "en:left in the sky",
-			"es:flotado", "es:dejado al aire"
+			"eng:floated", "eng:left in the sky",
+			"spa:flotado", "spa:dejado al aire"
 		],
 		"fe": [
 			"fatigue","tiredness","sleepyness",
-			"es:fatiga","es:cansancio"
+			"spa:fatiga","spa:cansancio"
 		],
 		"feki": [
-			"es:cansar",
-			"en:tire"
+			"spa:cansar",
+			"eng:tire"
 		],
 		"fen": [
-			"es:cansado","es:fatigado",
-			"en:tired","en:fatigued"
+			"spa:cansado","spa:fatigado",
+			"eng:tired","eng:fatigued"
 		],
 		"fekin": [
-			"es:hecho cansado",
-			"en:made tired"
+			"spa:hecho cansado",
+			"eng:made tired"
 		],
 		"fue": ["laziness","sloth"],
 		"foe": [],
 		"fae": [],
 		"fie": ["roughness"],
 		"be": [
-			"en:place","en:location",
-			"es:lugar","es:ubicación"
+			"eng:place","eng:location",
+			"spa:lugar","spa:ubicación"
 		],
 		"beki": [
 			"locate", "place",
-			"es:ubicar", "es:colocar"
+			"spa:ubicar", "spa:colocar"
 		],
 		"ben": [
-			"es:dejado",
-			"en:left"
+			"spa:dejado",
+			"eng:left"
 		],
 		"bekin": [
-			"en:located", "en:placed",
-			"es:ubicado", "es:colocado"
+			"eng:located", "eng:placed",
+			"spa:ubicado", "spa:colocado"
 		],
 		"bue": [
 			"weight","cost","value",
-			"es:peso","es:costo","es:precio","es:valor"
+			"spa:peso","spa:costo","spa:precio","spa:valor"
 		],
 	    "kebue": [
-	        "en:money","en:cash",
-	        "es:dinero",
-	        "ko:돈","ko:현금"
+	        "eng:money","eng:cash",
+	        "spa:dinero",
+	        "kor:돈","kor:현금"
 	    ],
 		"kebueki": [
-			"en:buy", "en:sell", "en:rent", "en:lease", "en:pay",
-			"es:comprar", "es:vender", "es:rentar", "es:alquilar", "es:pagar"
+			"eng:buy", "eng:sell", "eng:rent", "eng:lease", "eng:pay",
+			"spa:comprar", "spa:vender", "spa:rentar", "spa:alquilar", "spa:pagar"
 		],
 		"kebuen": [
-			"en:monetary",
-			"es:financiero"
+			"eng:monetary",
+			"spa:financiero"
 		],
 		"kebuekin": [
-			"en:bought",
-			"en:sold",
-			"en:rented",
-			"es:comprado",
-			"es:vendido",
-			"es:rentado",
-			"es:alquilado",
-			"es:pagado"
+			"eng:bought",
+			"eng:sold",
+			"eng:rented",
+			"spa:comprado",
+			"spa:vendido",
+			"spa:rentado",
+			"spa:alquilado",
+			"spa:pagado"
 		],
 		"boe": [
 			"fullness","density","matter",
-			"es:densidad","es:materia"
+			"spa:densidad","spa:materia"
 		],
 		"boeki": [
-			"es:llenar","es:rellenar",
-	        "en:fill","en:stuff","be filled","be stuffed"
+			"spa:llenar","spa:rellenar",
+	        "eng:fill","eng:stuff","be filled","be stuffed"
 		],
 		"boen": [
-			"es:lleno","es:relleno","es:denso",
-	        "en:full","en:stuffed","en:dense"
+			"spa:lleno","spa:relleno","spa:denso",
+	        "eng:full","eng:stuffed","eng:dense"
 		],
 		"boekin": [
-			"es:llenado",
-	        "en:filled","en:filling","stuffed","stuffing"
+			"spa:llenado",
+	        "eng:filled","eng:filling","stuffed","stuffing"
 		],
 		"bae": ["order","organization"],
 		"bie": ["control","command","direct"],
 		"de": [
 			"touch","feeling",
-			"es:toque","es:sensación"
+			"spa:toque","spa:sensación"
 		],
 		"deki": [
 	        "touch","feel","be touched","be felt",
-	        "es:tocar","sentir"
+	        "spa:tocar","sentir"
 	    ],
 		"den": [
 	        "felt","adjacent",
-	        "es:sentido","es:adyacente"
+	        "spa:sentido","spa:adyacente"
 	    ],
 		"dekin": [
 	        "touched","touching",
-	        "es:tocado","es:que toca"
+	        "spa:tocado","spa:que toca"
 	    ],
 		"due": ["shape","form"],
 		"doe": ["finding","discovery","recovery"],
 		"dae": ["hug","embrace","wrap"],
 		"die": [
 			"hand","five","highfive",
-			"es:mano","es:cinco"
+			"spa:mano","spa:cinco"
 		],
 		"diese": [
-			"en:finger",
-			"es:dedo"
+			"eng:finger",
+			"spa:dedo"
 		],
 		"dieseki": [
 			"point","be pointed at"
 		],
 		"diesen": [
 			"of the finger",
-	        "es:dedal"
+	        "spa:dedal"
 		],
 		"diesekin": [
 			"pointed at","pointing"
@@ -3314,72 +2932,72 @@
 		"kie": ["hit","impact","collision"],
 		
 		"hi": [
-			"en:creation", "en:creativity",
-			"es:creación", "es:creatividad"
+			"eng:creation", "eng:creativity",
+			"spa:creación", "spa:creatividad"
 		],
 		"hiki": [
-			"en:create", "en:build",
-			"es:crear", "es:construir"
+			"eng:create", "eng:build",
+			"spa:crear", "spa:construir"
 		],
 		"hin": [
-			"en:creative",
-			"es:creativo"
+			"eng:creative",
+			"spa:creativo"
 		],
 		"hikin": [
-			"en:built", "en:made",
-			"es:construido", "es:hecho"
+			"eng:built", "eng:made",
+			"spa:construido", "spa:hecho"
 		],
 		"hui": [
-			"en:artificiality","en:synthesis","en:manufacture",
-			"es:fabricación","es:artificialidad"
+			"eng:artificiality","eng:synthesis","eng:manufacture",
+			"spa:fabricación","spa:artificialidad"
 		],
 		"huihao": [
-			"en:robot",
-			"es:robot"
+			"eng:robot",
+			"spa:robot"
 		],
 		"huikao": [
-			"en:camera",
-			"es:cámera",
-			"ko:카메라"
+			"eng:camera",
+			"spa:cámera",
+			"kor:카메라"
 		],
 		"huiho": [
-			"en:machine",
-			"es:máquina",
-			"ko:기계"
+			"eng:machine",
+			"spa:máquina",
+			"kor:기계"
 		],
 		"hoi": [
 			"tool","repair","tuning",
-			"es:herramienta","es:reparación","es:afinación"
+			"spa:herramienta","spa:reparación","spa:afinación"
 		],
 		"hoiki": [
 			"use a tool on", "fix", "tune",
-			"es:arreglar", "es:trabajar con herramienta", "es:afinar"
+			"spa:arreglar", "spa:trabajar con herramienta", "spa:afinar"
 		],
 		"hoin": [
-			"en:tool-like",
-			"es:como herramienta"
+			"eng:tool-like",
+			"spa:como herramienta"
 		],
 		"hoikin": [
-			"en:fixed",
-			"es:arreglado"
+			"eng:fixed",
+			"spa:arreglado"
 		],
 		"hai": [
-			"en:animal",
-			"es:animal",
-			"ko:동물"
+			"eng:animal",
+			"spa:animal",
+			"kor:동물"
 		],
 		"haiki": [
 			"dehumanize", "behave like an animal",
-			"es:deshumanizar", "es:portarse como animal",
-			"ko:동물처럼 하다"
+			"spa:deshumanizar", "spa:portarse como animal",
+			"kor:동물처럼 하다"
 		],
 		"hain": [
 			"animal",
-			"es:animal"
+			"spa:animal"
 		],
 		"haikin": [
 			"dehumanized",
-			"es:deshumanizado"
+			"spa:deshumanizado"
 		],
 		"hei": ["type"],
 		"mi": ["movement","eight"],
@@ -3394,56 +3012,56 @@
 		"mein": ["liquid"],
 		"meikin": ["liquified"],
 		"li": [
-			"en:time",
-			"es:tiempo",
-			"ko:시간"
+			"eng:time",
+			"spa:tiempo",
+			"kor:시간"
 		],
 	    "beoli": [
-	        "en:beginning",
-	        "es:inicio"
+	        "eng:beginning",
+	        "spa:inicio"
 	    ],
 	    "neoli": [
-	        "en:end",
-	        "es:fin"
+	        "eng:end",
+	        "spa:fin"
 	    ],
 	    "kuili": [
-	        "en:earliness",
-	        "es:lo temprano"
+	        "eng:earliness",
+	        "spa:lo temprano"
 	    ],
 		"kuilil": [
-			"en:before",
-			"es:antes de",
-			"ko:전"
+			"eng:before",
+			"spa:antes de",
+			"kor:전"
 		],
 	    "huli": [
-	        "en:tardiness",
-	        "es:lo tarde"
+	        "eng:tardiness",
+	        "spa:lo tarde"
 	    ],
 		"hulil": [
-			"en:after",
-			"es:después de",
-			"ko:후"
+			"eng:after",
+			"spa:después de",
+			"kor:후"
 		],
 		"soli": [
-			"en:future","en:when",
-			"es:futuro","es:cuándo"
+			"eng:future","eng:when",
+			"spa:futuro","spa:cuándo"
 		],
 		"liki": [
-			"en:spend time", "en:last",
-			"ko:지내다", 
-			"es:durar", "es:pasar tiempo"
+			"eng:spend time", "eng:last",
+			"kor:지내다", 
+			"spa:durar", "spa:pasar tiempo"
 		],
 		"lin": [
-			"en:chronological",
-			"es:chronológico"
+			"eng:chronological",
+			"spa:chronológico"
 		],
 		"likin": [
-			"en:where time is spent", "en:with which time is spent",
-			"es:donde se pasa tiempo", "es:con que se pasa tiempo"
+			"eng:where time is spent", "eng:with which time is spent",
+			"spa:donde se pasa tiempo", "spa:con que se pasa tiempo"
 		],
 	    "hali": [
-	        "en:now","present",
-	        "es:ahora","es:presente"
+	        "eng:now","present",
+	        "spa:ahora","spa:presente"
 	    ],
 		"haliki": [
 	        "happen", "make happen", "modernize"
@@ -3458,8 +3076,8 @@
 	        "while/when"
 	    ],
 	    "fuli": [
-	        "en:past",
-	        "es:pasado"
+	        "eng:past",
+	        "spa:pasado"
 	    ],
 		"fuliki": [
 	        "deprecate", "precede"
@@ -3474,8 +3092,8 @@
 	        "before"
 	    ],
 	    "soli": [
-	        "en:future",
-	        "es:futuro"
+	        "eng:future",
+	        "spa:futuro"
 	    ],
 		"soliki": [
 	        "modernize, postpone, succeed"
@@ -3499,37 +3117,37 @@
 	        "lubricated", "made slippery"
 	    ],
 	    "luihai": [
-	        "en:snake","en:serpent",
-	        "es:serpiente"
+	        "eng:snake","eng:serpent",
+	        "spa:serpiente"
 	    ],
 		"loi": [
 			"exposure","vulnerability",
-			"es:exposición","es:lo descubierto","es:vulnerabilidad"
+			"spa:exposición","spa:lo descubierto","spa:vulnerabilidad"
 		],
 		"lai": [],
 		"lei": [
 			"season",
-			"es:temporada", "es:estación"
+			"spa:temporada", "spa:estación"
 		],
 		"leiki": [
-			"en:change seasons", "en:spend a season",
-			"es:camiar de temporada", "es:pasar la temporada"
+			"eng:change seasons", "eng:spend a season",
+			"spa:camiar de temporada", "spa:pasar la temporada"
 		],
 		"lein": [
-			"en:seasonal",
-			"es:estacional"
+			"eng:seasonal",
+			"spa:estacional"
 		],
 		"leikin": [
-			"en:where a season is spent", "en:with which a season is spent",
-			"es:donde se pasa la temporada", "es:con que se pasa la temporada"
+			"eng:where a season is spent", "eng:with which a season is spent",
+			"spa:donde se pasa la temporada", "spa:con que se pasa la temporada"
 		],
 		"ni": [
 			"simplicity",
-			"es:simplicidad"
+			"spa:simplicidad"
 		],
 		"niki": [
-	        "en:simplify","en:be simplified",
-			"es:simplificar","es:ser simplificado"
+	        "eng:simplify","eng:be simplified",
+			"spa:simplificar","spa:ser simplificado"
 	    ],
 		"nin": [
 	        "simple", "simply"
@@ -3539,18 +3157,18 @@
 	    ],
 		"nui": [
 			"top","lid","cap",
-			"es:cima","tapa"
+			"spa:cima","tapa"
 		],
 		"nuiki": [
-	        "es:tapar",
-	        "en:put a lid on"
+	        "spa:tapar",
+	        "eng:put a lid on"
 	    ],
 		"nuin": [
 	        "top","high",
-	        "es:de encima","es:alto"
+	        "spa:de encima","spa:alto"
 	    ],
 		"nuikin": [
-	        "es:tapado",
+	        "spa:tapado",
 	        "closed", "closing"
 	    ],
 		"nuil": [
@@ -3559,59 +3177,59 @@
 	    ],
 		"noi": [
 			"thought",
-			"es:pensamiento"
+			"spa:pensamiento"
 		],
 		"kenoi": [
-			"en:memory",
-			"es:memoria","es:recuerdo"
+			"eng:memory",
+			"spa:memoria","spa:recuerdo"
 		],
 		"nai": [
 			"belief","faith",
-			"es:creencia","es:fe"
+			"spa:creencia","spa:fe"
 		],
 		
 		"si": [
 			"height","up",
-			"es:altura","es:arriba",
-			"ko:키"
+			"spa:altura","spa:arriba",
+			"kor:키"
 		],
 		"sibua": [
-			"en:tree",
-			"es:árbol",
-			"ko:나무"
+			"eng:tree",
+			"spa:árbol",
+			"kor:나무"
 		],
 		"siki": [
 	        "raise","be raised",
-	        "es:subir","es:levantar"
+	        "spa:subir","spa:levantar"
 	    ],
 		"sin": [
 	        "high",
-	        "es:alto",
-			"ko:키가 큰"
+	        "spa:alto",
+			"kor:키가 큰"
 	    ],
 		"sikin": [
 	        "raised","raising",
-	        "es:subido","es:que sube"
+	        "spa:subido","spa:que sube"
 	    ],
 		"sil": [
 	        "over", "above",
-	        "es:sobre", "arriba de",
-			"ko:위에"
+	        "spa:sobre", "arriba de",
+			"kor:위에"
 	    ],
 	    "sima": [
-	        "en:wave",
-	        "es:ola","es:onda"
+	        "eng:wave",
+	        "spa:ola","spa:onda"
 	    ],
 		"simaki": [
 	        "wave","be waved",
-	        "es:agitar","es:ser agitado"
+	        "spa:agitar","spa:ser agitado"
 	    ],
 		"siman": [
 	        "wavy"
 	    ],
 		"simakin": [
 	        "waved","waving",
-	        "es:agitado","es:que agita"
+	        "spa:agitado","spa:que agita"
 	    ],
 		"sui": ["steepness"],
 		"soi": ["weightlessness","lightness"],
@@ -3644,35 +3262,35 @@
 		"fei": ["difficulty"],
 		"bi": ["destruction"],
 		"biki": [
-			"en:destroy",
-			"es:destruir"
+			"eng:destroy",
+			"spa:destruir"
 		],
 		"bin": [
-			"en:destructive",
-			"es:destructivo"
+			"eng:destructive",
+			"spa:destructivo"
 		],
 		"bikin": [
-			"en:destroyed",
-			"es:destruido"
+			"eng:destroyed",
+			"spa:destruido"
 		],
 		"bui": ["business"],
 		"boi": ["vehicle"],
 		"bai": [],
 		"bei": [
 			"moment", "instant",
-			"es:momento", "es:instante"
+			"spa:momento", "spa:instante"
 		],
 		"beiki": [
-			"en:spend a moment", "en:shorten",
-			"es:pasar un momento", "es:acortar"
+			"eng:spend a moment", "eng:shorten",
+			"spa:pasar un momento", "spa:acortar"
 		],
 		"bein": [
-			"en:short", "en:temporary", "en:ephimeral", "en:transient",
-			"es:corto", "es:temporal", "es:efímero"
+			"eng:short", "eng:temporary", "eng:ephimeral", "eng:transient",
+			"spa:corto", "spa:temporal", "spa:efímero"
 		],
 		"beikin": [
-			"en:with which a moment is spent", "en:where a moment is spent", "en:shortened",
-			"es:con que se pasa el momento", "es:donde se pasa el momento"
+			"eng:with which a moment is spent", "eng:where a moment is spent", "eng:shortened",
+			"spa:con que se pasa el momento", "spa:donde se pasa el momento"
 		],
 		"di": ["light","brightness"],
 		"diki": ["brighten","shine"],
@@ -3690,50 +3308,50 @@
 		"deikin": ["heated"],
 		
 		"kiki": [
-			"en:do",
-			"es:hacer"
+			"eng:do",
+			"spa:hacer"
 		],
 		"kin": [
-			"en:active",
-			"es:activo"
+			"eng:active",
+			"spa:activo"
 		],
 		"kikin": [
-			"en:done",
-			"es:hecho"
+			"eng:done",
+			"spa:hecho"
 		],
 		"kui": ["speed"],
 		"koi": ["color"],
 		"kai": [
-			"en:fun", "en:entertainment",
-			"es:diversión", "es:entretenimiento"
+			"eng:fun", "eng:entertainment",
+			"spa:diversión", "spa:entretenimiento"
 		],
 		"kaiki": [
-			"es:divertir", "es:entretener",
-			"en:entertain", "en:have fun"
+			"spa:divertir", "spa:entretener",
+			"eng:entertain", "eng:have fun"
 		],
 		"kain": [
-			"en:fun", "en:entertaining",
-			"es:divertido"
+			"eng:fun", "eng:entertaining",
+			"spa:divertido"
 		],
 		"kaikin": [
-			"en:entertained",
-			"es:entretenido"
+			"eng:entertained",
+			"spa:entretenido"
 		],
 		"kei": [
 			"occurrence","event",
-			"es:evento","es:suceso"
+			"spa:evento","spa:suceso"
 		],
 		"keiki": [
-			"en:make happen", "en:happen",
-			"es:pasar", "es:suceder", "es:hacer pasar"
+			"eng:make happen", "eng:happen",
+			"spa:pasar", "spa:suceder", "spa:hacer pasar"
 		],
 		"kein": [
-			"en:happening",
-			"es:ocurriendo"
+			"eng:happening",
+			"spa:ocurriendo"
 		],
 		"keikin": [
-			"en:made happen",
-			"es:hecho pasar"
+			"eng:made happen",
+			"spa:hecho pasar"
 		],
 		"beokei": [
 			"cause"
@@ -3757,8 +3375,8 @@
 			"causing"
 		],
 	    "neokei": [
-	        "en:effect",
-	        "es:resultado","es:efecto"
+	        "eng:effect",
+	        "spa:resultado","spa:efecto"
 	    ],
 		"neokeiki": [
 			"be caused by","be affected by","result"
@@ -3782,34 +3400,34 @@
 		"smeu": [],
 		"smiu": [
 			"foot",
-			"es:pie"
+			"spa:pie"
 		],
 		"smiuse": [
-			"en:toe",
-			"es:dedo de pie"
+			"eng:toe",
+			"spa:dedo de pie"
 		],
 		"smiuseki": [
 			"touch with toe",
-	        "es:tocar con dedo de pie"
+	        "spa:tocar con dedo de pie"
 		],
 		"smiusen": [
 			"of the toe",
-	        "es:dedal","es:de dedo de pie"
+	        "spa:dedal","spa:de dedo de pie"
 		],
 		"smiusekin": [
 			"touched with toe","touching with toe"
 		],
 		"smiuki": [
-			"es:pisar",
-	        "en:step","en:step on","en:stomp"
+			"spa:pisar",
+	        "eng:step","eng:step on","eng:stomp"
 		],
 		"smiun": [
 			"of the foot","podal",
-	        "es:pedal","de pie"
+	        "spa:pedal","de pie"
 		],
 		"smikin": [
-			"es:pisado",
-	        "en:stepped on","en:stepping","en:stepping on"
+			"spa:pisado",
+	        "eng:stepped on","eng:stepping","eng:stepping on"
 		],
 		"snu": ["shadow"],
 		"snou": [],
@@ -3847,80 +3465,80 @@
 		"smio": [],
 		"sno": [
 			"flavor","taste",
-			"es:sabor"
+			"spa:sabor"
 		],
 		"snoki": [
 	        "be tasty","make tasty",
-	        "es:ser sabroso","hacer sabroso"
+	        "spa:ser sabroso","hacer sabroso"
 	    ],
 		"snon": [
 	        "tasty","of flavor",
-	        "es:sabroso"
+	        "spa:sabroso"
 	    ],
 		"snokin": [
 	        "made tasty","making tasty",
-	        "es:hecho sabroso"
+	        "spa:hecho sabroso"
 	    ],
 	    "dasno": [
-	        "en:sweetness",
-	        "es:dulzura"
+	        "eng:sweetness",
+	        "spa:dulzura"
 	    ],
 		"dasnon": [
 	        "sweet",
-	        "es:dulce"
+	        "spa:dulce"
 	    ],
 	    "feisno": [
-	        "en:sourness",
-	        "es:acidez"
+	        "eng:sourness",
+	        "spa:acidez"
 	    ],
 		"feisnon": [
 	        "sour",
-	        "es:ácido"
+	        "spa:ácido"
 	    ],
 	    "deisno": [
-	        "en:spice",
-	        "es:picante"
+	        "eng:spice",
+	        "spa:picante"
 	    ],
 		"deisnon": [
 	        "spicy",
-	        "es:picante"
+	        "spa:picante"
 	    ],
 	    "lusno": [
-	        "en:bitterness",
-	        "es:amargura"
+	        "eng:bitterness",
+	        "spa:amargura"
 	    ],
 		"lusnon": [
 	        "bitter",
-	        "es:amargo"
+	        "spa:amargo"
 	    ],
 	    "masno": [
-	        "en:salt",
-	        "es:sal"
+	        "eng:salt",
+	        "spa:sal"
 	    ],
 		"masnon": [
 	        "salty",
-	        "es:salado"
+	        "spa:salado"
 	    ],
 	    "biusno": [
-	        "en:mint",
-	        "es:menta"
+	        "eng:mint",
+	        "spa:menta"
 	    ],
 		"biusnon": [
 	        "minty",
-	        "es:tener sabor de menta"
+	        "spa:tener sabor de menta"
 	    ],
 	    "fusno": [
-	        "en:blandness",
-	        "es:falta de sabor"
+	        "eng:blandness",
+	        "spa:falta de sabor"
 	    ],
 		"fusnon": [
 	        "bland",
-	        "es:faltar sabor"
+	        "spa:faltar sabor"
 	    ],
 		"snuo": [],
 		"snao": [
 			"tongue","lick",
-			"es:lengua","es:lamido"
+			"spa:lengua","spa:lamido"
 		],
 		"snaoki": [
 			"lick","be licked"
@@ -3933,11 +3551,11 @@
 		],
 		"sneo": [
 			"goal","target","purpose",
-			"es:meta","es:propósito"
+			"spa:meta","spa:propósito"
 		],
 		"sneol": [
 			"in order to","with the purpose of",
-			"es:para","es:con el propósito de"
+			"spa:para","spa:con el propósito de"
 		],
 		"snio": [],
 		"sfo": [],
@@ -3956,19 +3574,19 @@
 		"steo": [],
 		"stio": [
 			"smallness",
-			"es:lo pequeño"
+			"spa:lo pequeño"
 		],
 		"stioki": [
 	        "shrink","be shrunk",
-	        "es:empequeñecer","es:ser empequeñecido"
+	        "spa:empequeñecer","spa:ser empequeñecido"
 	    ],
 		"stion": [
 	        "small",
-	        "es:pequeño"
+	        "spa:pequeño"
 	    ],
 		"stiokin": [
 	        "shrunk","shrinking",
-	        "es:que empequeñece","es:empequeñecido"
+	        "spa:que empequeñece","spa:empequeñecido"
 	    ],
 		"sko": [],
 		"skuo": [],
@@ -3978,7 +3596,7 @@
 
 		"sma": [
 			"breath",
-			"es:aliento"
+			"spa:aliento"
 		],
 		"smaki": [
 			"breathe","blow on","be breathed","be blown on"
@@ -4041,7 +3659,7 @@
 		"spie": [],
 		"ste": [
 			"arm",
-			"es:brazo"
+			"spa:brazo"
 		],
 		"steki": [
 			"clothesline","be clotheslined"
@@ -4064,7 +3682,7 @@
 		
 		"smi": [
 			"leg","kick",
-			"es:pierna","es:pata","es:patada"
+			"spa:pierna","spa:pata","spa:patada"
 		],
 		"smiki": [
 			"kick","be kicked"
@@ -4079,7 +3697,7 @@
 		"smoi": [],
 		"smai": [
 			"steam","vapor",
-			"es:vapor"
+			"spa:vapor"
 		],
 		"smaiki": [
 			"steam","be steamed"
@@ -4258,7 +3876,7 @@
 		"ho": [],
 		"huo": [
 			"omi:habo huom noki.",
-			"en:I know myself."
+			"eng:I know myself."
 		],
 		"hao": [],
 		"heo": [],
@@ -4293,17 +3911,17 @@
 		"bao": [],
 		"beo": [
 			"omi:Abo Bm beoki",
-		    "en:A originates from B",
+		    "eng:A originates from B",
 			"omi:Bbo An beom heki",
-		    "en:B is A's origin",
+		    "eng:B is A's origin",
 			"omi:Bbo Abo beokin bemm heki",
-		    "en:B is where A originates from",
+		    "eng:B is where A originates from",
 			"omi:Bbo Abo beokin heki",
-		    "en:B is where a originates",
+		    "eng:B is where a originates",
 			"omi:Abo Bm beol heki",
-		    "en:A is from B",
+		    "eng:A is from B",
 			"omi:Abo Beon heki beol bm",
-		    "en:A is originally from B"
+		    "eng:A is originally from B"
 		],
 		"bio": [],
 		"do": [],
@@ -4320,7 +3938,7 @@
 		"ha": [],
 		"habo": [
 			"omi:abo mon aki = habo mon haki",
-			"en:I live peacefully."
+			"eng:I live peacefully."
 		],
 		"hua": [],
 		"hoa": [],
@@ -4330,9 +3948,9 @@
 		"mua": [],
 		"moa": [
 			"omi:moam mioki/minoki",
-		    "en:speak/communicate the truth",
+		    "eng:speak/communicate the truth",
 			"omi:moan mioki",
-		    "en:speak truthfully"
+		    "eng:speak truthfully"
 		],
 		"mea": [],
 		"mia": [],
@@ -4389,11 +4007,11 @@
 		"lie": [],
 		"ne": [
 			"omi:abo bm neki",
-		    "en:a brings b closer",
+		    "eng:a brings b closer",
 			"omi:abo bm neol/lol neki",
-		    "en:a approaches b",
+		    "eng:a approaches b",
 			"omi:abo bm nel hekis",
-		    "en:a will be near b"
+		    "eng:a will be near b"
 		],
 		"nue": [],
 		"noe": [],
@@ -4452,7 +4070,7 @@
 		"sei": [],
 		"fi": [
 			"omi:Abo kuim nan fil boim heki",
-			"en:A is faster than a vehicle"
+			"eng:A is faster than a vehicle"
 		],
 		"fui": [],
 		"foi": [],
@@ -4475,11 +4093,11 @@
 		"kei": [],
 		"beokei": [
 			"omi:Abo Cm beokeil Bm snaoki",
-		    "en:A licks B causing C"
+		    "eng:A licks B causing C"
 		],
 		"neokei": [
 		    "omi:Abo Cm neokeil Bm snaoki",
-		    "en:A licks B, because of C"
+		    "eng:A licks B, because of C"
 		],
 		
 		"smu": [],
@@ -4638,173 +4256,173 @@
 		"skei": [],
 		
 		"grammar conditional": [
-			"omi:Afoki Bki.","en:If A were to happen, B happens.",
-			"omi:Akei Bki.","en:If A happens, B happens.",
-			"omi:Akim hel Bki.","en:In the event of  A happening, B happens.",
-			"omi:Akim beol Bki.","en:Originating from A, B happens.",
-			"omi:Akim neokeil Bki","en:As a result of A, B happens.",
-			"omi:Bkim beokeil Aki","en:A happens, causing B.",
-			"omi:beokein Aki neokein Bki.","en:Cause A, effect B. A happening as a cause, B happens as a result.",
-			"omi:beon Aki neon Bki.","en:Origin A, destination B. Coming from A happening, B would happen.",
-			"omi:neokein Bki?","en:Effect B? Would B happen?",
-			"omi:neon Bki?","en:Destination B? Would B happen?"
+			"omi:Afoki Bki.","eng:If A were to happen, B happens.",
+			"omi:Akei Bki.","eng:If A happens, B happens.",
+			"omi:Akim hel Bki.","eng:In the event of  A happening, B happens.",
+			"omi:Akim beol Bki.","eng:Originating from A, B happens.",
+			"omi:Akim neokeil Bki","eng:As a result of A, B happens.",
+			"omi:Bkim beokeil Aki","eng:A happens, causing B.",
+			"omi:beokein Aki neokein Bki.","eng:Cause A, effect B. A happening as a cause, B happens as a result.",
+			"omi:beon Aki neon Bki.","eng:Origin A, destination B. Coming from A happening, B would happen.",
+			"omi:neokein Bki?","eng:Effect B? Would B happen?",
+			"omi:neon Bki?","eng:Destination B? Would B happen?"
 		],
 		"grammar present progressive": [
-			"en:I write in the house.","omi:habo habeam hel leoki.",
-			"en:I am writing in the house.","omi:habo habeam hel leomkin heki.",
-			"en:I am literarily in the house","omi:habo hel habeam leon heki.",
-			"en:I am being written in the house.","omi:habo hel habeam leokin/leonein heki."
+			"eng:I write in the house.","omi:habo habeam hel leoki.",
+			"eng:I am writing in the house.","omi:habo habeam hel leomkin heki.",
+			"eng:I am literarily in the house","omi:habo hel habeam leon heki.",
+			"eng:I am being written in the house.","omi:habo hel habeam leokin/leonein heki."
 		]
 	},
 	"examples": [
 		"omi:habo huom noki.",
-		"en:I know myself.",
+		"eng:I know myself.",
 		"omi:Abo Bm neki",
-	    "en:A brings B closer",
+	    "eng:A brings B closer",
 		"omi:Abo Bm neol/lol neki",
-	    "en:A approaches B",
+	    "eng:A approaches B",
 		"omi:Abo Bm nel hekis",
-	    "en:A will be near B",
+	    "eng:A will be near B",
 		"omi:Abo kuim nan fil boim heki",
-		"en:A is faster than a vehicle",
+		"eng:A is faster than a vehicle",
 		"omi:moam mioki/minoki",
-	    "en:speak/communicate the truth",
+	    "eng:speak/communicate the truth",
 		"omi:moan mioki",
-	    "en:speak truthfully",
+	    "eng:speak truthfully",
 		"omi:Abo Bm beoki",
-	    "en:A originates from B",
+	    "eng:A originates from B",
 		"omi:Bbo An beom heki",
-	    "en:B is A's origin",
+	    "eng:B is A's origin",
 		"omi:Bbo Abo beokin bemm heki",
-	    "en:B is where A originates from",
+	    "eng:B is where A originates from",
 		"omi:Bbo Abo beokin heki",
-	    "en:B is where a originates",
+	    "eng:B is where a originates",
 		"omi:Abo Bm beol heki",
-	    "en:A is from B",
+	    "eng:A is from B",
 		"omi:Abo Beon heki beol bm",
-	    "en:A is originally from B",
+	    "eng:A is originally from B",
 		"omi:Abo Cm beokeil Bm snaoki",
-	    "en:A licks B causing C",
+	    "eng:A licks B causing C",
 		"omi:abo mon aki = habo mon haki",
-		"en:I live peacefully."
+		"eng:I live peacefully."
 	],
 	"translations": {
 		"omi:habo huom noki.": [
 			"omi:habo huom noki.",
-			"en:I know myself."
+			"eng:I know myself."
 		],
 		"omi:Abo Bm neki": [
 			"omi:Abo Bm neki",
-			"en:A brings B closer"
+			"eng:A brings B closer"
 		],
 		"omi:Abo Bm neol/lol neki": [
 			"omi:Abo Bm neol/lol neki",
-			"en:A approaches B"
+			"eng:A approaches B"
 		],
 		"omi:Abo Bm nel hekis": [
 			"omi:Abo Bm nel hekis",
-			"en:A will be near B"
+			"eng:A will be near B"
 		],
 		"omi:Abo kuim nan fil boim heki": [
 			"omi:Abo kuim nan fil boim heki",
-			"en:A is faster than a vehicle"
+			"eng:A is faster than a vehicle"
 		],
 		"omi:moam mioki/minoki": [
 			"omi:moam mioki/minoki",
-			"en:speak/communicate the truth"
+			"eng:speak/communicate the truth"
 		],
 		"omi:moan mioki": [
 			"omi:moan mioki",
-			"en:speak truthfully"
+			"eng:speak truthfully"
 		],
 		"omi:Abo Bm beoki": [
 			"omi:Abo Bm beoki",
-			"en:A originates from B"
+			"eng:A originates from B"
 		],
 		"omi:Bbo An beom heki": [
 			"omi:Bbo An beom heki",
-			"en:B is A's origin"
+			"eng:B is A's origin"
 		],
 		"omi:Bbo Abo beokin bemm heki": [
 			"omi:Bbo Abo beokin bemm heki",
-			"en:B is where A originates from"
+			"eng:B is where A originates from"
 		],
 		"omi:Bbo Abo beokin heki": [
 			"omi:Bbo Abo beokin heki",
-			"en:B is where a originates"
+			"eng:B is where a originates"
 		],
 		"omi:Abo Bm beol heki": [
 			"omi:Abo Bm beol heki",
-			"en:A is from B"
+			"eng:A is from B"
 		],
 		"omi:Abo Beon heki beol bm": [
 			"omi:Abo Beon heki beol bm",
-			"en:A is originally from B"
+			"eng:A is originally from B"
 		],
 		"omi:Abo Cm beokeil Bm snaoki": [
 			"omi:Abo Cm beokeil Bm snaoki",
-			"en:A licks B causing C"
+			"eng:A licks B causing C"
 		],
 		"omi:abo mon aki = habo mon haki": [
 			"omi:abo mon aki = habo mon haki",
-			"en:I live peacefully."
+			"eng:I live peacefully."
 		],
 		"#noname": [
 			[
-				"en:I write in the house.",
+				"eng:I write in the house.",
 				"omi:habo habeam hel leoki."
 			],
 			[
-				"en:I am writing in the house.",
+				"eng:I am writing in the house.",
 				"omi:habo habeam hel leomkin heki."
 			],
 			[
-				"en:I am literarily in the house",
+				"eng:I am literarily in the house",
 				"omi:habo hel habeam leon heki."
 			],
 			[
-				"en:I am being written in the house.",
+				"eng:I am being written in the house.",
 				"omi:habo hel habeam leokin/leonein heki."
 			],
 			[
 				"omi:Afoki Bki.",
-				"en:If A were to happen, B happens."
+				"eng:If A were to happen, B happens."
 			],
 			[
 				"omi:Akei Bki.",
-				"en:If A happens, B happens."
+				"eng:If A happens, B happens."
 			],
 			[
 				"omi:Akim hel Bki.",
-				"en:In the event of  A happening, B happens."
+				"eng:In the event of  A happening, B happens."
 			],
 			[
 				"omi:Akim beol Bki.",
-				"en:Originating from A, B happens."
+				"eng:Originating from A, B happens."
 			],
 			[
 				"omi:Akim neokeil Bki",
-				"en:As a result of A, B happens."
+				"eng:As a result of A, B happens."
 			],
 			[
 				"omi:Bkim beokeil Aki",
-				"en:A happens, causing B."
+				"eng:A happens, causing B."
 			],
 			[
 				"omi:beokein Aki neokein Bki.",
-				"en:Cause A, effect B. A happening as a cause, B happens as a result."
+				"eng:Cause A, effect B. A happening as a cause, B happens as a result."
 			],
 			[
 				"omi:beon Aki neon Bki.",
-				"en:Origin A, destination B. Coming from A happening, B would happen."
+				"eng:Origin A, destination B. Coming from A happening, B would happen."
 			],
 			[
 				"omi:neokein Bki?",
-				"en:Effect B? Would B happen?"
+				"eng:Effect B? Would B happen?"
 			],
 			[
 				"omi:neon Bki?",
-				"en:Destination B? Would B happen?"
+				"eng:Destination B? Would B happen?"
 			]
 		]
 	},

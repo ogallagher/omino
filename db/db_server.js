@@ -156,20 +156,27 @@ exports.get_query = function(endpoint, args, is_external) {
 	})
 }
 
-exports.send_query = function(sql,callback) {
-	db.getConnection(function(err, conn) {
-		if (err) {
-			// connection failed
-			callback(err,null)
-		}
-		else {
-			conn.query(sql, function(err,res) {
-				// release connection when no longer needed
-				conn.release()
+exports.send_query = function(sql) {
+	return new Promise(function(resolve,reject) {
+		db.getConnection(function(err, conn) {
+			if (err) {
+				// connection failed
+				reject(err)
+			}
+			else {
+				conn.query(sql, function(err,res) {
+					// release connection when no longer needed
+					conn.release()
 				
-				// return error if defined, and response results
-				callback(err,res)
-			})
-		}
+					// return error if defined, and response results
+					if (err) {
+						reject(err)
+					}
+					else {
+						resolve(res)
+					}
+				})
+			}
+		})
 	})
 }
