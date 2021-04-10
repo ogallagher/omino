@@ -155,6 +155,9 @@ try {
 			// http server
 			server.listen(server.get('port'), on_start)
 			
+			// init db server
+			db_server.init()
+			
 			//expose database
 			server
 			.route(ROUTE_DB)

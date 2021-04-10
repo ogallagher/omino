@@ -1,12 +1,10 @@
 {
-	"match_email": {
-		"params": ["{username}","{email}"],
-		"query": "select 1 from people where username={username} and email={email}",
-		"external": true
-	},
 	"insert_language": {
 		"external": false,
-		"params": [],
-		"query": "insert into languages(code,english) values"
+		"params": [
+			"code","name"
+		],
+		"query": "insert ignore into `languages`(`code`,`english_name`) values ({code},{name})",
+		"notes": "insert ignore fails quietly if the language is already in the db"
 	}
 }

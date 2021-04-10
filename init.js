@@ -263,13 +263,64 @@ function compile_dictionary() {
 
 function import_iso_langs() {
 	return new Promise(function(resolve,reject) {
+		// connect to database
+		let db_server = require('./db/db_server.js')
+		db_server.init()
+		
 		let langs = require(`./${ISO_LANGS_FILE}`)
 		log.debug(`loaded ${langs.length} language codes from ${ISO_LANGS_FILE}`)
-		
+	
 		// ex. { English: 'Afar', alpha2: 'aa', 'alpha3-b': 'aar' }
+		let fails = 0
+		let promises = []
 		for (let lang of langs) {
+			let code = lang['alpha3-b']
+			let en_name = lang['English']
+		
+			log.debug(`adding language ${en_name}=${code}`)
 			
+			promises.push(
+				db_server
+				.get_query('insert_language', {code: code, name: en_name}, false)
+				.then(function(action) {
+					return new Promise(function(resolve) {
+					    if (action.sql) {
+					  		db_server.send_query(action.sql, function(err,data) {
+					  			if (err) {
+					  				log.error(`error in db data insert: ${err}`)
+									fails++
+					  			}
+					  			else {
+					  				log.info(`added language ${en_name}=${code}`)
+					  			}
+								
+								resolve()
+					  		})
+					    }
+						else {
+							log.error(`failed to compile sql query for ${code} language insert`)
+							fails++
+							
+							resolve()
+						}
+					})
+				})
+				.catch(function(err) {
+					log.error('conversion from endpoint to sql failed: ' + err)
+				})
+			)
 		}
+		
+		Promise.all(promises).finally(() => {
+			log.info(`language imports complete with ${fails} errors and ${langs.length-fails} passes`)
+		
+			if (fails > 0) {
+				reject()
+			}
+			else {
+				resolve()
+			}
+		})
 	})
 }
 
@@ -283,6 +334,14 @@ parse_cli_args()
 		log.set_level(level)
 	}
 	log.debug('logging initialized')
+	
+	// get environment vars
+	if (require('dotenv').config().error) {
+		log.warning('environment variables not loaded from .env')
+	}
+	else {
+		log.info('environment variables loaded from .env')
+	}
 	
 	if (cli_args[CLI_COMPILE]) {
 		let targets = cli_args[CLI_COMPILE].split(',')

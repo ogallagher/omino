@@ -31,7 +31,7 @@ const log = new Logger('db_server')
 let db // database connection object
 let api // database api, for hiding actual sql from the client
 
-exports.init = function(site) {
+exports.init = function() {
 	// get database connection credentials
 	let config = null
 	
@@ -69,16 +69,22 @@ exports.init = function(site) {
 		})
 		
 		// test a connection
-		db.getConnection(function(err, connection) {
-			if (err) {
-				log.error(err)
-				log.error('failed to connect to ' + config.host)
-			}
-			else {
-				log.info('database connected successfully')
-				connection.release()
-			}
-		})
+		try {
+			db.getConnection(function(err, connection) {
+				if (err) {
+					log.error(err)
+					log.error('failed to connect to ' + config.host)
+				}
+				else {
+					log.info('database connected successfully')
+					connection.release()
+				}
+			})
+		}
+		catch (err) {
+			log.error(err)
+			log.error('failed to connect to ' + config.host)
+		}
 	}
 	
 	try {
@@ -91,21 +97,17 @@ exports.init = function(site) {
 
 function db_escape(arg) {
 	return new Promise(function(resolve,reject) {
-		if (isNaN(arg)) {
-			// is string, escaped
-			arg = db.escape(arg)
-		}
-		// else, is number, directly inserted
+		let escaped = mysql.escape(arg)
 		
 		// double check against JS injection (XSS)
-		let matches = arg.match(/[<>]/)
+		let matches = escaped.match(/[<>]/)
 		if (matches) {
 			log.warning(`suspicious: blocked possible xss attempt with db query arg: \n${matches}`)
 			reject('xss')
 		}
 		else {
 			// arg appears safe; approved for query
-			resolve(arg)
+			resolve(escaped)
 		}
 	})
 }
@@ -124,15 +126,18 @@ exports.get_query = function(endpoint, args, is_external) {
 				let p = Promise.resolve()
 				
 				// handle general endpoints by inserting escaped params into the query directly
-				for (let i=0; i<params.length && approved; i++) {
+				for (let param of params) {
 					p = p
-					.then(db_escape(args[i]))
+					.then(() => {
+						return db_escape(args[param])
+					})
 					.then(function(arg) {
-						query = query.replace(params[i], arg)
+						log.always(`args[${param}] = ${args[param]} --> ${arg}`)
+						query = query.replace(`{${param}}`, arg)
 					})
 				}
 				
-				p.then(() => {
+				p.then(function() {
 					log.debug(endpoint + ' --> ' + query)
 					resolve({sql: query})
 				})
