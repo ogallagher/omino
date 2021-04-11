@@ -73,6 +73,24 @@
 		"g",
 		"k"
 	],
+	"voiced consonants": [
+		"m",
+		"l",
+		"n",
+		"z",
+		"v",
+		"b",
+		"d",
+		"g"
+	],
+	"breathed consonants": [
+		"s",
+		"f",
+		"h",
+		"p",
+		"t",
+		"k"
+	],
 	"aliases": {
 		"s": ["z"],
 		"z": ["s"],
@@ -709,7 +727,7 @@
 		"boe",
 		"bae",
 		"bie",
-		"du",
+		"de",
 		"due",
 		"doe",
 		"dae",
@@ -967,6 +985,350 @@
 		"ka",
 		"ke",
 		"ki"
+	],
+	"2vow roots": [
+		"hou",
+		"hau",
+		"heu",
+		"hiu",
+		"mou",
+		"mau",
+		"meu",
+		"miu",
+		"lou",
+		"lau",
+		"leu",
+		"liu",
+		"nou",
+		"nau",
+		"neu",
+		"niu",
+		"sou",
+		"sau",
+		"seu",
+		"siu",
+		"fou",
+		"fau",
+		"feu",
+		"fiu",
+		"bou",
+		"bau",
+		"beu",
+		"biu",
+		"dou",
+		"dau",
+		"deu",
+		"diu",
+		"kou",
+		"kau",
+		"keu",
+		"kiu",
+
+		"huo",
+		"hao",
+		"heo",
+		"hio",
+		"muo",
+		"mao",
+		"meo",
+		"mio",
+		"luo",
+		"lao",
+		"leo",
+		"lio",
+		"nuo",
+		"nao",
+		"neo",
+		"nio",
+		"suo",
+		"sao",
+		"seo",
+		"sio",
+		"fuo",
+		"fao",
+		"feo",
+		"fio",
+		"buo",
+		"bao",
+		"beo",
+		"bio",
+		"duo",
+		"dao",
+		"deo",
+		"dio",
+		"kuo",
+		"kao",
+		"keo",
+		"kio",
+		
+		"hua",
+		"hoa",
+		"hea",
+		"hia",
+		"mua",
+		"moa",
+		"mea",
+		"mia",
+		"lua",
+		"loa",
+		"lea",
+		"lia",
+		"nua",
+		"noa",
+		"nea",
+		"nia",
+		"sua",
+		"soa",
+		"sea",
+		"sia",
+		"fua",
+		"foa",
+		"fea",
+		"fia",
+		"bua",
+		"boa",
+		"bea",
+		"bia",
+		"dua",
+		"doa",
+		"dea",
+		"dia",
+		"kua",
+		"koa",
+		"kea",
+		"kia",
+		
+		"hue",
+		"hoe",
+		"hae",
+		"hie",
+		"mue",
+		"moe",
+		"mae",
+		"mie",
+		"lue",
+		"loe",
+		"lae",
+		"lie",
+		"nue",
+		"noe",
+		"nae",
+		"nie",
+		"sue",
+		"soe",
+		"sae",
+		"sie",
+		"fue",
+		"foe",
+		"fae",
+		"fie",
+		"bue",
+		"boe",
+		"bae",
+		"bie",
+		"due",
+		"doe",
+		"dae",
+		"die",
+		"kue",
+		"koe",
+		"kae",
+		"kie",
+		
+		"hui",
+		"hoi",
+		"hai",
+		"hei",
+		"mui",
+		"moi",
+		"mai",
+		"mei",
+		"lui",
+		"loi",
+		"lai",
+		"lei",
+		"nui",
+		"noi",
+		"nai",
+		"nei",
+		"sui",
+		"soi",
+		"sai",
+		"sei",
+		"fui",
+		"foi",
+		"fai",
+		"fei",
+		"bui",
+		"boi",
+		"bai",
+		"bei",
+		"dui",
+		"doi",
+		"dai",
+		"dei",
+		"kui",
+		"koi",
+		"kai",
+		"kei"
+	],
+	"2con roots": [
+		"smu",
+		"snu",
+		"sfu",
+		"sbu",
+		"sdu",
+		"sku",
+		"smo",
+		"sno",
+		"sfo",
+		"sbo",
+		"sdo",
+		"sko",
+		"sma",
+		"sna",
+		"sfa",
+		"sba",
+		"sda",
+		"ska",
+		"sme",
+		"sne",
+		"sfu",
+		"sbe",
+		"sdu",
+		"ske",
+		"smi",
+		"sni",
+		"sfi",
+		"sbi",
+		"sdi",
+		"ski"
+	],
+	"2con2vow roots": [
+		"smou",
+		"smau",
+		"smeu",
+		"smiu",
+		"snou",
+		"snau",
+		"sneu",
+		"sniu",
+		"sfou",
+		"sfau",
+		"sfeu",
+		"sfiu",
+		"sbou",
+		"sbau",
+		"sbeu",
+		"sbiu",
+		"sdou",
+		"sdau",
+		"sdeu",
+		"sdiu",
+		"skou",
+		"skau",
+		"skeu",
+		"skiu",
+
+		"smuo",
+		"smao",
+		"smeo",
+		"smio",
+		"snuo",
+		"snao",
+		"sneo",
+		"snio",
+		"sfuo",
+		"sfao",
+		"sfeo",
+		"sfio",
+		"sbuo",
+		"sbao",
+		"sbeo",
+		"sbio",
+		"sduo",
+		"sdao",
+		"sdeo",
+		"sdio",
+		"skuo",
+		"skao",
+		"skeo",
+		"skio",
+
+		"smua",
+		"smoa",
+		"smea",
+		"smia",
+		"snua",
+		"snoa",
+		"snea",
+		"snia",
+		"sfua",
+		"sfoa",
+		"sfea",
+		"sfia",
+		"sbua",
+		"sboa",
+		"sbea",
+		"sbia",
+		"sdua",
+		"sdoa",
+		"sdea",
+		"sdia",
+		"skua",
+		"skoa",
+		"skea",
+		"skia",
+		
+		"smue",
+		"smoe",
+		"smae",
+		"smie",
+		"snue",
+		"snoe",
+		"snae",
+		"snie",
+		"sfue",
+		"sfoe",
+		"sfae",
+		"sfie",
+		"sbue",
+		"sboe",
+		"sbae",
+		"sbie",
+		"sdue",
+		"sdoe",
+		"sdae",
+		"sdie",
+		"skue",
+		"skoe",
+		"skae",
+		"skie",
+		
+		"smui",
+		"smoi",
+		"smai",
+		"smei",
+		"snui",
+		"snoi",
+		"snai",
+		"snei",
+		"sfui",
+		"sfoi",
+		"sfai",
+		"sfei",
+		"sbui",
+		"sboi",
+		"sbai",
+		"sbei",
+		"sdui",
+		"sdoi",
+		"sdai",
+		"sdei",
+		"skui",
+		"skoi",
+		"skai",
+		"skei"
 	],
 	"numbers": [
 		"keo",
@@ -3746,84 +4108,174 @@
 		"bukoi": ["brown"],
 		"soikoi": ["pink"],
 		"saikoi": ["gray"],
-		"keikoi": ["orange"]
-	},
-	"definitions": {
-		"red": [
-			"A color."
+		"keikoi": ["orange"],
+		
+		"omi:habo huom noki.": [
+			"eng:I know myself."
 		],
-		"blue": [
-			"A color."
+		"omi:Abo Bm beoki": [
+			"eng:A originates from B"
 		],
-		"yellow": [
-			"A color."
+		"omi:Bbo An beom heki": [
+			"eng:B is A's origin"
 		],
-		"clear": [
-			"A color."
+		"omi:Bbo Abo beokin bemm heki": [
+			"eng:B is where A originates from"
 		],
-		"black": [
-			"A color."
+		"omi:Bbo Abo beokin heki": [
+			"eng:B is where a originates"
 		],
-		"white": [
-			"A color."
+		"omi:Abo Bm beol heki": [
+			"eng:A is from B"
 		],
-		"green": [
-			"A color."
+		"omi:Abo Beon heki beol bm": [
+			"eng:A is originally from B"
 		],
-		"purple": [
-			"A color."
+		"omi:abo mon aki = habo mon haki": [
+			"eng:I live peacefully."
 		],
-		"brown": [
-			"A color."
+		"omi:moam mioki/minoki": [
+			"eng:speak/communicate the truth"
 		],
-		"pink": [
-			"A color."
+		"omi:moan mioki": [
+			"eng:speak truthfully"
 		],
-		"gray": [
-			"A color."
+		"omi:Abo Bm neki": [
+			"eng:A brings B closer"
 		],
-		"orange": [
-			"A color."
+		"omi:Abo Bm neol/lol neki": [
+			"eng:A approaches B"
+		],
+		"omi:Abo Bm nel hekis": [
+			"eng:A will be near B"
+		],
+		"omi:Abo kuim nan fil boim heki": [
+			"eng:A is faster than a vehicle"
+		],
+		"omi:Abo Cm beokeil Bm snaoki": [
+			"eng:A licks B causing C"
+		],
+	    "omi:Abo Cm neokeil Bm snaoki": [
+			"eng:A licks B, because of C"
+		],
+		"omi:Afoki Bki.": [
+			"eng:If A were to happen, B happens."
+		],
+		"omi:Akei Bki.": [
+			"eng:If A happens, B happens."
+		],
+		"omi:Akim hel Bki.": [
+			"eng:In the event of  A happening, B happens."
+		],
+		"omi:Akim beol Bki.": [
+			"eng:Originating from A, B happens."
+		],
+		"omi:Akim neokeil Bki": [
+			"eng:As a result of A, B happens."
+		],
+		"omi:Bkim beokeil Aki": [
+			"eng:A happens, causing B."
+		],
+		"omi:beokein Aki neokein Bki.": [
+			"eng:Cause A, effect B. A happening as a cause, B happens as a result."
+		],
+		"omi:beon Aki neon Bki.": [
+			"eng:Origin A, destination B. Coming from A happening, B would happen."
+		],
+		"omi:neokein Bki?": [
+			"eng:Effect B? Would B happen?"
+		],
+		"omi:neon Bki?": [
+			"eng:Destination B? Would B happen?"
+		],
+		"eng:I write in the house.": [
+			"omi:habo habeam hel leoki."
+		],
+		"eng:I am writing in the house.": [
+			"omi:habo habeam hel leomkin heki."
+		],
+		"eng:I am literarily in the house": [
+			"omi:habo hel habeam leon heki."
+		],
+		"eng:I am being written in the house.": [
+			"omi:habo hel habeam leokin/leonein heki."
 		],
 		
-		"zero": [
-			"The number 0."
+		"eng:red": [
+			"eng:A color."
 		],
-		"one": [
-			"The number 1."
+		"eng:blue": [
+			"eng:A color."
 		],
-		"two": [
-			"The number 2."
+		"eng:yellow": [
+			"eng:A color."
 		],
-		"three": [
-			"The number 3."
+		"eng:clear": [
+			"eng:A color."
 		],
-		"four": [
-			"The number 4."
+		"eng:black": [
+			"eng:A color."
 		],
-		"five": [
-			"The number 5."
+		"eng:white": [
+			"eng:A color."
 		],
-		"six": [
-			"The number 6."
+		"eng:green": [
+			"eng:A color."
 		],
-		"seven": [
-			"The number 7."
+		"eng:purple": [
+			"eng:A color."
 		],
-		"eight": [
-			"The number 8."
+		"eng:brown": [
+			"eng:A color."
 		],
-		"nine": [
-			"The number 9."
+		"eng:pink": [
+			"eng:A color."
 		],
-		"ten": [
-			"The number 10."
+		"eng:gray": [
+			"eng:A color."
 		],
-		"hundred": [
-			"When \"one hundred\", the number 100. When within a number, multiplied by 100."
+		"eng:orange": [
+			"eng:A color."
 		],
-		"thousand": [
-			"When \"one thousand\", the number 1000. When within a number, multiplied by 1000"
+		
+		"eng:zero": [
+			"eng:The number 0."
+		],
+		"eng:one": [
+			"eng:The number 1."
+		],
+		"eng:two": [
+			"eng:The number 2."
+		],
+		"eng:three": [
+			"eng:The number 3."
+		],
+		"eng:four": [
+			"eng:The number 4."
+		],
+		"eng:five": [
+			"eng:The number 5."
+		],
+		"eng:six": [
+			"eng:The number 6."
+		],
+		"eng:seven": [
+			"eng:The number 7."
+		],
+		"eng:eight": [
+			"eng:The number 8."
+		],
+		"eng:nine": [
+			"eng:The number 9."
+		],
+		"eng:ten": [
+			"eng:The number 10."
+		],
+		"eng:hundred": [
+			"eng:When \"one hundred\", the number 100. When within a number, multiplied by 100."
+		],
+		"eng:thousand": [
+			"eng:When \"one thousand\", the number 1000. When within a number, multiplied by 1000"
 		]
 	},
 	"rel examples": {
@@ -4006,12 +4458,12 @@
 		"lae": [],
 		"lie": [],
 		"ne": [
-			"omi:abo bm neki",
-		    "eng:a brings b closer",
-			"omi:abo bm neol/lol neki",
-		    "eng:a approaches b",
-			"omi:abo bm nel hekis",
-		    "eng:a will be near b"
+			"omi:Abo Bm neki",
+		    "eng:A brings B closer",
+			"omi:Abo Bm neol/lol neki",
+		    "eng:A approaches B",
+			"omi:Abo Bm nel hekis",
+		    "eng:A will be near B"
 		],
 		"nue": [],
 		"noe": [],
@@ -4272,158 +4724,6 @@
 			"eng:I am writing in the house.","omi:habo habeam hel leomkin heki.",
 			"eng:I am literarily in the house","omi:habo hel habeam leon heki.",
 			"eng:I am being written in the house.","omi:habo hel habeam leokin/leonein heki."
-		]
-	},
-	"examples": [
-		"omi:habo huom noki.",
-		"eng:I know myself.",
-		"omi:Abo Bm neki",
-	    "eng:A brings B closer",
-		"omi:Abo Bm neol/lol neki",
-	    "eng:A approaches B",
-		"omi:Abo Bm nel hekis",
-	    "eng:A will be near B",
-		"omi:Abo kuim nan fil boim heki",
-		"eng:A is faster than a vehicle",
-		"omi:moam mioki/minoki",
-	    "eng:speak/communicate the truth",
-		"omi:moan mioki",
-	    "eng:speak truthfully",
-		"omi:Abo Bm beoki",
-	    "eng:A originates from B",
-		"omi:Bbo An beom heki",
-	    "eng:B is A's origin",
-		"omi:Bbo Abo beokin bemm heki",
-	    "eng:B is where A originates from",
-		"omi:Bbo Abo beokin heki",
-	    "eng:B is where a originates",
-		"omi:Abo Bm beol heki",
-	    "eng:A is from B",
-		"omi:Abo Beon heki beol bm",
-	    "eng:A is originally from B",
-		"omi:Abo Cm beokeil Bm snaoki",
-	    "eng:A licks B causing C",
-		"omi:abo mon aki = habo mon haki",
-		"eng:I live peacefully."
-	],
-	"translations": {
-		"omi:habo huom noki.": [
-			"omi:habo huom noki.",
-			"eng:I know myself."
-		],
-		"omi:Abo Bm neki": [
-			"omi:Abo Bm neki",
-			"eng:A brings B closer"
-		],
-		"omi:Abo Bm neol/lol neki": [
-			"omi:Abo Bm neol/lol neki",
-			"eng:A approaches B"
-		],
-		"omi:Abo Bm nel hekis": [
-			"omi:Abo Bm nel hekis",
-			"eng:A will be near B"
-		],
-		"omi:Abo kuim nan fil boim heki": [
-			"omi:Abo kuim nan fil boim heki",
-			"eng:A is faster than a vehicle"
-		],
-		"omi:moam mioki/minoki": [
-			"omi:moam mioki/minoki",
-			"eng:speak/communicate the truth"
-		],
-		"omi:moan mioki": [
-			"omi:moan mioki",
-			"eng:speak truthfully"
-		],
-		"omi:Abo Bm beoki": [
-			"omi:Abo Bm beoki",
-			"eng:A originates from B"
-		],
-		"omi:Bbo An beom heki": [
-			"omi:Bbo An beom heki",
-			"eng:B is A's origin"
-		],
-		"omi:Bbo Abo beokin bemm heki": [
-			"omi:Bbo Abo beokin bemm heki",
-			"eng:B is where A originates from"
-		],
-		"omi:Bbo Abo beokin heki": [
-			"omi:Bbo Abo beokin heki",
-			"eng:B is where a originates"
-		],
-		"omi:Abo Bm beol heki": [
-			"omi:Abo Bm beol heki",
-			"eng:A is from B"
-		],
-		"omi:Abo Beon heki beol bm": [
-			"omi:Abo Beon heki beol bm",
-			"eng:A is originally from B"
-		],
-		"omi:Abo Cm beokeil Bm snaoki": [
-			"omi:Abo Cm beokeil Bm snaoki",
-			"eng:A licks B causing C"
-		],
-		"omi:abo mon aki = habo mon haki": [
-			"omi:abo mon aki = habo mon haki",
-			"eng:I live peacefully."
-		],
-		"#noname": [
-			[
-				"eng:I write in the house.",
-				"omi:habo habeam hel leoki."
-			],
-			[
-				"eng:I am writing in the house.",
-				"omi:habo habeam hel leomkin heki."
-			],
-			[
-				"eng:I am literarily in the house",
-				"omi:habo hel habeam leon heki."
-			],
-			[
-				"eng:I am being written in the house.",
-				"omi:habo hel habeam leokin/leonein heki."
-			],
-			[
-				"omi:Afoki Bki.",
-				"eng:If A were to happen, B happens."
-			],
-			[
-				"omi:Akei Bki.",
-				"eng:If A happens, B happens."
-			],
-			[
-				"omi:Akim hel Bki.",
-				"eng:In the event of  A happening, B happens."
-			],
-			[
-				"omi:Akim beol Bki.",
-				"eng:Originating from A, B happens."
-			],
-			[
-				"omi:Akim neokeil Bki",
-				"eng:As a result of A, B happens."
-			],
-			[
-				"omi:Bkim beokeil Aki",
-				"eng:A happens, causing B."
-			],
-			[
-				"omi:beokein Aki neokein Bki.",
-				"eng:Cause A, effect B. A happening as a cause, B happens as a result."
-			],
-			[
-				"omi:beon Aki neon Bki.",
-				"eng:Origin A, destination B. Coming from A happening, B would happen."
-			],
-			[
-				"omi:neokein Bki?",
-				"eng:Effect B? Would B happen?"
-			],
-			[
-				"omi:neon Bki?",
-				"eng:Destination B? Would B happen?"
-			]
 		]
 	},
 	"antonyms": {
@@ -4813,49 +5113,49 @@
 		"skei": []
 	},
 	"homophones": {
-		"ou": ["o"],
-		"au": ["ao"],
-		"eu": ["eo"],
+		"ou": "o",
+		"au": "ao",
+		"eu": "eo",
 		
-		"o": ["ou"],
-		"ao": ["au"],
-		"eo": ["eu"],
+		"o": "ou",
+		"ao": "au",
+		"eo": "eu",
 		
-		"ua": ["oa"],
-		"oa": ["ua"],
-		"ea": ["ia"],
-		"ia": ["ea"],
+		"ua": "oa",
+		"oa": "ua",
+		"ea": "ia",
+		"ia": "ea",
 		
-		"ue": ["oe"],
-		"oe": ["ue"],
-		"ae": ["ai"],
+		"ue": "oe",
+		"oe": "ue",
+		"ae": "ai",
 		
-		"ai": ["ae"],
+		"ai": "ae",
 		
-		"hu": ["u"],
-		"hou": ["ou"],
-		"hau": ["au"],
-		"heu": ["eu"],
-		"hiu": ["iu"],
-		"ho": ["o"],
-		"huo": ["uo"],
-		"hao": ["ao"],
-		"heo": ["eo"],
-		"hio": ["io"],
-		"ha": ["a"],
-		"hua": ["ua"],
-		"hoa": ["oa"],
-		"hea": ["ea"],
-		"hia": ["ia"],
-		"he": ["e"],
-		"hue": ["ue"],
-		"hoe": ["oe"],
-		"hae": ["ae"],
-		"hie": ["ie"],
-		"hi": ["i"],
-		"hui": ["ui"],
-		"hoi": ["oi"],
-		"hai": ["ai"],
-		"hei": ["ei"]
+		"hu": "u",
+		"hou": "ou",
+		"hau": "au",
+		"heu": "eu",
+		"hiu": "iu",
+		"ho": "o",
+		"huo": "uo",
+		"hao": "ao",
+		"heo": "eo",
+		"hio": "io",
+		"ha": "a",
+		"hua": "ua",
+		"hoa": "oa",
+		"hea": "ea",
+		"hia": "ia",
+		"he": "e",
+		"hue": "ue",
+		"hoe": "oe",
+		"hae": "ae",
+		"hie": "ie",
+		"hi": "i",
+		"hui": "ui",
+		"hoi": "oi",
+		"hai": "ai",
+		"hei": "ei"
 	}
 }

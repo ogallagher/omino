@@ -132,7 +132,7 @@ exports.get_query = function(endpoint, args, is_external) {
 						return db_escape(args[param])
 					})
 					.then(function(arg) {
-						log.always(`args[${param}] = ${args[param]} --> ${arg}`)
+						log.debug(`args[${param}] = ${args[param]} --> ${arg}`)
 						query = query.replace(`{${param}}`, arg)
 					})
 				}

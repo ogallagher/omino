@@ -49,17 +49,19 @@
 		"external": true,
 		"params": [
 			"value",
-			"timestamp_ms"
+			"timestamp_ms",
+			"letter_type"
 		],
-		"query": "call insert_letter_by_value({value},{timestamp_ms})"
+		"query": "call insert_letter_by_value({value},{timestamp_ms},{letter_type})"
 	},
 	"insert_root": {
 		"external": true,
 		"params": [
 			"value",
-			"timestamp_ms"
+			"timestamp_ms",
+			"root_type"
 		],
-		"query": "call insert_root_by_value({value},{timestamp_ms})"
+		"query": "call insert_root_by_value({value},{timestamp_ms},{root_type})"
 	},
 	"insert_omino_word": {
 		"external": true,
@@ -78,5 +80,27 @@
 			"correct"
 		],
 		"query": "call insert_example_by_value({value},{language},{timestamp_ms},{correct})"
+	},
+	"insert_rel_example": {
+		"external": true,
+		"params": [
+			"entry_val",
+			"entry_lang",
+			"ex_val",
+			"ex_lang"
+		],
+		"query": "call insert_rel_example_by_value({entry_val},{entry_lang},{ex_val},{ex_lang})",
+		"notes": "assumes both entry and example already exist in strings"
+	},
+	"insert_homophones": {
+		"external": false,
+		"params": [
+			"one_val",
+			"one_lang",
+			"two_val",
+			"two_lang"
+		],
+		"query": "call insert_homophones_by_value({one_val},{one_lang},{two_val},{two_lang})",
+		"notes": "assumes both one and two already exist in strings"
 	}
 }
