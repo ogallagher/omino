@@ -1,0 +1,86 @@
+<!--
+	Owen Gallagher
+	2021-04-11
+	
+	Omino website translator widget.
+-->
+<div>
+	<div class="row gx-2">
+		<!-- lang one -->
+		<div class="col">
+			<div class="dropdown">
+				<button 
+					id="lang-select-one"
+					class="btn btn-outline-dark dropdown-toggle w-100" 
+					type="button"
+					data-bs-toggle="dropdown" 
+					aria-expanded="false">
+					English
+				</button>
+				<ul class="dropdown-menu w-100">
+					<li>
+						<span class="dropdown-item" href="#">English</span>
+					</li>
+					<li>
+						<span class="dropdown-item" href="#">Omino</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- switch -->
+		<div class="col-auto">
+			<button class="btn btn-outline-dark">
+				<svg class="bi bi-arrow-left-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z"/>
+				</svg>
+			</button>
+		</div>
+		
+		<!-- lang two -->
+		<div class="col">
+			<div class="dropdown">
+				<button 
+					id="lang-select-two"
+					class="btn btn-outline-dark dropdown-toggle w-100" 
+					type="button"
+					data-bs-toggle="dropdown" 
+					aria-expanded="false">
+					Omino
+				</button>
+				<ul class="dropdown-menu w-100">
+					<li>
+						<span class="dropdown-item" href="#">English</span>
+					</li>
+					<li>
+						<span class="dropdown-item" href="#">Omino</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row gx-0 mt-2">
+		<!-- input one -->
+		<div class="col-6 form-floating">
+			<textarea 
+				id="translator-input" 
+				class="form-control border-end-0 rounded-0" 
+				style="resize:none;overflow:hidden;">main mino
+			</textarea>
+		</div>
+		
+		<!-- output two -->
+		<div class="col-6 form-floating">
+			<textarea 
+				id="translator-output" 
+				class="form-control border-start-0 rounded-0"
+				style="resize:none;overflow:hidden;" 
+				disabled>young language
+			</textarea>
+		</div>
+	</div>
+	
+	<script src="js/string_manip.js" type="text/javascript"></script>
+	<script src="js/translator.js" type="text/javascript"></script>
+</div>

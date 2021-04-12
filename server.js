@@ -123,7 +123,7 @@ try {
 			else {
 				log.info('environment variables loaded from .env')
 			}
-	
+			
 			tests.read_dotenv(['TEST_KEY'])
 	
 			// handle POST request data with bodyparser

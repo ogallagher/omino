@@ -18,6 +18,13 @@
         
         <title>Omino: Dictionary</title>
 		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+		
+		<script src="js/logger.js" type="text/javascript"></script>
+		<script src="js/frontend_imports.js" type="text/javascript"></script>
+		<script src="js/dictionary.js" type="text/javascript"></script>
+		
 		<!--
 	Owen Gallagher <github.com/ogallagher>
 	2021-04-08
@@ -97,39 +104,24 @@
     Creation date: **9 April 2021**
 -->
 <h1 id="omino-dictionary">Omino dictionary</h1>
-<table>
-<thead>
-<tr>
-<th>Omino &darr;</th>
-<th>&harr;</th>
-<th>English &darr;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>main mino</td>
-<td></td>
-<td>young language</td>
-</tr>
-</tbody>
-</table>
+<p><span id="frontend-import-translator"></span></p>
 <h2 id="definitions">Definitions</h2>
 <h3 id="mino">mino</h3>
 <ul>
-<li><strong><a href="?q=en:language">language</a>:</strong> Language.</li>
-<li><strong><a href="?q=en:communication">communication</a>:</strong> Communication.</li>
+<li><strong><a href="?q=eng:language">language</a>:</strong> Language.</li>
+<li><strong><a href="?q=eng:communication">communication</a>:</strong> Communication.</li>
 </ul>
 <h3 id="main">main</h3>
 <ul>
-<li><strong><a href="?q=en:young">young</a>:</strong> Young.</li>
+<li><strong><a href="?q=eng:young">young</a>:</strong> Young.</li>
 <li><strong>adjective/adverb grammar suffix</strong></li>
 </ul>
 <h2 id="roots">Roots</h2>
 <p>Words contained within these words.</p>
 <ul>
-<li><strong><a href="?q=omi:mi">mi</a>:</strong> <a href="?q=en:movement">movement</a>.</li>
-<li><strong><a href="?q=omi:no">no</a>:</strong> <a href="?q=en:knowledge">knowlege</a>.</li>
-<li><strong><a href="?q=omi:mai">mai</a>:</strong> <a href="?q=en:youth">youth</a>.</li>
+<li><strong><a href="?q=omi:mi">mi</a>:</strong> <a href="?q=eng:movement">movement</a>.</li>
+<li><strong><a href="?q=omi:no">no</a>:</strong> <a href="?q=eng:knowledge">knowlege</a>.</li>
+<li><strong><a href="?q=omi:mai">mai</a>:</strong> <a href="?q=eng:youth">youth</a>.</li>
 </ul>
 <h2 id="derivatives">Derivatives</h2>
 <p>Words that contain these words.</p>
@@ -141,8 +133,9 @@
 <p>No synonyms.</p>
 <h2 id="antonyms">Antonyms</h2>
 <p>No antonyms.</p>
-			
-			<!--
+		</div>
+		
+		<!--
 	Owen Gallagher <github.com/ogallagher>
 	2021-04-08
 	
@@ -188,6 +181,5 @@
     })
 </script>
 
-		</div>
 	</body>
 </html>

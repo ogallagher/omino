@@ -5,29 +5,27 @@
 
 # Omino dictionary
 
-| Omino &darr; | &harr; | English &darr; |
-| --- | --- | --- |
-| main mino |  | young language |
+<span id="frontend-import-translator"></span>
 
 ## Definitions
 
 ### mino
 
-- **[language](?q=en:language):** Language.
-- **[communication](?q=en:communication):** Communication.
+- **[language](?q=eng:language):** Language.
+- **[communication](?q=eng:communication):** Communication.
 
 ### main
 
-- **[young](?q=en:young):** Young.
+- **[young](?q=eng:young):** Young.
 - **adjective/adverb grammar suffix**
 
 ## Roots
 
 Words contained within these words.
 
-- **[mi](?q=omi:mi):** [movement](?q=en:movement).
-- **[no](?q=omi:no):** [knowlege](?q=en:knowledge).
-- **[mai](?q=omi:mai):** [youth](?q=en:youth).
+- **[mi](?q=omi:mi):** [movement](?q=eng:movement).
+- **[no](?q=omi:no):** [knowlege](?q=eng:knowledge).
+- **[mai](?q=omi:mai):** [youth](?q=eng:youth).
 
 ## Derivatives
 

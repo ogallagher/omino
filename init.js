@@ -16,6 +16,7 @@ const yargs = require('yargs')
 // frontend imports
 
 const Logger = require('./public/js/logger.js').Logger
+const parse_db_scratch_string = require('./public/js/string_manip.js').str_to_raw_lang_ts
 
 // constants
 
@@ -339,24 +340,6 @@ function import_iso_langs() {
 			}
 		})
 	})
-}
-
-function parse_db_scratch_string(raw, language_default) {
-	// determine language and value
-	let lang_code = /^\w{3}:/m
-	let language = language_default
-	let value = raw
-	
-	if (raw.search(lang_code) != -1) {
-		language = raw.substring(0,3)
-		value = raw.substring(4)
-	}
-	
-	return {
-		language: language,
-		value: value,
-		timestamp_ms: Math.floor(new Date())
-	}
 }
 
 function get_letter_type(letter, db_scratch) {
