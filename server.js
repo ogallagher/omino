@@ -79,21 +79,20 @@ try {
 	}
 	
 	function handle_db(endpoint,args,res) {
-		log.info(`db: ${endpoint} [${args}]`)
+		log.info(`db: ${endpoint} [${JSON.stringify(args)}]`)
 		
 		db_server
 		.get_query(endpoint, args, true)
 		.then(function(action) {
 		    if (action.sql) {
-		  		db_server.send_query(action.sql, function(err,data) {
-		  			if (err) {
-		  				log.error(`error in db data fetch: ${err}`)
-		  				res.json({error: 'fetch error'})
-		  			}
-		  			else {
-		  				res.json(data)
-		  			}
-		  		})
+		  		db_server.send_query(action.sql)
+				.then(function(data) {
+					res.json(data)
+				})
+				.catch(function(err) {
+	  				log.error(`error in db data fetch: ${err}`)
+	  				res.json({error: 'fetch error'})
+				})
 		    }
 			else {
 				res.json({error: action})
@@ -162,16 +161,18 @@ try {
 			server
 			.route(ROUTE_DB)
 			.get(function (req,res) {
-				let endpoint = req.query.endpoint //db api endpoint
-				let args = req.query.args //inputs for compiled sql string
-			
-				handle_db(endpoint,args,res)
+				handle_db(
+					req.query.endpoint,	// db api endpoint
+					req.query, 			// other arguments
+					res
+				)
 			})
 			.post(function (req,res) {
-				let endpoint = req.body.endpoint //db api endpoint
-				let args = req.body.args //inputs for compiled sql string
-		
-				handle_db(endpoint,args,res)
+				handle_db(
+					req.body.endpoint,	// db api endpoint
+					req.body,			// other arguments
+					res
+				)
 			});
 		}
 		else {

@@ -11,10 +11,11 @@
 			<div class="dropdown">
 				<button 
 					id="lang-select-one"
-					class="btn btn-outline-dark dropdown-toggle w-100" 
+					class="btn btn-lg btn-outline-dark dropdown-toggle w-100" 
 					type="button"
 					data-bs-toggle="dropdown" 
-					aria-expanded="false">
+					aria-expanded="false"
+					data-lang="eng">
 					English
 				</button>
 				<ul class="dropdown-menu w-100">
@@ -31,7 +32,7 @@
 		<!-- switch -->
 		<div class="col-auto">
 			<button class="btn btn-outline-dark">
-				<svg class="bi bi-arrow-left-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+				<svg class="bi bi-arrow-left-right" xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor" viewBox="0 0 16 16">
 					<path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z"/>
 				</svg>
 			</button>
@@ -42,10 +43,11 @@
 			<div class="dropdown">
 				<button 
 					id="lang-select-two"
-					class="btn btn-outline-dark dropdown-toggle w-100" 
+					class="btn btn-lg btn-outline-dark dropdown-toggle w-100" 
 					type="button"
 					data-bs-toggle="dropdown" 
-					aria-expanded="false">
+					aria-expanded="false"
+					data-lang="omi">
 					Omino
 				</button>
 				<ul class="dropdown-menu w-100">
@@ -66,8 +68,7 @@
 			<textarea 
 				id="translator-input" 
 				class="form-control border-end-0 rounded-0" 
-				style="resize:none;overflow:hidden;">main mino
-			</textarea>
+				style="resize:none;overflow:hidden;">main mino</textarea>
 		</div>
 		
 		<!-- output two -->
@@ -76,8 +77,17 @@
 				id="translator-output" 
 				class="form-control border-start-0 rounded-0"
 				style="resize:none;overflow:hidden;" 
-				disabled>young language
-			</textarea>
+				disabled>young language</textarea>
+		</div>
+	</div>
+	
+	<div class="row mt-2">
+		<div class="col">
+			<button id="translator-submit" class="btn btn-outline-dark w-100" type="button">
+				<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+					<path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+				</svg>
+			</button>
 		</div>
 	</div>
 	

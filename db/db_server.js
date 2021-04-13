@@ -129,7 +129,14 @@ exports.get_query = function(endpoint, args, is_external) {
 				for (let param of params) {
 					p = p
 					.then(() => {
-						return db_escape(args[param])
+						let a = args[param]
+						
+						if (a === undefined || a === null) {
+							return null
+						}
+						else {
+							return db_escape(args[param])
+						}
 					})
 					.then(function(arg) {
 						log.debug(`args[${param}] = ${args[param]} --> ${arg}`)
@@ -158,22 +165,29 @@ exports.get_query = function(endpoint, args, is_external) {
 
 exports.send_query = function(sql) {
 	return new Promise(function(resolve,reject) {
+		log.debug(`sending ${sql}`)
+		
 		db.getConnection(function(err, conn) {
 			if (err) {
 				// connection failed
+				log.warning('failed to connect to omino db')
 				reject(err)
 			}
 			else {
 				conn.query(sql, function(err,res) {
 					// release connection when no longer needed
 					conn.release()
-				
+					
 					// return error if defined, and response results
 					if (err) {
+						log.warning(`sql error: ${err}`)
 						reject(err)
 					}
 					else {
-						resolve(res)
+						let data = res[0]
+						let metadata = res[1]
+						log.debug(`query metadata: ${JSON.stringify(metadata)}`)
+						resolve(data)
 					}
 				})
 			}

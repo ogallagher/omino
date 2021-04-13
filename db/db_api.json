@@ -17,14 +17,6 @@
 		],
 		"query": "insert into `strings`(`language`,`value`,`last_updated`) values ({language},{value},{timestamp_ms})"
 	},
-	"fetch_string": {
-		"external": true,
-		"params": [
-			"value",
-			"language"
-		],
-		"query": "select * from `strings` where `value`={value} and `language`={language}"
-	},
 	"insert_definition": {
 		"external": true,
 		"params": [
@@ -102,5 +94,22 @@
 		],
 		"query": "call insert_homophones_by_value({one_val},{one_lang},{two_val},{two_lang})",
 		"notes": "assumes both one and two already exist in strings"
+	},
+	"fetch_string": {
+		"external": true,
+		"params": [
+			"value",
+			"language"
+		],
+		"query": "select * from `strings` where `value`={value} and `language`={language}"
+	},
+	"fetch_definitions": {
+		"external": true,
+		"params": [
+			"value",
+			"language"
+		],
+		"query": "call fetch_definitions({value},{language})",
+		"notes": "searches definitions by value (and optionally language) for either entry or definition."
 	}
 }
