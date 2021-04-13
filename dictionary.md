@@ -1,43 +1,42 @@
 <!--
-    Author: **Owen Gallagher**  
-    Creation date: **9 April 2021**
+
+Owen Gallagher
+2021-04-09
+
 -->
 
 # Omino dictionary
 
-<span id="frontend-import-translator"></span>
+<span class="frontend-import-translator"></span>
 
-## Definitions
+<h2 title="Translations of each input phrase, and definitions of each translation, if applicable.">Translations</h2>
 
-### mino
+<div id="all-translations">No translations found.</div>
 
-- **[language](?q=eng:language):** Language.
-- **[communication](?q=eng:communication):** Communication.
+<h2 title="Examples of each input phrase, and translations of each example, if applicable.">Examples</h2>
 
-### main
-
-- **[young](?q=eng:young):** Young.
-- **adjective/adverb grammar suffix**
+<div id="all-examples">No examples found.</div>
 
 ## Roots
 
 Words contained within these words.
 
-- **[mi](?q=omi:mi):** [movement](?q=eng:movement).
-- **[no](?q=omi:no):** [knowlege](?q=eng:knowledge).
-- **[mai](?q=omi:mai):** [youth](?q=eng:youth).
+<div id="all-roots"></div>
 
 ## Derivatives
 
 Words that contain these words.
 
-- **[omino](?q=omi:omino):** Omino language.
-- **[maiki](?q=omi:maiki):** Be young. Become young. Make young.
+<div id="all-derivatives"></div>
 
 ## Synonyms
 
-No synonyms.
+Words with similar meanings.
+
+<div id="all-synonyms"></div>
 
 ## Antonyms
 
-No antonyms.
+Words with opposing meanings.
+
+<div id="all-antonyms"></div>

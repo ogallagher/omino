@@ -1,6 +1,8 @@
 <!--
-    Author: **Owen Gallagher**  
-    Creation date: **5 April 2021**
+
+Owen Gallagher
+2021-04-05
+
 -->
 
 # Omino
