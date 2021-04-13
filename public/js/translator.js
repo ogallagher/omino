@@ -10,7 +10,10 @@ Owen Gallagher
 const TRANSLATOR_INPUT_ID = 'translator-input'
 const TRANSLATOR_OUTPUT_ID = 'translator-output'
 const TRANSLATOR_LANG_ONE_ID = 'lang-select-one'
+const TRANSLATOR_LANG_ONE_OPTION_SELECTOR = '.dropdown.lang-one .dropdown-item'
 const TRANSLATOR_LANG_TWO_ID = 'lang-select-two'
+const TRANSLATOR_LANG_TWO_OPTION_SELECTOR = '.dropdown.lang-two .dropdown-item'
+const TRANSLATOR_LANG_SWAP_ID = 'lang-swap'
 const TRANSLATOR_SUBMIT_ID = 'translator-submit'
 const URL_KEY_TRANSLATOR_INPUT = 'q'
 
@@ -49,6 +52,35 @@ function translator_read_url() {
 	else {
 		log.debug('no translator input query found in url params')
 	}
+}
+
+function translator_update_languages(which, language) {
+	let log = translator_log
+	
+	// define language name and code
+	let lang_name = language
+	let lang_code = language
+	if (language.length > 3) {
+		lang_code = lang_name_to_code[lang_name.toLowerCase()]
+	}
+	else {
+		lang_name = lang_code_to_name[lang_code]
+	}
+	
+	log.debug(`setting language ${which} to ${lang_name}=${lang_code}`)
+	
+	// update language buttons
+	let other
+	if (which == 'one') {
+		other = 'two'
+	}
+	else {
+		other = 'one'
+	}
+	
+	$(`#lang-select-${which}`)
+	.html(lang_name)
+	.attr('data-lang', lang_code)
 }
 
 function translator_on_submit() {
@@ -139,6 +171,21 @@ function translator_translate(value,language) {
 
 $(document).ready(function() {
 	translator_read_url()
+	
+	$(TRANSLATOR_LANG_ONE_OPTION_SELECTOR).click(function() {
+		translator_update_languages('one', $(this).html())
+	})
+	$(TRANSLATOR_LANG_TWO_OPTION_SELECTOR).click(function() {
+		translator_update_languages('two', $(this).html())
+	})
+	$(`#${TRANSLATOR_LANG_SWAP_ID}`).click(function() {
+		let lang_one = $(`#${TRANSLATOR_LANG_ONE_ID}`).attr('data-lang')
+		let lang_two = $(`#${TRANSLATOR_LANG_TWO_ID}`).attr('data-lang')
+		
+		// swap languages
+		translator_update_languages('one', lang_two)
+		translator_update_languages('two', lang_one)
+	})
 	
 	$(`#${TRANSLATOR_SUBMIT_ID}`).click(translator_on_submit)
 })
