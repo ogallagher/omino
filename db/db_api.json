@@ -110,6 +110,16 @@
 			"language"
 		],
 		"query": "call fetch_definitions({value},{language})",
-		"notes": "searches definitions by value (and optionally language) for either entry or definition."
+		"notes": "searches definitions by value (and optionally language) for either entry or definition.",
+		"returns": ["in_id","in_lang","in_val","out_id","out_lang","out_val"]
+	},
+	"fetch_definitions_by_id": {
+		"external": true,
+		"params": [
+			"id"
+		],
+		"query": "select `def_id`,`value`,`language` from `rel_definitions` d inner join (select `id` as def_id, `value`, `language` from `strings`) s on d.`definition`=s.def_id where d.`entry`={id} union select `def_id`,`value`,`language` from `rel_definitions` d inner join (select `id` as def_id, `value`, `language` from `strings`) s on d.`entry`=s.def_id where d.`definition`={id}",
+		"notes": "searches definitions by id for entry or definition",
+		"returns": ["def_id","value","language"]
 	}
 }

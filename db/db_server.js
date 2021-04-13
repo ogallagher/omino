@@ -140,7 +140,7 @@ exports.get_query = function(endpoint, args, is_external) {
 					})
 					.then(function(arg) {
 						log.debug(`args[${param}] = ${args[param]} --> ${arg}`)
-						query = query.replace(`{${param}}`, arg)
+						query = query.replace(new RegExp(`{${param}}`,'g'), arg)
 					})
 				}
 				
@@ -185,6 +185,11 @@ exports.send_query = function(sql) {
 					}
 					else {
 						let data = res[0]
+						// ensure data is an array
+						if (!Array.isArray(data)) {
+							data = [data]
+						}
+						
 						let metadata = res[1]
 						log.debug(`query metadata: ${JSON.stringify(metadata)}`)
 						resolve(data)

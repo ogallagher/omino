@@ -18,6 +18,7 @@ const TRANSLATOR_SUBMIT_ID = 'translator-submit'
 const URL_KEY_TRANSLATOR_INPUT = 'q'
 
 const ENDPOINT_TRANSLATE = 'fetch_definitions'
+const ENDPOINT_TRANSLATE_ID = 'fetch_definitions_by_id'
 
 const TRANSLATOR_TARGET_TRANSLATIONS = 'all-translations'
 const TRANSLATOR_TARGET_EXAMPLES = 'all-examples'
@@ -167,9 +168,9 @@ function translator_translate(value,language) {
 							}
 							else {
 								// handle alternate translations for out language
-								log.debug(`TODO other translation ${value}=${row['out_val']}`)
+								// TODO other translation row['out_val']
 							}
-						
+							
 							// concat out lang translation
 							translations.push(row)
 						}
@@ -208,8 +209,33 @@ function translator_translate(value,language) {
 	})
 }
 
+function translator_define(value,language) {
+	const log = translator_log
+	log.debug(`defining ${language}:${value}`)
+	
+	return new Promise(function(resolve,reject) {
+		if (typeof value == 'number') {
+			// value is db string id
+			$.ajax({
+				url: '/db',
+				method: 'GET',
+				data: {
+					endpoint: ENDPOINT_TRANSLATE_ID,
+					id: value
+				},
+				success: resolve,
+				error: reject
+			})
+		}
+		else {
+			// value is string value, id unknown
+			reject('not implemented')
+		}
+	})
+}
+
 function translator_load_translations(translations) {
-	let log = translator_log
+	const log = translator_log
 	
 	let dest = $(`#${TRANSLATOR_TARGET_TRANSLATIONS}`).empty()
 	if (dest.length != 0) {
@@ -256,57 +282,84 @@ function translator_load_translations(translations) {
 		frontend_import('translation')
 		.then(function() {
 			log.debug(`loaded ${translations.length} translation components`)
-		})
-		.catch(function(err) {
-			log.error(`translation components load failed: ${err}`)
-		})
-		
-		// load definition component
-		frontend_import_nowhere('definition')
-		.then(function(def_component) {
-			let keys = Object.keys(translations)
-			$('.translation').each(function(i) {
-				// translation = { lang val id outs:[{lang val id}] }
-				let translation = translations[keys[i]]
 			
-				// load translation data into component
-				let self = $(this)
+			// load definition component
+			frontend_import_nowhere('definition')
+			.then(function(def_component) {
+				let keys = Object.keys(translations)
+				$('.translation').each(function(i) {
+					// translation = { lang val id outs:[{lang val id}] }
+					let translation = translations[keys[i]]
 			
-				// input phrase
-				self.find('.translation-entry')
-				.attr('data-lang', translation['lang'])
-				.attr('data-dbid', translation['id'])
-				.html(translation['val'])
-				log.debug(`loaded translation entry ${translation['lang']}:${translation['val']}`)
+					// load translation data into component
+					let self = $(this)
+			
+					// input phrase
+					self.find('.translation-entry')
+					.attr('data-lang', translation['lang'])
+					.attr('data-dbid', translation['id'])
+					.html(translation['val'])
+					log.debug(`loaded translation entry ${translation['lang']}:${translation['val']}`)
 				
-				// insert definition components
-				let defs_container = self.find('.translation-val').empty()
+					// insert definition components
+					let defs_container = self.find('.translation-val').empty()
 				
-				for (let out of translation['outs']) {
-					let def = $(def_component)
+					for (let out of translation['outs']) {
+						let def = $(def_component)
 					
-					let url = `?${
-						new URLSearchParams({
-							q: `${out['lang']}:${out['val']}`
-						}).toString()
-					}`
+						let url = `?${
+							new URLSearchParams({
+								q: `${out['lang']}:${out['val']}`
+							}).toString()
+						}`
 					
-					// load definition entry
-					def.find('.definition-entry')
-					.attr('href',url)
-					.attr('title',url)
-					.html(out['val'])
-					log.debug(`loaded definition entry ${out['lang']}:${out['val']}`)
+						// load definition entry
+						def.find('.definition-entry')
+						.attr('href',url)
+						.attr('title',url)
+						.html(out['val'])
+						log.debug(`loaded definition entry ${out['lang']}:${out['val']}`)
 					
-					// TODO load definition value
+						// fetch definition value
+						translator_define(out['id'], out['lang'])
+						.then(function(res) {
+							if (res == undefined || res.length == 0) {
+								log.warning(
+									`no definition found for ${
+										out['id']
+									}=${out['lang']}:${out['val']}`
+								)
+							}
+							else {
+								// select same-language definitions
+								let target_lang = out['lang']
+								let definitions = []
+								for (let row of res) {
+									// row = {def_id value language}
+									if (row['language'] == target_lang) {
+										definitions.push(`<span data-dbid="${row['def_id']}">${row['value']}</span>`)
+									}
+								}
+								
+								// load definition value
+								def.find('.definition-value').html(definitions.join(' '))
+							}
+						})
+						.catch(function(err) {
+							log.error(`definition value fetch failed: ${err}`)
+						})
 					
-					// append to defs container
-					defs_container.append(def)
-				}
+						// append to defs container
+						defs_container.append(def)
+					}
+				})
+			})
+			.catch(function(err) {
+				log.error(`definition component load failed: ${err}`)
 			})
 		})
 		.catch(function(err) {
-			log.error(`definition component load failed: ${err}`)
+			log.error(`translation components load failed: ${err}`)
 		})
 	}
 	else {

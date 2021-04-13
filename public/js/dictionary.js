@@ -35,8 +35,8 @@ $(document).ready(function() {
 			log.info(`imported component ${component}`)
 			loaded_components.push(component)
 		})
-		.catch(function(selector) {
-			log.error(`failed to import ${component} into ${selector}`)
+		.catch(function() {
+			log.error(`failed to import ${component}`)
 		})
 	}
 })
