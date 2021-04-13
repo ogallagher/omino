@@ -5,13 +5,6 @@ Owen Gallagher <github.com/ogallagher>
 
 */
 
-/*
-valid component ids:
-
-- translator
-- 
-*/
-
 // constants
 
 const COMP_PREFIX = 'frontend-import'

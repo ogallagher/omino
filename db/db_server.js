@@ -165,7 +165,7 @@ exports.get_query = function(endpoint, args, is_external) {
 
 exports.send_query = function(sql) {
 	return new Promise(function(resolve,reject) {
-		log.debug(`sending ${sql}`)
+		log.debug(`sending query of length ${sql.length}`)
 		
 		db.getConnection(function(err, conn) {
 			if (err) {

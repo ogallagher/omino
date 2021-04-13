@@ -19,6 +19,7 @@ const URL_KEY_TRANSLATOR_INPUT = 'q'
 
 const ENDPOINT_TRANSLATE = 'fetch_definitions'
 const ENDPOINT_TRANSLATE_ID = 'fetch_definitions_by_id'
+const ENDPOINT_EXAMPLES_ID = 'fetch_translated_examples_by_id'
 
 const TRANSLATOR_TARGET_TRANSLATIONS = 'all-translations'
 const TRANSLATOR_TARGET_EXAMPLES = 'all-examples'
@@ -92,14 +93,19 @@ function translator_update_languages(which, language) {
 }
 
 function translator_on_submit() {
+	const log = translator_log
 	// extract input value and language
 	let language = $(`#${TRANSLATOR_LANG_ONE_ID}`).html()
 	let value = $(`#${TRANSLATOR_INPUT_ID}`).val()
 	
 	translator_translate(value,language)
-	.then(function(in_id) {
-		// use acquired id for input phrase to pose other queries
+	.then(function(in_ids) {
+		log.debug('translate finished')
+		let lang = lang_name_to_code[language.trim().toLowerCase()]
+		
+		// use acquired ids for input phrase to pose other queries
 		// fetch examples
+		translator_examples(in_ids, value, lang)
 		
 		// fetch roots
 		
@@ -111,8 +117,8 @@ function translator_on_submit() {
 		
 		// fetch homophones
 	})
-	.catch(function() {
-		// fail quietly
+	.catch(function(err) {
+		log.error(`translation failed: ${err}`)
 	})
 }
 
@@ -147,58 +153,65 @@ function translator_translate(value,language) {
 				const out_area = $(`#${TRANSLATOR_OUTPUT_ID}`)
 				const out_lang = $(`#${TRANSLATOR_LANG_TWO_ID}`).attr('data-lang')
 			
-				if (res.length == 0) {
-					out_area.html('translation not found')
-					reject()
+				if (out_area.length == 0) {
+					// pass results to caller for general use
+					resolve(res)
 				}
 				else {
-					// pull input string id from first row
-					let in_id = res[0]['in_id']
-					resolve(in_id)
-					
-					let best = null
-					let translations = []
-					let other_langs = []
-					
-					for (let row of res) {
-						if (row['out_lang'] == out_lang) {
-							if (best == null) {
-								// select first translation for out language
-								best = row
-							}
-							else {
-								// handle alternate translations for out language
-								// TODO other translation row['out_val']
-							}
-							
-							// concat out lang translation
-							translations.push(row)
-						}
-						else {
-							other_langs.push(row)
-						}
-					}
-				
-					if (best != null) {
-						// load result into output
-						out_area.html(best['out_val'])
+					// load results into current page
+					if (res.length == 0) {
+						out_area.html('translation not found')
+						reject()
 					}
 					else {
-						let follow_up
-						if (other_langs.length != 0) {
-							follow_up = `Did you mean to translate to ${
-								lang_code_to_name[other_langs[0]['out_lang']]
-							}?`
+						// pull input string id from first row
+						let in_id = res[0]['in_id']
+						resolve([in_id])
+						
+						let best = null
+						let translations = []
+						let other_langs = []
+					
+						for (let row of res) {
+							if (row['out_lang'] == out_lang) {
+								if (best == null) {
+									// select first translation for out language
+									best = row
+								}
+								else {
+									// handle alternate translations for out language
+									// TODO other translation row['out_val']
+								}
+							
+								// concat out lang translation
+								translations.push(row)
+							}
+							else {
+								other_langs.push(row)
+							}
+						}
+				
+						if (best != null) {
+							// load result into output
+							out_area.html(best['out_val'])
 						}
 						else {
-							follow_up = 'No other languages found.'
+							let follow_up
+							if (other_langs.length != 0) {
+								follow_up = `Did you mean to translate to ${
+									lang_code_to_name[other_langs[0]['out_lang']]
+								}?`
+							}
+							else {
+								follow_up = 'No other languages found.'
+							}
+					
+							out_area.html(`Translation not found for current output language. ${follow_up}`)
 						}
 					
-						out_area.html(`Translation not found for current output language. ${follow_up}`)
+						// load translations into target for definitions queries
+						translator_load_translations(translations)
 					}
-					
-					// load translations into target for definitions queries
-					translator_load_translations(translations)
 				}
 			},
 			error: function(err) {
@@ -231,6 +244,100 @@ function translator_define(value,language) {
 			// value is string value, id unknown
 			reject('not implemented')
 		}
+	})
+}
+
+function translator_examples(in_ids, in_val, in_lang) {
+	const log = translator_log
+	log.debug(`fetching same-language examples with translations of ${in_ids.join(',')}`)
+	
+	return new Promise(function(resolve,reject) {
+		let dest = $(`#${TRANSLATOR_TARGET_EXAMPLES}`).empty()
+		
+		new Promise(function(resolve) {
+			if (dest.length != 0) {
+				// fetch examples and example components
+				frontend_import_nowhere('examples')
+				.then(function(examples) {
+					frontend_import_nowhere('example')
+					.then(function(example) {
+						resolve({
+							examples: examples,
+							example: example
+						})
+					})
+					.catch(reject)
+				})
+				.catch(reject)
+			}
+			else {
+				resolve()
+			}
+		})
+		.then(function(components) {
+			let promises = []
+			for (let in_id of in_ids) {
+				promises.push(
+					new Promise(function(resolve,reject) {
+						$.ajax({
+							url: '/db',
+							method: 'GET',
+							data: {
+								endpoint: ENDPOINT_EXAMPLES_ID,
+								id: in_id
+							},
+							success: function(res) {
+								log.debug(`fetched ${res.length} examples`)
+								
+								if (res.hasOwnProperty('error')) {
+									reject(res)
+								}
+								else if (components != undefined) {
+									// add examples component to dest
+									let examples = $(components.examples)
+									
+									examples.find('.examples-entry')
+									.attr('data-lang', in_lang)
+									.attr('data-dbid', in_id)
+									.html(in_val)
+									
+									dest.append(examples)
+									
+									let examples_val = examples.find('.examples-val').empty()
+									for (let row of res) {
+										// load each example into examples for this phrase
+										// row = {ex_id ex_val ex_lang tl_id tl_val tl_lang}
+										let example = $(components.example)
+										
+										example.find('.example-entry')
+										.attr('data-lang', row['ex_lang'])
+										.attr('data-dbid', row['ex_id'])
+										.html(row['ex_val'])
+										
+										example.find('.example-translation')
+										.attr('data-lang', row['tl_lang'])
+										.attr('data-dbid', row['tl_id'])
+										.html(row['tl_val'])
+										
+										examples_val.append(example)
+									}
+								}
+								else {
+									// pass examples to caller for general use
+									resolve(res)
+								}
+							},
+							error: reject
+						})
+					})
+				)
+			}
+		
+			Promise.all(promises)
+			.then(resolve)
+			.catch(reject)
+		})
+		.catch(reject)
 	})
 }
 

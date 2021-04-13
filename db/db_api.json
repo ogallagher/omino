@@ -121,5 +121,14 @@
 		"query": "select `def_id`,`value`,`language` from `rel_definitions` d inner join (select `id` as def_id, `value`, `language` from `strings`) s on d.`definition`=s.def_id where d.`entry`={id} union select `def_id`,`value`,`language` from `rel_definitions` d inner join (select `id` as def_id, `value`, `language` from `strings`) s on d.`entry`=s.def_id where d.`definition`={id}",
 		"notes": "searches definitions by id for entry or definition",
 		"returns": ["def_id","value","language"]
+	},
+	"fetch_translated_examples_by_id": {
+		"external": true,
+		"params": [
+			"id"
+		],
+		"query": "call fetch_translated_examples({id})",
+		"notes": "searches examples by entry id",
+		"returns": ["ex_id","ex_val","ex_lang","tl_id","tl_val","tl_lang"]
 	}
 }
