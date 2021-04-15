@@ -130,5 +130,19 @@
 		"query": "call fetch_translated_examples({id})",
 		"notes": "searches examples by entry id",
 		"returns": ["ex_id","ex_val","ex_lang","tl_id","tl_val","tl_lang"]
+	},
+	"fetch_translated_roots": {
+		"external": true,
+		"params": [
+			"id",
+			"value",
+			"out_language"
+		],
+		"query": "call fetch_translated_roots_letters({id},{value},{out_language})",
+		"notes": "searches roots/letters matching the input string, specified either by id or value, translating to the output language. Only one of either id or value must be provided. If string is invalid (only one letter), result=null is returned.",
+		"returns": [
+			[["rt_root","rt_letter"],"rt_type","rt_id","rt_val","rt_lang","tl_id","tl_val","tl_lang"],
+			["result"]
+		]
 	}
 }
