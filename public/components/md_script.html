@@ -34,16 +34,18 @@
 	// create left index of headings (table of contents)
 	
 	let toc = $('#table-of-contents')
-    $('h2,h3').each(function (index) {
-		let heading = $(this)
+	if (toc.length != 0) {
+	    $('h2,h3').each(function (index) {
+			let heading = $(this)
 		
-        let anchor = $(`<a name="toc${index}" id="toc${index}"></a>`)
-		heading.prepend(anchor)
+	        let anchor = $(`<a name="toc${index}" id="toc${index}"></a>`)
+			heading.prepend(anchor)
 		
-		let level = parseInt(heading.prop('tagName').toLowerCase().replace('h',''))
+			let level = parseInt(heading.prop('tagName').toLowerCase().replace('h',''))
 		
-        toc.append($(
-        	`<li class="h${level+3}"><a href="#toc${index}">${heading.text()}</a></li>`
-        ))
-    })
+	        toc.append($(
+	        	`<li class="h${level+3}"><a href="#toc${index}">${heading.text()}</a></li>`
+	        ))
+	    })
+	}
 </script>

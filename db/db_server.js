@@ -97,6 +97,11 @@ exports.init = function() {
 
 function db_escape(arg) {
 	return new Promise(function(resolve,reject) {
+		// http request converts null args to empty strings; convert back
+		if (arg == '') {
+			arg = null
+		}
+		
 		let escaped = mysql.escape(arg)
 		
 		// double check against JS injection (XSS)

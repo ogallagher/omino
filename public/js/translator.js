@@ -20,6 +20,7 @@ const URL_KEY_TRANSLATOR_INPUT = 'q'
 const ENDPOINT_TRANSLATE = 'fetch_definitions'
 const ENDPOINT_TRANSLATE_ID = 'fetch_definitions_by_id'
 const ENDPOINT_EXAMPLES_ID = 'fetch_translated_examples_by_id'
+const ENDPOINT_ROOTS = 'fetch_translated_roots'
 
 const TRANSLATOR_TARGET_TRANSLATIONS = 'all-translations'
 const TRANSLATOR_TARGET_EXAMPLES = 'all-examples'
@@ -56,7 +57,9 @@ function translator_read_url() {
 		log.debug(`found translator input query ${JSON.stringify(translator_input)}`)
 		
 		$(`#${TRANSLATOR_INPUT_ID}`).html(translator_input.value)
-		$(`#${TRANSLATOR_LANG_ONE_ID}`).html(lang_code_to_name[translator_input.language])
+		$(`#${TRANSLATOR_LANG_ONE_ID}`)
+		.attr('data-lang',translator_input.language)
+		.html(lang_code_to_name[translator_input.language])
 	}
 	else {
 		log.debug('no translator input query found in url params')
@@ -95,19 +98,20 @@ function translator_update_languages(which, language) {
 function translator_on_submit() {
 	const log = translator_log
 	// extract input value and language
-	let language = $(`#${TRANSLATOR_LANG_ONE_ID}`).html()
+	const in_lang = $(`#${TRANSLATOR_LANG_ONE_ID}`).attr('data-lang')
+	const out_lang = $(`#${TRANSLATOR_LANG_TWO_ID}`).attr('data-lang')
 	let value = $(`#${TRANSLATOR_INPUT_ID}`).val()
 	
-	translator_translate(value,language)
+	translator_translate(value,in_lang,out_lang)
 	.then(function(in_ids) {
 		log.debug('translate finished')
-		let lang = lang_name_to_code[language.trim().toLowerCase()]
 		
 		// use acquired ids for input phrase to pose other queries
 		// fetch examples
-		translator_examples(in_ids, value, lang)
+		translator_examples(in_ids, value, in_lang)
 		
 		// fetch roots
+		translator_roots(in_ids, value, in_lang, out_lang)
 		
 		// fetch derivatives
 		
@@ -122,7 +126,7 @@ function translator_on_submit() {
 	})
 }
 
-function translator_translate(value,language) {
+function translator_translate(value,in_lang,out_lang) {
 	const log = translator_log
 	
 	return new Promise(function(resolve,reject) {
@@ -130,29 +134,27 @@ function translator_translate(value,language) {
 		value = value.trim().toLowerCase()
 	
 		// ensure language code
-		if (language.length > 3) {
-			language = lang_name_to_code[language.trim().toLowerCase()]
+		if (in_lang == undefined) {
+			log.warning(`translating from unknown language ${in_lang}`)
+			in_lang = null
 		}
-		log.info(`translating ${language}:${value}`)
-		if (language == undefined) {
-			log.warning(`unrecognized language ${language}`)
-			language = null
+		else {
+			log.info(`translating ${in_lang}:${value} to ${out_lang}`)
 		}
-	
+		
 		$.ajax({
 			method: 'POST',
 			url: '/db',
 			data: {
 				endpoint: ENDPOINT_TRANSLATE,
 				value: value,
-				language: language
+				language: in_lang
 			},
 			success: function(res) {
 				log.debug(`translation result: ${JSON.stringify(res)}`)
 			
 				const out_area = $(`#${TRANSLATOR_OUTPUT_ID}`)
-				const out_lang = $(`#${TRANSLATOR_LANG_TWO_ID}`).attr('data-lang')
-			
+				
 				if (out_area.length == 0) {
 					// pass results to caller for general use
 					resolve(res)
@@ -252,7 +254,7 @@ function translator_examples(in_ids, in_val, in_lang) {
 	log.debug(`fetching same-language examples with translations of ${in_ids.join(',')}`)
 	
 	return new Promise(function(resolve,reject) {
-		let dest = $(`#${TRANSLATOR_TARGET_EXAMPLES}`).empty()
+		const dest = $(`#${TRANSLATOR_TARGET_EXAMPLES}`).empty()
 		
 		new Promise(function(resolve) {
 			if (dest.length != 0) {
@@ -304,22 +306,27 @@ function translator_examples(in_ids, in_val, in_lang) {
 									dest.append(examples)
 									
 									let examples_val = examples.find('.examples-val').empty()
-									for (let row of res) {
-										// load each example into examples for this phrase
-										// row = {ex_id ex_val ex_lang tl_id tl_val tl_lang}
-										let example = $(components.example)
+									if (res.length == 0) {
+										examples_val.html('No examples found.')
+									}
+									else {
+										for (let row of res) {
+											// load each example into examples for this phrase
+											// row = {ex_id ex_val ex_lang tl_id tl_val tl_lang}
+											let example = $(components.example)
 										
-										example.find('.example-entry')
-										.attr('data-lang', row['ex_lang'])
-										.attr('data-dbid', row['ex_id'])
-										.html(row['ex_val'])
+											example.find('.example-entry')
+											.attr('data-lang', row['ex_lang'])
+											.attr('data-dbid', row['ex_id'])
+											.html(row['ex_val'])
 										
-										example.find('.example-translation')
-										.attr('data-lang', row['tl_lang'])
-										.attr('data-dbid', row['tl_id'])
-										.html(row['tl_val'])
+											example.find('.example-translation')
+											.attr('data-lang', row['tl_lang'])
+											.attr('data-dbid', row['tl_id'])
+											.html(row['tl_val'])
 										
-										examples_val.append(example)
+											examples_val.append(example)
+										}
 									}
 								}
 								else {
@@ -339,6 +346,169 @@ function translator_examples(in_ids, in_val, in_lang) {
 		})
 		.catch(reject)
 	})
+}
+
+function translator_roots(in_ids, in_val, in_lang, out_lang) {
+	const log = translator_log
+	const dest = $(`#${TRANSLATOR_TARGET_ROOTS}`).empty()
+	
+	if (in_lang == 'omi') {
+		log.debug(`fetching roots for ${in_ids.join(',')}`)
+		
+		return new Promise(function(resolve,reject) {
+			new Promise(function(resolve, reject) {
+				if (dest.length != 0) {
+					// load roots and root components
+					frontend_import_nowhere('roots')
+					.then(function(roots) {
+						frontend_import_nowhere('root')
+						.then(function(root) {
+							resolve({
+								roots: roots,
+								root: root
+							})
+						})
+						.catch(reject)
+					})
+					.catch(reject)
+				}
+				else {
+					// don't load container components if there's no load target
+					resolve()
+				}
+			})
+			.then(function(components) {
+				let promises = []
+				for (let in_id of in_ids) {
+					promises.push(
+						new Promise(function(resolve,reject) {
+							$.ajax({
+								url: '/db',
+								method: 'GET',
+								data: {
+									endpoint: ENDPOINT_ROOTS,
+									id: in_id,
+									value: null, // only one of id or value is needed for this endpoint
+									out_language: out_lang
+								},
+								success: function(res) {
+									if (res.hasOwnProperty('error')) {
+										reject(res)
+									}
+									else {
+										log.debug(`fetched ${res.length} root-translations`)
+										// group root-translation pairs by root
+										// {rt_id: {type id val lang translations: [{id val lang}]}}
+										let roots = {}
+										for (let row of res) {
+											if (roots.hasOwnProperty(row['rt_id'])) {
+												// add translation to existing root
+												roots[row['rt_id']].translations.push({
+													id: row['tl_id'],
+													val: row['tl_val'],
+													lang: row['tl_lang']
+												})
+											}
+											else {
+												// add new root and translation
+												let root = {
+													size: null,
+													type: row['rt_type'],
+													id: row['rt_id'],
+													val: row['rt_val'],
+													lang: row['rt_lang'],
+													translations: [{
+														id: row['tl_id'],
+														val: row['tl_val'],
+														lang: row['tl_lang']
+													}]
+												}
+												if (row.hasOwnProperty('rt_root')) {
+													root.size = 'root'
+												}
+												else if (row.hasOwnProperty('rt_letter')) {
+													root.size = 'letter'
+												}
+												roots[row['rt_id']] = root
+											}
+										}
+										
+										if (components != undefined) {
+											// add roots component to dest
+											let roots_cmpt = $(components.roots)
+											
+											roots_cmpt.find('.roots-entry')
+											.attr('data-lang', in_lang)
+											.attr('data-dbid', in_id)
+											.html(in_val)
+											
+											dest.append(roots_cmpt)
+											
+											let roots_val = roots_cmpt.find('.roots-val').empty()
+											if (res.length == 0) {
+												roots_val.html('No roots found.')
+											}
+											else {
+												for (let root_id of Object.keys(roots)) {
+													// load each root into roots for this phrase
+													let root_data = roots[root_id]
+													let root_cmpt = $(components.root)
+													
+													root_cmpt.find('.root-entry')
+													.attr('data-lang', root_data['lang'])
+													.attr('data-dbid', root_data['id'])
+													.attr('href', `?${new URLSearchParams({
+														q: `${root_data['lang']}:${root_data['val']}`
+													})}`)
+													.html(root_data['val'])
+													
+													// load each translation into translations for root
+													let tl_cont = root_cmpt.find('.root-translations')
+													.attr('data-lang', out_lang)
+													
+													for (let tl of root_data.translations) {
+														tl_cont.append($(
+															`<div data-dbid="${
+																tl.id
+															}" data-lang="${
+																tl.lang
+															}" class="mx-2">${
+																tl.val
+															}</div>`
+														))
+														log.debug(`loaded ${tl.val} into tl_cont.length=${tl_cont.length}`)
+													}
+													roots_val.append(root_cmpt)
+												}
+											}
+										}
+										else {
+											// pass roots to caller for general use
+											resolve(roots)
+										}
+									}
+								},
+								error: reject
+							})
+						})
+					)
+				}
+	
+				Promise.all(promises)
+				.then(resolve)
+				.catch(reject)
+			})
+			.catch(reject)
+		})
+	}
+	else {
+		const lang_name = lang_code_to_name[in_lang]
+		log.debug(`roots unsupported for language ${in_lang} = ${lang_name}`)
+		if (dest.length != 0) {
+			dest.html(`Roots unsupported for language: ${lang_name}.`)
+		}
+		resolve()
+	}
 }
 
 function translator_load_translations(translations) {

@@ -39,4 +39,8 @@ $(document).ready(function() {
 			log.error(`failed to import ${component}`)
 		})
 	}
+	
+	// spread headers
+	$('h2, .h2').addClass('mt-4')
+	$('h3, .h3').addClass('mt-2')
 })

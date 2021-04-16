@@ -111,9 +111,8 @@ Owen Gallagher
 <div id="all-translations">No translations found.</div>
 <h2 title="Examples of each input phrase, and translations of each example, if applicable.">Examples</h2>
 <div id="all-examples">No examples found.</div>
-<h2 id="roots">Roots</h2>
-<p>Words contained within these words.</p>
-<div id="all-roots"></div>
+<h2 title="Roots contained within each input phrase, and their translations.">Roots</h2>
+<div id="all-roots">No roots found.</div>
 <h2 id="derivatives">Derivatives</h2>
 <p>Words that contain these words.</p>
 <div id="all-derivatives"></div>
@@ -161,18 +160,20 @@ Owen Gallagher
 	// create left index of headings (table of contents)
 	
 	let toc = $('#table-of-contents')
-    $('h2,h3').each(function (index) {
-		let heading = $(this)
+	if (toc.length != 0) {
+	    $('h2,h3').each(function (index) {
+			let heading = $(this)
 		
-        let anchor = $(`<a name="toc${index}" id="toc${index}"></a>`)
-		heading.prepend(anchor)
+	        let anchor = $(`<a name="toc${index}" id="toc${index}"></a>`)
+			heading.prepend(anchor)
 		
-		let level = parseInt(heading.prop('tagName').toLowerCase().replace('h',''))
+			let level = parseInt(heading.prop('tagName').toLowerCase().replace('h',''))
 		
-        toc.append($(
-        	`<li class="h${level+3}"><a href="#toc${index}">${heading.text()}</a></li>`
-        ))
-    })
+	        toc.append($(
+	        	`<li class="h${level+3}"><a href="#toc${index}">${heading.text()}</a></li>`
+	        ))
+	    })
+	}
 </script>
 
 	</body>

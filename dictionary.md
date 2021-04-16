@@ -17,11 +17,9 @@ Owen Gallagher
 
 <div id="all-examples">No examples found.</div>
 
-## Roots
+<h2 title="Roots contained within each input phrase, and their translations.">Roots</h2>
 
-Words contained within these words.
-
-<div id="all-roots"></div>
+<div id="all-roots">No roots found.</div>
 
 ## Derivatives
 
