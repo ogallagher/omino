@@ -21,6 +21,7 @@ const ENDPOINT_TRANSLATE = 'fetch_definitions'
 const ENDPOINT_TRANSLATE_ID = 'fetch_definitions_by_id'
 const ENDPOINT_EXAMPLES_ID = 'fetch_translated_examples_by_id'
 const ENDPOINT_ROOTS = 'fetch_translated_roots'
+const ENDPOINT_LONG_SUBSTR = 'fetch_longest_substring'
 
 const TRANSLATOR_TARGET_TRANSLATIONS = 'all-translations'
 const TRANSLATOR_TARGET_EXAMPLES = 'all-examples'
@@ -103,23 +104,26 @@ function translator_on_submit() {
 	let value = $(`#${TRANSLATOR_INPUT_ID}`).val()
 	
 	translator_translate(value,in_lang,out_lang)
-	.then(function(in_ids) {
-		log.debug('translate finished')
-		
-		// use acquired ids for input phrase to pose other queries
-		// fetch examples
-		translator_examples(in_ids, value, in_lang)
-		
-		// fetch roots
-		translator_roots(in_ids, value, in_lang, out_lang)
-		
-		// fetch derivatives
-		
-		// fetch synonyms
-		
-		// fetch antonyms
-		
-		// fetch homophones
+	.then(function(in_phrases) {
+		if (in_phrases.length > 0) {
+			// in_phrases: [{in_id? out_id out_lang out_val}]
+			log.debug(`performing secondary queries on ${in_phrases.length} input phrases`)
+
+			// use acquired ids for input phrase to pose other queries
+			// fetch examples
+			translator_examples(in_phrases)
+
+			// fetch roots
+			translator_roots(in_phrases, out_lang)
+
+			// fetch derivatives
+
+			// fetch synonyms
+
+			// fetch antonyms
+
+			// fetch homophones
+		}
 	})
 	.catch(function(err) {
 		log.error(`translation failed: ${err}`)
@@ -131,8 +135,12 @@ function translator_translate(value,in_lang,out_lang) {
 	
 	return new Promise(function(resolve,reject) {
 		// clean value
-		value = value.trim().toLowerCase()
-	
+		value = value.trim()
+		if (in_lang == 'omi') {
+			value = value.toLowerCase()
+		}
+		const full_value = value
+		
 		// ensure language code
 		if (in_lang == undefined) {
 			log.warning(`translating from unknown language ${in_lang}`)
@@ -142,85 +150,183 @@ function translator_translate(value,in_lang,out_lang) {
 			log.info(`translating ${in_lang}:${value} to ${out_lang}`)
 		}
 		
-		$.ajax({
-			method: 'POST',
-			url: '/db',
-			data: {
-				endpoint: ENDPOINT_TRANSLATE,
-				value: value,
-				language: in_lang
-			},
-			success: function(res) {
-				log.debug(`translation result: ${JSON.stringify(res)}`)
-			
-				const out_area = $(`#${TRANSLATOR_OUTPUT_ID}`)
+		// { index_in_input: {in_id out_id out_lang out_val} }
+		let substrings = {}
+		const regex_non_alphanumeric = /[^\w0123456789]+/
+		
+		function substrings_done(p) {
+			p.then(() => {
+				// sorted keys in order of appearance in full_value
+				let keys = Object.keys(substrings).sort(function(a,b) { return a-b })
+				log.debug(`translating substrings: \n${JSON.stringify(substrings)}`)
 				
+				// resolve method, allowing parallel execution of other translator queries using the
+				// raw input value converted to valid db string phrases
+				resolve(Object.values(substrings))
+				
+				const out_area = $(`#${TRANSLATOR_OUTPUT_ID}`).empty()
 				if (out_area.length == 0) {
-					// pass results to caller for general use
-					resolve(res)
+					log.error(`#${TRANSLATOR_OUTPUT_ID} translations target container not found`)
+					reject('html container')
 				}
 				else {
-					// load results into current page
-					if (res.length == 0) {
-						out_area.html('translation not found')
-						reject()
-					}
-					else {
-						// pull input string id from first row
-						let in_id = res[0]['in_id']
-						resolve([in_id])
-						
-						let best = null
-						let translations = []
-						let other_langs = []
+					// clear translations container
+					$(`#${TRANSLATOR_TARGET_TRANSLATIONS}`).empty()
 					
-						for (let row of res) {
-							if (row['out_lang'] == out_lang) {
-								if (best == null) {
-									// select first translation for out language
-									best = row
-								}
-								else {
-									// handle alternate translations for out language
-									// TODO other translation row['out_val']
-								}
+					let promises = []
+					let translations = [] // [{idx,in_id,in_val,in_lang,out_id,out_val,out_lang}]
+					let other_langs = []
+					
+					for (let k of keys) {
+						promises.push(new Promise(function(resolve,reject) {
+							// {in_id? out_id out_lang out_val}
+							let substring = substrings[k]				
+							$.ajax({
+								method: 'POST',
+								url: '/db',
+								data: {
+									endpoint: ENDPOINT_TRANSLATE_ID,
+									id: substring.out_id
+								},
+								success: function(res) {
+									log.debug(`translation ${substring.out_val} --> ${JSON.stringify(res)}`)
 							
-								// concat out lang translation
-								translations.push(row)
-							}
-							else {
-								other_langs.push(row)
-							}
-						}
-				
-						if (best != null) {
-							// load result into output
-							out_area.html(best['out_val'])
-						}
-						else {
-							let follow_up
-							if (other_langs.length != 0) {
-								follow_up = `Did you mean to translate to ${
-									lang_code_to_name[other_langs[0]['out_lang']]
-								}?`
-							}
-							else {
-								follow_up = 'No other languages found.'
-							}
+									if (res.length > 0) {
+										let best = null // {def_id, value, language}
+										let best_other_lang = null
+										for (let row of res) {
+											const io_row = {
+												idx: k,
+												in_id: substring['out_id'],
+												in_lang: substring['out_lang'],
+												in_val: substring['out_val'],
+												out_id: row['def_id'],
+												out_val: row['value'],
+												out_lang: row['language']
+											}
+									
+											// row = {def_id value language}
+											if (row['language'] == out_lang) {
+												if (best == null) {
+													// select first translation for out language
+													best = row
+												}
+												else {
+													// handle alternate translations for out language
+													// TODO other translation row['value']
+												}
+										
+												// concat out lang translation
+												translations.push(io_row)
+											}
+											else {
+												if (best_other_lang == null) {
+													best_other_lang = io_row
+												}
+												other_langs.push(io_row)
+											}
+										}
+										
+										if (best != null) {
+											// load result into output
+											out_area.append(best['value'] + ' ')
+											resolve(true)
+										}
+										else {
+											log.warning(`translations for ${out_lang} not found; alt = ${
+												lang_code_to_name[best_other_lang['out_lang']]
+											}`)
+											resolve(false)
+										}
+									}
+									else {
+										log.warning(`no translations found for ${substring.out_id} for any output language`)
+										resolve(false)
+									}
+								},
+								error: function(err) {
+									log.error(`translation failed: ${err}`)
+									reject('http')
+								}
+							})
+						}))
+					}
 					
-							out_area.html(`Translation not found for current output language. ${follow_up}`)
-						}
-					
+					Promise.all(promises)
+					.then(function(bools) {
 						// load translations into target for definitions queries
 						translator_load_translations(translations)
-					}
+					})
+					.catch(reject)
 				}
-			},
-			error: function(err) {
-				log.error(`translation failed: ${err}`)
-				reject()
-			}
-		})
+			})
+			.catch(reject)
+		}
+		
+		function next_substring(p) {
+			p = p
+			.then(new Promise(function(resolve,reject) {
+				log.debug(`value = ${value}`)
+				let tokens = value.split(regex_non_alphanumeric)
+				if (tokens.length == 0) {
+					substrings_done(p)
+				}
+				else {
+					// let floor_length = Math.max(0, tokens[0].length-1)
+					log.debug(`fetching substrings for ${value}`)
+					
+					$.ajax({
+						method: 'POST',
+						url: '/db',
+						data: {
+							endpoint: ENDPOINT_LONG_SUBSTR,
+							value: value,
+							language: in_lang,
+							floor_length: 0
+						},
+						success: function(res_subs) {
+							if (res_subs.length == 0) {
+								substrings_done(p)
+							}
+							else {
+								// add longest substring to substrings
+								let longest = res_subs[0]
+								let longest_val = longest.out_val
+								log.debug(`fetched substring ${longest_val} for ${value}`)
+								
+								let less_idx = value.indexOf(longest_val)
+								let full_idx = full_value.indexOf(longest_val)
+								substrings[full_idx] = longest
+								
+								// remove longest substring from value, leaf full_value intact
+								value = 
+									value.substring(0,less_idx) + 
+									value.substring(less_idx+longest_val.length, value.length)
+								
+								// continue if there's more input to handle
+								if (less_idx != -1 && value.length > 0) {
+									next_substring(p)
+								}
+								else {
+									substrings_done(p)
+								}
+							}
+						},
+						error: function(err) {
+							log.error(`failed to fetch long substrings for ${value}: ${err}`)
+							reject('http')
+							substrings_done(p)
+						}
+					})
+				}
+			}))
+			.catch(function(err) {
+				substrings_done(Promise.reject(err))
+			})
+		}
+		
+		// get longest valid substrings
+		next_substring(Promise.resolve())
 	})
 }
 
@@ -249,9 +355,9 @@ function translator_define(value,language) {
 	})
 }
 
-function translator_examples(in_ids, in_val, in_lang) {
+function translator_examples(in_phrases) {
 	const log = translator_log
-	log.debug(`fetching same-language examples with translations of ${in_ids.join(',')}`)
+	log.debug(`fetching same-language examples with translations for ${in_phrases.length} input phrases`)
 	
 	return new Promise(function(resolve,reject) {
 		const dest = $(`#${TRANSLATOR_TARGET_EXAMPLES}`).empty()
@@ -278,7 +384,12 @@ function translator_examples(in_ids, in_val, in_lang) {
 		})
 		.then(function(components) {
 			let promises = []
-			for (let in_id of in_ids) {
+			for (let in_phrase of in_phrases) {
+				// in_phrase: {in_id? out_id out_lang out_val}
+				let in_id = in_phrase.out_id
+				let in_val = in_phrase.out_val
+				let in_lang = in_phrase.out_lang
+				
 				promises.push(
 					new Promise(function(resolve,reject) {
 						$.ajax({
@@ -290,21 +401,21 @@ function translator_examples(in_ids, in_val, in_lang) {
 							},
 							success: function(res) {
 								log.debug(`fetched ${res.length} examples`)
-								
+							
 								if (res.hasOwnProperty('error')) {
 									reject(res)
 								}
 								else if (components != undefined) {
 									// add examples component to dest
 									let examples = $(components.examples)
-									
+								
 									examples.find('.examples-entry')
 									.attr('data-lang', in_lang)
 									.attr('data-dbid', in_id)
 									.html(in_val)
-									
+								
 									dest.append(examples)
-									
+								
 									let examples_val = examples.find('.examples-val').empty()
 									if (res.length == 0) {
 										examples_val.html('No examples found.')
@@ -314,17 +425,17 @@ function translator_examples(in_ids, in_val, in_lang) {
 											// load each example into examples for this phrase
 											// row = {ex_id ex_val ex_lang tl_id tl_val tl_lang}
 											let example = $(components.example)
-										
+									
 											example.find('.example-entry')
 											.attr('data-lang', row['ex_lang'])
 											.attr('data-dbid', row['ex_id'])
 											.html(row['ex_val'])
-										
+									
 											example.find('.example-translation')
 											.attr('data-lang', row['tl_lang'])
 											.attr('data-dbid', row['tl_id'])
 											.html(row['tl_val'])
-										
+									
 											examples_val.append(example)
 										}
 									}
@@ -339,7 +450,7 @@ function translator_examples(in_ids, in_val, in_lang) {
 					})
 				)
 			}
-		
+	
 			Promise.all(promises)
 			.then(resolve)
 			.catch(reject)
@@ -348,12 +459,13 @@ function translator_examples(in_ids, in_val, in_lang) {
 	})
 }
 
-function translator_roots(in_ids, in_val, in_lang, out_lang) {
+function translator_roots(in_phrases,out_lang) {
 	const log = translator_log
 	const dest = $(`#${TRANSLATOR_TARGET_ROOTS}`).empty()
 	
+	const in_lang = in_phrases[0].out_lang
 	if (in_lang == 'omi') {
-		log.debug(`fetching roots for ${in_ids.join(',')}`)
+		log.debug(`fetching roots for ${in_phrases.length} phrases`)
 		
 		return new Promise(function(resolve,reject) {
 			new Promise(function(resolve, reject) {
@@ -379,7 +491,11 @@ function translator_roots(in_ids, in_val, in_lang, out_lang) {
 			})
 			.then(function(components) {
 				let promises = []
-				for (let in_id of in_ids) {
+				for (let in_phrase of in_phrases) {
+					// in_phrase: {in_id? out_id out_lang out_val}
+					let in_id = in_phrase.out_id
+					let in_val = in_phrase.out_val
+					
 					promises.push(
 						new Promise(function(resolve,reject) {
 							$.ajax({
@@ -507,16 +623,16 @@ function translator_roots(in_ids, in_val, in_lang, out_lang) {
 		if (dest.length != 0) {
 			dest.html(`Roots unsupported for language: ${lang_name}.`)
 		}
-		resolve()
+		return Promise.resolve()
 	}
 }
 
 function translator_load_translations(translations) {
 	const log = translator_log
 	
-	let dest = $(`#${TRANSLATOR_TARGET_TRANSLATIONS}`).empty()
+	let dest = $(`#${TRANSLATOR_TARGET_TRANSLATIONS}`)
 	if (dest.length != 0) {
-		log.info(`loading ${translations.length} phrases into #${TRANSLATOR_TARGET_TRANSLATIONS}`)
+		log.info(`loading ${translations.length} translations into #${TRANSLATOR_TARGET_TRANSLATIONS}`)
 		
 		// load translation placeholders into dest
 		let translation_placeholder_str = '<div class="frontend-import-translation"></div>'
@@ -538,6 +654,7 @@ function translator_load_translations(translations) {
 					lang: translation['in_lang'],
 					val: translation['in_val'],
 					id: translation['in_id'],
+					idx: translation['idx'],
 					outs: [
 						{
 							lang: translation['out_lang'],
@@ -550,7 +667,6 @@ function translator_load_translations(translations) {
 				// load translation placeholder
 				dest.append($(translation_placeholder_str))
 			}
-			
 		}
 		
 		translations = translations_dict
@@ -558,29 +674,31 @@ function translator_load_translations(translations) {
 		// load translation components
 		frontend_import('translation')
 		.then(function() {
-			log.debug(`loaded ${translations.length} translation components`)
-			
 			// load definition component
 			frontend_import_nowhere('definition')
 			.then(function(def_component) {
-				let keys = Object.keys(translations)
+				let keys = Object.keys(translations).sort(
+					function(ak,bk) { 
+						return translations[ak]['idx']-translations[bk]['idx']
+					}
+				)
 				$('.translation').each(function(i) {
-					// translation = { lang val id outs:[{lang val id}] }
+					// translation = { lang val id idx outs:[{lang val id}] }
 					let translation = translations[keys[i]]
-			
+					
 					// load translation data into component
 					let self = $(this)
-			
+					
 					// input phrase
 					self.find('.translation-entry')
 					.attr('data-lang', translation['lang'])
 					.attr('data-dbid', translation['id'])
 					.html(translation['val'])
 					log.debug(`loaded translation entry ${translation['lang']}:${translation['val']}`)
-				
+					
 					// insert definition components
 					let defs_container = self.find('.translation-val').empty()
-				
+					
 					for (let out of translation['outs']) {
 						let def = $(def_component)
 					
@@ -589,14 +707,14 @@ function translator_load_translations(translations) {
 								q: `${out['lang']}:${out['val']}`
 							}).toString()
 						}`
-					
+						
 						// load definition entry
 						def.find('.definition-entry')
 						.attr('href',url)
 						.attr('title',url)
 						.html(out['val'])
 						log.debug(`loaded definition entry ${out['lang']}:${out['val']}`)
-					
+						
 						// fetch definition value
 						translator_define(out['id'], out['lang'])
 						.then(function(res) {
@@ -620,6 +738,7 @@ function translator_load_translations(translations) {
 								
 								// load definition value
 								def.find('.definition-value').html(definitions.join(' '))
+								log.debug(`loaded ${definitions.length} definitions for ${out['val']}`)
 							}
 						})
 						.catch(function(err) {

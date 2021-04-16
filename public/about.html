@@ -241,7 +241,7 @@ he     (yesterday   person (eat     food  )) like    sleeps .</code></pre>
 <li>descriptive: <strong>leon = literary</strong></li>
 <li>ambiguous: <strong>leokin = that writes, that is written</strong></li>
 <li>active: <strong>leomkin = that is writing</strong></li>
-<li>passive: <strong>leonein</strong></li></ul></li>
+<li>passive: <strong>leonein = that is written</strong></li></ul></li>
 <li>possessive<ul>
 <li>ambiguous: <ul>
 <li>singular: <strong>leon = of literature</strong></li>
@@ -1215,18 +1215,20 @@ You feed my friend, please. &rarr; hamem doamien hoaki.</p>
 	// create left index of headings (table of contents)
 	
 	let toc = $('#table-of-contents')
-    $('h2,h3').each(function (index) {
-		let heading = $(this)
+	if (toc.length != 0) {
+	    $('h2,h3').each(function (index) {
+			let heading = $(this)
 		
-        let anchor = $(`<a name="toc${index}" id="toc${index}"></a>`)
-		heading.prepend(anchor)
+	        let anchor = $(`<a name="toc${index}" id="toc${index}"></a>`)
+			heading.prepend(anchor)
 		
-		let level = parseInt(heading.prop('tagName').toLowerCase().replace('h',''))
+			let level = parseInt(heading.prop('tagName').toLowerCase().replace('h',''))
 		
-        toc.append($(
-        	`<li class="h${level+3}"><a href="#toc${index}">${heading.text()}</a></li>`
-        ))
-    })
+	        toc.append($(
+	        	`<li class="h${level+3}"><a href="#toc${index}">${heading.text()}</a></li>`
+	        ))
+	    })
+	}
 </script>
 
 		</div>

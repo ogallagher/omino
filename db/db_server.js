@@ -189,13 +189,16 @@ exports.send_query = function(sql) {
 						reject(err)
 					}
 					else {
+						let metadata = res[1]
 						let data = res[0]
+						if (metadata == undefined || !metadata.hasOwnProperty('fieldCount')) {
+							data = res
+						}
 						// ensure data is an array
 						if (!Array.isArray(data)) {
 							data = [data]
 						}
 						
-						let metadata = res[1]
 						log.debug(`query metadata: ${JSON.stringify(metadata)}`)
 						resolve(data)
 					}

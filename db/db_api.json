@@ -103,6 +103,17 @@
 		],
 		"query": "select * from `strings` where `value`={value} and `language`={language}"
 	},
+	"fetch_longest_substring": {
+		"external": true,
+		"params": [
+			"value",
+			"language",
+			"floor_length"
+		],
+		"query": "call fetch_longest_substring({value},{language},{floor_length})",
+		"notes": "fetch same-lang substrings (including self) **longer** than floor_length, ordered string length descending",
+		"returns": ["in_id","out_id","out_lang","out_val"]
+	},
 	"fetch_definitions": {
 		"external": true,
 		"params": [
