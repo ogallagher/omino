@@ -222,7 +222,7 @@ Example: **leo = literature,writing**
     - active: **leomkin = that is writing**
     - passive: **leonein = that is written**
 - possessive
-    - ambiguous: 
+    - ambiguous
         - singular: **leon = of literature**
         - plural: **leons = of writings** or **leosn**
     - subject

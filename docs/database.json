@@ -1455,7 +1455,7 @@
 			"spa:quietud","spa:cuatro"
 		],
 		"huki": [
-			"stop",
+			"stop", "be stopped",
 			"spa:parar", "spa:detener"
 		],
 		"hun": [
@@ -1463,23 +1463,14 @@
 			"spa:quieto"
 		],
 		"hukin": [
-			"stopped",
+			"stopped","stopping",
 			"spa:detenido"
-		],
-		"huki": [
-			"stop","be stopped"
 		],
 		"humki": [
 			"stop"
 		],
 		"hunei": [
 			"be stopped"
-		],
-		"hun": [
-			"still"
-		],
-		"hukin": [
-			"stopped","stopping"
 		],
 		"humkin": [
 			"stopping"
@@ -1590,23 +1581,6 @@
 			"eng:cleaned",
 			"spa:limpiado",
 			"kor:깨긋한"
-		],
-	    "budui": [
-	        "eng:dirtiness",
-	        "spa:suciedad"
-	    ],
-		"buduiki": [
-			"eng:dirty",
-			"spa:ensuciar"
-		],
-		"buduin": [
-			"eng:dirty",
-			"spa:sucio",
-			"kor:더러운"
-		],
-		"buduikin": [
-			"eng:dirtied",
-			"spa:ensuciado"
 		],
 		"lu": ["removal"],
 		"luki": [
@@ -1748,6 +1722,9 @@
 			"ground","earth","dirt",
 			"spa:tierra","suelo"
 		],
+		"buki": ["land","ground"],
+		"bun": ["earthen"],
+		"bukin": ["landed","grounded"],
 	    "sibu": [
 	        "eng:hill","eng:pile","eng:stack",
 	        "spa:colina","spa:pila"
@@ -1792,9 +1769,23 @@
 		"subukin": [
 	        "dented", "denting"
 	    ],
-		"buki": ["land","ground"],
-		"bun": ["earthen"],
-		"bukin": ["landed","grounded"],
+	    "budui": [
+	        "eng:dirtiness",
+	        "spa:suciedad"
+	    ],
+		"buduiki": [
+			"eng:dirty",
+			"spa:ensuciar"
+		],
+		"buduin": [
+			"eng:dirty",
+			"spa:sucio",
+			"kor:더러운"
+		],
+		"buduikin": [
+			"eng:dirtied",
+			"spa:ensuciado"
+		],
 		"bou": ["respect"],
 		"bau": ["preservation"],
 		"beu": ["solid","hardness","omi:buobeu"],
@@ -2560,10 +2551,10 @@
 	        "swim"
 	    ],
 		"mian": [
-	        "swimming, marine"
+	        "swimming", "marine"
 	    ],
 		"miakin": [
-	        "swum "
+	        "swum"
 	    ],
 	    "miahai": [
 	        "eng:fish",
@@ -2735,7 +2726,7 @@
 			"kor:자는"
 		],
 		"bakin": [
-			"eng:putting to sleep","eng:be put to sleep",
+			"eng:putting to sleep","eng:put to sleep",
 			"spa:durmiendo", "spa:dormido"
 		],
 		"bua": [
@@ -2771,16 +2762,16 @@
 		"bea": ["cover","protection"],
 		"bia": ["clothing","garment"],
 		"da": ["happiness","joy","cheer"],
-		"taki": [
+		"daki": [
 			"make happy", "cheer",
 			"spa:animar", "spa:alegrar"
 		],
-		"tan": [
+		"dan": [
 			"happy", "cheerful",
 			"spa:feliz", "spa:alegre",
 			"kor:행복한", "kor:기쁜"
 		],
-		"takin": [
+		"dakin": [
 			"made happy",
 			"spa:animado", "spa:hecho feliz"
 		],
@@ -2805,11 +2796,11 @@
 			"spa:mañana",
 	        "omi:hesodia"
 	    ],
-	    "koafudia": [
+	    "kaofudia": [
 	        "day before yesterday",
 			"spa:anteayer"
 	    ],
-	    "koasodia": [
+	    "kaosodia": [
 	        "day after tomorrow",
 			"spa:pasado mañada"
 	    ],
@@ -2834,8 +2825,8 @@
 			"spa:puñalada","spa:agujero","spa:hoyo"
 		],
 		"koa": [
-			"eng:await","eng:hope",
-			"spa:esperar"
+			"eng:awaiting","eng:hope",
+			"spa:esperanza"
 		],
 		"kea": [
 			"eng:work","eng:labor","eng:functioning",
@@ -2843,7 +2834,7 @@
 		],
 		"kia": [
 			"jump","hop",
-			"spa:saltar","spa:brincar"
+			"spa:salto","spa:brinco"
 		],
 		
 		"he": [
@@ -2926,6 +2917,18 @@
 		"le": [
 			"similarity","likeness"
 		],
+		"leki": [
+	        "make similar", "approximate", "be made similar", "be approximated"
+	    ],
+		"len": [
+	        "similar", "similarly"
+	    ],
+		"lekin": [
+	        "made similar", "approximated", "making similar", "approximating"
+	    ],
+		"lel": [
+	        "like", "as"
+	    ],
 	    "file": [
 	        "eng:comparison","eng:contrast",
 	        "spa:comparación","spa:contraste"
@@ -2946,18 +2949,6 @@
 			"eng:compared to/compared with", "eng:relative to",
 			"spa:comparado con", "spa:relativo a"
 		],
-		"leki": [
-	        "make similar", "approximate", "be made similar", "be approximated"
-	    ],
-		"len": [
-	        "similar", "similarly"
-	    ],
-		"lekin": [
-	        "made similar", "approximated", "making similar", "approximating"
-	    ],
-		"lel": [
-	        "like, as"
-	    ],
 		"lue": [],
 		"loe": [
 			"normalcy","average","nine",
@@ -3055,7 +3046,7 @@
 		],
 		"laemakin": [
 			"become a mother",
-			"spa: hecha madre"
+			"spa:hecha madre"
 		],
 	    "kelae": [
 	        "eng:child",
@@ -3240,7 +3231,7 @@
 	        "eng:filled","eng:filling","stuffed","stuffing"
 		],
 		"bae": ["order","organization"],
-		"bie": ["control","command","direct"],
+		"bie": ["control","command","direction"],
 		"de": [
 			"touch","feeling",
 			"spa:toque","spa:sensación"
@@ -3378,6 +3369,19 @@
 			"spa:tiempo",
 			"kor:시간"
 		],
+		"liki": [
+			"eng:spend time", "eng:last",
+			"kor:지내다", 
+			"spa:durar", "spa:pasar tiempo"
+		],
+		"lin": [
+			"eng:chronological",
+			"spa:chronológico"
+		],
+		"likin": [
+			"eng:where time is spent", "eng:with which time is spent",
+			"spa:donde se pasa tiempo", "spa:con que se pasa tiempo"
+		],
 	    "beoli": [
 	        "eng:beginning",
 	        "spa:inicio"
@@ -3404,23 +3408,6 @@
 			"spa:después de",
 			"kor:후"
 		],
-		"soli": [
-			"eng:future","eng:when",
-			"spa:futuro","spa:cuándo"
-		],
-		"liki": [
-			"eng:spend time", "eng:last",
-			"kor:지내다", 
-			"spa:durar", "spa:pasar tiempo"
-		],
-		"lin": [
-			"eng:chronological",
-			"spa:chronológico"
-		],
-		"likin": [
-			"eng:where time is spent", "eng:with which time is spent",
-			"spa:donde se pasa tiempo", "spa:con que se pasa tiempo"
-		],
 	    "hali": [
 	        "eng:now","present",
 	        "spa:ahora","spa:presente"
@@ -3428,11 +3415,11 @@
 		"haliki": [
 	        "happen", "make happen", "modernize"
 	    ],
-		"han": [
-	        "current", "happening"
+		"halin": [
+	        "current","modern","present"
 	    ],
-		"hakin": [
-	        "modernized"
+		"halikin": [
+	        "modernized","modernizing"
 	    ],
 		"halil": [
 	        "while/when"
@@ -3453,15 +3440,15 @@
 		"fulil": [
 	        "before"
 	    ],
-	    "soli": [
-	        "eng:future",
-	        "spa:futuro"
-	    ],
+		"soli": [
+			"eng:future","eng:when",
+			"spa:futuro","spa:cuándo"
+		],
 		"soliki": [
-	        "modernize, postpone, succeed"
+	        "modernize", "postpone", "succeed"
 	    ],
 		"solin": [
-	        "successor, del futuro"
+	        "successor", "spa:del futuro"
 	    ],
 		"solil": [
 	        "after"
@@ -3764,6 +3751,18 @@
 			"foot",
 			"spa:pie"
 		],
+		"smiuki": [
+			"spa:pisar",
+	        "eng:step","eng:step on","eng:stomp"
+		],
+		"smiun": [
+			"of the foot","podal",
+	        "spa:pedal","de pie"
+		],
+		"smikin": [
+			"spa:pisado",
+	        "eng:stepped on","eng:stepping","eng:stepping on"
+		],
 		"smiuse": [
 			"eng:toe",
 			"spa:dedo de pie"
@@ -3778,18 +3777,6 @@
 		],
 		"smiusekin": [
 			"touched with toe","touching with toe"
-		],
-		"smiuki": [
-			"spa:pisar",
-	        "eng:step","eng:step on","eng:stomp"
-		],
-		"smiun": [
-			"of the foot","podal",
-	        "spa:pedal","de pie"
-		],
-		"smikin": [
-			"spa:pisado",
-	        "eng:stepped on","eng:stepping","eng:stepping on"
 		],
 		"snu": ["shadow"],
 		"snou": [],

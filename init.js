@@ -44,7 +44,7 @@ const PLACEHOLDER_MD = '{backend-import-md}'
 const PLACEHOLDER_NAVBAR = '{backend-import-navbar}'
 
 const ISO_LANGS_FILE = `${DATA_DIR}/iso_language_codes.json`
-const DATABASE_SCRATCH_FILE = `${DOCS_DIR}/database.json`
+const DB_SCRATCH_FILE_DEFAULT = `${DOCS_DIR}/database.json`
 
 const CLI_LOG_LEVEL = 'logging'
 const CLI_COMPILE = 'compile'
@@ -92,8 +92,9 @@ function parse_cli_args() {
 			default: false
 		})
 		.option(CLI_IMPORT_DB_SCRATCH, {
-			type: 'boolean',
-			description: `Import all scratch-db contents from ${DATABASE_SCRATCH_FILE} into the database. This should only be done once.`
+			type: 'string',
+			default: DB_SCRATCH_FILE_DEFAULT,
+			description: `Import all scratch-db contents from the the given file into the database. This should only be done once.`
 		})
 		.help()
 		.alias('help','h')
@@ -377,12 +378,12 @@ function get_root_type(root, db_scratch) {
 	}
 }
 
-function import_database_scratch() {
+function import_database_scratch(db_scratch_file) {
 	return new Promise(function(resolve,reject) {
 		init_db_server()
 		
-		let db_scratch = require(`./${DATABASE_SCRATCH_FILE}`)
-		log.debug(`loaded scratch database from ${DATABASE_SCRATCH_FILE}`)
+		let db_scratch = require(`./${db_scratch_file}`)
+		log.debug(`loaded scratch database from ${db_scratch_file}`)
 		
 		let promises = []
 		let fails = 0
@@ -829,9 +830,11 @@ parse_cli_args()
 	}
 	
 	if (cli_args[CLI_IMPORT_DB_SCRATCH]) {
-		log.debug('importing from db scratch')
+		let db_scratch_file = cli_args[CLI_IMPORT_DB_SCRATCH]
 		
-		import_database_scratch()
+		log.debug(`importing from db scratch file ${db_scratch_file}`)
+		
+		import_database_scratch(db_scratch_file)
 		.then(() => {
 			log.info('db scratch import succeeded')
 		})
