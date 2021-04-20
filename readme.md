@@ -480,7 +480,23 @@ I am literarily in the house &rarr; habo hel habeam **leon heki**.
 
 I am being written in the house. &rarr; habo hel habeam **leokin/leonein heki**.
 
-#### Past imperfect, Past perfect, Past participle, Past progressive
+#### Perfect in past, present, and future
+
+The perfect tense is similar to the construction of the progressive, using the `nei` passive ending instead of the `ki` active ending.
+
+I speak &rarr; habo mioki<br>
+I am speaking &rarr; habo miokin heki<br>
+I have spoken &rarr; habo miokin henei
+
+I spoke &rarr; habo miokif<br>
+I was speaking &rarr; habo miokin hekif<br>
+I had spoken &rarr; habo miokin heneif
+
+I will speak &rarr; habo miokis<br>
+I will be speaking &rarr; habo miokin hekis<br>
+I will have spoken &rarr; habo kiokin heneis
+
+#### Past imperfect, past future/predective
 
 Consider the different meanings of the following phrases:
 
@@ -489,11 +505,10 @@ English                     | Spanish               | Omino
 ----------------------------------------------------------
 happened                    | pasó                  | keikif
 used to happen              | pasaba                | ?.. son            (unknown)
-had happened                | había pasado          | ?.. hiun noki      (don't know)
 would/was going to happen   | pasaría/iba a pasar   | ?.. solio len soki (still don't know how)
 ```
 
-These complex past tenses are not yet defined.
+These tenses are not yet defined.
 
 #### Reflexive
 
