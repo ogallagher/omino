@@ -148,9 +148,17 @@ try {
 	
 			// use .env port
 			server.set('port', process.env[DOTENV_PORT])
-	
+			
 			// serve website from public/
 			server.use(express.static(PUBLIC_DIR))
+			
+			// route root path to about page
+			server.get('/', function(req,res,next) {
+				log.debug(`routing root path to /about.html`)
+				res.sendFile(`${PUBLIC_DIR}/about.html`, {
+					root: '.'
+				})
+			})
 		
 			// http server
 			server.listen(server.get('port'), on_start)
@@ -175,6 +183,17 @@ try {
 					res
 				)
 			});
+			
+			// route raw filenames to extension filenames (db endpoint skipped if already handled)
+			server.get(/\/(.+)(\.html){0}/, function(req,res,next) {
+				let filename = req.params[0]
+				let extended = `${PUBLIC_DIR}/${filename}.html`
+				
+				log.debug(`routing raw file ${filename} to ${extended}`)
+				res.sendFile(extended, {
+					root: '.'
+				})
+			})
 		}
 		else {
 			log.info('webserver not enabled; skipping')
