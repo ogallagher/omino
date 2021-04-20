@@ -1,0 +1,715 @@
+{
+	"notes": {
+		"last update": {
+			"year": 2021,
+			"month": 4,
+			"day": 20,
+			"hour": 0,
+			"minute": 0
+		},
+		"goals": [
+			"give english examples of all roots: done",
+			"some conjunctions"
+		]
+	},
+	"rel definitions": {
+		"na": ["any"],
+		"hoe": ["every"],
+		
+		"hos": ["things"],
+		"men": ["and"],
+		"fin": ["or"],
+		"fon": ["or"],
+		"hiun": ["but","however","though","while"],
+		"feun": ["but","however","though","while"],
+		"beon": ["so","therefore"],
+		"beokein": ["so","therefore"],
+		"hoe": ["everything","everyone"],
+		"hoeho": ["everything"],
+		"hoehao": ["everyone","everybody"],
+		"hoeli": ["always"],
+		"hoedia": ["every day"],
+		"hoebe": ["everywhere"],
+		"fuoli": ["never"],
+		"sneon": ["in order to","so"],
+		"lion": ["so"],
+		"liol": ["with","using","via"],
+		"neol": ["until","by"],
+		"beoki": ["come from","be from"],
+		"beomki": ["come from","be from"],
+		"beonei": ["be the origin of"],
+		"fiunei": ["not like","be dissatisfied by"],
+		"nianei": ["like","be satisfied by"],
+		"siki": ["make taller","become taller"],
+		"simki": ["make taller"],
+		"sinei": ["become taller"],
+		"maoski": ["tooth","fang"],
+		"nafo": ["anything"],
+		"nafon": ["any"],
+		"nafi": ["anything else"],
+		"nafin": ["any other"],
+		"nafolio": ["any way","anyway","anyhow"],
+		"folio": ["which way","which method"],
+		"solio": ["what way","what method"],
+		"kaofudia": ["day before yesterday"],
+		"kaosodia": ["day after tomorrow"],
+		
+		"smoi": [
+			"journey","trip","voyage"
+		],
+		"smoin": [
+			"adventurous","of travel","pioneering"
+		],
+		"smoiki": ["journey","travel","take a trip","be traveled to","travel to"],
+		"smoimki": ["journey","travel","take a trip","travel to"],
+		"smoinei": ["be traveled to"],
+		"smoikin": ["traveling","journeying","traveled to","journeyed to"],
+		"smoimkin": ["traveling","journeying"],
+		"smoinein": ["traveled to","journeyed to"],
+		"habao": ["this year","current year"],
+		"sobao": ["next year","years from now"],
+		"fubao": ["last year","years ago"],
+		
+		"hun hobos loen huki fin min hobos miki": [
+			"inanimate things are usually still, while animate things are moving"
+		],
+		"nen habeam hen heubo boki": [
+			"individuality is important in this house"
+		],
+		"habon skabo fudia hiuneif": [
+			"my request was denied yesterday"
+		],
+		"hasabo leom mun mienoki": [
+			"she teaches literature reluctantly"
+		],
+		"biun leibos hoen hom maumki": [
+			"the cold seasons freeze everything"
+		],
+		"nuil dobum miuki?": [
+			"is it snowing at the top of the mountain?"
+		],
+		"doamien buom lukim kenoiki": [
+			"please remember to take out the trash"
+		],
+		"hanebo lounm beol hane fulin louneif": [
+			"if you're old, you already aged"
+		],
+		"foli hane leuki": [
+			"when to you depart?"
+		],
+		"hanebo liukif hai kao keom?": [
+			"did you take two animals?"
+		],
+		"lien hiu konein haboms sneon bem snan lean nuki": [
+			"darken the place so we can hide more easily"
+		],
+		"liobo nui meakim nounei": [
+			"it is disproven that the method is the best one",
+			"spa:se ha refutado que el método sea el mejor"
+		],
+		"hanes bion halin neuki lion neol sodia hiu fuon hekis": [
+			"you all should plug it now so that it is not empty by tomorrow"
+		],
+		"hasabo siahaim niukif lion nuemki hom": [
+			"she tricked the bird in order to capture it"
+		],
+		"nen ma sonan sukim non sohaobo": [
+			"does anyone know how deep this water is?",
+			"spa:alguien sabe qué tan profundo es este agua?"
+		],
+		"sauki sul saim": [
+			"it is raining below the clouds",
+			"spa:llueve bajo las nubes"
+		],
+		"habo seum nianei": [
+			"i enjoy the quiet",
+			"spa:me gusta el silencio"
+		],
+		"siun hoi kuilin doeneis": [
+			"the lost tool will soon be found",
+			"spa:la herramienta perdida pronto se encontrará"
+		],
+		"sen habeams hen miahaibo fuki": [
+			"there are no fish in those houses",
+			"spa:no hay peces en esas casas"
+		],
+		"hasan lelaemo fauki fuam solil": [
+			"her brother is sick after eating",
+			"spa:su hermano está enfermo después de comer"
+		],
+		"feun laebom beoki habo": [
+			"i come from a pessimistic family",
+			"spa:vengo de una familia pesimista"
+		],
+		"sobeo hanebo huon diem fiunei": [
+			"why don't you like your own hands?",
+			"spa:por qué no te gustan las manos tuyas?"
+		],
+		"nan buas siki beol bum": [
+			"many plants grow from the ground"
+		],
+		"habos hilaems boumki": [
+			"we respect our parents"
+		],
+		"solim neol hanebo hon miahain kaom baukis?": [
+			"how long will you save that fish eye?"
+		],
+		"buebo beu, mei, fon seim heki?": [
+			"is the matter a solid, liquid, or gas?"
+		],
+		"hamen fubo habom duki": [
+			"the lack of friends saddens me"
+		],
+		"hasebos maoskim daukif maom beol": [
+			"they extracted the tooth from the mouth"
+		],
+		"deukim huki": [
+			"stop frowning"
+		],
+		"diun haobos kiu kainm noiki": [
+			"bad people think that killing is fun",
+			"spa:mala gente piensa que matar es divertido"
+		],
+		"laema fubao bakim solil kukif": [
+			"the mother died last year while sleeping",
+			"spa:la madre murió el año pasado mientras dormía"
+		],
+		"sobeo hasen smiubo keuki": [
+			"why does their foot hurt?",
+			"spa:por qué le duele el pie?"
+		],
+		"deo men nan haon loa": [
+			"love is natural and very human",
+			"spa:el amor es natural y muy humano"
+		],
+		"sneobo heki kea men han heom fakim": [
+			"the goal is to achieve a good work and life balance"
+		],
+		"hasobo len hioki feun hasebos hasom hiu naokif": [
+			"he kept yelling, but they didn't hear him"
+		],
+		"mon bebos fein doenei": [
+			"peaceful places are not easy to find"
+		],
+		"hane habof meom kan fiakis?": [
+			"would you throw me the ball?"
+		],
+		"hane sohaom mel mioki": [
+			"whom are you speaking with?"
+		],
+		"habobos niom fain loki habeam lol": [
+			"we will try to point the sound toward the house"
+		],
+		"laobo lien leonei, fin mionei, fin lanei, fin nafin folionei": [
+			"art can be written, or spoken, or sung, or done any other way"
+		],
+		"liobos son hiun neokeibos mean": [
+			"the methods are unknown, but the results are good"
+		],
+		"feaki halil hanebo hioki hon nel habon naomm": [
+			"it's annoying when you yell so close to my ear"
+		],
+		"smoibo boki snan neom": [
+			"the journey is more important than the destination"
+		],
+		"la len huom nioki": [
+			"the music sounds like a whisper"
+		],
+		"habon laemo mian lio noki": [
+			"my father knows how to swim"
+		],
+		"heki den habon saom": [
+			"it is touching my nose"
+		],
+		"hanebo sen sion buom saoki?": [
+			"do you smell that smelly garbage over there?"
+		],
+		"fohein luihaibo kuen?": [
+			"which kind of snake is dangerous?"
+		],
+		"main haobo nan fiom mioki": [
+			"the young person asks many questions"
+		],
+		"sdion baobos meol don baom baoki": [
+			"small planets orbit around large planets"
+		],
+		"hilaebos noeki kelaems beakin biom": [
+			"parents have the responsibility to protect their children"
+		],
+		"laeman deo men laemon libo noin": [
+			"mother nature and father time are imaginary"
+		],
+		"dian dei dion": [
+			"the sun's heat is strong"
+		],
+		"miu die keon diam solil koneif": [
+			"the snow appeared after five days"
+		],
+		"kea habaon lean henei": [
+			"work this year has been easy"
+		],
+		"hasan liabo feaki men liakin hiu lienei": [
+			"her throat itches and she cannot swallow"
+		],
+		"kenoin nuabo mel doim nieki": [
+			"recalled experiences bring emotions with them",
+			"spa:experiencia recordada lleva consigo las emociones"
+		],
+		"habofs noan kuobos mienonei": [
+			"we are taught the parts of the human body"
+		],
+		"haboms neaki men mekin dao": [
+			"thanks for supporting and accompanying us"
+		],
+		"habobo lein sfim nianei": [
+			"i enjoy the changing of seasons"
+		],
+		"dei men biun sas saki beol fin loms": [
+			"hot and cold air blow from different directions"
+		],
+		"hiun hoaki haims": [
+			"do not feed the animals"
+		],
+		"haomo men haoma haom heki": [
+			"men and women are humans"
+		],
+		"sdion keos lean kenoinei": [
+			"small numbers are easily remembered"
+		],
+		"haobos huen sdem halin noeki": [
+			"people have weak arms now"
+		],
+		"dea hean": [
+			"smiling is healthy"
+		],
+		"hasobo kao keo baom halil keakim hiakis": [
+			"he will agree to work for two years"
+		],
+		"hasebos diedominakao daems kaofudia miekif": [
+			"they gave five hundred eighty two hugs the day before yesterday"
+		],
+		"daes men muams mieki": [
+			"give hugs and kisses"
+		],
+		"hames moam bion mioki": [
+			"friends should tell the truth"
+		],
+		"sua suen liem heki": [
+			"invisibility is an unusual ability"
+		],
+		"seas baom neol sian liokin": [
+			"aliens arrive on Earth by flying"
+		],
+		"hoehaobo halin hoakin heki": [
+			"everyone is eating now"
+		],
+		"lelaema baem boakim kaki": [
+			"the sister wants to be in charge of organizing"
+		],
+		"hoen beaneis smiubos": [
+			"the feet will be fully protected"
+		],
+		"habobo bia lien laom hekim naiki": [
+			"i believe clothing can be art"
+		],
+		"hoibos loun haoms daki": [
+			"tools make old people happy"
+		],
+		"huosems doaki hoedia": [
+			"they help each other every day"
+		],
+		"nan kelaes kiam kaki?": [
+			"do many children want to jump?"
+		],
+		"saibos noeki kuams?": [
+			"do clouds have holes?"
+		],
+		"koan sin hao neikim": [
+			"hopefully the tall people are idle"
+		],
+		"habeam hel hiebo funei": [
+			"the house has no furniture"
+		],
+		"snibo moe men luin": [
+			"the surface is smooth and slippery"
+		],
+		"lelaebos hiu hoeli leki": [
+			"siblings are not always similar"
+		],
+		"huihao solim hel loeneis": [
+			"robots will be normal in the future"
+		],
+		"soe mea fin diun lien heki": [
+			"luck can be good or bad"
+		],
+		"sae naen": [
+			"freedom is attractive"
+		],
+		"sai siem hel sieki": [
+			"clouds float in the sky"
+		],
+		"smikibo feki": [
+			"kicking is tiring"
+		],
+		"fuen haos hiu faiki": [
+			"lazy people don't try"
+		],
+		"buibo fien henei": [
+			"business has been rough"
+		],
+		"boen hos loen buen": [
+			"dense things are normally heavy"
+		],
+		"halil hiu mikim sohao boim bieki?": [
+			"who controls the vehicle when it's not moving?"
+		],
+		"meobo nin duem heki": [
+			"the sphere is a simple shape"
+		],
+		"huin buam doeki": [
+			"find the artificial plant"
+		],
+		"kenoi ken noim heki": [
+			"memory is repeated thought"
+		],
+		"haobo huom kaoki hel koem": [
+			"one sees oneself in a reflection"
+		],
+		"hu keon boibos kiekif dui men bin": [
+			"four vehicles crashed chaotically and destructively"
+		],
+		"fuim hikibo daim liol feiki": [
+			"creating weapons with fire is difficult"
+		],
+		"bei keiki": [
+			"the moment happens"
+		],
+		"meibo heun lon muiki": [
+			"the liquid flows in one direction"
+		],
+		"huobo fioki sona lin kai heneism": [
+			"i wonder how long the fun will last"
+		],
+		"doim kokibo haboms loiki": [
+			"showing emotions makes us vulnerable"
+		],
+		"hases smekif hao sbun skoi hekim naikinm": [
+			"they met someone who secretly believes that rainbows exist"
+		],
+		"sibun snebo suiki, beokein hanebo bion hiu smiuki sinan nen": [
+			"the edge of the hill is steep, so you should not step too close"
+		],
+		"siahaibos ful feim neokein siaki beokein nan soin": [
+			"birds fly without difficulty because they are so light"
+		],
+		"miahais haom fil smaki": [
+			"fish breathe differently from humans"
+		],
+		"habon hame smaim daineim foiki": [
+			"my friend is afraid of being burned by steam"
+		],
+		"di ham neokein bon beom heki": [
+			"light is an important cause of life"
+		],
+		"ki deisnon, nei fusnon": [
+			"action is spicy; idleness is bland"
+		],
+		"bubo kuin beuki halil sdeuneim": [
+			"the ground solidifies quickly when it's dry"
+		],
+		"skoe hiu koin": [
+			"the moon is not colorful"
+		],
+		"skin hoibos lel fuim lien hoinei": [
+			"sharp tools can be used as weapons"
+		],
+		"hoabo snan diun snoki mel sfun masnom": [
+			"food tastes worse with less salt"
+		],
+		"koibos sfun han hel snum": [
+			"colors are less vibrant in shadow"
+		],
+		"snaokibo nuin bon keim heki hadia": [
+			"licking is the main event today"
+		],
+		"nen minobo snan snoenei habom": [
+			"this language is becoming increasingly familiar to me"
+		]
+	},
+	"rel examples": {
+		"hu": ["hu keon boibos kiekif dui men bin","hun hobos loen huki fin min hobos miki","deukim huki"],
+		"heu": ["nen habeam hen heubo boki","meibo heun lon muiki"],
+		"hiu": ["skoe hiu koin","fuen haos hiu faiki","lelaebos hiu hoeli leki","hiun hoaki haims","hasan liabo feaki men liakin hiu lienei","liobos son hiun neokeibos mean","habon skabo fudia hiuneif","lien hiu konein haboms sneon bem snan lean nuki","hasobo len hioki feun hasebos hasom hiu naokif"],
+		"mu": ["hasabo leom mun mienoki"],
+		"mau": ["biun leibos hoen hom maumki"],
+		"miu": ["nuil dobum miuki?","miu die keon diam solil koneif"],
+		"lu": ["doamien buom lukim kenoiki"],
+		"lou": ["hoibos loun haoms daki","hanebo lounm beol hane fulin louneif"],
+		"leu": ["foli hane leuki"],
+		"liu": ["hanebo liukif hai kao keom?"],
+		"nu": ["lien hiu konein haboms sneon bem snan lean nuki"],
+		"nou": ["liobo nui meakim nounei"],
+		"neu": ["hanes bion halin neuki lion neol sodia hiu fuon hekis"],
+		"niu": ["hasabo siahaim niukif lion nuemki hom"],
+		"su": ["nen ma sonan sukim non sohaobo","sauki sul saim"],
+		"sau": ["sauki sul saim"],
+		"seu": ["habo seum nianei"],
+		"siu": ["siun hoi kuilin doeneis"],
+		"fu": ["siahaibos ful feim neokein siaki beokein nan soin","habeam hel hiebo funei","sen habeams hen miahaibo fuki","hamen fubo habom duki"],
+		"fudia": ["habon skabo fudia hiuneif"],
+		"fubao": ["laema fubao bakim solil kukif"],
+		"fuli": ["hanebo lounm beol hane fulin louneif"],
+		"fusno": ["ki deisnon, nei fusnon"],
+		"fau": ["hasan lelaemo fauki fuam solil"],
+		"feu": ["feun laebom beoki habo","hasobo len hioki feun hasebos hasom hiu naokif"],
+		"fiu": ["sobeo hanebo huon diem fiunei"],
+		"bu": ["nan buas siki beol bum","bubo kuin beuki halil sdeuneim"],
+		"bou": ["habos hilaems boumki"],
+		"bau": ["solim neol hanebo hon miahain kaom baukis?"],
+		"beu": ["bubo kuin beuki halil sdeuneim","buebo beu, mei, fon seim heki?"],
+		"biu": ["biun leibos hoen hom maumki","dei men biun sas saki beol fin loms"],
+		"du": ["hamen fubo habom duki"],
+		"dau": ["hasebos maoskim daukif maom beol"],
+		"deu": ["deukim huki"],
+		"diu": ["hoabo snan diun snoki mel sfun masnom","soe mea fin diun lien heki","diun haobos kiu kainm noiki"],
+		"ku": ["laema fubao bakim solil kukif"],
+		"keu": ["sobeo hasen smiubo keuki"],
+		"kiu": ["diun haobos kiu kainm noiki"],
+
+		"ho": ["hun hobos loen huki fin min hobos miki","hasabo siahaim niukif lion nuemki hom","feaki halil hanebo hioki hon nel habon naomm"],
+		"huo": ["huobo fioki sona lin kai heneism","haobo huom kaoki hel koem","la len huom nioki","sobeo hanebo huon diem fiunei"],
+		"huose": ["huosems doaki hoedia"],
+		"hao": ["fuen haos hiu faiki","hoibos loun haoms daki","diun haobos kiu kainm noiki","deo men nan haon loa","haomo men haoma haom heki"],
+		"haomo": ["haomo men haoma haom heki"],
+		"haoma": ["haomo men haoma haom heki"],
+		"heo": ["sneobo heki kea men han heom fakim"],
+		"hio": ["hasobo len hioki feun hasebos hasom hiu naokif","feaki halil hanebo hioki hon nel habon naomm"],
+		"mo": ["mon bebos fein doenei"],
+		"mao": ["hasebos maoskim doukif maom beol"],
+		"maoski": ["hasebos maoskim doukif maom beol"],
+		"meo": ["meobo nin duem heki","hane habof meom kan fiakis?","sdion baobos meol don baom baoki"],
+		"mio": ["hames moam bion mioki","main haobo nan fiom mioki","hane sohaom mel mioki","laobo lien leonei, fin mionei, fin lanei, fin nafin folionei"],
+		"lo": ["meibo heun lon muiki","habobos niom fain loki habeam lol","dei men biun sas saki beol fin loms"],
+		"lao": ["habobo bia lien laom hekim naiki","laobo lien leonei, fin mionei, fin lanei, fin nafin folionei"],
+		"leo": ["hasabo leom mun mienoki","laobo lien leonei, fin mionei, fin lanei, fin nafin folionei"],
+		"lio": ["fuim hikibo daim liol feiki","seas baom neol sian liokin","habon laemo mian lio noki","liobos son hiun neokeibos mean","liobo nui meakim nounei","hanes bion halin neuki lion neol sodia hiu fuon hekis","hasabo siahaim niukif lion nuemki hom"],
+		"no": ["habon laemo mian lio noki","nen ma sonan sukim non sohaobo"],
+		"nao": ["hasobo len hioki feun hasebos hasom hiu naokif","feaki halil hanebo hioki hon nel habon naomm"],
+		"neo": ["seas baom neol sian liokin","smoibo boki snan neom","hanes bion halin neuki lion neol sodia hiu fuon hekis","solim neol hanebo hon miahain kaom baukis?"],
+		"neokei": ["di ham neokein bon beom heki","siahaibos ful feim neokein siaki beokein nan soin","liobos son hiun neokeibos mean"],
+		"nio": ["la len huom nioki","habobos niom fain loki habeam lol"],
+		"so": ["sobeo hasen smiubo keuki","liobos son hiun neokeibos mean"],
+		"soli": ["huihao solim hel loeneis","miu die keon diam solil koneif","hasan lelaemo fauki fuam solil","solim neol hanebo hon miahain kaom baukis?","laema fubao bakim solil kukif"],
+		"sodia": ["hanes bion halin neuki lion neol sodia hiu fuon hekis"],
+		"sona": ["huobo fioki sona lin kai heneism","nen ma sonan sukim non sohaobo"],
+		"sohao": ["halil hiu mikim sohao boim bieki?","nen ma sonan sukim non sohaobo","hane sohaom mel mioki"],
+		"sao": ["heki den habon saom","hanebo sen sion buom saoki?"],
+		"sio": ["hanebo sen sion buom saoki?"],
+		"fo": ["buebo beu, mei, fon seim heki?","fohein luihaibo kuen?"],
+		"foli": ["foli hane leuki"],
+		"folio": ["laobo lien leonei, fin mionei, fin lanei, fin nafin folionei"],
+		"fuo": ["hanes bion halin neuki lion neol sodia hiu fuon hekis"],
+		"fio": ["huobo fioki sona lin kai heneism","main haobo nan fiom mioki"],
+		"bo": ["snaokibo nuin bon keim heki hadia","nen habeam hen heubo boki","smoibo boki snan neom"],
+		"buo": ["doamien buom lukim kenoiki","hanebo sen sion buom saoki?"],
+		"bao": ["seas baom neol sian liokin","sdion baobos meol don baom baoki"],
+		"beo": ["di ham neokein bon beom heki","hanebo lounm beol hane fulin louneif","feun laebom beoki habo","dei men biun sas saki beol fin loms"],
+		"beokei": ["siahaibos ful feim neokein siaki beokein nan soin","sibun snebo suiki, beokein hanebo bion hiu smiuki sinan nen"],
+		"bio": ["sibun snebo suiki, beokein hanebo bion hiu smiuki sinan nen","hames moam bion mioki","hanes bion halin neuki lion neol sodia hiu fuon hekis","hilaebos noeki kelaems beakin biom"],
+		"do": ["sdion baobos meol don baom baoki"],
+		"dobu": ["nuil dobum miuki?"],
+		"dao": ["haboms neaki men mekin dao"],
+		"deo": ["deo men nan haon loa","laeman deo men laemon libo noin"],
+		"dio": ["dian dei dion"],
+		"ko": ["doim kokibo haboms loiki","lien hiu konein haboms sneon bem snan lean nuki","miu die keon diam solil koneif"],
+		"kuo": ["habofs noan kuobos mienonei"],
+		"kao": ["haobo huom kaoki hel koem","hasobo kao keo baom halil keakim hiakis","hanebo liukif hai kao keom?","solim neol hanebo hon miahain kaom baukis?"],
+		"kaofudia": ["hasebos diedominakao daems kaofudia miekif"],
+		"keo": ["hu keon boibos kiekif dui men bin","hasobo kao keo baom halil keakim hiakis","hanebo liukif hai kao keom?","sdion keos lean kenoinei"],
+		
+		"ha": ["koibos sfun han hel snum","sneobo heki kea men han heom fakim"],
+		"habo": ["nen minobo snan snoenei habom","doim kokibo haboms loiki","haboms neaki men mekin dao","habofs noan kuobos mienonei","habon skabo fudia hiuneif","hamen fubo habom duki","hane habof meom kan fiakis?"],
+		"hane": ["hanebo lounm beol hane fulin beoneif","foli hane leuki","hanebo liukif hai kao keom?","habos hilaems boumki"],
+		"hasa": ["hasan liabo feaki men liakin hiu lienei","hasabo leom mun mienoki","hasabo siahaim niukif lion nuemki hom"],
+		"haso": ["hasobo kao keo baom halil keakim hiakis","hasobo len hioki feun hasebos hasom hiu naokif"],
+		"habea": ["habeam hel hiebo funei","nen habeam hen heubo boki","habobos niom fain loki habeam lol"],
+		"hame": ["habon hame smaim daineim foiki","hamen fubo habom duki","hames moam bion mioki"],
+		"hase": ["hases smekif hao sbun skoi hekim naikinm","hasebos maoskim doukif maom beol","sobeo hasen smiubo keuki"],
+		"habao": ["kea habaon lean henei"],
+		"hali": ["bubo kuin beuki halil sdeuneim","halil hiu mikim sohao boim bieki?","haobos huen sdem halin noeki","hoehaobo halin hoakin heki"],
+		"hadia": ["snaokibo nuin bon keim heki hadia"],
+		"hoa": ["hoabo snan diun snoki mel sfun masnom","hiun hoaki haims","hoehaobo halin hoakin heki"],
+		"hea": ["dea hean"],
+		"hia": ["hasobo kao keo baom halil keakim hiakis"],
+		"ma": ["nen ma sonan sukim non sohaobo"],
+		"masno": ["hoabo snan diun snoki mel sfun masnom"],
+		"mua": ["daes men muams mieki"],
+		"moa": ["hames moam bion mioki"],
+		"mea": ["soe mea fin diun lien heki","liobo nui meakim nounei","liobos son hiun neokeibos mean"],
+		"mia": ["habon laemo mian lio noki"],
+		"miahai": ["miahais haom fil smaki","sen habeams hen miahaibo fuki","solim neol hanebo hon miahain kaom baukis?"],
+		"la": ["la len huom nioki","laobo lien leonei, fin mionei, fin lanei, fin nafin folionei"],
+		"loa": ["deo men nan haon loa"],
+		"lea": ["kea habaon lean henei","sdion keos lean kenoinei"],
+		"lia": ["hasan liabo feaki men liakin hiu lienei"],
+		"na": ["nan kelaes kiam kaki?","siahaibos ful feim neokein siaki beokein nan soin"],
+		"nafi": ["laobo lien leonei, fin mionei, fin lanei, fin nafin folionei"],
+		"nua": ["kenoin nuabo mel doim nieki"],
+		"noa": ["habofs noan kuobos mienonei"],
+		"nea": ["haboms neaki men mekin dao"],
+		"nia": ["habobo lein sfim nianei","habo seum nianei"],
+		"sa": ["dei men biun sas saki beol fin loms"],
+		"sua": ["sua suen liem heki"],
+		"sea": ["seas baom neol sian liokin"],
+		"sia": ["siahaibos ful feim neokein siaki beokein nan soin","seas baom neol sian liokin"],
+		"siahai": ["siahaibos ful feim neokein siaki beokein nan soin","hasabo siahaim niukif lion nuemki hom"],
+		"fa": ["sneobo heki kea men han heom fakim"],
+		"fua": ["hasan lelaemo fauki fuam solil"],
+		"fea": ["hasan liabo feaki men liakin hiu lienei"],
+		"fia": ["hane habof meom kan fiakis?"],
+		"ba": ["laema fubao bakim solil kukif"],
+		"bua": ["huin buam doeki","nan buas siki beol bum"],
+		"boa": ["lelaema baem boakim kaki"],
+		"bea": ["hilaebos noeki kelaems beakin biom","hoen beaneis smiubos"],
+		"bia": ["habobo bia lien laom hekim naiki"],
+		"da": ["hoibos loun haoms daki"],
+		"doa": ["huosems doaki hoedia"],
+		"doamie": ["doamien buom lukim kenoiki"],
+		"dea": ["dea hean"],
+		"dia": ["dian dei dion","miu die keon diam solil koneif"],
+		"ka": ["hane habof meom kan fiakis?","lelaema baem boakim kaki","nan kelaes kiam kaki?"],
+		"kua": ["saibos noeki kuams?"],
+		"koa": ["koan sin hao neikim"],
+		"kea": ["hasobo kao keo baom halil keakim hiakis","sneobo heki kea men han heom fakim","kea habaon lean henei"],
+		"kia": ["nan kelaes kiam kaki?"],
+		
+		"he": ["di ham neokein bon beom heki","huobo fioki sona lin kai heneism","haobo huom kaoki hel koem","buibo fien henei","sai siem hel sieki","huihao solim hel loeneis","habeam hel hiebo funei","habobo bia lien laom hekim naiki","hoehaobo halin hoakin heki","sua suen liem heki","haomo men haoma haom heki","sneobo heki kea men han heom fakim","heki den habon saom","kea habaon lean henei"],
+		"hue": ["haobos huen sdem halin noeki"],
+		"hoe": ["biun leibos hoen hom maumki","hoen beaneis smiubos"],
+		"hoehao": ["hoehaobo halin hoakin heki"],
+		"hoedia": ["huosems doaki hoedia"],
+		"hoeli": ["lelaebos hiu hoeli leki"],
+		"hie": ["habeam hel hiebo funei"],
+		"me": ["hoabo snan diun snoki mel sfun masnom","hu keon boibos kiekif dui men bin","snibo moe men luin","daes men muams mieki","haboms neaki men mekin dao","kenoin nuabo mel doim nieki","deo men nan haon loa","sneobo heki kea men han heom fakim","hane sohaom mel mioki"],
+		"moe": ["snibo moe men luin"],
+		"mie": ["daes men muams mieki","hasebos diedominakao daems kaofudia miekif"],
+		"mieno": ["hasabo leom mun mienoki"],
+		"le": ["skin hoibos lel fuim lien hoinei","lelaebos hiu hoeli leki","la len huom nioki","hasobo len hioki feun hasebos hasom hiu naokif"],
+		"lelae": ["lelaebos hiu hoeli leki"],
+		"lelaemo": ["hasan lelaemo fauki fuam solil"],
+		"lelaema": ["lelaema baem boakim kaki"],
+		"loe": ["boen hos loen buen","huihao solim hel loeneis","hun hobos loen huki fin min hobos miki"],
+		"lae": ["feun laebom beoki habo"],
+		"laema": ["laema fubao bakim solil kukif","laeman deo men laemon libo noin"],
+		"laemo": ["habon laemo mian lio noki","laeman deo men laemon libo noin"],
+		"lie": ["skin hoibos lel fuim lien hoinei","soe mea fin diun lien heki","habobo bia lien laom hekim naiki","sua suen liem heki","hasan liabo feaki men liakin hiu lienei","lien hiu konein haboms sneon bem snan lean nuki","laobo lien leonei, fin mionei, fin lanei, fin nafin folionei"],
+		"ne": ["nen minobo snan snoenei habom","feaki halil hanebo hioki hon nel habon naomm","sibun snebo suiki, beokein hanebo bion hiu smiuki sinan nen"],
+		"nue": ["hasabo siahaim niukif lion nuemki hom"],
+		"noe": ["hilaebos noeki kelaems beakin biom","haobos huen sdem halin noeki","saibos noeki kuams?"],
+		"nae": ["sae naen"],
+		"nie": ["kenoin nuabo mel doim nieki"],
+		"se": ["sen habeams hen miahaibo fuki","hanebo sen sion buom saoki?"],
+		"sue": ["sua suen liem heki"],
+		"soe": ["soe mea fin diun lien heki"],
+		"sae": ["sae naen"],
+		"sie": ["sai siem hel sieki"],
+		"fe": ["smikibo feki"],
+		"fue": ["fuen haos hiu faiki"],
+		"fie": ["buibo fien henei"],
+		"be": ["lien hiu konein haboms sneon bem snan lean nuki","mon bebos fein doenei"],
+		"bue": ["buebo beu, mei, fon seim heki?","boen hos loen buen"],
+		"boe": ["boen hos loen buen"],
+		"bae": ["lelaema baem boakim kaki"],
+		"bie": ["halil hiu mikim sohao boim bieki?"],
+		"de": ["heki den habon saom"],
+		"due": ["meobo nin duem heki"],
+		"doe": ["huin buam doeki","siun hoi kuilin doeneis","mon bebos fein doenei"],
+		"dae": ["daes men muams mieki","hasebos diedominakao daems kaofudia miekif"],
+		"die": ["sobeo hanebo huon diem fiunei","miu die keon diam solil koneif"],
+		"ke": ["kenoi ken noim heki"],
+		"kelae": ["hilaebos noeki kelaems beakin biom","nan kelaes kiam kaki?"],
+		"kenoi": ["kenoi ken noim heki","kenoin nuabo mel doim nieki","sdion keos lean kenoinei"],
+		"kue": ["fohein luihaibo kuen?"],
+		"koe": ["haobo huom kaoki hel koem","hasebos diedominakao daems kaofudia miekif"],
+		"kie": ["hu keon boibos kiekif dui men bin"],
+		
+		"hi": ["fuim hikibo daim liol feiki"],
+		"hilae": ["habos hilaems boumki","hilaebos noeki kelaems beakin biom"],
+		"hui": ["huin buam doeki"],
+		"huihao": ["huihao solim hel loeneis"],
+		"hoi": ["skin hoibos lel fuim lien hoinei","hoibos loun haoms daki","siun hoi kuilin doeneis"],
+		"hai": ["hanebo liukif hai kao keom?","hiun hoaki haims"],
+		"hei": ["fohein luihaibo kuen?"],
+		"mi": ["halil hiu mikim sohao boim bieki?","hun hobos loen huki fin min hobos miki"],
+		"mino": ["nen minobo snan snoenei habom"],
+		"mui": ["meibo heun lon muiki"],
+		"mai": ["main haobo nan fiom mioki"],
+		"mei": ["buebo beu, mei, fon seim heki?","meibo heun lon muiki"],
+		"li": ["huobo fioki sona lin kai heneism","laeman deo men laemon libo noin"],
+		"lui": ["snibo moe men luin"],
+		"luihai": ["fohein luihaibo kuen?"],
+		"loi": ["doim kokibo haboms loiki"],
+		"lei": ["biun leibos hoen hom maumki","habobo lein sfim nianei"],
+		"ni": ["meobo nin duem heki"],
+		"nui": ["snaokibo nuin bon keim heki hadia","nuil dobum miuki?"],
+		"noi": ["kenoi ken noim heki","diun haobos kiu kainm noiki","laeman deo men laemon libo noin"],
+		"nai": ["hases smekif hao sbun skoi hekim naikinm","habobo bia lien laom hekim naiki"],
+		"nei": ["koan sin hao neikim","ki deisnon, nei fusnon"],
+		"si": ["nan buas siki beol bum","koan sin hao neikim"],
+		"sina": ["sibun snebo suiki, beokein hanebo bion hiu smiuki sinan nen"],
+		"sibu": ["sibun snebo suiki, beokein hanebo bion hiu smiuki sinan nen"],
+		"sui": ["sibun snebo suiki, beokein hanebo bion hiu smiuki sinan nen"],
+		"soi": ["siahaibos ful feim neokein siaki beokein nan soin"],
+		"sai": ["sai siem hel sieki","sauki sul saim","saibos noeki kuams?"],
+		"sei": ["buebo beu, mei, fon seim heki?"],
+		"fi": ["miahais haom fil smaki","soe mea fin diun lien heki","dei men biun sas saki beol fin loms"],
+		"fui": ["skin hoibos lel fuim lien hoinei","fuim hikibo daim liol feiki"],
+		"foi": ["habon hame smaim daineim foiki"],
+		"fai": ["fuen haos hiu faiki"],
+		"fei": ["siahaibos ful feim neokein siaki beokein nan soin","mon bebos fein doenei","fuim hikibo daim liol feiki"],
+		"bi": ["hu keon boibos kiekif dui men bin"],
+		"bui": ["buibo fien henei"],
+		"boi": ["hu keon boibos kiekif dui men bin","halil hiu mikim sohao boim bieki?"],
+		"bei": ["bei keiki"],
+		"di": ["di ham neokein bon beom heki"],
+		"dui": ["hu keon boibos kiekif dui men bin"],
+		"doi": ["doim kokibo haboms loiki","kenoin nuabo mel doim nieki"],
+		"dai": ["habon hame smaim daineim foiki","fuim hikibo daim liol feiki"],
+		"dei": ["dian dei dion","dei men biun sas saki beol fin loms"],
+		"deisno": ["ki deisnon, nei fusnon"],
+		"ki": ["ki deisnon, nei fusnon"],
+		"kui": ["bubo kuin beuki halil sdeuneim"],
+		"kuili": ["siun hoi kuilin doeneis"],
+		"koi": ["koibos sfun han hel snum","skoe hiu koin"],
+		"kai": ["huobo fioki sona lin kai heneism","diun haobos kiu kainm noiki"],
+		"kei": ["snaokibo nuin bon keim heki hadia","bei keiki"],
+		
+		"smiu": ["sibun snebo suiki, beokein hanebo bion hiu smiuki sinan nen","sobeo hasen smiubo keuki","hoen beaneis smiubos"],
+		"snu": ["koibos sfun han hel snum"],
+		"sfu": ["koibos sfun han hel snum","hoabo snan diun snoki mel sfun masnom"],
+		"sbu": ["hases smekif hao sbun skoi hekim naikinm"],
+		"sdeu": ["bubo kuin beuki halil sdeuneim"],
+		"sno": ["hoabo snan diun snoki mel sfun masnom"],
+		"snao": ["snaokibo nuin bon keim heki hadia"],
+		"sneo": ["sneobo heki kea men han heom fakim"],
+		"sdio": ["sdion baobos meol don baom baoki","sdion keos lean kenoinei"],
+
+		"sma": ["miahais haom fil smaki"],
+		"sna": ["nen minobo snan snoenei habom","hoabo snan diun snoki mel sfun masnom","smoibo boki snan neom"],
+		"ska": ["habon skabo fudia hiuneif"],
+		
+		"sme": ["hases smekif hao sbun skoi hekim naikinm"],
+		"sne": ["sibun snebo suiki, beokein hanebo bion hiu smiuki sinan nen"],
+		"snoe": ["nen minobo snan snoenei habom"],
+		"sde": ["haobos huen sdem halin noeki"],
+		"skoe": ["skoe hiu koin"],
+		
+		"smi": ["smikibo feki"],
+		"smoi": ["smoibo boki snan neom"],
+		"smai": ["habon hame smaim daineim foiki"],
+		"sni": ["snibo moe men luin"],
+		"sfi": ["habobo lein sfim nianei"],
+		"ski": ["skin hoibos lel fuim lien hoinei"],
+		"skoi": ["hases smekif hao sbun skoi hekim naikinm"]
+	}
+}

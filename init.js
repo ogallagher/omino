@@ -49,7 +49,8 @@ const DB_SCRATCH_FILE_DEFAULT = `${DOCS_DIR}/database.json`
 const CLI_LOG_LEVEL = 'logging'
 const CLI_COMPILE = 'compile'
 const CLI_IMPORT_ISO_LANGS = 'import-iso-langs'
-const CLI_IMPORT_DB_SCRATCH = 'import-db-scratch'
+const CLI_IMPORT_DB_SCRATCH = 'db-scratch-file'
+const CLI_IMPORT_DB_SCRATCH_BOOL = 'import-db-scratch'
 
 const LANG_ENGLISH = 'eng'
 const LANG_SPANISH = 'spa'
@@ -91,10 +92,16 @@ function parse_cli_args() {
 			description: `Import language codes from ${ISO_LANGS_FILE} into the database. This should only be done once.`,
 			default: false
 		})
+		.option(CLI_IMPORT_DB_SCRATCH_BOOL, {
+			type: 'boolean',
+			description: `Import all scratch-db contents into the database. This should only be done once.`,
+			default: false
+		})
 		.option(CLI_IMPORT_DB_SCRATCH, {
+			alias: 'd',
 			type: 'string',
 			default: DB_SCRATCH_FILE_DEFAULT,
-			description: `Import all scratch-db contents from the the given file into the database. This should only be done once.`
+			description: `Specify path to the scratch-db file.`
 		})
 		.help()
 		.alias('help','h')
@@ -524,7 +531,7 @@ function import_database_scratch(db_scratch_file) {
 				}
 			
 				// insert omino roots
-				if (db_scratch.roots.includes(entry)) {
+				if (db_scratch.hasOwnProperty('roots') && db_scratch['roots'].includes(entry)) {
 					entry_str.root_type = get_root_type(entry_str.value, db_scratch)
 					
 					promises.push(
@@ -585,164 +592,168 @@ function import_database_scratch(db_scratch_file) {
 			}
 		}
 		
-		for (let entry in db_scratch['rel examples']) {
-			let examples = db_scratch['rel examples'][entry]
-			log.debug(`importing ${entry} with ${examples.length} examples`)
+		if (db_scratch.hasOwnProperty('rel examples')) {
+			for (let entry in db_scratch['rel examples']) {
+				let examples = db_scratch['rel examples'][entry]
+				log.debug(`importing ${entry} with ${examples.length} examples`)
 			
-			let entry_str = parse_db_scratch_string(entry, LANG_OMINO)
-			// assuming example entry already in strings
+				let entry_str = parse_db_scratch_string(entry, LANG_OMINO)
+				// assuming example entry already in strings
 			
-			for (let example of examples) {
-				// insert example into strings
-				let ex_str = parse_db_scratch_string(example, LANG_OMINO)
-				ex_str.correct = true
-				
-				// insert example into strings and examples
-				promises.push(
-					db_server.get_query('insert_example', ex_str, false)
-					.then(function(action) {
-						return new Promise(function(resolve) {
-							if (action.sql) {
-								db_server.send_query(action.sql)
-								.then(function() {
-									log.info(`added ex ${entry_str.value}`)
-								})
-								.catch(function(err) {
-					  				log.error(`error in ex insert: ${err} for ${entry_str.value}`)
-									fails++
-								})
-								.finally(function() {
-									// insert entry-example into rel examples
-									db_server.get_query(
-										'insert_rel_example', 
-										{
-											entry_val: entry_str.value,
-											entry_lang: entry_str.language,
-											ex_val: ex_str.value,
-											ex_lang: ex_str.language
-										},
-										false
-									)
-									.then(function(action) {
-										if (action.sql) {
-											return db_server.send_query(action.sql)
-											.then(function(data) {
-												log.info(`[${entry_str.value}:${ex_str.value}] --> ${JSON.stringify(data)}`)
-											})
-											.catch(function(err) {
-												log.error(`error in rel ex insert ${err} for ${entry_str.value}=${ex_str.value}`)
-												fails++
-											})
-										}
-										else {
-											log.error(`failed to compile sql for rel ex ${ex_str.value}`)
-											fails++
-										}
+				for (let example of examples) {
+					// insert example into strings
+					let ex_str = parse_db_scratch_string(example, LANG_OMINO)
+					ex_str.correct = true
+					
+					// insert example into strings and examples
+					promises.push(
+						db_server.get_query('insert_example', ex_str, false)
+						.then(function(action) {
+							return new Promise(function(resolve) {
+								if (action.sql) {
+									db_server.send_query(action.sql)
+									.then(function() {
+										log.info(`added ex ${entry_str.value}`)
 									})
 									.catch(function(err) {
-										log.error(`conversion from endpoint to sql failed: ${err}`)
+						  				log.error(`error in ex insert: ${err} for ${entry_str.value}`)
 										fails++
 									})
-									.finally(resolve)
-								})
-							}
-							else {
-								log.error(`failed to compile sql for ex insert ${ex_str.value}`)
-								fails++
-								resolve()
-							}
+									.finally(function() {
+										// insert entry-example into rel examples
+										db_server.get_query(
+											'insert_rel_example', 
+											{
+												entry_val: entry_str.value,
+												entry_lang: entry_str.language,
+												ex_val: ex_str.value,
+												ex_lang: ex_str.language
+											},
+											false
+										)
+										.then(function(action) {
+											if (action.sql) {
+												return db_server.send_query(action.sql)
+												.then(function(data) {
+													log.info(`[${entry_str.value}:${ex_str.value}] --> ${JSON.stringify(data)}`)
+												})
+												.catch(function(err) {
+													log.error(`error in rel ex insert ${err} for ${entry_str.value}=${ex_str.value}`)
+													fails++
+												})
+											}
+											else {
+												log.error(`failed to compile sql for rel ex ${ex_str.value}`)
+												fails++
+											}
+										})
+										.catch(function(err) {
+											log.error(`conversion from endpoint to sql failed: ${err}`)
+											fails++
+										})
+										.finally(resolve)
+									})
+								}
+								else {
+									log.error(`failed to compile sql for ex insert ${ex_str.value}`)
+									fails++
+									resolve()
+								}
+							})
 						})
-					})
-					.catch(function(err) {
-						log.error(`conversion from endpoint to sql failed: ${err}`)
-					})
-				)
+						.catch(function(err) {
+							log.error(`conversion from endpoint to sql failed: ${err}`)
+						})
+					)
+				}
 			}
 		}
 		
-		for (let entry in db_scratch['homophones']) {
-			// insert one and two into strings
-			let one = parse_db_scratch_string(entry, LANG_OMINO)
-			let two = parse_db_scratch_string(db_scratch['homophones'][entry], LANG_OMINO)
+		if (db_scratch.hasOwnProperty('homophones')) {
+			for (let entry in db_scratch['homophones']) {
+				// insert one and two into strings
+				let one = parse_db_scratch_string(entry, LANG_OMINO)
+				let two = parse_db_scratch_string(db_scratch['homophones'][entry], LANG_OMINO)
 			
-			let hstr_promises = [
-				db_server.get_query('insert_string',one,false)
-				.then(function(action) {
-					if (action.sql) {
-						return db_server.send_query(action.sql)
-						.then(function() {
-							log.info(`inserted homophone string ${one.value}`)
-						})
-						.catch(function(err) {
-							log.error(`error in homophone string insert: ${err}`)
-						})
-					}
-					else {
-						log.error(`failed to compile sql from homophone str insert of ${one.value}`)
-					}
-				})
-				.catch(function(err) {
-					log.error(`conversion from endpoint to sql failed: ${err}`)
-				}),
-				db_server.get_query('insert_string',two,false)
-				.then(function(action) {
-					if (action.sql) {
-						return db_server.send_query(action.sql)
-						.then(function() {
-							log.info(`inserted homophone string ${two.value}`)
-						})
-						.catch(function(err) {
-							log.error(`error in homophone string insert: ${err}`)
-						})
-					}
-					else {
-						log.error(`failed to compile sql from homophone str insert of ${two.value}`)
-					}
-				})
-				.catch(function(err) {
-					log.error(`conversion from endpoint to sql failed: ${err}`)
-				})
-			]
-			
-			promises.push(
-				Promise.all(hstr_promises)
-				.then(function() {
-					// insert one ~ two into homophones
-					db_server.get_query(
-						'insert_homophones', 
-						{
-							one_val: one.value,
-							one_lang: one.language,
-							two_val: two.value,
-							two_lang: two.language
-						},
-						false
-					)
+				let hstr_promises = [
+					db_server.get_query('insert_string',one,false)
 					.then(function(action) {
-						return new Promise(function(resolve) {
-							if (action.sql) {
-								db_server.send_query(action.sql)
-								.then(function(data) {
-									log.info(`homophones ${one.value}~${two.value} -> ${JSON.stringify(data)}`)
-								})
-								.catch(function(err) {
-					  				log.error(`error in homophones insert: ${err} for ${one.value}~${two.value}`)
-									fails++
-								})
-								.finally(resolve)
-							}
-							else {
-								log.error(`failed to compile sql for ex insert ${ex_str.value}`)
-								fails++
-								resolve()
-							}
-						})
+						if (action.sql) {
+							return db_server.send_query(action.sql)
+							.then(function() {
+								log.info(`inserted homophone string ${one.value}`)
+							})
+							.catch(function(err) {
+								log.error(`error in homophone string insert: ${err}`)
+							})
+						}
+						else {
+							log.error(`failed to compile sql from homophone str insert of ${one.value}`)
+						}
+					})
+					.catch(function(err) {
+						log.error(`conversion from endpoint to sql failed: ${err}`)
+					}),
+					db_server.get_query('insert_string',two,false)
+					.then(function(action) {
+						if (action.sql) {
+							return db_server.send_query(action.sql)
+							.then(function() {
+								log.info(`inserted homophone string ${two.value}`)
+							})
+							.catch(function(err) {
+								log.error(`error in homophone string insert: ${err}`)
+							})
+						}
+						else {
+							log.error(`failed to compile sql from homophone str insert of ${two.value}`)
+						}
 					})
 					.catch(function(err) {
 						log.error(`conversion from endpoint to sql failed: ${err}`)
 					})
-				})
-			)
+				]
+			
+				promises.push(
+					Promise.all(hstr_promises)
+					.then(function() {
+						// insert one ~ two into homophones
+						db_server.get_query(
+							'insert_homophones', 
+							{
+								one_val: one.value,
+								one_lang: one.language,
+								two_val: two.value,
+								two_lang: two.language
+							},
+							false
+						)
+						.then(function(action) {
+							return new Promise(function(resolve) {
+								if (action.sql) {
+									db_server.send_query(action.sql)
+									.then(function(data) {
+										log.info(`homophones ${one.value}~${two.value} -> ${JSON.stringify(data)}`)
+									})
+									.catch(function(err) {
+						  				log.error(`error in homophones insert: ${err} for ${one.value}~${two.value}`)
+										fails++
+									})
+									.finally(resolve)
+								}
+								else {
+									log.error(`failed to compile sql for ex insert ${ex_str.value}`)
+									fails++
+									resolve()
+								}
+							})
+						})
+						.catch(function(err) {
+							log.error(`conversion from endpoint to sql failed: ${err}`)
+						})
+					})
+				)
+			}
 		}
 		
 		Promise.all(promises)
@@ -829,7 +840,7 @@ parse_cli_args()
 		})
 	}
 	
-	if (cli_args[CLI_IMPORT_DB_SCRATCH]) {
+	if (cli_args[CLI_IMPORT_DB_SCRATCH_BOOL]) {
 		let db_scratch_file = cli_args[CLI_IMPORT_DB_SCRATCH]
 		
 		log.debug(`importing from db scratch file ${db_scratch_file}`)

@@ -15,7 +15,7 @@
 		"last update": {
 			"year": 2021,
 			"month": 4,
-			"day": 8,
+			"day": 20,
 			"hour": 0,
 			"minute": 0
 		},
@@ -315,7 +315,7 @@
 		"soe",
 		"sae",
 		"sie",
-		"fu",
+		"fe",
 		"fue",
 		"foe",
 		"fae",
@@ -496,7 +496,7 @@
 		"sboe",
 		"sbae",
 		"sbie",
-		"sdu",
+		"sde",
 		"sdue",
 		"sdoe",
 		"sdae",
@@ -4043,7 +4043,9 @@
 			"kicked","kicking"
 		],
 		"smui": [],
-		"smoi": [],
+		"smoi": [
+			"journey","trip","voyage"
+		],
 		"smai": [
 			"steam","vapor",
 			"spa:vapor"

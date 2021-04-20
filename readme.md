@@ -313,7 +313,7 @@ In cases of adjacent consonants that are difficult to pronounce (ex. **leonms**)
 | Yourselves | hanen huos, huones |
 | Themselves (masculine) | hason huos, huosos |
 | Themselves (feminine) | hasan huos, huosas |
-| Themselves (plural) | hasen huos, huosen |
+| Themselves (plural) | hasen huos, huoses |
 | Themselves (thing) | haon huos, huos |
 
 ### Prepositions
@@ -375,6 +375,63 @@ sieki men suen sehom. &rarr; (Look at) that strange and floating thing.
 
 Capitalization is not used in Omino, though it can optionally be used for proper names (names of people, places) to avoid ambiguity.
 
+### Superlatives and comparison
+
+Comparative and superlative modifiers are simply a subset of general descriptors.
+
+**sinan** = too, overly
+
+**hoen** = all, every, each
+
+**nan** = much, many, a lot of
+
+**kuon** = some, partly, partial
+
+**stion** = little, few, small
+
+**fun** = lack of, none
+
+**snan** = increasingly, more
+
+**sfun** = decreasingly, less, fewer
+
+**nuin** = most, best, top
+
+**neun** = least, worst, bottom
+
+**nen** = almost, nearly
+
+**fain** = hardly, barely
+
+### Numbers and counting
+
+Numbers are a subset of omino [roots](#roots) chosen to be as intuitive as possible, short to pronounce, and different in sound so as not to be confused with each other. Since numbers are also words and therefore have at least two meanings, a number can be suffixed with **keo**, which means "count" or "number", do avoid ambiguity.
+
+When describing counts/quantities, the descriptive **n** suffix is normally appended, again to avoid ambiguity.
+
+| Numeral | Omino | English |
+| --- | --- | --- |
+| -1 | hiu he | negative/minus one, not existence |
+| 0 | fu | zero, absence |
+| 1 | he | one, existence |
+| 2 | kao | two, eye |
+| 3 | lo | three, direction |
+| 4 | hu | four, stillness |
+| 5 | die | five, hand |
+| 6 | su | six, depth |
+| 7 | sue | seven, strangeness |
+| 8 | mi | eight, movement |
+| 9 | loe | nine, normalcy |
+| 10 | na | ten, abundance |
+| 100 | do | hundred, largeness |
+| 1000 | nado / bao<sup id="a3">[3](#thousand)</sup> | thousand, planet |
+
+**lon baos men suen dias** &rarr; three years and seven days
+
+**hasabo die keon haim kaki** &rarr; she wants five animals
+
+**hasebos diedominakao daems kaofudia miekif** &rarr; they gave 582 hugs the day before yesterday
+
 ### Missing and imitating complexity
 
 Omino's principles resist using more complicated tenses, cases, modes, and such, but it makes sense to stretch the grammatical capabilities of the language in the future if it's to be considered as a viable and complete form of communication. Below are some meanings that are currently not well/precisely defined in Omino.
@@ -388,12 +445,12 @@ Add a verb ending using **foki (m fon kiki) = uncertainty+action** or **kei = oc
 Afoki Bki. &rarr; If A were to happen, B happens.  
 Akei Bki. &rarr; If A happens, B happens.
 
-Use a preposition like **hel = in/at/on** or **beol = originating from** or **neokeil = because of** or **beokeil = causing**.
+Use a preposition like **hel = in/at/on** or **beol = originating from** or **neokeil = causing** or **beokeil = because of**.
 
 Akim hel Bki. &rarr; In the event of  A happening, B happens.  
 Akim beol Bki. &rarr; Originating from A, B happens.  
-Akim neokeil Bki &rarr; As a result of A, B happens.  
-Bkim beokeil Aki &rarr; A happens, causing B.
+Akim beokeil Bki &rarr; As a result of A, B happens.  
+Bkim neokeil Aki &rarr; A happens, causing B.
 
 Use adverb(s) like **neokein = as a result/effect** and **beokein = as a cause** paired.
 
@@ -467,6 +524,18 @@ In both cases, similar to **por favor** in Spanish and 제발 in Korean, you can
 Will you feed my friend, please? &rarr; hanebo hamem hoaki doamien?  
 You feed my friend, please. &rarr; hamem doamien hoaki.
 
+#### Conjunctions
+
+There're no separate grammar rules for conjunctions, and are instead mimicked using the `n` adjective/adverb/descriptive suffix. Below are some examples.
+
+| Omino | English |
+| --- | --- |
+| men | **and**, additionally |
+| fin | **or**, differently |
+| hiun | **but**, **though**, negatively |
+| feun | **however**, **but**, opposingly |
+| beon | **so**, **therefore**, as the origin |
+
 ## Roots
 
 After [individual letters](#inherent-meanings-of-letters), the next level of complexity in derivation of meaning is the [syllable](https://en.wikipedia.org/wiki/Syllable), which in Omino has the following components:
@@ -492,7 +561,7 @@ Each root is a monosyllable noun, chosen as a fitting embodiment of the combinat
 |       |  h  |  m  |  l  |  n  |  s  |  f  |  b  |  d  |  k  | sm | sn | sf | sp | st | sk |
 | ---- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **u**  | hu - stillness | mu - want not | lu - removal | nu - darkness | su - lowness,depth | fu - absence,lack | bu - ground | du - sadness | ku - death | sm | snu - shadow | sfu - decrease | spu - secret | st | sk |
-| **uo** | huo - whisper,self |  muo  |  luo  |  nuo  |  suo  |  fuo  |  buo  |  duo  |  kuo - piece,part | sm | sn | sf| sp | st | sk |
+| **uo** | huo - whisper,self |  muo  |  luo  |  nuo  |  suo  |  fuo - emptiness  |  buo  |  duo  |  kuo - piece,part | sm | sn | sf | sp | st | sk |
 | **ua** | hua  |  mua - kiss |  lua  |  nua - experience |  sua - invisibility |  fua - consumption |  bua - plant |  dua  |  kua hole,stab | sm | sn | sf| sp | st | sk |
 | **ue** | hue - weakness |  mue  |  lue  |  nue - captivity |  sue - strangeness |  fue - laziness |  bue - weight |  due - shape,form |  kue danger | sm | sn | sf| sp | st | sk |
 | **ui** | hui - artificiality |  mui - flow,current |  lui - sliding,slipping |  nui - top |  sui - steepness |  fui - weapon |  bui - business |  dui - chaos,disorder |  kui - speed | sm | sn | sf| sp | st | sk |
@@ -502,7 +571,7 @@ Each root is a monosyllable noun, chosen as a fitting embodiment of the combinat
 | **oe** | hoe - whole |  moe - smoothness |  loe - normalcy |  noe - possession |  soe - luck,randomness |  foe |  boe - fullness |  doe - finding |  koe - reflection | sm | snoe - familiarity | sf| sp | st | skoe - moon |
 | **oi** | hoi - tool |  moi  |  loi - exposure,vulnerability |  noi - thought |  soi - weightlessness |  foi - fear |  boi - vehicle |  doi - emotion |  koi - color | sm | sn | sf| sp | st | skoi - rainbow |
 | **au** | hau  |  mau - ice  |  lau  |  nau  |  sau - rain |  fau - sickness |  bau - preservation |  dau - extraction |  kau  | sm | sn | sf| sp | st | sk |
-| **ao** | hao - person |  mao - mouth |  lao - art |  nao - ear |  sao - nose |  fao |  bao - world |  dao  |  kao - eye | sm | snao - tongue | sf| sp | st | sk |
+| **ao** | hao - person |  mao - mouth |  lao - art |  nao - ear |  sao - nose |  fao |  bao - world |  dao  - gratitude |  kao - eye | sm | snao - tongue | sf| sp | st | sk |
 | **a**  | ha - life | ma - water | la - music | na - abundance | sa - air | fa - achievement | ba - sleep,rest | da - happiness | ka - desire | sma - breath | sna - increase | sf| sp | st | ska - request |
 | **ae** | hae |  mae |  lae - family |  nae - stickiness,attraction |  sae - freedom |  fae |  bae - order |  dae - hug,embrace |  kae | sm | sn | sf | sp | st | sk |
 | **ai** | hai - animal |  mai - youth |  lai |  nai - belief |  sai - cloud |  fai - effort,attempt |  bai |  dai - fire |  kai - fun | smai - steam | sn | sf| sp | st | sk |
@@ -527,3 +596,5 @@ Each root is a monosyllable noun, chosen as a fitting embodiment of the combinat
 <b id="mino-etymology">1</b> **mino** in turn comes from **mi** (movement) and **no** (knowledge). [&#8617;](#a1)
 
 <b id="implicit-dipthongs">2</b> In some languages there are implicit vowel dipthongs, even when only a single vowel is written. "No", for example, can be pronounced "N-uh-oh-oo". In Omino, this never happens. [&#8617;](#a2)
+
+<b id="thousand">3</b> I plan to stick with **bao** as the preferred name, as in English, where each thousand gets a new name. However, **nado** could also work (10*100). [&#8617;](#a3)

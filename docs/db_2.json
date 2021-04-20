@@ -881,7 +881,7 @@
 		"hoeleki": ["purify","become pure"],
 		"hoelen": ["pure","homogenous"],
 		"hae": [],
-		"heimkin": ["furnishing"],
+		"hiemkin": ["furnishing"],
 		"hienein": ["furnished"],
 		"meki": ["be accompanied","be added"],
 		"memki": ["accompany","add"],
@@ -1357,7 +1357,7 @@
 		"fuikin": ["attacking","weaponizing","attacked","weaponized"],
 		"fuimkin": ["attacking","weaponizing"],
 		"fuinein": ["attacked","weaponized"],
-		"foiki": ["fear","be feared","be scary",,"make scary"],
+		"foiki": ["fear","be feared","be scary","make scary"],
 		"foimki": ["fear","make scary"],
 		"foinei": ["be feared","be scary"],
 		"foin": ["fearful","afraid","fearsome"],
@@ -1806,8 +1806,5 @@
 		"soikoin": ["pink", "pink colored"],
 		"saikoin": ["gray", "gray colored"],
 		"keikoin": ["orange", "orange colored"]
-	},
-	"rel examples": {
-		
 	}
 }
