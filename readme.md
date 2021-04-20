@@ -569,7 +569,7 @@ Each root is a monosyllable noun, chosen as a fitting embodiment of the combinat
 | **o**  | ho - thing,it | mo - peace | lo - direction | no - knowledge | so - ignorance | fo - uncertainty | bo - importance | do - size | ko - appearance | sm | sno - flavor,taste | sf| sp | st | sk |
 | **oa** | hoa - food |  moa - truth |  loa - love |  noa - body |  soa |  foa |  boa - head |  doa - help |  koa - hope  | sm | sn | sf| sp | st | sk |
 | **oe** | hoe - whole |  moe - smoothness |  loe - normalcy |  noe - possession |  soe - luck,randomness |  foe |  boe - fullness |  doe - finding |  koe - reflection | sm | snoe - familiarity | sf| sp | st | skoe - moon |
-| **oi** | hoi - tool |  moi  |  loi - exposure,vulnerability |  noi - thought |  soi - weightlessness |  foi - fear |  boi - vehicle |  doi - emotion |  koi - color | sm | sn | sf| sp | st | skoi - rainbow |
+| **oi** | hoi - tool |  moi  |  loi - exposure,vulnerability |  noi - thought |  soi - weightlessness |  foi - fear |  boi - vehicle |  doi - emotion |  koi - color | smoi - journey | sn | sf | sp | st | skoi - rainbow |
 | **au** | hau  |  mau - ice  |  lau  |  nau  |  sau - rain |  fau - sickness |  bau - preservation |  dau - extraction |  kau  | sm | sn | sf| sp | st | sk |
 | **ao** | hao - person |  mao - mouth |  lao - art |  nao - ear |  sao - nose |  fao |  bao - world |  dao  - gratitude |  kao - eye | sm | snao - tongue | sf| sp | st | sk |
 | **a**  | ha - life | ma - water | la - music | na - abundance | sa - air | fa - achievement | ba - sleep,rest | da - happiness | ka - desire | sma - breath | sna - increase | sf| sp | st | ska - request |
