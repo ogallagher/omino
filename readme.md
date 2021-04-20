@@ -39,6 +39,12 @@ The name "Omino" is derived from **mino**, which means **language** or **communi
 
 At this time, Omino is too underdeveloped to have much of a biography, so we'll leave it at that.
 
+## Development and collaboration
+
+The software for this webserver is open-source, available for reference and collaboration at [github.com/ogallagher/omino](https://github.com/ogallagher/omino). 
+
+All content on the site is licensed under [CC-BY 4.0](http://creativecommons.org/licenses/by/4.0/), so you can pretty much do whatever you want with it as long as I'm credited as a source.
+
 ## Alphabet
 
 The current working alphabet for Omino is a subset of the Latin alphabet used by most European languages. The sound assigned to each letter is officially fully consistent, though there are a couple cases of intentional flexibility to allow for different pronunciations of the same spelling depending on the speaker's preference. The full alphabet is divided into three categories:
