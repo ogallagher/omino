@@ -1,0 +1,113 @@
+{
+	"notes": {
+		"last update": {
+			"year": 2021,
+			"month": 4,
+			"day": 20,
+			"hour": 20,
+			"minute": 0
+		},
+		"goals": [
+			"new translations and vocab as needed for cals.conlang.org/translation/language/omino"
+		]
+	},
+	"rel definitions": {
+		"banoi": [
+			"dream",
+			"spa:sueño",
+			"ko:꿈"
+		],
+		"banoiki": [
+			"dream", "be dreamt", "become a dream"
+		],
+		"banoimki": [
+			"dream"
+		],
+		"banoinei": [
+			"be dreamt", "become a dream"
+		],
+		"banoin": [
+			"dreamy","dreamlike"
+		],
+		"banoikin": [
+			"dreaming","dreamt","made a dream"
+		],
+		"banoinein": [
+			"dreamt","made a dream"
+		],
+		"banoimkin": [
+			"dreaming"
+		],
+		"fuku": [
+			"extinction"
+		],
+		"bouke": [
+			"tradition"
+		],
+		"diuka": [
+			"corruption"
+		],
+		"diukan": [
+			"corrupt"
+		],
+		"dolae": [
+			"grandparent"
+		],
+		"dolaemo": [
+			"grandfather"
+		],
+		"dolaema": [
+			"grandmother"
+		],
+		"dodolae": [
+			"great-grandparent"
+		],
+		"skai": [
+			"comedy"
+		],
+		"bekeo": [
+			"cardinal position","place in line","number in order"
+		],
+		"muo": [
+			"chest","torso"
+		],
+		"muobia": [
+			"shirt"
+		],
+		
+		"habo noikin lion heki": [
+			"i think, therefore i am"
+		],
+		"feuki minon fukum. minom iki!": [
+			"fight linguistic extinction. invent a language!"
+		],
+		"boukebo lous maims diukakin lion kums niaki": [
+			"tradition is the old corrupting the young to please the dead"
+		],
+		"iobo abof miokif: \n\"deanei men danei! \nos snan diun lieki!\" \nneokein abo uom deakif men dakif. \nmen obos snan diuneif.": [
+			"a voice said to me: \n\"smile and be happy! \nthings could be worse!\" \nso i smiled \nand was happy.\nand things got worse."
+		],
+		"abon ames": ["my friends"],
+		"abon nuin ames": ["my best friends"],
+		"abon nuin amems beon ame": ["one of my best friends"],
+		"abon nuin amems beon lo keon ames": ["three of my best friends"],
+		"abon nuin amens kuo": ["some of my best friends"],
+		"abon nuin amens nen oe": ["most of my best friends"],
+		"abon nuin amens oe": ["all of my best friends"],
+		
+		"skain amo": ["a funny man"],
+		"nan skain amo": ["a very funny man"],
+		"hoen nuin skain amo": ["the funniest man of all"],
+		
+		"lo keon muobia": ["three shirts"],
+		"lo keon miubaen muobia": ["three clean shirts"],
+		"lo keon nuin miubaen muobia": ["the cleanest three shirts"],
+		"nuin main kao keon miubaems beon muobias": ["the newest two of the clean shirts"],
+		"nuin main kao keon miubaen lo keoms beon muobias": ["the newest two of the three clean shirts"],
+		
+		"he bekeon fio": ["the first question"],
+		"he bekeon fio lo keos": ["the first three questions"],
+		"lo bekeon fio": ["the third question"],
+		"neun fios": ["the last of the questions"]
+	}
+}

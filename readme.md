@@ -582,7 +582,7 @@ Each root is a monosyllable noun, chosen as a fitting embodiment of the combinat
 |       |  h  |  m  |  l  |  n  |  s  |  f  |  b  |  d  |  k  | sm | sn | sf | sp | st | sk |
 | ---- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **u**  | hu - stillness | mu - want not | lu - removal | nu - darkness | su - lowness,depth | fu - absence,lack | bu - ground | du - sadness | ku - death | sm | snu - shadow | sfu - decrease | spu - secret | st | sk |
-| **uo** | huo - whisper,self |  muo  |  luo  |  nuo  |  suo  |  fuo - emptiness  |  buo  |  duo  |  kuo - piece,part | sm | sn | sf | sp | st | sk |
+| **uo** | huo - whisper,self |  muo - torso,chest  |  luo  |  nuo  |  suo  |  fuo - emptiness  |  buo  |  duo  |  kuo - piece,part | sm | sn | sf | sp | st | sk |
 | **ua** | hua  |  mua - kiss |  lua  |  nua - experience |  sua - invisibility |  fua - consumption |  bua - plant |  dua  |  kua hole,stab | sm | sn | sf| sp | st | sk |
 | **ue** | hue - weakness |  mue  |  lue  |  nue - captivity |  sue - strangeness |  fue - laziness |  bue - weight |  due - shape,form |  kue danger | sm | sn | sf| sp | st | sk |
 | **ui** | hui - artificiality |  mui - flow,current |  lui - sliding,slipping |  nui - top |  sui - steepness |  fui - weapon |  bui - business |  dui - chaos,disorder |  kui - speed | sm | sn | sf| sp | st | sk |
@@ -595,7 +595,7 @@ Each root is a monosyllable noun, chosen as a fitting embodiment of the combinat
 | **ao** | hao - person |  mao - mouth |  lao - art |  nao - ear |  sao - nose |  fao |  bao - world |  dao  - gratitude |  kao - eye | sm | snao - tongue | sf| sp | st | sk |
 | **a**  | ha - life | ma - water | la - music | na - abundance | sa - air | fa - achievement | ba - sleep,rest | da - happiness | ka - desire | sma - breath | sna - increase | sf| sp | st | ska - request |
 | **ae** | hae |  mae |  lae - family |  nae - stickiness,attraction |  sae - freedom |  fae |  bae - order |  dae - hug,embrace |  kae | sm | sn | sf | sp | st | sk |
-| **ai** | hai - animal |  mai - youth |  lai |  nai - belief |  sai - cloud |  fai - effort,attempt |  bai |  dai - fire |  kai - fun | smai - steam | sn | sf| sp | st | sk |
+| **ai** | hai - animal |  mai - youth |  lai |  nai - belief |  sai - cloud |  fai - effort,attempt |  bai |  dai - fire |  kai - fun | smai - steam | sn | sf | sp | st | skai - comedy |
 | **eu** | heu - singularity  |  meu  |  leu - departure |  neu - bottom  |  seu - quiet |  feu - opposition,negativity |  beu - solid |  deu - frown |  keu - pain | sm | sn | sf| sp | steu - dryness | sk |
 | **eo** | heo - balance |  meo - roundness |  leo - literature |  neo - destination |  seo |  feo |  beo - origin |  deo - nature,universe |  keo - count,number | sm | sneo - goal,target | sf| sp | st | sk |
 | **ea** | hea - health,safety |  mea - good |  lea - ease |  nea - affirmation,positivity |  sea - alien |  fea - irritation,itchiness |  bea - cover,protection | dea - smile | kea - labor,work | sm | sn | sf| sp | st | sk |
