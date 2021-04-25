@@ -40,9 +40,7 @@ try {
 	// cross origin request origins
 	const origins = [
 		'http://localhost',	'http://127.0.0.1',		// local testing (same device)
-		'http://192.168.0.30',						// local testing (different devices, pi)
-		'http://184.153.65.200',					// remote testing (temp ip)
-		'http://ominolanguage.com'					// omino domain tbd
+		'http://omino.conlang.org'					// omino conlang subdomain
 	]
 	
 	// logging
