@@ -32,6 +32,8 @@ try {
 	const PUBLIC_DIR = 'public'
 	
 	const DOTENV_PORT = 'PORT'
+	const DOTENV_LOG_LEVEL = 'LOGGING'
+	const DOTENV_WEBSERVER = 'WEBSERVER'
 	
 	// cli args
 	const CLI_LOG_LEVEL = 'logging'
@@ -107,23 +109,22 @@ try {
 	
 	parse_cli_args()
 	.then(function(cli_args) {
-		if (cli_args[CLI_LOG_LEVEL]) {
-			let level = Logger.level_number(cli_args[CLI_LOG_LEVEL])
-			log.info(`set logging level to ${cli_args[CLI_LOG_LEVEL]}=${level}`)
+		// get environment vars
+		if (require('dotenv').config().error) {
+			throw 'environment variables not loaded from .env'
+		}
+		else {
+			log.info('environment variables loaded from .env')
+		}
+		
+		if (cli_args.hasOwnProperty(CLI_LOG_LEVEL) || process.env.hasOwnProperty(DOTENV_LOG_LEVEL)) {
+			let level_name = cli_args[CLI_LOG_LEVEL] || process.env[DOTENV_LOG_LEVEL]
+			let level = Logger.level_number(level_name)
+			log.info(`set logging level to ${level_name}=${level}`)
 			log.set_level(level)
 		}
 		
-		if (cli_args[CLI_WEBSERVER]) {
-			// get environment vars
-			if (require('dotenv').config().error) {
-				throw 'environment variables not loaded from .env'
-			}
-			else {
-				log.info('environment variables loaded from .env')
-			}
-			
-			tests.read_dotenv(['TEST_KEY'])
-	
+		if (cli_args.hasOwnProperty(CLI_WEBSERVER) || process.env.hasOwnProperty(DOTENV_WEBSERVER)) {
 			// handle POST request data with bodyparser
 			server.use(bodyparser.json())
 			server.use(bodyparser.urlencoded({
