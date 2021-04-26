@@ -42,7 +42,8 @@ try {
 	// cross origin request origins
 	const origins = [
 		'http://localhost',	'http://127.0.0.1',		// local testing (same device)
-		'http://omino.conlang.org'					// omino conlang subdomain
+		'http://omino.conlang.org',					// omino conlang subdomain
+		'https://omino.conlang.org'
 	]
 	
 	// logging
