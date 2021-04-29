@@ -15,7 +15,9 @@ const TRANSLATOR_LANG_TWO_ID = 'lang-select-two'
 const TRANSLATOR_LANG_TWO_OPTION_SELECTOR = '.dropdown.lang-two .dropdown-item'
 const TRANSLATOR_LANG_SWAP_ID = 'lang-swap'
 const TRANSLATOR_SUBMIT_ID = 'translator-submit'
+
 const URL_KEY_TRANSLATOR_INPUT = 'q'
+const URL_KEY_TRANSLATOR_OUTPUT = 'out'
 
 const ENDPOINT_TRANSLATE = 'fetch_definitions'
 const ENDPOINT_TRANSLATE_ID = 'fetch_definitions_by_id'
@@ -42,6 +44,10 @@ const lang_name_to_code = {
 	'korean': 'kor',
 	'omino': 'omi'
 }
+const lang_code_to_default_out = {
+	'omi': 'eng',
+	'eng': 'omi'
+}
 
 // variables
 
@@ -52,19 +58,35 @@ const translator_log = new Logger('translator')
 function translator_read_url() {
 	let log = translator_log
 	let url_params = new URLSearchParams(window.location.search)
+	let submit = false
 	
-	if (url_params.has('q')) {
-		let translator_input = str_to_raw_lang_ts(url_params.get('q'))
+	if (url_params.has(URL_KEY_TRANSLATOR_INPUT)) {
+		let translator_input = str_to_raw_lang_ts(url_params.get(URL_KEY_TRANSLATOR_INPUT))
 		log.debug(`found translator input query ${JSON.stringify(translator_input)}`)
 		
+		// in_lang and in_val
 		$(`#${TRANSLATOR_INPUT_ID}`).html(translator_input.value)
 		$(`#${TRANSLATOR_LANG_ONE_ID}`)
 		.attr('data-lang',translator_input.language)
 		.html(lang_code_to_name[translator_input.language])
+		
+		// out_lang
+		if (url_params.has(URL_KEY_TRANSLATOR_OUTPUT)) {
+			let translator_output_lang = url_params.get(URL_KEY_TRANSLATOR_OUTPUT)
+			if (translator_output_lang.length > 3) {
+				translator_output_lang = lang_name_to_code[translator_output_lang.toLowerCase()]
+			}
+			log.debug(`found translator output lang ${translator_output_lang}`)
+			translator_update_languages('two', translator_output_lang)
+			
+			submit = true
+		}
 	}
 	else {
 		log.debug('no translator input query found in url params')
 	}
+	
+	return submit
 }
 
 function translator_update_languages(which, language) {
@@ -190,7 +212,7 @@ function translator_translate(value,in_lang,out_lang) {
 								},
 								success: function(res) {
 									log.debug(`translation ${substring.out_val} --> ${JSON.stringify(res)}`)
-							
+									
 									if (res.length > 0) {
 										let best = null // {def_id, value, language}
 										let best_other_lang = null
@@ -204,7 +226,7 @@ function translator_translate(value,in_lang,out_lang) {
 												out_val: row['value'],
 												out_lang: row['language']
 											}
-									
+											
 											// row = {def_id value language}
 											if (row['language'] == out_lang) {
 												if (best == null) {
@@ -569,13 +591,18 @@ function translator_roots(in_phrases,out_lang) {
 													// load each root into roots for this phrase
 													let root_data = roots[root_id]
 													let root_cmpt = $(components.root)
+													let root_out_lang = lang_code_to_default_out[root_data['lang']]
+													let url = `?${new URLSearchParams({
+														q: `${root_data['lang']}:${root_data['val']}`,
+														out: root_out_lang
+													})}`
 													
 													root_cmpt.find('.root-entry')
 													.attr('data-lang', root_data['lang'])
 													.attr('data-dbid', root_data['id'])
-													.attr('href', `?${new URLSearchParams({
-														q: `${root_data['lang']}:${root_data['val']}`
-													})}`)
+													.attr('data-out-lang', root_out_lang)
+													.attr('href', url)
+													.attr('title', url)
 													.html(root_data['val'])
 													
 													// load each translation into translations for root
@@ -693,6 +720,7 @@ function translator_load_translations(translations) {
 					self.find('.translation-entry')
 					.attr('data-lang', translation['lang'])
 					.attr('data-dbid', translation['id'])
+					.attr('data-out-lang', lang_code_to_default_out[translation['lang']])
 					.html(translation['val'])
 					log.debug(`loaded translation entry ${translation['lang']}:${translation['val']}`)
 					
@@ -704,7 +732,8 @@ function translator_load_translations(translations) {
 					
 						let url = `?${
 							new URLSearchParams({
-								q: `${out['lang']}:${out['val']}`
+								q: `${out['lang']}:${out['val']}`,
+								out: lang_code_to_default_out[out['lang']]
 							}).toString()
 						}`
 						
@@ -712,6 +741,9 @@ function translator_load_translations(translations) {
 						def.find('.definition-entry')
 						.attr('href',url)
 						.attr('title',url)
+						.attr('data-lang',out['lang'])
+						.attr('data-dbid',out['id'])
+						.attr('data-out-lang',lang_code_to_default_out[out['lang']])
 						.html(out['val'])
 						log.debug(`loaded definition entry ${out['lang']}:${out['val']}`)
 						
@@ -766,7 +798,10 @@ function translator_load_translations(translations) {
 // main
 
 $(document).ready(function() {
-	translator_read_url()
+	if (translator_read_url()) {
+		// if in and out params are defined, autosubmit translation
+		translator_on_submit()
+	}
 	
 	$(TRANSLATOR_LANG_ONE_OPTION_SELECTOR).click(function() {
 		translator_update_languages('one', $(this).html())
