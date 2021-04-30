@@ -53,19 +53,30 @@ The current working alphabet for Omino is a subset of the Latin alphabet used by
 
 U O A E I
 
-These are pronounced as they would be in Spanish, and should be as pure as possible<sup id="a2">[2](#implicit-dipthongs)</sup>.
+These are meant to be pronounced as they would be in Spanish, and should be as pure as possible.<sup id="a2">[2](#implicit-dipthongs)</sup> However, 
 
-For English speakers, these are equivalent to the vowel sounds in the following words:
+Below is a set of valid pronunciations for each vowel:
 
-- b**oo**t, p**oo**l
-- g**oa**l, p**o**ke
-- s**o**ck, h**a**ll
-- p**e**n, s**e**t
-- t**ee**th, s**ee**m
+| Omino letter | IPA | English examples | Spanish examples |
+| --- | --- | --- | --- |
+| U | u | b**oo**t p**oo**l | men**ú** ll**u**via |
+| O | o | g**oa**l h**o**le | v**o**lver cay**ó** |
+| A | a ɑ ɒ ɔ | s**o**ck h**a**ll | c**a**nto **á**tomo |
+| E | e ɛ | p**e**n s**e**t | desd**é**n m**e**nos |
+| I | i | t**ee**th s**ee**m | s**i**no as**í** |
 
 ### Soft consonants
 
 M L N S/Z F/V *H*
+
+| Omino letter | IPA | English examples | Spanish examples |
+| --- | --- | --- | --- |
+| M | m | **m**onth ha**m**ster | **m**es ca**m**ino |
+| L | l l̪ | **l**ess se**l**f | me**l**ón so**l** |
+| N | n ŋ  | **n**ote pi**n**e si**ng**er | pi**n**o e**n**ojo ta**ng**o |
+| S Z | s z ʃ ʒ ð θ | **c**entury de**s**ert **z**ebra la**th**e  | **s**al**s**a ca**z**ar |
+| F V | f v β | a**f**ter ad**v**enture | **f**a**v**or |
+| H | h x | **h**elpful | **j**amón **g**ene |
 
 Soft consonants are a subset of consonants that are allowed to directly precede another consonant without a vowel between them. This distinction is useful when inventing new words and deciding on proper [grammar suffixes](#grammar-suffixes), and is implemented as a measure to ensure ease of pronunciation and listening comprehension.
 
@@ -77,13 +88,19 @@ To illustrate, consider pronouncing the following preconsonant-heavy syllables:
 
 Mamslansfmla
 
-It's admittedly difficult, but less when compared to these, using hard consonants:
+It's admittedly difficult, but less so when compared to these, using hard consonants:
 
 Babdkadkbda
 
-### Hard Consonants
+### Hard consonants
 
 B/P D/T G/K
+
+| Omino letter | IPA | English examples | Spanish examples |
+| --- | --- | --- | --- |
+| B P | b p | may**b**e ga**p**ing | **b**alón ca**p**a |
+| D T | d t | me**d**ical pa**t**en**t** | pa**t**o me**d**io |
+| G K | g k | a**g**ain **c**arrot ma**k**e | **gu**erra ma**g**o a**c**á |
 
 These are consonants that temporarily obstruct the airway and therefore cannot be heard individually when strung together (and are also more difficult to pronounce). For this reason, they are never placed as final letters in a syllable, as in [grammar suffixes](#grammar-suffixes).
 
@@ -111,6 +128,8 @@ At the most elemental level are individual sounds, as Omino seeks to take intuit
 These inherent were chosen wholly based on personal intuition, trusting that life experience, exposure to various languages, time, and an open mind would allow for decent approximations of what each sound should mean, on average, to any person regardless of the language they speak. This also supposes that such a "universal meaning" should exist, inspired by the theory of [phonosemantics](https://en.wikipedia.org/wiki/Sound_symbolism), and experiments involving the ["Bouba/kiki effect"](https://en.wikipedia.org/wiki/Bouba/kiki_effect).
 
 ## Pronunciation
+
+See the alphabet sections on [vowels](#vowels), ["soft" consonants](#soft-consonants), and ["hard" consonants](#hard-consonants) for pronunciation of each letter.
 
 Generally, pronunciation of each letter is pure and consistent. There are no accents, tones, or syllable stress rules. However, there are some permitted, but not required, exceptions:
 

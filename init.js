@@ -20,6 +20,7 @@ const parse_db_scratch_string = require('./public/js/string_manip.js').str_to_ra
 
 // constants
 
+const ALL = 'all'
 const MD_README_FILE = 'readme.md'
 const MD_DICTIONARY_FILE = 'dictionary.md'
 
@@ -795,7 +796,7 @@ parse_cli_args()
 		log.debug(`compiling: ${JSON.stringify(targets)}`)
 		
 		new Promise(function(resolve) {
-			if (targets.includes(MD_README_FILE)) {
+			if (targets.includes(MD_README_FILE) || targets.includes(ALL)) {
 				compile_readme()
 				.then(() => {
 					log.info('compilation of readme passed')
@@ -811,7 +812,7 @@ parse_cli_args()
 		})
 		.then(() => {
 			return new Promise(function(resolve) {
-				if (targets.includes(MD_DICTIONARY_FILE)) {
+				if (targets.includes(MD_DICTIONARY_FILE) || targets.includes(ALL)) {
 					compile_dictionary()
 					.then(() => {
 						log.info('compilation of dictionary passed')
