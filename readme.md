@@ -59,7 +59,7 @@ Below is a set of valid pronunciations for each vowel:
 
 | Omino letter | IPA | English examples | Spanish examples |
 | --- | --- | --- | --- |
-| U | u | b**oo**t p**oo**l | men**ú** ll**u**via |
+| U | u y | b**oo**t p**oo**l | men**ú** ll**u**via |
 | O | o | g**oa**l h**o**le | v**o**lver cay**ó** |
 | A | a ɑ ɒ ɔ | s**o**ck h**a**ll | c**a**nto **á**tomo |
 | E | e ɛ | p**e**n s**e**t | desd**é**n m**e**nos |
