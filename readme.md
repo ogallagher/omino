@@ -556,7 +556,7 @@ Can you feed my friend?  &rarr; hanebo hamem lien hoakis? hanebo hamem hoakin li
 
 Or by stating it as fact.
 
-You feed my friend. &rarr; hanebo habon hamem hoaki.
+You feed my friend. &rarr; hanebo habon hamem hoaki.  
 You can feed my friend. &rarr; habon hamem hoaki.
 
 In both cases, similar to **por favor** in Spanish and 제발 in Korean, you can add "as a favor/please" to be polite, with **doamie = favor/help giving &rarr; doamien = as a favor**:
