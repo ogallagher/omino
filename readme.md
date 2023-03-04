@@ -602,8 +602,8 @@ Each root is a monosyllable noun, chosen as a fitting embodiment of the combinat
 | ---- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **u**  | hu - stillness | mu - want not | lu - removal | nu - darkness | su - lowness,depth | fu - absence,lack | bu - ground | du - sadness | ku - death | sm | snu - shadow | sfu - decrease | spu - secret | st | sk |
 | **uo** | huo - whisper,self |  muo - torso,chest  |  luo  |  nuo  |  suo  |  fuo - emptiness  |  buo  |  duo  |  kuo - piece,part | sm | sn | sf | sp | st | sk |
-| **ua** | hua  |  mua - kiss |  lua  |  nua - experience |  sua - invisibility |  fua - consumption |  bua - plant |  dua  |  kua hole,stab | sm | sn | sf| sp | st | sk |
-| **ue** | hue - weakness |  mue  |  lue  |  nue - captivity |  sue - strangeness |  fue - laziness |  bue - weight |  due - shape,form |  kue danger | sm | sn | sf| sp | st | sk |
+| **ua** | hua  |  mua - kiss |  lua  |  nua - experience |  sua - invisibility |  fua - consumption |  bua - plant |  dua  |  kua - hole,stab | sm | sn | sf| sp | st | sk |
+| **ue** | hue - weakness |  mue  |  lue  |  nue - captivity |  sue - strangeness |  fue - laziness |  bue - weight |  due - shape,form |  kue - danger | sm | sn | sf| sp | st | sk |
 | **ui** | hui - artificiality |  mui - flow,current |  lui - sliding,slipping |  nui - top |  sui - steepness |  fui - weapon |  bui - business |  dui - chaos,disorder |  kui - speed | sm | sn | sf| sp | st | sk |
 | **ou** | hou |  mou - want not  |  lou - age  |  nou - falsehood |  sou - emptiness  |  fou |  bou - respect |  dou |  kou  | sm | sn | sf| sp | st | sk |
 | **o**  | ho - thing,it | mo - peace | lo - direction | no - knowledge | so - ignorance | fo - uncertainty | bo - importance | do - size | ko - appearance | sm | sno - flavor,taste | sf| sp | st | sk |
