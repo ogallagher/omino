@@ -1,5 +1,3 @@
-# Owen Gallagher <ogallagher>
-# 2021-04-08
 # Omino root git ignore
 
 # node dependencies
@@ -14,6 +12,9 @@ data/
 
 # environment variables
 .env
+
+# template compilation
+public/*.html
 
 # dreamhost config
 app.js
