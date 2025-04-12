@@ -1,18 +1,12 @@
-/*
+/**
+ * @fileoverview Frontend and backend compatible logging module, originally written for
+ * [refraction](https://github.com/ogallagher/refraction).
+ */
 
-Owen Gallagher <ogallagher>
-28 Nov 2020
-
-Frontend and backend compatible logging module, originally written for 
-[refraction](https://github.com/ogallagher/regfraction).
-
-*/
-
+/**
+ * Logging class.
+ */
 class Logger {
-	/*
-	Logging class.
-	*/
-	
 	static level_name(level) {
 		if (level == Logger.LEVEL_DEBUG) {
 			return 'debug'
@@ -100,14 +94,23 @@ class Logger {
 		}
 	}
 	
+	/**
+	 * Logger constructor.
+	 * 
+	 * @param {string} name 
+	 * @param {number|undefined} level 
+	 */
 	constructor(name, level) {
-		/*
-		Logger constructor.
-		*/
-		
+		/**
+		 * @type {string}
+		 */
 		this.name = name
 		
-		// reference to sub-loggers
+		/**
+		 * Reference to sub-loggers.
+		 * 
+		 * @type {Logger[]}
+		 */
 		this.children = []
 		
 		// add as child to root logger
@@ -115,6 +118,9 @@ class Logger {
 			Logger.root.children.push(this)
 			
 			if (level != undefined) {
+				/**
+				 * @type {number}
+				 */
 				this.level = level
 			}
 			else {
@@ -193,6 +199,6 @@ Logger.LEVEL_ALWAYS = 10
 // create root logger
 Logger.root = new Logger('root', Logger.LEVEL_DEBUG)
 
-if (typeof exports != 'undefined') {
+if (typeof exports !== 'undefined') {
 	exports.Logger = Logger
 }

@@ -1,9 +1,33 @@
-/*
-
-Owen Gallagher
-2021-04-11
-
-*/
+/**
+ * @typedef {string} LangCode 
+ * 
+ * @typedef {import('./logger.js').Logger} Logger
+ * 
+ * @typedef {{
+ * 	in_id: number
+ * 	out_id: number
+ * 	out_lang: LangCode
+ * 	out_val: string
+ * }} FetchLongestSubstringRes
+ * 
+ * @typedef {{
+ * 	def_id: number
+ * 	value: string
+ * 	language: LangCode
+ * }} FetchDefinitionsByIdRes
+ * 
+ * @typedef {{[index_in_input: number]: FetchLongestSubstringRes}} SourcePhrases
+ * 
+ * @typedef {{
+ * 	idx: number
+ * 	in_id: number
+ * 	in_val: string
+ * 	in_lang: LangCode
+ * 	out_id: number
+ * 	out_val: string
+ * 	out_lang: LangCode
+ * }} Translation
+ */
 
 // constants
 
@@ -32,18 +56,27 @@ const TRANSLATOR_TARGET_DERIVATIVES = 'all-derivatives'
 const TRANSLATOR_TARGET_SYNONYMS = 'all-synonyms'
 const TRANSLATOR_TARGET_ANTONYMS = 'all-antonyms'
 
+/**
+ * @type {{[key:LangCode]: string}}
+ */
 const lang_code_to_name = {
 	'eng': 'English',
 	'spa': 'Spanish',
 	'kor': 'Korean',
 	'omi': 'Omino'
 }
+/**
+ * @type {{[key:string]: LangCode}}
+ */
 const lang_name_to_code = {
 	'english': 'eng',
 	'spanish': 'spa',
 	'korean': 'kor',
 	'omino': 'omi'
 }
+/**
+ * @type {{[key:LangCode]: LangCode}}
+ */
 const lang_code_to_default_out = {
 	'omi': 'eng',
 	'eng': 'omi'
@@ -51,10 +84,18 @@ const lang_code_to_default_out = {
 
 // variables
 
+/**
+ * @type {Logger}
+ */
 const translator_log = new Logger('translator')
 
 // methods
 
+/**
+ * Parse translator inputs from url query.
+ * 
+ * @returns {boolean} Whether to invoke translator entrypoint.
+ */
 function translator_read_url() {
 	let log = translator_log
 	let url_params = new URLSearchParams(window.location.search)
@@ -89,6 +130,12 @@ function translator_read_url() {
 	return submit
 }
 
+/**
+ * Update input and output language controls.
+ * 
+ * @param {string} which Which language control to update.
+ * @param {LangCode | string} language Name or code of language.
+ */
 function translator_update_languages(which, language) {
 	let log = translator_log
 	
@@ -118,238 +165,303 @@ function translator_update_languages(which, language) {
 	.attr('data-lang', lang_code)
 }
 
-function translator_on_submit() {
+/**
+ * Translator entrypoint.
+ * 
+ * Given the translator input text, fetch and display data from the database.
+ */
+async function translator_on_submit() {
 	const log = translator_log
 	// extract input value and language
+	/**
+	 * @type {string}
+	 */
 	const in_lang = $(`#${TRANSLATOR_LANG_ONE_ID}`).attr('data-lang')
+	/**
+	 * @type {string}
+	 */
 	const out_lang = $(`#${TRANSLATOR_LANG_TWO_ID}`).attr('data-lang')
+	/**
+	 * @type {string}
+	 */
 	let value = $(`#${TRANSLATOR_INPUT_ID}`).val()
 	
-	translator_translate(value,in_lang,out_lang)
-	.then(function(in_phrases) {
-		if (in_phrases.length > 0) {
-			// in_phrases: [{in_id? out_id out_lang out_val}]
-			log.debug(`performing secondary queries on ${in_phrases.length} input phrases`)
-
+	try {
+		const in_phrases = await translator_parse_source(value, in_lang)
+		log.debug('before translator_translate', 'translator_parse_source.then')
+		translator_translate(in_phrases, out_lang)
+		log.debug('after translator_translate', 'translator_parse_source.then')
+	
+		const in_phrases_list = Object.values(in_phrases)
+		if (in_phrases_list.length > 0) {
+			log.debug(`performing secondary queries on ${in_phrases_list.length} input phrases`)
+	
 			// use acquired ids for input phrase to pose other queries
 			// fetch examples
-			translator_examples(in_phrases)
-
+			translator_examples(in_phrases_list)
+	
 			// fetch roots
-			translator_roots(in_phrases, out_lang)
-
+			translator_roots(in_phrases_list, out_lang)
+	
 			// fetch derivatives
-
+	
 			// fetch synonyms
-
+	
 			// fetch antonyms
-
+	
 			// fetch homophones
 		}
-	})
-	.catch(function(err) {
+		else {
+			log.info(`skip secondary queries on ${in_phrases_list} input phrases`)
+		}
+	}
+	catch(err) {
 		log.error(`translation failed: ${err}`)
+	}
+}
+
+/**
+ * Parse source text as list of known phrases.
+ * 
+ * @param {string} value Unprocessed source text.
+ * @param {LangCode} in_lang Input/source language code.
+ * @returns {Promise<SourcePhrases>} Resolved source text substrings present in db.
+ */
+async function translator_parse_source(value, in_lang) {
+	const log = translator_log
+	
+	// clean value
+	value = value.trim()
+	if (in_lang == 'omi') {
+		value = value.toLowerCase()
+	}
+	/**
+	 * Full source text.
+	 */
+	const full_value = value
+	
+	// ensure language code
+	if (in_lang == undefined) {
+		log.warning(`translating from unknown language ${in_lang}`)
+		in_lang = null
+	}
+	else {
+		log.info(`translating ${in_lang}:${value}`)
+	}
+	
+	// { index_in_input: {in_id out_id out_lang out_val} }
+	/**
+	 * @type {SourcePhrases}
+	 */
+	let substrings = {}
+	const regex_non_alphanumeric = /[^\w0123456789]+/
+	
+	/**
+	 * Iterates through source text to convert to list of translatable substring phrases.
+	 * @returns {Promise<void>}
+	 */
+	async function next_substring() {
+		log.debug(`value = ${value}`)
+		let tokens = value.split(regex_non_alphanumeric)
+		if (tokens.length == 0) {
+			return
+		}
+		
+		// let floor_length = Math.max(0, tokens[0].length-1)
+		log.debug(`fetching substrings for ${value}`)
+		
+		await new Promise(function (resolve, reject) {
+			$.ajax({
+				method: 'POST',
+				url: '/db',
+				data: {
+					endpoint: ENDPOINT_LONG_SUBSTR,
+					value: value,
+					language: in_lang,
+					floor_length: 0
+				},
+				/**
+				 * @alias on_fetch_longest_substring
+				 * @param {FetchLongestSubstringRes[]} res_subs 
+				 */
+				success: function(res_subs) {
+					if (res_subs.length == 0) {
+						resolve()
+					}
+					else {
+						// add longest substring to substrings
+						let longest = res_subs[0]
+						let longest_val = longest.out_val
+						log.debug(`fetched substring ${longest_val} for ${value}`)
+						/**
+						 * Location of substring in unprocessed source text.
+						 */
+						let less_idx = value.indexOf(longest_val)
+						/**
+						 * Location of substring in source text.
+						 */
+						let full_idx = full_value.indexOf(longest_val)
+						substrings[full_idx] = longest
+						
+						// remove longest substring from value, leave full_value intact
+						value = (
+							value.substring(0, less_idx)
+							+ value.substring(less_idx+longest_val.length)
+						).trim()
+						
+						// continue if there's more input to handle
+						if (less_idx !== -1 && value.length > 0) {
+							return next_substring().then(resolve)
+						}
+						else {
+							log.info('done', 'translator_parse_source.next_substring')
+							resolve()
+						}
+					}
+				},
+				error: function(err) {
+					log.error(`failed to fetch long substrings for ${value}: ${JSON.stringify(err, undefined, 2)}`)
+					reject('http')
+				}
+			})
+		})
+	}
+	
+	// get longest valid substrings
+	return await next_substring().then(() => {
+		// TODO mobile not reaching here
+		log.debug('return source phrases', 'translator_parse_source.return')
+		return substrings
 	})
 }
 
-function translator_translate(value,in_lang,out_lang) {
+/**
+ * 
+ * @param {SourcePhrases} in_phrases 
+ * @param {LangCode} out_lang 
+ * @returns {Promise<void>}
+ */
+function translator_translate(in_phrases, out_lang) {
 	const log = translator_log
+
+	// sorted keys in order of appearance in full_value
+	let keys = Object.keys(in_phrases).sort(function(a,b) { return a-b })
+	log.debug(`translating substrings: \n${JSON.stringify(in_phrases)}`)
 	
-	return new Promise(function(resolve,reject) {
-		// clean value
-		value = value.trim()
-		if (in_lang == 'omi') {
-			value = value.toLowerCase()
-		}
-		const full_value = value
+	const out_area = $(`#${TRANSLATOR_OUTPUT_ID}`).empty()
+	if (out_area.length === 0) {
+		log.error(`#${TRANSLATOR_OUTPUT_ID} translations target container not found`)
+		throw new Error('html container')
+	}
+	else {
+		// clear translations container
+		$(`#${TRANSLATOR_TARGET_TRANSLATIONS}`).empty()
 		
-		// ensure language code
-		if (in_lang == undefined) {
-			log.warning(`translating from unknown language ${in_lang}`)
-			in_lang = null
-		}
-		else {
-			log.info(`translating ${in_lang}:${value} to ${out_lang}`)
-		}
+		/**
+		 * @type {Promise[]}
+		 */
+		let promises = []
+		/**
+		 * @type {Translation[]}
+		 */
+		let translations = []
+		/**
+		 * @type {Translation[]}
+		 */
+		let other_langs = []
 		
-		// { index_in_input: {in_id out_id out_lang out_val} }
-		let substrings = {}
-		const regex_non_alphanumeric = /[^\w0123456789]+/
-		
-		function substrings_done(p) {
-			p.then(() => {
-				// sorted keys in order of appearance in full_value
-				let keys = Object.keys(substrings).sort(function(a,b) { return a-b })
-				log.debug(`translating substrings: \n${JSON.stringify(substrings)}`)
-				
-				// resolve method, allowing parallel execution of other translator queries using the
-				// raw input value converted to valid db string phrases
-				resolve(Object.values(substrings))
-				
-				const out_area = $(`#${TRANSLATOR_OUTPUT_ID}`).empty()
-				if (out_area.length == 0) {
-					log.error(`#${TRANSLATOR_OUTPUT_ID} translations target container not found`)
-					reject('html container')
-				}
-				else {
-					// clear translations container
-					$(`#${TRANSLATOR_TARGET_TRANSLATIONS}`).empty()
-					
-					let promises = []
-					let translations = [] // [{idx,in_id,in_val,in_lang,out_id,out_val,out_lang}]
-					let other_langs = []
-					
-					for (let k of keys) {
-						promises.push(new Promise(function(resolve,reject) {
-							// {in_id? out_id out_lang out_val}
-							let substring = substrings[k]				
-							$.ajax({
-								method: 'POST',
-								url: '/db',
-								data: {
-									endpoint: ENDPOINT_TRANSLATE_ID,
-									id: substring.out_id
-								},
-								success: function(res) {
-									log.debug(`translation ${substring.out_val} --> ${JSON.stringify(res)}`)
-									
-									if (res.length > 0) {
-										let best = null // {def_id, value, language}
-										let best_other_lang = null
-										for (let row of res) {
-											const io_row = {
-												idx: k,
-												in_id: substring['out_id'],
-												in_lang: substring['out_lang'],
-												in_val: substring['out_val'],
-												out_id: row['def_id'],
-												out_val: row['value'],
-												out_lang: row['language']
-											}
-											
-											// row = {def_id value language}
-											if (row['language'] == out_lang) {
-												if (best == null) {
-													// select first translation for out language
-													best = row
-												}
-												else {
-													// handle alternate translations for out language
-													// TODO other translation row['value']
-												}
-										
-												// concat out lang translation
-												translations.push(io_row)
-											}
-											else {
-												if (best_other_lang == null) {
-													best_other_lang = io_row
-												}
-												other_langs.push(io_row)
-											}
-										}
-										
-										if (best != null) {
-											// load result into output
-											out_area.append(best['value'] + ' ')
-											resolve(true)
-										}
-										else {
-											log.warning(`translations for ${out_lang} not found; alt = ${
-												lang_code_to_name[best_other_lang['out_lang']]
-											}`)
-											resolve(false)
-										}
+		for (let k of keys) {
+			promises.push(new Promise(function(resolve, reject) {
+				/**
+				 * @type {FetchLongestSubstringRes}
+				 */
+				let in_phrase = in_phrases[k]				
+				$.ajax({
+					method: 'POST',
+					url: '/db',
+					data: {
+						endpoint: ENDPOINT_TRANSLATE_ID,
+						id: in_phrase.out_id
+					},
+					/**
+					 * 
+					 * @param {FetchDefinitionsByIdRes[]} res 
+					 */
+					success: function(res) {
+						log.debug(`translation ${in_phrase.out_val} --> ${JSON.stringify(res)}`)
+						
+						if (res.length > 0) {
+							/**
+							 * @type {FetchDefinitionsByIdRes|null}
+							 */
+							let best = null
+							/**
+							 * @type {FetchDefinitionsByIdRes|null}
+							 */
+							let best_other_lang = null
+							for (let row of res) {
+								const io_row = {
+									idx: k,
+									in_id: in_phrase['out_id'],
+									in_lang: in_phrase['out_lang'],
+									in_val: in_phrase['out_val'],
+									out_id: row['def_id'],
+									out_val: row['value'],
+									out_lang: row['language']
+								}
+								
+								if (row['language'] === out_lang) {
+									if (best === null) {
+										// select first translation for out language
+										best = row
 									}
 									else {
-										log.warning(`no translations found for ${substring.out_id} for any output language`)
-										resolve(false)
+										// handle alternate translations for out language
+										// TODO other translation row['value']
 									}
-								},
-								error: function(err) {
-									log.error(`translation failed: ${err}`)
-									reject('http')
-								}
-							})
-						}))
-					}
-					
-					Promise.all(promises)
-					.then(function(bools) {
-						// load translations into target for definitions queries
-						translator_load_translations(translations)
-					})
-					.catch(reject)
-				}
-			})
-			.catch(reject)
-		}
-		
-		function next_substring(p) {
-			p = p
-			.then(new Promise(function(resolve,reject) {
-				log.debug(`value = ${value}`)
-				let tokens = value.split(regex_non_alphanumeric)
-				if (tokens.length == 0) {
-					substrings_done(p)
-				}
-				else {
-					// let floor_length = Math.max(0, tokens[0].length-1)
-					log.debug(`fetching substrings for ${value}`)
-					
-					$.ajax({
-						method: 'POST',
-						url: '/db',
-						data: {
-							endpoint: ENDPOINT_LONG_SUBSTR,
-							value: value,
-							language: in_lang,
-							floor_length: 0
-						},
-						success: function(res_subs) {
-							if (res_subs.length == 0) {
-								substrings_done(p)
-							}
-							else {
-								// add longest substring to substrings
-								let longest = res_subs[0]
-								let longest_val = longest.out_val
-								log.debug(`fetched substring ${longest_val} for ${value}`)
-								
-								let less_idx = value.indexOf(longest_val)
-								let full_idx = full_value.indexOf(longest_val)
-								substrings[full_idx] = longest
-								
-								// remove longest substring from value, leaf full_value intact
-								value = 
-									value.substring(0,less_idx) + 
-									value.substring(less_idx+longest_val.length, value.length)
-								
-								// continue if there's more input to handle
-								if (less_idx != -1 && value.length > 0) {
-									next_substring(p)
+							
+									// concat out lang translation
+									translations.push(io_row)
 								}
 								else {
-									substrings_done(p)
+									if (best_other_lang === null) {
+										best_other_lang = io_row
+									}
+									other_langs.push(io_row)
 								}
 							}
-						},
-						error: function(err) {
-							log.error(`failed to fetch long substrings for ${value}: ${err}`)
-							reject('http')
-							substrings_done(p)
+							
+							if (best !== null) {
+								// load result into output
+								out_area.append(best['value'] + ' ')
+								resolve(true)
+							}
+							else {
+								log.warning(`translations for ${out_lang} not found; alt = ${
+									lang_code_to_name[best_other_lang['out_lang']]
+								}`)
+								resolve(false)
+							}
 						}
-					})
-				}
+						else {
+							log.warning(`no translations found for ${in_phrase.out_id} for any output language`)
+							resolve(false)
+						}
+					},
+					error: function(err) {
+						log.error(`translation failed: ${err}`)
+						reject('http')
+					}
+				})
 			}))
-			.catch(function(err) {
-				substrings_done(Promise.reject(err))
-			})
 		}
 		
-		// get longest valid substrings
-		next_substring(Promise.resolve())
-	})
+		return Promise.all(promises)
+		.then(() => {
+			// load translations into target for definitions queries
+			return translator_load_translations(translations)
+		})
+	}
 }
 
 function translator_define(value,language) {
@@ -477,7 +589,10 @@ function translator_examples(in_phrases) {
 			.then(resolve)
 			.catch(reject)
 		})
-		.catch(reject)
+		.catch((err) => {
+			log.error(err, 'translator_examples')
+			reject(err)
+		})
 	})
 }
 
@@ -795,21 +910,21 @@ function translator_load_translations(translations) {
 	}
 }
 
-// main
-
-$(document).ready(function() {
+// main called when DOM is ready
+// see https://api.jquery.com/ready/
+$(function() {
 	if (translator_read_url()) {
 		// if in and out params are defined, autosubmit translation
 		translator_on_submit()
 	}
 	
-	$(TRANSLATOR_LANG_ONE_OPTION_SELECTOR).click(function() {
+	$(TRANSLATOR_LANG_ONE_OPTION_SELECTOR).on('click', function() {
 		translator_update_languages('one', $(this).html())
 	})
-	$(TRANSLATOR_LANG_TWO_OPTION_SELECTOR).click(function() {
+	$(TRANSLATOR_LANG_TWO_OPTION_SELECTOR).on('click', function() {
 		translator_update_languages('two', $(this).html())
 	})
-	$(`#${TRANSLATOR_LANG_SWAP_ID}`).click(function() {
+	$(`#${TRANSLATOR_LANG_SWAP_ID}`).on('click', function() {
 		let lang_one = $(`#${TRANSLATOR_LANG_ONE_ID}`).attr('data-lang')
 		let lang_two = $(`#${TRANSLATOR_LANG_TWO_ID}`).attr('data-lang')
 		
@@ -818,5 +933,12 @@ $(document).ready(function() {
 		translator_update_languages('two', lang_one)
 	})
 	
-	$(`#${TRANSLATOR_SUBMIT_ID}`).click(translator_on_submit)
+	$(`#${TRANSLATOR_SUBMIT_ID}`).on('click', translator_on_submit)
 })
+
+// backend exports for testing
+if (typeof exports !== 'undefined') {
+	exports.ENDPOINT_LONG_SUBSTR = ENDPOINT_LONG_SUBSTR
+	
+	exports.translator_parse_source = translator_parse_source
+}

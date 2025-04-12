@@ -1,11 +1,6 @@
-/*
-
-Owen Gallagher <github.com/ogallagher>
-2021-04-08
-
-Omino webserver initialization.
-
-*/
+/**
+ * @fileoverview Omino webserver initialization.
+ */
 
 // external imports
 

@@ -20,8 +20,6 @@ try {
 	const Logger = require('./public/js/logger.js').Logger
 	
 	// backend imports
-	
-	const tests = require('./tests')
 	const db_server = require('./db/db_server')
 	
 	// constants

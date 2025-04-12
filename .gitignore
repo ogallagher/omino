@@ -21,3 +21,5 @@ app.js
 .htaccess
 tmp/
 
+# ide
+.vscode/

@@ -4,7 +4,10 @@
   "description": "Webserver for the Omino constructed auxiliary language.",
   "main": "server.js",
   "scripts": {
-    "test": "node server.js"
+    "test": "mocha tests",
+    "prestart": "node init.js --compile all",
+    "serve": "node server.js",
+    "start": "forever server.js"
   },
   "repository": {
     "type": "git",
@@ -33,5 +36,14 @@
     "mysql": "^2.18.1",
     "showdown": "^1.9.1",
     "yargs": "^16.2.0"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/jquery": "^3.5.32",
+    "forever": "^4.0.3",
+    "jquery": "^3.7.1",
+    "jquery-mockjax": "^2.6.1",
+    "jsdom": "^26.0.0",
+    "mocha": "^11.1.0"
   }
 }
