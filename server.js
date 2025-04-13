@@ -145,6 +145,12 @@ try {
 			 */
 			const corsOptions = {
 				origin: function(origin, callback) {
+					// ignore origin port
+					let port_delim_idx = origin?.indexOf(':', 'https:'.length)
+					if (port_delim_idx !== undefined && port_delim_idx !== -1) {
+						origin = origin.substring(0, port_delim_idx)
+					}
+
 					if (origin != null && origins.indexOf(origin) === -1) {
 						log.error(`cross origin request failed for ${origin}`)
 						return callback(new Error('CORS for origin ' + origin + ' is not allowed access.'), false)
