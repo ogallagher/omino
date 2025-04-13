@@ -1,6 +1,6 @@
 {
   "name": "omino",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Webserver for the Omino constructed auxiliary language.",
   "main": "server.js",
   "scripts": {
