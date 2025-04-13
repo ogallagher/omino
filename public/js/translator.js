@@ -170,8 +170,10 @@ function translator_update_languages(which, language) {
  * 
  * Given the translator input text, fetch and display data from the database.
  */
-async function translator_on_submit() {
+function translator_on_submit() {
 	const log = translator_log
+	const ctx = 'on_submit'
+
 	// extract input value and language
 	/**
 	 * @type {string}
@@ -185,154 +187,160 @@ async function translator_on_submit() {
 	 * @type {string}
 	 */
 	let value = $(`#${TRANSLATOR_INPUT_ID}`).val()
-	
-	try {
-		const in_phrases = await translator_parse_source(value, in_lang)
-		log.debug('before translator_translate', 'translator_parse_source.then')
-		translator_translate(in_phrases, out_lang)
-		log.debug('after translator_translate', 'translator_parse_source.then')
-	
-		const in_phrases_list = Object.values(in_phrases)
-		if (in_phrases_list.length > 0) {
-			log.debug(`performing secondary queries on ${in_phrases_list.length} input phrases`)
-	
-			// use acquired ids for input phrase to pose other queries
-			// fetch examples
-			translator_examples(in_phrases_list)
-	
-			// fetch roots
-			translator_roots(in_phrases_list, out_lang)
-	
-			// fetch derivatives
-	
-			// fetch synonyms
-	
-			// fetch antonyms
-	
-			// fetch homophones
+
+	log.debug('before translator_parse_source', ctx)
+	translator_parse_source(value, in_lang)
+	.then(
+		(in_phrases) => {
+			log.debug('before translator_translate', `${ctx}.parse_source.then'`)
+			translator_translate(in_phrases, out_lang)
+			log.debug('after translator_translate', `${ctx}.parse_source.then'`)
+		
+			const in_phrases_list = Object.values(in_phrases)
+			if (in_phrases_list.length > 0) {
+				log.debug(`performing secondary queries on ${in_phrases_list.length} input phrases`, `${ctx}.parse_source.then`)
+		
+				// use acquired ids for input phrase to pose other queries
+				// fetch examples
+				translator_examples(in_phrases_list)
+		
+				// fetch roots
+				translator_roots(in_phrases_list, out_lang)
+		
+				// fetch derivatives
+		
+				// fetch synonyms
+		
+				// fetch antonyms
+		
+				// fetch homophones
+			}
+			else {
+				log.info(`skip secondary queries on ${in_phrases_list} input phrases`, `${ctx}.parse_source.then`)
+			}
+		},
+		(err) => {
+			log.error(`translation failed. ${err}`, `${ctx}.parse_source.catch`)
 		}
-		else {
-			log.info(`skip secondary queries on ${in_phrases_list} input phrases`)
+	)
+}
+
+/**
+ * Iterates through source text to convert to list of translatable substring phrases.
+ * 
+ * @param {string} value 
+ * @param {string} in_lang 
+ * @param {string|undefined} in_text 
+ * 
+ * @returns {Promise<undefined|Map<number, FetchLongestSubstringRes>>}
+ */
+async function translator_next_substrings(value, in_lang, in_text) {
+	const log = translator_log
+	const ctx = `next_substrings."${value}"`
+	const regex_non_alphanumeric = /[^\w0123456789]+/
+
+	let tokens = value.split(regex_non_alphanumeric)
+	if (tokens.length == 0) {
+		return
+	}
+
+	if (in_text === undefined) {
+		in_text = value
+	}
+	
+	// let floor_length = Math.max(0, tokens[0].length-1)
+
+	/**
+	 * @type {FetchLongestSubstringRes[]}
+	 */
+	const res_subs = await $.ajax({
+		url: '/db',
+		method: 'POST',
+		data: {
+			endpoint: ENDPOINT_LONG_SUBSTR,
+			value: value,
+			language: in_lang,
+			floor_length: 0
+		}
+	})
+	log.debug(`fetched endpoint=${ENDPOINT_LONG_SUBSTR}`, ctx)
+
+	if (res_subs.length == 0) {
+		return
+	}
+
+	// add longest substring to substrings
+	let longest = res_subs[0]
+	let longest_val = longest.out_val
+	log.debug(`fetched substring ${longest_val} for ${value}`, ctx)
+	/**
+	 * Location of substring in unprocessed source text.
+	 */
+	let value_idx = value.indexOf(longest_val)
+	/**
+	 * Location of substring in source text.
+	 */
+	let in_idx = in_text.indexOf(longest_val)
+	log.info(`substring ${JSON.stringify(longest)} in source at ${in_idx}`, ctx)
+	
+	/**
+	 * @type {Map<number, FetchLongestSubstringRes>}
+	 */
+	let substrings = new Map()
+	substrings.set(in_idx, longest)
+
+	// remove longest substring from value
+	const next_value_arr = [...value]
+	next_value_arr.splice(value_idx, longest.out_val.length)
+	const next_value = next_value_arr.join('').trim()
+	
+	// continue if there's more input to handle
+	if (value_idx !== -1 && next_value.length > 0) {
+		log.info('parse subsequent substrings', ctx)
+		const next_substrings = await translator_next_substrings(next_value, in_lang, in_text)
+		log.info('subsequent substrings done', ctx)
+		
+		if (next_substrings !== undefined && next_substrings.size > 0) {
+			next_substrings.forEach((ns, ni) => substrings.set(ni, ns))
 		}
 	}
-	catch(err) {
-		log.error(`translation failed: ${err}`)
+	else {
+		log.info('done', ctx)
 	}
+
+	return substrings
 }
 
 /**
  * Parse source text as list of known phrases.
  * 
- * @param {string} value Unprocessed source text.
+ * @param {string} in_text Unprocessed source text.
  * @param {LangCode} in_lang Input/source language code.
  * @returns {Promise<SourcePhrases>} Resolved source text substrings present in db.
  */
-async function translator_parse_source(value, in_lang) {
+async function translator_parse_source(in_text, in_lang) {
+	const ctx = 'parse_source'
 	const log = translator_log
 	
 	// clean value
-	value = value.trim()
-	if (in_lang == 'omi') {
-		value = value.toLowerCase()
+	in_text = in_text.trim()
+	if (in_lang === 'omi') {
+		in_text = in_text.toLowerCase()
 	}
-	/**
-	 * Full source text.
-	 */
-	const full_value = value
 	
 	// ensure language code
 	if (in_lang == undefined) {
-		log.warning(`translating from unknown language ${in_lang}`)
+		log.warning(`translating from unknown language ${in_lang}`, ctx)
 		in_lang = null
 	}
 	else {
-		log.info(`translating ${in_lang}:${value}`)
-	}
-	
-	// { index_in_input: {in_id out_id out_lang out_val} }
-	/**
-	 * @type {SourcePhrases}
-	 */
-	let substrings = {}
-	const regex_non_alphanumeric = /[^\w0123456789]+/
-	
-	/**
-	 * Iterates through source text to convert to list of translatable substring phrases.
-	 * @returns {Promise<void>}
-	 */
-	async function next_substring() {
-		log.debug(`value = ${value}`)
-		let tokens = value.split(regex_non_alphanumeric)
-		if (tokens.length == 0) {
-			return
-		}
-		
-		// let floor_length = Math.max(0, tokens[0].length-1)
-		log.debug(`fetching substrings for ${value}`)
-		
-		await new Promise(function (resolve, reject) {
-			$.ajax({
-				method: 'POST',
-				url: '/db',
-				data: {
-					endpoint: ENDPOINT_LONG_SUBSTR,
-					value: value,
-					language: in_lang,
-					floor_length: 0
-				},
-				/**
-				 * @alias on_fetch_longest_substring
-				 * @param {FetchLongestSubstringRes[]} res_subs 
-				 */
-				success: function(res_subs) {
-					if (res_subs.length == 0) {
-						resolve()
-					}
-					else {
-						// add longest substring to substrings
-						let longest = res_subs[0]
-						let longest_val = longest.out_val
-						log.debug(`fetched substring ${longest_val} for ${value}`)
-						/**
-						 * Location of substring in unprocessed source text.
-						 */
-						let less_idx = value.indexOf(longest_val)
-						/**
-						 * Location of substring in source text.
-						 */
-						let full_idx = full_value.indexOf(longest_val)
-						substrings[full_idx] = longest
-						
-						// remove longest substring from value, leave full_value intact
-						value = (
-							value.substring(0, less_idx)
-							+ value.substring(less_idx+longest_val.length)
-						).trim()
-						
-						// continue if there's more input to handle
-						if (less_idx !== -1 && value.length > 0) {
-							return next_substring().then(resolve)
-						}
-						else {
-							log.info('done', 'translator_parse_source.next_substring')
-							resolve()
-						}
-					}
-				},
-				error: function(err) {
-					log.error(`failed to fetch long substrings for ${value}: ${JSON.stringify(err, undefined, 2)}`)
-					reject('http')
-				}
-			})
-		})
+		log.info(`translating ${in_lang}:${in_text}`, ctx)
 	}
 	
 	// get longest valid substrings
-	return await next_substring().then(() => {
-		// TODO mobile not reaching here
-		log.debug('return source phrases', 'translator_parse_source.return')
-		return substrings
-	})
+	const substrings = await translator_next_substrings(in_text, in_lang)
+	log.debug('return source phrases', `${ctx}.return`)
+	return Object.fromEntries(substrings.entries())
 }
 
 /**

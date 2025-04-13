@@ -78,8 +78,15 @@ try {
 		log.always(`${WEBSITE_NAME} server is running at <host>:${server.get('port')}`)
 	}
 	
-	function handle_db(endpoint,args,res) {
-		log.info(`db: ${endpoint} [${JSON.stringify(args)}]`)
+	/**
+	 * 
+	 * @param {string} endpoint 
+	 * @param {object} args 
+	 * @param {import('express').Response} res 
+	 */
+	function handle_db(endpoint, args, res) {
+		const ctx = 'handle_db'
+		log.info(`db: ${endpoint} [${JSON.stringify(args)}]`, ctx)
 		
 		db_server
 		.get_query(endpoint, args, true)
@@ -87,10 +94,12 @@ try {
 		    if (action.sql) {
 		  		db_server.send_query(action.sql)
 				.then(function(data) {
+					log.debug(`res.length=${data.length}`, ctx)
 					res.json(data)
+					res.on('finish', () => {log.debug('res.finish', ctx)})
 				})
 				.catch(function(err) {
-	  				log.error(`error in db data fetch: ${err}`)
+	  				log.error(`error in db data fetch: ${err}`, ctx)
 	  				res.json({error: 'fetch error'})
 				})
 		    }
@@ -99,7 +108,7 @@ try {
 			}
 		})
 		.catch(function(err) {
-			log.error('conversion from endpoint to sql failed: ' + err)
+			log.error('conversion from endpoint to sql failed: ' + err, ctx)
 			res.json({error: 'endpoint error'})
 		})
 	}
@@ -130,11 +139,13 @@ try {
 				extended: false,
 				limit: '50mb'
 			}))
-	
-			// enable cross-origin requests for same origin html imports
-			server.use(cors({
-				origin: function(origin,callback) {
-					if (origin != null && origins.indexOf(origin) == -1) {
+			
+			/**
+			 * @type {cors.CorsOptions}
+			 */
+			const corsOptions = {
+				origin: function(origin, callback) {
+					if (origin != null && origins.indexOf(origin) === -1) {
 						log.error(`cross origin request failed for ${origin}`)
 						return callback(new Error('CORS for origin ' + origin + ' is not allowed access.'), false)
 					}
@@ -142,7 +153,10 @@ try {
 						return callback(null,true)
 					}
 				}
-			}))
+			}
+	
+			// enable cross-origin requests for same origin html imports
+			server.use(cors(corsOptions))
 	
 			// use .env port
 			server.set('port', process.env[DOTENV_PORT])
@@ -151,7 +165,7 @@ try {
 			server.use(express.static(PUBLIC_DIR))
 			
 			// route root path to about page
-			server.get('/', function(req,res,next) {
+			server.get('/', function(_req, res) {
 				log.debug(`routing root path to /about.html`)
 				res.sendFile(`${PUBLIC_DIR}/about.html`, {
 					root: '.'

@@ -168,6 +168,12 @@ exports.get_query = function(endpoint, args, is_external) {
 	})
 }
 
+/**
+ * Execute database query and return result list.
+ * 
+ * @param {string} sql 
+ * @returns {Promise<object[]>}
+ */
 exports.send_query = function(sql) {
 	return new Promise(function(resolve,reject) {
 		log.debug(`sending query of length ${sql.length}`)

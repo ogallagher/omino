@@ -9,6 +9,7 @@ const window = new JSDOM(
 ).window
 const $ = require('jquery')(window)
 require('jquery-mockjax')($, window)
+const fetchmock = require('fetch-mock').default.mockGlobal()
 
 // frontend imports
 const Logger = require('../public/js/logger.js').Logger
@@ -26,6 +27,8 @@ const t = require('../public/js/translator.js')
 const log = new Logger('tests.translator', Logger.LEVEL_DEBUG)
 
 describe('translator_parse_source', () => {
+    const text_1 = 'main mino'
+
     before(() => {
         // mock server fetches
         /**
@@ -45,26 +48,35 @@ describe('translator_parse_source', () => {
                 out_val: 'mino'
             }]
         ]
-        // whole source text
-        $.mockjax({
-            url: '/db',
-            data: {
-                endpoint: t.ENDPOINT_LONG_SUBSTR,
-                value: 'main mino',
-                language: 'omi'
-            },
-            responseText: res_longest_substring_main_mino[0]
-        })
-        // remaining source text
-        $.mockjax({
-            url: '/db',
-            data: {
-                endpoint: t.ENDPOINT_LONG_SUBSTR,
-                value: 'mino',
-                language: 'omi'
-            },
-            responseText: res_longest_substring_main_mino[1]
-        })
+
+        fetchmock.config.allowRelativeUrls = true
+        fetchmock.config.matchPartialBody = true
+
+        for (let [idx, value] of [text_1, 'mino'].entries()) {
+            // mock ajax
+            $.mockjax({
+                url: '/db',
+                data: {
+                    endpoint: t.ENDPOINT_LONG_SUBSTR,
+                    value: value,
+                    language: 'omi'
+                },
+                responseText: res_longest_substring_main_mino[idx]
+            })
+            /* mock fetch (not used)
+            fetchmock.route(
+                {
+                    url: '/db',
+                    body: {
+                        endpoint: t.ENDPOINT_LONG_SUBSTR,
+                        value: value,
+                        language: 'omi'
+                    }
+                },
+                JSON.stringify(res_longest_substring_main_mino[idx])
+            )
+            */
+        }
     })
 
     it('resolves list of known phrases', async function() {
@@ -72,8 +84,10 @@ describe('translator_parse_source', () => {
         this.timeout(0)
         
         const in_phrases = await t.translator_parse_source(
-            'main mino', 'omi', 'eng'
+            text_1, 'omi', 'eng'
         )
         assert.strictEqual(Object.keys(in_phrases).length, 2, 'expect 2 separate words')
+        assert.strictEqual(in_phrases[text_1.indexOf('main')].out_val, 'main')
+        assert.strictEqual(in_phrases[text_1.indexOf('mino')].out_val, 'mino')
     })
 })
