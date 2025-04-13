@@ -81,7 +81,7 @@ class Logger {
 			let call_stack = err.stack.split('\n')
 			let caller_info = call_stack[4]
 			
-			if (caller_info.indexOf(':') == -1) {
+			if (caller_info === undefined || caller_info.indexOf(':') === -1) {
 				caller_info = call_stack[3]
 			}
 			
