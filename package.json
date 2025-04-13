@@ -7,7 +7,8 @@
     "test": "mocha tests",
     "prestart": "node init.js --compile all",
     "serve": "node server.js",
-    "start": "forever server.js"
+    "start": "forever start server.js",
+    "poststart": "forever list"
   },
   "repository": {
     "type": "git",
